@@ -31,13 +31,30 @@ const SpeedComparison = () => {
                 bottom: 30,
               }}
               barSize={60}
+              className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-4 shadow-sm"
             >
-              <CartesianGrid strokeDasharray="3 3" vertical={false} />
+              <defs>
+                {speedData.map((entry, index) => (
+                  <linearGradient 
+                    key={`gradient-${index}`} 
+                    id={`colorGradient${index}`} 
+                    x1="0" 
+                    y1="0" 
+                    x2="0" 
+                    y2="1"
+                  >
+                    <stop offset="0%" stopColor={entry.color} stopOpacity={0.9} />
+                    <stop offset="95%" stopColor={entry.color} stopOpacity={0.6} />
+                  </linearGradient>
+                ))}
+              </defs>
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e0e0e0" />
               <XAxis 
                 dataKey="name" 
                 scale="point" 
                 padding={{ left: 50, right: 50 }} 
-                tick={{ fill: '#333', fontSize: 14 }}
+                tick={{ fill: '#555', fontSize: 14 }}
+                axisLine={{ stroke: '#e0e0e0' }}
               />
               <YAxis 
                 hide 
@@ -45,22 +62,31 @@ const SpeedComparison = () => {
               />
               <Tooltip
                 contentStyle={{
-                  borderRadius: '8px',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                  borderRadius: '10px',
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
                   border: 'none',
-                  padding: '12px',
+                  padding: '14px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
                 }}
                 formatter={(value: number) => [`${value} Мбит/с`, 'Скорость']}
-                labelStyle={{ fontWeight: 'bold', marginBottom: '8px' }}
+                labelStyle={{ fontWeight: 'bold', marginBottom: '8px', color: '#333' }}
+                cursor={{ fill: 'rgba(200, 200, 200, 0.1)' }}
               />
               <Bar 
                 dataKey="value" 
                 isAnimationActive={true}
-                animationDuration={1000}
+                animationDuration={1200}
+                animationEasing="ease-out"
               >
                 {
                   speedData.map((entry, index) => (
-                    <rect key={`bar-${index}`} fill={entry.color} rx={4} ry={4} />
+                    <rect 
+                      key={`bar-${index}`} 
+                      fill={`url(#colorGradient${index})`} 
+                      rx={8} 
+                      ry={8} 
+                      className="drop-shadow-sm transition-all duration-300 hover:filter hover:brightness-105"
+                    />
                   ))
                 }
                 <LabelList 
@@ -68,7 +94,9 @@ const SpeedComparison = () => {
                   position="top" 
                   fill="#555" 
                   fontSize={14}
-                  offset={10}
+                  fontWeight="600"
+                  offset={15}
+                  formatter={(value: string) => [`${value}`]}
                 />
               </Bar>
             </BarChart>
@@ -80,7 +108,7 @@ const SpeedComparison = () => {
           {speedData.map((speed, index) => (
             <div 
               key={index} 
-              className={`rounded-xl overflow-hidden shadow-lg transition-all hover:shadow-xl animate-fade-in-up`}
+              className={`rounded-xl overflow-hidden shadow-lg transition-all hover:shadow-xl animate-fade-in-up backdrop-blur-xs bg-white/95`}
               style={{ 
                 animationDelay: `${index * 0.1}s`,
                 borderTop: `4px solid ${speed.color}`
@@ -93,8 +121,10 @@ const SpeedComparison = () => {
                     <span className="text-sm text-gray-500">{speed.description}</span>
                   </div>
                   <div 
-                    className="text-white text-xs rounded-full px-3 py-1 font-medium"
-                    style={{ backgroundColor: speed.color }}
+                    className="text-white text-xs rounded-full px-3 py-1 font-medium shadow-sm"
+                    style={{ 
+                      background: `linear-gradient(135deg, ${speed.color}, ${speed.color}cc)` 
+                    }}
                   >
                     {index === 2 ? 'Топ' : index === 1 ? 'Популярный' : 'Базовый'}
                   </div>
@@ -117,14 +147,11 @@ const SpeedComparison = () => {
                   </div>
                 </div>
 
-                <div 
-                  className="w-full h-1 mb-3"
-                  style={{ backgroundColor: speed.color }}
-                ></div>
+                <div className="w-full h-1 mb-3 opacity-70 rounded-full" style={{ background: `linear-gradient(to right, ${speed.color}99, ${speed.color})` }}></div>
                 
                 <a 
                   href="#pricing" 
-                  className="block text-center py-2 font-medium text-sm"
+                  className="block text-center py-2 font-medium text-sm transition-all hover:underline"
                   style={{ color: speed.color }}
                 >
                   Посмотреть тарифы
