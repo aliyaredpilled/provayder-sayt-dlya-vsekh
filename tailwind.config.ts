@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -46,11 +47,17 @@ export default {
 						DEFAULT: '#FF9500',
 						light: '#FEC6A1',
 						bright: '#F97316',
+						dark: '#E8700C',
 					},
 					purple: {
 						DEFAULT: '#9B87F5',
 						dark: '#6E59A5',
 						light: '#D6BCFA',
+					},
+					yellow: {
+						DEFAULT: '#FFCC00',
+						light: '#FBEEC9',
+						bright: '#FACC15',
 					}
 				},
 				primary: {
@@ -149,10 +156,12 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'speed-gradient': 'linear-gradient(90deg, #0A84FF, #5AC8FA)',
+				'orange-gradient': 'linear-gradient(90deg, #FF9500, #F97316)',
 			},
 			boxShadow: {
-				'glow': '0 0 20px 5px rgba(10, 132, 255, 0.15)',
+				'glow': '0 0 20px 5px rgba(249, 115, 22, 0.2)',
 				'card': '0 4px 20px rgba(0, 0, 0, 0.05)',
+				'orange-glow': '0 0 20px rgba(249, 115, 22, 0.3)',
 			},
 			backdropBlur: {
 				'xs': '2px',

@@ -61,7 +61,7 @@ const NavBar = () => {
           </a>
           <a 
             href="#contact" 
-            className="bg-skynet-blue hover:bg-skynet-blue-dark text-white rounded-full px-5 py-2 transition-all"
+            className="bg-skynet-orange hover:bg-skynet-orange-dark text-white rounded-full px-5 py-2 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
           >
             Подключиться
           </a>
@@ -86,19 +86,19 @@ const NavBar = () => {
           <div className="px-4 py-3 space-y-1">
             <div className="py-2">
               <p className="font-medium text-gray-800 mb-1">Услуги</p>
-              <a href="#" className="block pl-3 py-2 text-gray-600">Интернет для дома</a>
-              <a href="#" className="block pl-3 py-2 text-gray-600">Телевидение</a>
-              <a href="#" className="block pl-3 py-2 text-gray-600">Телефония</a>
-              <a href="#" className="block pl-3 py-2 text-gray-600">Wi-Fi роутеры</a>
+              <a href="#" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Интернет для дома</a>
+              <a href="#" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Телевидение</a>
+              <a href="#" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Телефония</a>
+              <a href="#" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Wi-Fi роутеры</a>
             </div>
-            <a href="#pricing" className="block py-2 text-gray-800">Тарифы</a>
-            <a href="#" className="block py-2 text-gray-800">Покрытие</a>
-            <a href="#" className="block py-2 text-gray-800">Поддержка</a>
-            <a href="#contact" className="block py-2 text-gray-800">Контакты</a>
+            <a href="#pricing" className="block py-2 text-gray-800 hover:text-skynet-orange">Тарифы</a>
+            <a href="#" className="block py-2 text-gray-800 hover:text-skynet-orange">Покрытие</a>
+            <a href="#" className="block py-2 text-gray-800 hover:text-skynet-orange">Поддержка</a>
+            <a href="#contact" className="block py-2 text-gray-800 hover:text-skynet-orange">Контакты</a>
             <a href="#" className="block py-2 text-skynet-blue font-medium">Личный кабинет</a>
             <a 
               href="#contact" 
-              className="block bg-skynet-blue text-white rounded-lg px-4 py-3 text-center mt-4"
+              className="block bg-skynet-orange text-white rounded-lg px-4 py-3 text-center mt-4 shadow-md"
             >
               Подключиться
             </a>
