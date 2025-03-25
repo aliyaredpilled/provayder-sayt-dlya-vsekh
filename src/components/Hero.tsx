@@ -39,7 +39,7 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/1b4d860d-bd94-43f4-af81-78eb4c5f70b8.png" 
                 alt="Семья с ноутбуком" 
-                className="w-full h-auto max-h-[550px] object-cover"
+                className="w-full h-auto max-h-[620px] object-cover brightness-110 contrast-105 saturate-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                 <div className="flex items-center bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-lg mb-4 max-w-fit">
