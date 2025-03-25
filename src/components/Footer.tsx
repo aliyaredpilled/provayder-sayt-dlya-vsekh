@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Логотип и информация о компании */}
           <div>
             <div className="mb-6">
@@ -53,31 +53,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Все услуги</Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Компания */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Компания</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">О компании</Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Новости</Link>
-              </li>
-              <li>
-                <Link to="/career" className="text-gray-400 hover:text-white transition-colors">Вакансии</Link>
-              </li>
-              <li>
-                <Link to="/tariffs" className="text-gray-400 hover:text-white transition-colors">Тарифы</Link>
-              </li>
-              <li>
-                <Link to="/reviews" className="text-gray-400 hover:text-white transition-colors">Отзывы</Link>
-              </li>
-              <li>
-                <Link to="/faq" className="text-gray-400 hover:text-white transition-colors">FAQ</Link>
               </li>
             </ul>
           </div>

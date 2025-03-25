@@ -3,6 +3,15 @@ import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,24 +45,46 @@ const NavBar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          <div className="relative group">
-            <button className="flex items-center text-gray-800 hover:text-skynet-blue">
-              Услуги <ChevronDown className="ml-1 h-4 w-4" />
-            </button>
-            <div className="absolute left-0 mt-2 w-48 opacity-0 transform -translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
-              <div className="bg-white rounded-lg shadow-lg p-3 ring-1 ring-black ring-opacity-5">
-                <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Интернет для дома</Link>
-                <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телевидение</Link>
-                <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телефония</Link>
-                <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Wi-Fi роутеры</Link>
-              </div>
-            </div>
-          </div>
-          <Link to="/tariffs" className="text-gray-800 hover:text-skynet-blue">Тарифы</Link>
-          <Link to="/about" className="text-gray-800 hover:text-skynet-blue">О компании</Link>
-          <Link to="/faq" className="text-gray-800 hover:text-skynet-blue">Поддержка</Link>
-          <Link to="/contacts" className="text-gray-800 hover:text-skynet-blue">Контакты</Link>
+        <div className="hidden md:flex items-center space-x-6">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Услуги</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[400px] gap-3 p-4">
+                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Интернет для дома</Link>
+                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телевидение</Link>
+                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телефония</Link>
+                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Wi-Fi роутеры</Link>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <Link to="/tariffs" className={navigationMenuTriggerStyle()}>Тарифы</Link>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>О компании</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[400px] gap-3 p-4">
+                    <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">О компании</Link>
+                    <Link to="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Новости</Link>
+                    <Link to="/career" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Вакансии</Link>
+                    <Link to="/reviews" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Отзывы</Link>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <Link to="/faq" className={navigationMenuTriggerStyle()}>Поддержка</Link>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <Link to="/contacts" className={navigationMenuTriggerStyle()}>Контакты</Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
@@ -93,7 +124,15 @@ const NavBar = () => {
               <Link to="/services" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Wi-Fi роутеры</Link>
             </div>
             <Link to="/tariffs" className="block py-2 text-gray-800 hover:text-skynet-orange">Тарифы</Link>
-            <Link to="/about" className="block py-2 text-gray-800 hover:text-skynet-orange">О компании</Link>
+            
+            <div className="py-2">
+              <p className="font-medium text-gray-800 mb-1">О компании</p>
+              <Link to="/about" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">О компании</Link>
+              <Link to="/blog" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Новости</Link>
+              <Link to="/career" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Вакансии</Link>
+              <Link to="/reviews" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Отзывы</Link>
+            </div>
+            
             <Link to="/faq" className="block py-2 text-gray-800 hover:text-skynet-orange">Поддержка</Link>
             <Link to="/contacts" className="block py-2 text-gray-800 hover:text-skynet-orange">Контакты</Link>
             <Link to="/account" className="block py-2 text-skynet-blue font-medium">Личный кабинет</Link>
