@@ -9,11 +9,6 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <div className="flex items-center mb-6">
-              <img 
-                src="/lovable-uploads/skynet-logo.png" 
-                alt="Skynet Logo" 
-                className="h-16 mr-4 animate-fade-in-up"
-              />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-fade-in-up">
                 <span className="text-skynet-blue">SkyNet</span>
               </h1>
@@ -42,8 +37,8 @@ const Hero = () => {
           <div className="md:w-1/2 relative animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1581089781785-603411fa81e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                alt="Высокоскоростной интернет" 
+                src="/lovable-uploads/1b4d860d-bd94-43f4-af81-78eb4c5f70b8.png" 
+                alt="Семья с ноутбуком" 
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
