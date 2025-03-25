@@ -1,6 +1,7 @@
 
-import { Star, User, ArrowRight } from 'lucide-react';
+import { Star, User, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const reviews = [
   {
@@ -41,6 +42,60 @@ const reviews = [
   }
 ];
 
+const ReviewCard = ({ review, index }: { review: typeof reviews[0], index: number }) => {
+  const [expanded, setExpanded] = useState(false);
+  const isLongText = review.text.length > 200;
+  
+  return (
+    <div 
+      className="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      <div className="flex items-center mb-4">
+        <div className="w-12 h-12 bg-skynet-blue rounded-full flex items-center justify-center text-white mr-3">
+          <User size={20} />
+        </div>
+        <div>
+          <h3 className="font-semibold text-lg">{review.name}</h3>
+          <div className="flex">
+            {[...Array(review.rating)].map((_, i) => (
+              <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="text-gray-600">
+        {isLongText && !expanded ? (
+          <>
+            <p className="line-clamp-5">{review.text.substring(0, 200)}...</p>
+            <button 
+              onClick={() => setExpanded(true)}
+              className="text-skynet-blue flex items-center mt-2 text-sm font-medium hover:underline"
+            >
+              Показать полностью <ChevronDown className="ml-1 h-4 w-4" />
+            </button>
+          </>
+        ) : (
+          <>
+            <p>{review.text}</p>
+            {isLongText && expanded && (
+              <button 
+                onClick={() => setExpanded(false)}
+                className="text-skynet-blue flex items-center mt-2 text-sm font-medium hover:underline"
+              >
+                Свернуть <ChevronUp className="ml-1 h-4 w-4" />
+              </button>
+            )}
+          </>
+        )}
+      </div>
+      <div className="mt-4 text-right">
+        <span className="text-xs text-gray-400">Клиент SkyNet</span>
+      </div>
+    </div>
+  );
+};
+
 const CustomerReviews = () => {
   return (
     <section className="py-20 bg-skynet-gray-light/30">
@@ -59,29 +114,11 @@ const CustomerReviews = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
-            <div 
+            <ReviewCard 
               key={review.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-skynet-blue rounded-full flex items-center justify-center text-white mr-3">
-                  <User size={20} />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg">{review.name}</h3>
-                  <div className="flex">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p className="text-gray-600 line-clamp-5">{review.text}</p>
-              <div className="mt-4 text-right">
-                <span className="text-xs text-gray-400">Клиент SkyNet</span>
-              </div>
-            </div>
+              review={review}
+              index={index}
+            />
           ))}
         </div>
         
