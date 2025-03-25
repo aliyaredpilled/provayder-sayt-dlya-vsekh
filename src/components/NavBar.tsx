@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,13 +27,13 @@ const NavBar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="/" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/f99e9003-72ca-4ed2-8f38-b0688e90d606.png" 
+            src="/lovable-uploads/704e9442-6bb2-4e95-a66d-a39c1b2f1222.png" 
             alt="SKYNET" 
             className="h-10"
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
@@ -42,29 +43,29 @@ const NavBar = () => {
             </button>
             <div className="absolute left-0 mt-2 w-48 opacity-0 transform -translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
               <div className="bg-white rounded-lg shadow-lg p-3 ring-1 ring-black ring-opacity-5">
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Интернет для дома</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телевидение</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телефония</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Wi-Fi роутеры</a>
+                <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Интернет для дома</Link>
+                <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телевидение</Link>
+                <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телефония</Link>
+                <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Wi-Fi роутеры</Link>
               </div>
             </div>
           </div>
-          <a href="#pricing" className="text-gray-800 hover:text-skynet-blue">Тарифы</a>
-          <a href="#" className="text-gray-800 hover:text-skynet-blue">Покрытие</a>
-          <a href="#" className="text-gray-800 hover:text-skynet-blue">Поддержка</a>
-          <a href="#contact" className="text-gray-800 hover:text-skynet-blue">Контакты</a>
+          <Link to="/tariffs" className="text-gray-800 hover:text-skynet-blue">Тарифы</Link>
+          <Link to="/about" className="text-gray-800 hover:text-skynet-blue">О компании</Link>
+          <Link to="/faq" className="text-gray-800 hover:text-skynet-blue">Поддержка</Link>
+          <Link to="/contacts" className="text-gray-800 hover:text-skynet-blue">Контакты</Link>
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          <a href="#" className="text-skynet-blue hover:text-skynet-blue-dark font-medium">
+          <Link to="/account" className="text-skynet-blue hover:text-skynet-blue-dark font-medium">
             Личный кабинет
-          </a>
-          <a 
-            href="#contact" 
+          </Link>
+          <Link 
+            to="/contacts" 
             className="bg-skynet-orange hover:bg-skynet-orange-dark text-white rounded-full px-5 py-2 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
           >
             Подключиться
-          </a>
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -86,22 +87,22 @@ const NavBar = () => {
           <div className="px-4 py-3 space-y-1">
             <div className="py-2">
               <p className="font-medium text-gray-800 mb-1">Услуги</p>
-              <a href="#" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Интернет для дома</a>
-              <a href="#" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Телевидение</a>
-              <a href="#" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Телефония</a>
-              <a href="#" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Wi-Fi роутеры</a>
+              <Link to="/services" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Интернет для дома</Link>
+              <Link to="/services" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Телевидение</Link>
+              <Link to="/services" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Телефония</Link>
+              <Link to="/services" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Wi-Fi роутеры</Link>
             </div>
-            <a href="#pricing" className="block py-2 text-gray-800 hover:text-skynet-orange">Тарифы</a>
-            <a href="#" className="block py-2 text-gray-800 hover:text-skynet-orange">Покрытие</a>
-            <a href="#" className="block py-2 text-gray-800 hover:text-skynet-orange">Поддержка</a>
-            <a href="#contact" className="block py-2 text-gray-800 hover:text-skynet-orange">Контакты</a>
-            <a href="#" className="block py-2 text-skynet-blue font-medium">Личный кабинет</a>
-            <a 
-              href="#contact" 
+            <Link to="/tariffs" className="block py-2 text-gray-800 hover:text-skynet-orange">Тарифы</Link>
+            <Link to="/about" className="block py-2 text-gray-800 hover:text-skynet-orange">О компании</Link>
+            <Link to="/faq" className="block py-2 text-gray-800 hover:text-skynet-orange">Поддержка</Link>
+            <Link to="/contacts" className="block py-2 text-gray-800 hover:text-skynet-orange">Контакты</Link>
+            <Link to="/account" className="block py-2 text-skynet-blue font-medium">Личный кабинет</Link>
+            <Link 
+              to="/contacts" 
               className="block bg-skynet-orange text-white rounded-lg px-4 py-3 text-center mt-4 shadow-md"
             >
               Подключиться
-            </a>
+            </Link>
           </div>
         </div>
       )}

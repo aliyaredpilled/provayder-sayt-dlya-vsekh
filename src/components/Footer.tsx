@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <img 
-                src="/lovable-uploads/f99e9003-72ca-4ed2-8f38-b0688e90d606.png" 
+                src="/lovable-uploads/704e9442-6bb2-4e95-a66d-a39c1b2f1222.png" 
                 alt="SKYNET" 
                 className="h-10 brightness-150 contrast-150 invert" 
               />
@@ -39,19 +40,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Услуги</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Интернет для дома</a>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Интернет для дома</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Цифровое ТВ</a>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Цифровое ТВ</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Телефония</a>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Телефония</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Wi-Fi роутеры</a>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Wi-Fi роутеры</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Все услуги</a>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Все услуги</Link>
               </li>
             </ul>
           </div>
@@ -61,19 +62,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Компания</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">О компании</a>
+                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">О компании</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Новости</a>
+                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Новости</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Вакансии</a>
+                <Link to="/career" className="text-gray-400 hover:text-white transition-colors">Вакансии</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Покрытие</a>
+                <Link to="/tariffs" className="text-gray-400 hover:text-white transition-colors">Тарифы</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">FAQ</a>
+                <Link to="/reviews" className="text-gray-400 hover:text-white transition-colors">Отзывы</Link>
+              </li>
+              <li>
+                <Link to="/faq" className="text-gray-400 hover:text-white transition-colors">FAQ</Link>
               </li>
             </ul>
           </div>

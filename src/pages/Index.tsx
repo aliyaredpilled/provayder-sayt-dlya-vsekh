@@ -1,11 +1,13 @@
 
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
+import PromoBanners from "@/components/PromoBanners";
+import ServiceOverview from "@/components/ServiceOverview";
 import SpeedComparison from "@/components/SpeedComparison";
 import PricingPlans from "@/components/PricingPlans";
 import Benefits from "@/components/Benefits";
-import ContactSection from "@/components/ContactSection";
 import FAQ from "@/components/FAQ";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -13,6 +15,8 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <NavBar />
       <Hero />
+      <PromoBanners />
+      <ServiceOverview />
       <SpeedComparison />
       <PricingPlans />
       <Benefits />

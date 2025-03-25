@@ -1,231 +1,215 @@
 
-import { useState } from 'react';
-import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+import { useRef } from 'react';
+import { Phone, Mail, Clock, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ContactSection = () => {
-  const [formState, setFormState] = useState({
-    name: '',
-    phone: '',
-    address: '',
-    plan: 'ultrafast',
-    submitted: false
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormState(prev => ({ ...prev, [name]: value }));
-  };
+  const nameRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const addressRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would send the form data to a server
-    console.log('Form submitted:', formState);
-    setFormState(prev => ({ ...prev, submitted: true }));
     
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormState({
-        name: '',
-        phone: '',
-        address: '',
-        plan: 'ultrafast',
-        submitted: false
-      });
-    }, 3000);
+    // Here would be an API call to submit the form data
+    // For now, we'll just log the form data and show an alert
+    
+    console.log({
+      name: nameRef.current?.value,
+      phone: phoneRef.current?.value,
+      address: addressRef.current?.value,
+      message: messageRef.current?.value
+    });
+    
+    alert('Заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.');
+    
+    // Reset form
+    if (nameRef.current) nameRef.current.value = '';
+    if (phoneRef.current) phoneRef.current.value = '';
+    if (addressRef.current) addressRef.current.value = '';
+    if (messageRef.current) messageRef.current.value = '';
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-skynet-gray-light/50 to-white">
-      <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
-            Подключение
-          </span>
-          <h2 className="heading-lg mb-4 text-gray-900">
-            Готовы ощутить скорость 10 Гбит/с?
-          </h2>
-          <p className="text-gray-600">
-            Заполните форму ниже, и наш специалист свяжется с вами в течение 24 часов, 
-            чтобы организовать подключение и ответить на все ваши вопросы.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="bg-white rounded-2xl shadow-card p-6 md:p-8 animate-fade-in-up">
-            {formState.submitted ? (
-              <div className="text-center py-8">
-                <div className="inline-flex items-center justify-center bg-green-100 text-green-600 rounded-full w-16 h-16 mb-4">
-                  <CheckCircle className="h-8 w-8" />
+    <section id="contact" className="py-20 bg-white relative overflow-hidden">
+      {/* Background decoration elements */}
+      <div className="absolute -top-20 -right-20 w-60 h-60 bg-skynet-blue/5 rounded-full filter blur-3xl"></div>
+      <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-skynet-orange/5 rounded-full filter blur-3xl"></div>
+      
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
+              Оставить заявку
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Подключиться просто
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Оставьте заявку, и наш специалист свяжется с вами для уточнения деталей и подключения
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-5 gap-10">
+            <div className="md:col-span-2 space-y-6">
+              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 bg-skynet-blue text-white rounded-lg flex items-center justify-center">
+                      <Phone className="h-6 w-6" />
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Телефон</h3>
+                    <p className="text-gray-600 mb-1">Для подключения:</p>
+                    <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      +7 (843) 290-92-94
+                    </a>
+                    <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
+                    <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      +7 (843) 5-777-775
+                    </a>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Спасибо за заявку!</h3>
-                <p className="text-gray-600">
-                  Мы свяжемся с вами в ближайшее время для подтверждения деталей подключения.
-                </p>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit}>
-                <div className="space-y-4">
+              
+              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 bg-skynet-orange text-white rounded-lg flex items-center justify-center">
+                      <Mail className="h-6 w-6" />
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                    <p className="text-gray-600 mb-1">Для запросов и предложений:</p>
+                    <a href="mailto:info@skynet.ru" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      info@skynet.ru
+                    </a>
+                    <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
+                    <a href="mailto:support@skynet.ru" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      support@skynet.ru
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 bg-green-500 text-white rounded-lg flex items-center justify-center">
+                      <Clock className="h-6 w-6" />
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Режим работы</h3>
+                    <p className="text-gray-600 mb-1">Отдел продаж:</p>
+                    <p className="text-gray-800">Пн-Пт: 9:00-20:00</p>
+                    <p className="text-gray-800">Сб: 10:00-18:00</p>
+                    <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
+                    <p className="text-gray-800">24/7, без выходных</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center md:text-left">
+                <Link 
+                  to="/contacts" 
+                  className="inline-flex items-center text-skynet-blue hover:text-skynet-blue-dark mt-2"
+                >
+                  Все контакты <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+            
+            <div className="md:col-span-3">
+              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Оставить заявку на подключение</h3>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Ваше имя
+                      Ваше имя *
                     </label>
-                    <input
-                      id="name"
-                      name="name"
+                    <input 
                       type="text"
+                      id="name"
+                      ref={nameRef}
                       required
-                      value={formState.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-skynet-blue focus:border-transparent outline-none transition-all"
-                      placeholder="Иван Иванов"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
+                      placeholder="Введите ваше имя"
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Телефон
+                      Телефон *
                     </label>
-                    <input
-                      id="phone"
-                      name="phone"
+                    <input 
                       type="tel"
+                      id="phone"
+                      ref={phoneRef}
                       required
-                      value={formState.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-skynet-blue focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
                       placeholder="+7 (___) ___-__-__"
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
-                      Адрес подключения
+                      Адрес подключения *
                     </label>
-                    <input
-                      id="address"
-                      name="address"
+                    <input 
                       type="text"
+                      id="address"
+                      ref={addressRef}
                       required
-                      value={formState.address}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-skynet-blue focus:border-transparent outline-none transition-all"
-                      placeholder="Город, улица, дом, квартира"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
+                      placeholder="Казань, ул. ..."
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="plan" className="block text-sm font-medium text-gray-700 mb-1">
-                      Выберите тариф
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                      Комментарий
                     </label>
-                    <select
-                      id="plan"
-                      name="plan"
-                      value={formState.plan}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-skynet-blue focus:border-transparent outline-none transition-all"
-                    >
-                      <option value="standard">Стандарт (100 Мбит/с)</option>
-                      <option value="fast">Быстрый (1 Гбит/с)</option>
-                      <option value="ultrafast">Сверхскоростной (10 Гбит/с)</option>
-                    </select>
+                    <textarea 
+                      id="message"
+                      ref={messageRef}
+                      rows={3}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
+                      placeholder="Дополнительная информация или пожелания"
+                    ></textarea>
                   </div>
                   
-                  <div className="pt-2">
-                    <button
-                      type="submit"
-                      className="w-full bg-skynet-blue text-white rounded-lg px-4 py-3 font-medium hover:bg-skynet-blue-dark transition-all focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:ring-offset-2"
-                    >
-                      Отправить заявку
-                    </button>
+                  <div className="flex items-start">
+                    <div className="flex items-center h-5">
+                      <input
+                        id="policy"
+                        name="policy"
+                        type="checkbox"
+                        required
+                        className="h-4 w-4 text-skynet-blue focus:ring-skynet-blue border-gray-300 rounded"
+                      />
+                    </div>
+                    <div className="ml-3 text-sm">
+                      <label htmlFor="policy" className="text-gray-600">
+                        Я согласен на обработку моих персональных данных в соответствии с{' '}
+                        <a href="#" className="text-skynet-blue hover:underline">
+                          политикой конфиденциальности
+                        </a>
+                      </label>
+                    </div>
                   </div>
                   
-                  <div className="text-xs text-gray-500 text-center">
-                    Нажимая кнопку "Отправить заявку", вы соглашаетесь с нашей{' '}
-                    <a href="#" className="text-skynet-blue hover:underline">
-                      Политикой конфиденциальности
-                    </a>
-                  </div>
-                </div>
-              </form>
-            )}
-          </div>
-          
-          <div className="space-y-8">
-            <div className="bg-gradient-to-r from-skynet-blue/10 to-skynet-blue/5 rounded-xl p-6 animate-fade-in-up">
-              <h3 className="text-xl font-bold mb-4">Преимущества подключения</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <div className="bg-skynet-blue rounded-full p-1 text-white mr-3 mt-0.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700">Подключение в течение 24 часов после заявки</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-skynet-blue rounded-full p-1 text-white mr-3 mt-0.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700">Бесплатная настройка оборудования</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-skynet-blue rounded-full p-1 text-white mr-3 mt-0.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700">Скидка 50% на первую неделю</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-skynet-blue rounded-full p-1 text-white mr-3 mt-0.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700">Гарантия скорости или возврат денег</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-xl font-bold">Контактная информация</h3>
-              
-              <div className="flex items-start">
-                <div className="bg-skynet-blue/10 rounded-full p-2 text-skynet-blue mr-4">
-                  <Phone className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">Телефон поддержки:</p>
-                  <a href="tel:+78001234567" className="text-lg font-medium text-gray-900 hover:text-skynet-blue">
-                    8 (800) 123-45-67
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-skynet-blue/10 rounded-full p-2 text-skynet-blue mr-4">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">Электронная почта:</p>
-                  <a href="mailto:info@skynet.ru" className="text-lg font-medium text-gray-900 hover:text-skynet-blue">
-                    info@skynet.ru
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-skynet-blue/10 rounded-full p-2 text-skynet-blue mr-4">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">Головной офис:</p>
-                  <p className="text-lg font-medium text-gray-900">
-                    г. Москва, ул. Технологическая, 10
-                  </p>
-                </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium py-3 rounded-lg shadow-md hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
+                  >
+                    Оставить заявку
+                  </button>
+                </form>
               </div>
             </div>
           </div>
