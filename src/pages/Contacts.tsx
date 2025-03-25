@@ -279,7 +279,7 @@ const Contacts = () => {
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Мы на карте</h2>
           <div className="h-[400px] rounded-xl overflow-hidden shadow-lg">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35903.92342308253!2d49.06065424450058!3d55.78897079228648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd11%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1627292319305!5m2!1sru!2sru" 
+              src="https://yandex.ru/map-widget/v1/?ll=49.072990%2C55.835754&mode=search&oid=20535149244&ol=biz&sctx=ZAAAAAgBEAAaKAoSCclXAimx4UJAETf8brpl5UtAEhIJZJRnXg67pz8RaW%2FwhclUoT8iBgABAgMEBSgKOABAhp0GSAFqAnJ1nQHNzMw9oAEAqAEAvQHDd4lGwgEFvIX2v0yCAgZza3luZXSKAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=49.072990%2C55.835754&sspn=0.011460%2C0.004722&text=skynet&z=16.84" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

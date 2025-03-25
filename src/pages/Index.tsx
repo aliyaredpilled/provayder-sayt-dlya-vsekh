@@ -9,6 +9,7 @@ import Benefits from "@/components/Benefits";
 import FAQ from "@/components/FAQ";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import CustomerReviews from "@/components/CustomerReviews";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <SpeedComparison />
       <PricingPlans />
       <Benefits />
+      <CustomerReviews />
       <FAQ />
       <ContactSection />
       <Footer />

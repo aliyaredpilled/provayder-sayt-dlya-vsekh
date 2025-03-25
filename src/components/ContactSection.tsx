@@ -213,6 +213,21 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
+          
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Мы на карте</h3>
+            <div className="rounded-xl overflow-hidden shadow-lg h-[400px]">
+              <iframe 
+                src="https://yandex.ru/map-widget/v1/?ll=49.072990%2C55.835754&mode=search&oid=20535149244&ol=biz&sctx=ZAAAAAgBEAAaKAoSCclXAimx4UJAETf8brpl5UtAEhIJZJRnXg67pz8RaW%2FwhclUoT8iBgABAgMEBSgKOABAhp0GSAFqAnJ1nQHNzMw9oAEAqAEAvQHDd4lGwgEFvIX2v0yCAgZza3luZXSKAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=49.072990%2C55.835754&sspn=0.011460%2C0.004722&text=skynet&z=16.84" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                title="Карта расположения офиса SKYNET"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </section>
