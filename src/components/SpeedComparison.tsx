@@ -4,9 +4,9 @@ import { speedData } from '@/lib/speedData';
 
 const SpeedComparison = () => {
   return (
-    <section id="speed-comparison" className="py-20 bg-white">
+    <section id="speed-comparison" className="py-12 bg-white">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
             Почувствуйте разницу
           </span>
@@ -104,7 +104,7 @@ const SpeedComparison = () => {
         </div>
 
         {/* Speed details cards */}
-        <div className="grid md:grid-cols-3 gap-6 mt-14">
+        <div className="grid md:grid-cols-3 gap-6 mt-10">
           {speedData.map((speed, index) => (
             <div 
               key={index} 

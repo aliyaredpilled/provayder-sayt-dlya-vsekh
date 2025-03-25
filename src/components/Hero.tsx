@@ -39,10 +39,10 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/1b4d860d-bd94-43f4-af81-78eb4c5f70b8.png" 
                 alt="Семья с ноутбуком" 
-                className="w-full h-auto max-h-[620px] object-cover brightness-110 contrast-105 saturate-110"
+                className="w-full h-auto max-h-[660px] object-cover brightness-125 contrast-110 saturate-115"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-                <div className="flex items-center bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-lg mb-4 max-w-fit">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-6">
+                <div className="flex items-center bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-lg mb-4 max-w-fit">
                   <div className="bg-skynet-orange text-white p-2 rounded-full mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />

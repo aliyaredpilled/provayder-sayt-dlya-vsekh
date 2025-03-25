@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -10,7 +9,7 @@ const Services = () => {
     <div className="min-h-screen bg-white">
       <NavBar />
       
-      <section className="pt-32 pb-20 bg-skynet-gray-light/50">
+      <section className="pt-32 pb-14 bg-skynet-gray-light/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
@@ -27,7 +26,7 @@ const Services = () => {
         </div>
       </section>
       
-      <section className="py-20 bg-white">
+      <section className="py-14 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -89,7 +88,7 @@ const Services = () => {
         </div>
       </section>
       
-      <section className="py-20 bg-skynet-gray-light/30">
+      <section className="py-14 bg-skynet-gray-light/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -150,7 +149,7 @@ const Services = () => {
         </div>
       </section>
       
-      <section className="py-20 bg-white">
+      <section className="py-14 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -203,9 +202,9 @@ const Services = () => {
         </div>
       </section>
       
-      <section className="py-16 bg-skynet-blue/5">
+      <section className="py-14 bg-skynet-blue/5">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Дополнительные сервисы
             </h2>
