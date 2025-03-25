@@ -26,13 +26,12 @@ const NavBar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="/" className="flex items-center space-x-2">
-          <span className="text-skynet-blue font-bold text-2xl tracking-tight">
-            SKYNET
-          </span>
-          <span className="bg-skynet-blue text-white text-xs px-2 py-0.5 rounded-full font-medium">
-            10G
-          </span>
+        <a href="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/f99e9003-72ca-4ed2-8f38-b0688e90d606.png" 
+            alt="SKYNET" 
+            className="h-10"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -44,9 +43,9 @@ const NavBar = () => {
             <div className="absolute left-0 mt-2 w-48 opacity-0 transform -translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
               <div className="bg-white rounded-lg shadow-lg p-3 ring-1 ring-black ring-opacity-5">
                 <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Интернет для дома</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Бизнес-решения</a>
                 <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телевидение</a>
                 <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телефония</a>
+                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Wi-Fi роутеры</a>
               </div>
             </div>
           </div>
@@ -88,9 +87,9 @@ const NavBar = () => {
             <div className="py-2">
               <p className="font-medium text-gray-800 mb-1">Услуги</p>
               <a href="#" className="block pl-3 py-2 text-gray-600">Интернет для дома</a>
-              <a href="#" className="block pl-3 py-2 text-gray-600">Бизнес-решения</a>
               <a href="#" className="block pl-3 py-2 text-gray-600">Телевидение</a>
               <a href="#" className="block pl-3 py-2 text-gray-600">Телефония</a>
+              <a href="#" className="block pl-3 py-2 text-gray-600">Wi-Fi роутеры</a>
             </div>
             <a href="#pricing" className="block py-2 text-gray-800">Тарифы</a>
             <a href="#" className="block py-2 text-gray-800">Покрытие</a>

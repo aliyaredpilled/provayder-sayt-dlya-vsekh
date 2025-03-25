@@ -5,6 +5,7 @@ import SpeedComparison from "@/components/SpeedComparison";
 import PricingPlans from "@/components/PricingPlans";
 import Benefits from "@/components/Benefits";
 import ContactSection from "@/components/ContactSection";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <SpeedComparison />
       <PricingPlans />
       <Benefits />
+      <FAQ />
       <ContactSection />
       <Footer />
     </div>
