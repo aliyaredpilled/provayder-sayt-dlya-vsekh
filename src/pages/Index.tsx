@@ -13,7 +13,7 @@ import CustomerReviews from "@/components/CustomerReviews";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-200/90 via-sky-100/80 to-white/90">
+    <div className="min-h-screen bg-sky-50">
       <NavBar />
       <Hero />
       <PromoBanners />
