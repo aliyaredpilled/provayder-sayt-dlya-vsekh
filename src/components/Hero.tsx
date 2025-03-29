@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-b from-skynet-blue/5 to-white/80 backdrop-blur-sm overflow-hidden">
+    <section className="pt-32 pb-20 bg-transparent backdrop-blur-sm overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
@@ -56,8 +56,8 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-skynet-blue/20 rounded-full filter blur-3xl"></div>
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-skynet-orange/15 rounded-full filter blur-3xl"></div>
+            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-skynet-blue/30 rounded-full filter blur-3xl"></div>
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-skynet-orange/20 rounded-full filter blur-3xl"></div>
           </div>
         </div>
         
