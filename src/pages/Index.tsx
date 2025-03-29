@@ -13,7 +13,7 @@ import CustomerReviews from "@/components/CustomerReviews";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-sky-50">
       <NavBar />
       <Hero />
       <PromoBanners />

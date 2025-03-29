@@ -48,7 +48,7 @@ const ReviewCard = ({ review, index }: { review: typeof reviews[0], index: numbe
   
   return (
     <div 
-      className="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up"
+      className="bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up border border-skynet-blue/10"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="flex items-center mb-4">
@@ -98,7 +98,7 @@ const ReviewCard = ({ review, index }: { review: typeof reviews[0], index: numbe
 
 const CustomerReviews = () => {
   return (
-    <section className="py-20 bg-skynet-gray-light/30">
+    <section className="py-20 bg-gradient-to-b from-sky-100/70 to-white/80">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">

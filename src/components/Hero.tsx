@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-b from-skynet-gray-light to-white overflow-hidden">
+    <section className="pt-32 pb-20 bg-gradient-to-b from-skynet-blue/5 to-white/80 backdrop-blur-sm overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
@@ -28,7 +28,7 @@ const Hero = () => {
               </Link>
               <Link 
                 to="/services" 
-                className="border border-skynet-blue text-skynet-blue font-medium px-8 py-3 rounded-full hover:bg-skynet-blue/5 transition-all flex items-center justify-center"
+                className="bg-white/80 backdrop-blur-sm text-skynet-blue font-medium px-8 py-3 rounded-full hover:bg-skynet-blue/5 transition-all flex items-center justify-center border border-skynet-blue/20"
               >
                 Наши услуги <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -56,12 +56,12 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-skynet-blue/10 rounded-full filter blur-3xl"></div>
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-skynet-orange/10 rounded-full filter blur-3xl"></div>
+            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-skynet-blue/20 rounded-full filter blur-3xl"></div>
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-skynet-orange/15 rounded-full filter blur-3xl"></div>
           </div>
         </div>
         
-        <div className="mt-16 pt-8 border-t border-gray-200">
+        <div className="mt-16 pt-8 border-t border-skynet-blue/10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-skynet-blue">99.9%</p>

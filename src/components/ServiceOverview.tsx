@@ -1,3 +1,4 @@
+
 import { WifiIcon, Tv, Phone, Cloud, Shield, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -73,7 +74,7 @@ const ServiceOverview = () => {
           {services.map((service, index) => (
             <div 
               key={service.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100 animate-fade-in-up"
+              className="bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`${service.color} w-14 h-14 rounded-lg flex items-center justify-center text-white mb-5`}>
