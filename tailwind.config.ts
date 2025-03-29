@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -34,9 +33,9 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				skynet: {
 					blue: {
-						DEFAULT: '#0A84FF',
-						dark: '#0066CC',
-						light: '#5AC8FA',
+						DEFAULT: 'rgb(42,110,182)',
+						dark: '#1a5592',
+						light: '#5a97d0',
 					},
 					gray: {
 						DEFAULT: '#8E8E93',
@@ -185,17 +184,17 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'speed-gradient': 'linear-gradient(90deg, #0A84FF, #5AC8FA)',
+				'speed-gradient': 'linear-gradient(90deg, rgb(42,110,182), #5A97D0)',
 				'orange-gradient': 'linear-gradient(90deg, #FF9500, #F97316)',
-				'blue-purple-gradient': 'linear-gradient(135deg, #0A84FF, #9B87F5)',
-				'blue-green-gradient': 'linear-gradient(135deg, #0A84FF, #34C759)',
+				'blue-purple-gradient': 'linear-gradient(135deg, rgb(42,110,182), #9B87F5)',
+				'blue-green-gradient': 'linear-gradient(135deg, rgb(42,110,182), #34C759)',
 				'orange-yellow-gradient': 'linear-gradient(135deg, #FF9500, #FFCC00)',
 			},
 			boxShadow: {
 				'glow': '0 0 20px 5px rgba(249, 115, 22, 0.2)',
 				'card': '0 4px 20px rgba(0, 0, 0, 0.05)',
 				'orange-glow': '0 0 20px rgba(249, 115, 22, 0.3)',
-				'blue-glow': '0 0 20px rgba(10, 132, 255, 0.3)',
+				'blue-glow': '0 0 20px rgba(42, 110, 182, 0.3)',
 				'floating': '0 10px 25px -3px rgba(0, 0, 0, 0.1)',
 				'intense': '0 20px 25px -5px rgba(0, 0, 0, 0.2)',
 			},
