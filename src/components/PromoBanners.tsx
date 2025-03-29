@@ -10,7 +10,7 @@ const promos = [
     bgImage: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
     buttonText: 'Подключиться',
     expireDate: '31.12.2023',
-    color: 'from-skynet-blue/80 to-skynet-blue-light/90'
+    color: 'from-skynet-blue/90 to-skynet-blue-light/90'
   },
   {
     id: 'promo2',
@@ -19,7 +19,7 @@ const promos = [
     bgImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
     buttonText: 'Узнать детали',
     expireDate: '15.12.2023',
-    color: 'from-skynet-orange/80 to-amber-500/90'
+    color: 'from-skynet-orange/90 to-amber-500/90'
   },
   {
     id: 'promo3',
@@ -28,13 +28,13 @@ const promos = [
     bgImage: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1744&q=80',
     buttonText: 'Подключить ТВ',
     expireDate: '01.12.2023',
-    color: 'from-purple-600/80 to-indigo-700/90'
+    color: 'from-purple-600/90 to-indigo-700/90'
   }
 ];
 
 const PromoBanners = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-white/90 to-sky-100/70">
+    <section className="py-16 bg-transparent backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {promos.map((promo) => (
