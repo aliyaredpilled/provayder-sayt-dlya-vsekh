@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const ReferralPromo = () => {
   return (
-    <section className="py-12 relative overflow-hidden">
+    <section className="py-12 relative overflow-hidden bg-gradient-to-b from-sky-50 to-white">
       <div className="container mx-auto px-4">
         <div className="bg-gradient-to-r from-skynet-blue to-skynet-blue-light rounded-2xl overflow-hidden relative">
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-skynet-orange opacity-20 rounded-full blur-3xl"></div>
@@ -61,8 +61,8 @@ const ReferralPromo = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-skynet-orange/30 to-skynet-orange-bright/30 rounded-full blur-3xl"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1557682257-2f9c37a3a5f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1429&q=80"
-                  alt="Friends enjoying internet"
+                  src="/lovable-uploads/7b311004-ad44-4e56-9a36-e4cdcb849a5f.png"
+                  alt="Подарок: интернет и телевидение"
                   className="relative z-10 rounded-2xl shadow-xl max-w-xs"
                 />
               </div>

@@ -31,7 +31,7 @@ const latestNews = [
 
 const LatestNews = () => {
   return (
-    <section className="py-16 bg-white relative">
+    <section className="py-16 bg-gradient-to-b from-sky-100 via-sky-50 to-white relative">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-10">
           <div>
@@ -52,7 +52,7 @@ const LatestNews = () => {
           {latestNews.map((post) => (
             <div 
               key={post.id}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all"
+              className="bg-white/80 backdrop-blur-sm rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all"
             >
               <img 
                 src={post.image} 

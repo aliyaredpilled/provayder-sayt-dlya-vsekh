@@ -19,12 +19,12 @@ const Index = () => {
       <NavBar />
       <Hero />
       <PromoBanners />
+      <LatestNews />
       <ReferralPromo />
       <ServiceOverview />
       <SpeedComparison />
       <PricingPlans />
       <Benefits />
-      <LatestNews />
       <CustomerReviews />
       <FAQ />
       <ContactSection />
