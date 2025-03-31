@@ -21,7 +21,7 @@ const SpeedComparison = () => {
         </div>
 
         {/* Speed comparison chart */}
-        <div className="h-[400px] w-full mb-10 px-4 animate-fade-in-up">
+        <div className="h-[450px] w-full mb-16 px-4 animate-fade-in-up"> {/* Increased height and bottom margin */}
           <ChartContainer className="bg-gradient-to-br from-white to-sky-50 rounded-xl p-8 shadow-md" config={{
             'standard': { color: '#8E8E93' },
             'fast': { color: '#FF9500' },
@@ -33,9 +33,9 @@ const SpeedComparison = () => {
                 top: 30,
                 right: 30,
                 left: 20,
-                bottom: 30,
+                bottom: 50, // Increased bottom margin
               }}
-              barSize={80}
+              barSize={100} // Increased bar size
             >
               <defs>
                 {speedData.map((entry, index) => (
@@ -47,8 +47,8 @@ const SpeedComparison = () => {
                     x2="0" 
                     y2="1"
                   >
-                    <stop offset="0%" stopColor={entry.color} stopOpacity={0.95} />
-                    <stop offset="95%" stopColor={entry.color} stopOpacity={0.7} />
+                    <stop offset="0%" stopColor={entry.color} stopOpacity={1} />
+                    <stop offset="95%" stopColor={entry.color} stopOpacity={0.8} />
                   </linearGradient>
                 ))}
               </defs>
@@ -83,7 +83,7 @@ const SpeedComparison = () => {
                 animationDuration={1500}
                 animationBegin={300}
                 animationEasing="ease-out"
-                radius={[15, 15, 0, 0]}
+                radius={[20, 20, 0, 0]} // Increased radius for more rounded corners
               >
                 {
                   speedData.map((entry, index) => (
@@ -91,6 +91,7 @@ const SpeedComparison = () => {
                       key={`bar-${index}`} 
                       fill={`url(#colorGradient${index})`}
                       className="drop-shadow-lg transition-all duration-300 hover:filter hover:brightness-110 cursor-pointer"
+                      style={{ filter: 'drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1))' }}
                     />
                   ))
                 }
@@ -100,7 +101,7 @@ const SpeedComparison = () => {
                   fill="#555" 
                   fontSize={16}
                   fontWeight="600"
-                  offset={20}
+                  offset={30} // Increased offset
                   formatter={(value: string) => [`${value}`]}
                 />
               </Bar>
