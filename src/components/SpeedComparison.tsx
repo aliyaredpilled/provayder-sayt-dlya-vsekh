@@ -1,4 +1,3 @@
-
 import { ChartContainer } from '@/components/ui/chart';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LabelList } from 'recharts';
 import { speedData } from '@/lib/speedData';
@@ -21,7 +20,7 @@ const SpeedComparison = () => {
         </div>
 
         {/* Speed comparison chart */}
-        <div className="h-[450px] w-full mb-16 px-4 animate-fade-in-up"> {/* Increased height and bottom margin */}
+        <div className="h-[500px] w-full mb-24 px-4 animate-fade-in-up"> {/* Increased height and bottom margin significantly */}
           <ChartContainer className="bg-gradient-to-br from-white to-sky-50 rounded-xl p-8 shadow-md" config={{
             'standard': { color: '#8E8E93' },
             'fast': { color: '#FF9500' },
@@ -33,9 +32,9 @@ const SpeedComparison = () => {
                 top: 30,
                 right: 30,
                 left: 20,
-                bottom: 50, // Increased bottom margin
+                bottom: 70, // Increased bottom margin even more
               }}
-              barSize={100} // Increased bar size
+              barSize={100}
             >
               <defs>
                 {speedData.map((entry, index) => (
@@ -83,7 +82,7 @@ const SpeedComparison = () => {
                 animationDuration={1500}
                 animationBegin={300}
                 animationEasing="ease-out"
-                radius={[20, 20, 0, 0]} // Increased radius for more rounded corners
+                radius={[20, 20, 0, 0]}
               >
                 {
                   speedData.map((entry, index) => (
@@ -101,7 +100,7 @@ const SpeedComparison = () => {
                   fill="#555" 
                   fontSize={16}
                   fontWeight="600"
-                  offset={30} // Increased offset
+                  offset={40} // Increased offset for labels
                   formatter={(value: string) => [`${value}`]}
                 />
               </Bar>
