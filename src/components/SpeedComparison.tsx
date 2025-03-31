@@ -1,10 +1,11 @@
 
+import { ChartContainer } from '@/components/ui/chart';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LabelList } from 'recharts';
 import { speedData } from '@/lib/speedData';
 
 const SpeedComparison = () => {
   return (
-    <section id="speed-comparison" className="py-12 bg-white">
+    <section id="speed-comparison" className="py-12 bg-gradient-to-b from-sky-50 to-white">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
@@ -21,17 +22,20 @@ const SpeedComparison = () => {
 
         {/* Speed comparison chart */}
         <div className="h-[400px] w-full mb-10 px-4 animate-fade-in-up">
-          <ResponsiveContainer width="100%" height="100%">
+          <ChartContainer className="bg-gradient-to-br from-white to-sky-50 rounded-xl p-8 shadow-md" config={{
+            'standard': { color: '#8E8E93' },
+            'fast': { color: '#FF9500' },
+            'ultrafast': { color: '#0A84FF' },
+          }}>
             <BarChart
               data={speedData}
               margin={{
-                top: 20,
+                top: 30,
                 right: 30,
                 left: 20,
                 bottom: 30,
               }}
-              barSize={60}
-              className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-4 shadow-sm"
+              barSize={80}
             >
               <defs>
                 {speedData.map((entry, index) => (
@@ -43,18 +47,19 @@ const SpeedComparison = () => {
                     x2="0" 
                     y2="1"
                   >
-                    <stop offset="0%" stopColor={entry.color} stopOpacity={0.9} />
-                    <stop offset="95%" stopColor={entry.color} stopOpacity={0.6} />
+                    <stop offset="0%" stopColor={entry.color} stopOpacity={0.95} />
+                    <stop offset="95%" stopColor={entry.color} stopOpacity={0.7} />
                   </linearGradient>
                 ))}
               </defs>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e0e0e0" />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e0e0e0" opacity={0.5} />
               <XAxis 
                 dataKey="name" 
                 scale="point" 
-                padding={{ left: 50, right: 50 }} 
-                tick={{ fill: '#555', fontSize: 14 }}
+                padding={{ left: 60, right: 60 }} 
+                tick={{ fill: '#555', fontSize: 15, fontWeight: 500 }}
                 axisLine={{ stroke: '#e0e0e0' }}
+                tickLine={false}
               />
               <YAxis 
                 hide 
@@ -62,30 +67,30 @@ const SpeedComparison = () => {
               />
               <Tooltip
                 contentStyle={{
-                  borderRadius: '10px',
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+                  borderRadius: '16px',
+                  boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
                   border: 'none',
-                  padding: '14px',
+                  padding: '16px',
                   backgroundColor: 'rgba(255, 255, 255, 0.95)',
                 }}
                 formatter={(value: number) => [`${value} Мбит/с`, 'Скорость']}
-                labelStyle={{ fontWeight: 'bold', marginBottom: '8px', color: '#333' }}
+                labelStyle={{ fontWeight: 'bold', marginBottom: '10px', color: '#333', fontSize: '15px' }}
                 cursor={{ fill: 'rgba(200, 200, 200, 0.1)' }}
               />
               <Bar 
                 dataKey="value" 
                 isAnimationActive={true}
-                animationDuration={1200}
+                animationDuration={1500}
+                animationBegin={300}
                 animationEasing="ease-out"
+                radius={[15, 15, 0, 0]}
               >
                 {
                   speedData.map((entry, index) => (
                     <rect 
                       key={`bar-${index}`} 
-                      fill={`url(#colorGradient${index})`} 
-                      rx={8} 
-                      ry={8} 
-                      className="drop-shadow-sm transition-all duration-300 hover:filter hover:brightness-105"
+                      fill={`url(#colorGradient${index})`}
+                      className="drop-shadow-lg transition-all duration-300 hover:filter hover:brightness-110 cursor-pointer"
                     />
                   ))
                 }
@@ -93,14 +98,14 @@ const SpeedComparison = () => {
                   dataKey="description" 
                   position="top" 
                   fill="#555" 
-                  fontSize={14}
+                  fontSize={16}
                   fontWeight="600"
-                  offset={15}
+                  offset={20}
                   formatter={(value: string) => [`${value}`]}
                 />
               </Bar>
             </BarChart>
-          </ResponsiveContainer>
+          </ChartContainer>
         </div>
 
         {/* Speed details cards */}
