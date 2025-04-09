@@ -118,7 +118,7 @@ const PricingPlans = () => {
           <p className="text-gray-500 text-sm mb-4">
             * Стоимость подключения - 5000₽. Возможна аренда роутера за 150₽/месяц или покупка за 3500₽
           </p>
-          <a href="#" className="text-skynet-blue font-medium inline-flex items-center hover:underline">
+          <a href="/tariffs" className="text-skynet-blue font-medium inline-flex items-center hover:underline">
             Смотреть все тарифы и опции
             <ArrowRight className="ml-1 h-4 w-4" />
           </a>
