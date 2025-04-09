@@ -4,7 +4,8 @@ import Footer from "@/components/Footer";
 import PricingPlans from "@/components/PricingPlans";
 import SpeedComparison from "@/components/SpeedComparison";
 import ContactSection from "@/components/ContactSection";
-import { CheckCircle2, ArrowDown } from 'lucide-react';
+import { CheckCircle2, ArrowDown, Wifi } from 'lucide-react';
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
 
 const Tariffs = () => {
   return (
@@ -21,7 +22,7 @@ const Tariffs = () => {
               Выгодные тарифы для любых потребностей
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Выберите оптимальный тарифный план для вашего дома. Все тарифы включают безлимитный интернет и бесплатное подключение.
+              Выберите оптимальный тарифный план для вашего дома. Подключение по оптоволоконной сети XG-Pon, все тарифы включают безлимитный интернет.
             </p>
             <div className="flex justify-center">
               <button className="flex items-center text-skynet-blue font-medium animate-bounce">
@@ -40,54 +41,68 @@ const Tariffs = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Сравнение тарифных планов</h2>
             
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-skynet-gray-light">
-                    <th className="py-4 px-6 text-left text-gray-900 font-semibold">Характеристики</th>
-                    <th className="py-4 px-6 text-center text-gray-900 font-semibold">Стандарт</th>
-                    <th className="py-4 px-6 text-center text-gray-900 font-semibold">Быстрый</th>
-                    <th className="py-4 px-6 text-center text-gray-900 font-semibold">Сверхскоростной</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-6 text-gray-700">Скорость</td>
-                    <td className="py-4 px-6 text-center text-gray-900">100 Мбит/с</td>
-                    <td className="py-4 px-6 text-center text-gray-900">1 Гбит/с</td>
-                    <td className="py-4 px-6 text-center text-gray-900">10 Гбит/с</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 bg-gray-50">
-                    <td className="py-4 px-6 text-gray-700">Ежемесячная плата</td>
-                    <td className="py-4 px-6 text-center text-gray-900">499 ₽</td>
-                    <td className="py-4 px-6 text-center text-gray-900">999 ₽</td>
-                    <td className="py-4 px-6 text-center text-gray-900">2499 ₽</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-6 text-gray-700">Wi-Fi роутер</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Аренда</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Аренда Wi-Fi 6</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Wi-Fi 6E в подарок</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 bg-gray-50">
-                    <td className="py-4 px-6 text-gray-700">Техническая поддержка</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Базовая</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Приоритетная</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Премиум 24/7</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-6 text-gray-700">Статический IP</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Дополнительно</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Дополнительно</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Включено</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 bg-gray-50">
-                    <td className="py-4 px-6 text-gray-700">Подключение</td>
-                    <td className="py-4 px-6 text-center text-gray-900">1500 ₽</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Бесплатно</td>
-                    <td className="py-4 px-6 text-center text-gray-900">Бесплатно</td>
-                  </tr>
-                </tbody>
-              </table>
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-skynet-gray-light">
+                    <TableHead className="text-gray-900 font-semibold">Характеристики</TableHead>
+                    <TableHead className="text-center text-gray-900 font-semibold">50 Мбит/с</TableHead>
+                    <TableHead className="text-center text-gray-900 font-semibold">100 Мбит/с</TableHead>
+                    <TableHead className="text-center text-gray-900 font-semibold">500 Мбит/с</TableHead>
+                    <TableHead className="text-center text-gray-900 font-semibold">900 Мбит/с</TableHead>
+                    <TableHead className="text-center text-gray-900 font-semibold">2 Гбит/с</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="text-gray-700">Скорость</TableCell>
+                    <TableCell className="text-center text-gray-900">50 Мбит/с</TableCell>
+                    <TableCell className="text-center text-gray-900">100 Мбит/с</TableCell>
+                    <TableCell className="text-center text-gray-900">500 Мбит/с</TableCell>
+                    <TableCell className="text-center text-gray-900">900 Мбит/с</TableCell>
+                    <TableCell className="text-center text-gray-900">2 Гбит/с</TableCell>
+                  </TableRow>
+                  <TableRow className="bg-gray-50">
+                    <TableCell className="text-gray-700">Ежемесячная плата</TableCell>
+                    <TableCell className="text-center text-gray-900">1000 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">1200 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">2000 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">2400 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">3500 ₽</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="text-gray-700">Wi-Fi роутер</TableCell>
+                    <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
+                    <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
+                    <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
+                    <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
+                    <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
+                  </TableRow>
+                  <TableRow className="bg-gray-50">
+                    <TableCell className="text-gray-700">Техническая поддержка</TableCell>
+                    <TableCell className="text-center text-gray-900">Базовая</TableCell>
+                    <TableCell className="text-center text-gray-900">Базовая</TableCell>
+                    <TableCell className="text-center text-gray-900">Приоритетная</TableCell>
+                    <TableCell className="text-center text-gray-900">Приоритетная</TableCell>
+                    <TableCell className="text-center text-gray-900">Премиум 24/7</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="text-gray-700">Подключение</TableCell>
+                    <TableCell className="text-center text-gray-900">5000 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">5000 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">5000 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">5000 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">5000 ₽</TableCell>
+                  </TableRow>
+                  <TableRow className="bg-gray-50">
+                    <TableCell className="text-gray-700">Технология</TableCell>
+                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
+                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
+                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
+                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
+                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
             </div>
           </div>
         </div>
@@ -101,6 +116,11 @@ const Tariffs = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Часто задаваемые вопросы о тарифах</h2>
             
             <div className="space-y-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Что такое технология XG-PON?</h3>
+                <p className="text-gray-700">XG-PON (10-Gigabit-capable Passive Optical Network) - это технология пассивной оптической сети, обеспечивающая скорость передачи данных до 10 Гбит/с. Это более современный стандарт, чем GPON, который позволяет достигать высоких скоростей интернета для домашнего использования.</p>
+              </div>
+              
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Могу ли я менять тарифный план?</h3>
                 <p className="text-gray-700">Да, вы можете изменить свой тарифный план в любое время через личный кабинет или обратившись в нашу службу поддержки. Изменение тарифа происходит с начала следующего расчетного периода.</p>
@@ -132,8 +152,8 @@ const Tariffs = () => {
               </div>
               <div className="flex flex-col items-center">
                 <CheckCircle2 className="h-12 w-12 text-skynet-orange mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Бесплатное подключение</h3>
-                <p className="text-white/80">На тарифах от 1 Гбит/с подключение бесплатно</p>
+                <h3 className="text-xl font-semibold mb-2">Технология XG-PON</h3>
+                <p className="text-white/80">Современное оптоволоконное подключение</p>
               </div>
               <div className="flex flex-col items-center">
                 <CheckCircle2 className="h-12 w-12 text-skynet-orange mb-4" />
