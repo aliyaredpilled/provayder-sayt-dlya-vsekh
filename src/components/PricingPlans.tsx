@@ -43,13 +43,13 @@ const PricingPlans = () => {
           </Card>
         </div>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
           {pricingPlans.map((plan, index) => (
             <div 
               key={plan.id}
               className={`relative rounded-2xl bg-white transition-all duration-300 ${
                 plan.isPopular 
-                  ? 'shadow-xl ring-2 ring-skynet-blue md:-my-4 md:py-4 scale-105' 
+                  ? 'shadow-xl ring-2 ring-skynet-blue md:-my-4 md:py-6 scale-105' 
                   : 'shadow-lg hover:shadow-xl'
               } overflow-hidden animate-fade-in-up`}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -62,9 +62,9 @@ const PricingPlans = () => {
                 </div>
               )}
               
-              <div className="p-4">
+              <div className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{plan.name}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-1">{plan.name}</h3>
                   <div 
                     className="inline-block h-1 w-10 rounded"
                     style={{ backgroundColor: plan.color }}
@@ -73,7 +73,7 @@ const PricingPlans = () => {
                 
                 <div className="mb-5">
                   <div className="flex items-end mb-2">
-                    <span className="text-3xl font-bold">{plan.price}</span>
+                    <span className="text-4xl font-bold">{plan.price}</span>
                     <span className="text-gray-500 ml-2">/ {plan.period}</span>
                   </div>
                   <div 
@@ -84,23 +84,23 @@ const PricingPlans = () => {
                   </div>
                 </div>
                 
-                <ul className="space-y-2 mb-6 min-h-[180px]">
+                <ul className="space-y-3 mb-8 min-h-[200px]">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
                       <div 
                         className="mr-2 p-1 rounded-full text-white mt-0.5 flex-shrink-0"
                         style={{ backgroundColor: plan.color }}
                       >
-                        <Check className="h-2.5 w-2.5" />
+                        <Check className="h-3 w-3" />
                       </div>
-                      <span className="text-gray-600 text-xs">{feature}</span>
+                      <span className="text-gray-600 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
                 <a 
                   href="#contact"
-                  className={`w-full rounded-full py-2.5 px-4 text-center font-medium transition-all flex items-center justify-center ${
+                  className={`w-full rounded-full py-3 px-4 text-center font-medium transition-all flex items-center justify-center ${
                     plan.isPopular 
                       ? 'bg-skynet-blue hover:bg-skynet-blue-dark text-white' 
                       : 'bg-white text-gray-800 border border-gray-200 hover:bg-gray-50'
