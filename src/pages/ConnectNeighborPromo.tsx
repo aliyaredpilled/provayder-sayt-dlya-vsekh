@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -67,38 +66,65 @@ const ConnectNeighborPromo = () => {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
-              Как работает акция
+            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+              Как работает акция?
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-8 mt-8">
-              <div className="text-center">
-                <div className="bg-skynet-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  1
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <div className="text-center mb-4">
+                  <div className="bg-skynet-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    1
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Вариант 1</h3>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Расскажите соседу</h3>
-                <p className="text-gray-600">
-                  Поделитесь информацией о наших услугах с друзьями или соседями
-                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <CheckCircle2 className="text-green-500 mt-1 mr-3 flex-shrink-0" size={20} />
+                    <p className="text-gray-700">Вы получаете 2 месяца бесплатного интернета</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle2 className="text-green-500 mt-1 mr-3 flex-shrink-0" size={20} />
+                    <p className="text-gray-700">Ваш сосед подключается на обычных условиях</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle2 className="text-green-500 mt-1 mr-3 flex-shrink-0" size={20} />
+                    <p className="text-gray-700">Максимальная выгода для вас</p>
+                  </div>
+                </div>
               </div>
               
-              <div className="text-center">
-                <div className="bg-skynet-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  2
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <div className="text-center mb-4">
+                  <div className="bg-skynet-orange text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    2
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Вариант 2</h3>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Сосед подключается</h3>
-                <p className="text-gray-600">
-                  Ваш сосед оформляет подключение к интернету SKYNET
-                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <CheckCircle2 className="text-green-500 mt-1 mr-3 flex-shrink-0" size={20} />
+                    <p className="text-gray-700">Вы получаете 1 месяц бесплатного интернета</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle2 className="text-green-500 mt-1 mr-3 flex-shrink-0" size={20} />
+                    <p className="text-gray-700">Ваш сосед также получает 1 месяц бесплатно</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle2 className="text-green-500 mt-1 mr-3 flex-shrink-0" size={20} />
+                    <p className="text-gray-700">Взаимная выгода для обеих сторон</p>
+                  </div>
+                </div>
               </div>
-              
-              <div className="text-center">
-                <div className="bg-skynet-orange text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  3
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Получаете скидку</h3>
-                <p className="text-gray-600">
-                  Вы оба получаете скидку 50% на 3 месяца
+            </div>
+            
+            <div className="text-center">
+              <p className="text-lg text-gray-600 mb-4">
+                Выберите наиболее подходящий вариант при оформлении заявки
+              </p>
+              <div className="bg-skynet-blue/5 border border-skynet-blue/20 rounded-lg p-4 inline-block">
+                <p className="text-skynet-blue font-medium">
+                  Условия акции обсуждаются с менеджером индивидуально
                 </p>
               </div>
             </div>
