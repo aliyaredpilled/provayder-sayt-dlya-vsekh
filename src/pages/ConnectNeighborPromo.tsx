@@ -1,3 +1,4 @@
+
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -9,7 +10,7 @@ const ConnectNeighborPromo = () => {
     <div className="min-h-screen bg-white">
       <NavBar />
       
-      <section className="pt-20 pb-16 bg-gradient-to-b from-skynet-blue to-skynet-blue-light text-white">
+      <section className="pt-32 pb-16 bg-gradient-to-b from-skynet-blue to-skynet-blue-light text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -18,9 +19,11 @@ const ConnectNeighborPromo = () => {
             <p className="text-xl text-white/90 mb-6">
               Для всех абонентов предоставим 2 месяца бесплатного Интернета Вам, либо по 1 месяцу Вам и Вашему соседу.
             </p>
-            <p className="text-lg text-white/80 mb-8">
-              Акция действует только для частного сектора
-            </p>
+            <div className="flex justify-center">
+              <span className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-lg font-medium px-4 py-2 rounded-full">
+                Акция действует только для частного сектора
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -28,7 +31,7 @@ const ConnectNeighborPromo = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Как работает акция</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Как работает акция</h2>
             
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div className="bg-skynet-gray-light/30 rounded-2xl p-8">
@@ -109,7 +112,6 @@ const ConnectNeighborPromo = () => {
         </div>
       </section>
 
-      <ContactSection />
       <Footer />
     </div>
   );
