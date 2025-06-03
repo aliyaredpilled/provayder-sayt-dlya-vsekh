@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -44,10 +43,10 @@ export default {
 						dark: '#48484A',
 					},
 					orange: {
-						DEFAULT: '#E04400',
+						DEFAULT: '#FF7A00',
 						light: '#FF8A50',
-						bright: '#E04400',
-						dark: '#C73E00',
+						bright: '#FF7A00',
+						dark: '#E56900',
 					},
 					purple: {
 						DEFAULT: '#9B87F5',
@@ -186,15 +185,15 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'speed-gradient': 'linear-gradient(90deg, rgb(42,110,182), #5A97D0)',
-				'orange-gradient': 'linear-gradient(90deg, #E04400, #C73E00)',
+				'orange-gradient': 'linear-gradient(90deg, #FF7A00, #E56900)',
 				'blue-purple-gradient': 'linear-gradient(135deg, rgb(42,110,182), #9B87F5)',
 				'blue-green-gradient': 'linear-gradient(135deg, rgb(42,110,182), #34C759)',
-				'orange-yellow-gradient': 'linear-gradient(135deg, #E04400, #FFCC00)',
+				'orange-yellow-gradient': 'linear-gradient(135deg, #FF7A00, #FFCC00)',
 			},
 			boxShadow: {
-				'glow': '0 0 20px 5px rgba(224, 68, 0, 0.2)',
+				'glow': '0 0 20px 5px rgba(255, 122, 0, 0.2)',
 				'card': '0 4px 20px rgba(0, 0, 0, 0.05)',
-				'orange-glow': '0 0 20px rgba(224, 68, 0, 0.3)',
+				'orange-glow': '0 0 20px rgba(255, 122, 0, 0.3)',
 				'blue-glow': '0 0 20px rgba(42, 110, 182, 0.3)',
 				'floating': '0 10px 25px -3px rgba(0, 0, 0, 0.1)',
 				'intense': '0 20px 25px -5px rgba(0, 0, 0, 0.2)',
