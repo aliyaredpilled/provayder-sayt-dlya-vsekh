@@ -1,3 +1,4 @@
+
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -53,27 +54,6 @@ const Hero = () => {
             
             <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-skynet-blue/30 rounded-full filter blur-3xl"></div>
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-skynet-orange/20 rounded-full filter blur-3xl"></div>
-          </div>
-        </div>
-        
-        <div className="mt-16 pt-8 border-t border-skynet-blue/10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-skynet-blue">99.9%</p>
-              <p className="text-gray-600 mt-2">Надежность сети</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-skynet-blue">24/7</p>
-              <p className="text-gray-600 mt-2">Техническая поддержка</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-skynet-blue">10+</p>
-              <p className="text-gray-600 mt-2">Лет на рынке</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-skynet-blue">50K+</p>
-              <p className="text-gray-600 mt-2">Довольных клиентов</p>
-            </div>
           </div>
         </div>
       </div>

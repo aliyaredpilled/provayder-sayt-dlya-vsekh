@@ -34,14 +34,14 @@ const promos = [
 
 const PromoBanners = () => {
   return (
-    <section className="py-16 bg-transparent backdrop-blur-sm relative z-10">
+    <section className="py-8 bg-transparent backdrop-blur-sm relative z-10">
       <div className="absolute inset-0 bg-sky-100/50 backdrop-blur-sm -z-10 rounded-3xl mx-4"></div>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {promos.map((promo) => (
             <div 
               key={promo.id}
-              className="relative overflow-hidden rounded-2xl h-[400px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="relative overflow-hidden rounded-2xl h-[360px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
               <div 
                 className="absolute inset-0 bg-cover bg-center"
