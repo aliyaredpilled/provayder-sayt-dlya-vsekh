@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -12,25 +11,17 @@ const Hero = () => {
               Сверхскоростной интернет <br />
               <span className="text-skynet-orange">до 10 Гбит/с</span> для вашего дома
             </h2>
-            <p className="text-base text-gray-600 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Мы предлагаем надежные телекоммуникационные услуги для частных лиц с быстрым интернетом, цифровым ТВ и другими сервисами для вашего комфорта.
-            </p>
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <Link 
-                to="/tariffs" 
-                className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-6 py-2.5 rounded-full shadow-lg hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
-              >
-                Выбрать тариф
-              </Link>
-              <Link 
                 to="/services" 
-                className="bg-white/80 backdrop-blur-sm text-skynet-blue font-medium px-6 py-2.5 rounded-full hover:bg-skynet-blue/5 transition-all flex items-center justify-center border border-skynet-blue/20"
+                className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-6 py-2.5 rounded-full shadow-lg hover:shadow-orange-glow transition-all transform hover:-translate-y-1 flex items-center justify-center"
               >
-                Наши услуги <ArrowRight className="ml-2 h-4 w-4" />
+                Подробнее <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </div>
           <div className="md:w-1/2 relative animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
               <img 
                 src="/lovable-uploads/1b4d860d-bd94-43f4-af81-78eb4c5f70b8.png" 
