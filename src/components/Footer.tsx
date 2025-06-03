@@ -5,87 +5,87 @@ import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'luc
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Логотип и информация о компании */}
           <div>
-            <div className="mb-6">
+            <div className="mb-4">
               <img 
-                src="/lovable-uploads/704e9442-6bb2-4e95-a66d-a39c1b2f1222.png" 
+                src="/lovable-uploads/ac974cac-ec6b-417a-8f2c-894736445062.png" 
                 alt="SKYNET" 
-                className="h-10 brightness-150 contrast-150 invert" 
+                className="h-8" 
               />
             </div>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 mb-4 text-sm">
               Ваш надежный провайдер современных телекоммуникационных услуг для дома и семьи в Казани.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={20} />
+                <Facebook size={18} />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={20} />
+                <Instagram size={18} />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
+                <Twitter size={18} />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={20} />
+                <Linkedin size={18} />
               </a>
             </div>
           </div>
           
           {/* Услуги */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Услуги</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-3">Услуги</h3>
+            <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Интернет для дома</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">Интернет для дома</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Цифровое ТВ</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">Цифровое ТВ</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Телефония</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">Телефония</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Wi-Fi роутеры</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">Wi-Fi роутеры</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Все услуги</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">Все услуги</Link>
               </li>
             </ul>
           </div>
           
           {/* Контакты */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Контакты</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-3">Контакты</h3>
+            <ul className="space-y-2">
               <li className="flex items-center">
-                <Phone size={18} className="mr-3 text-skynet-blue" />
+                <Phone size={16} className="mr-2 text-skynet-blue" />
                 <div>
-                  <p className="text-gray-200">Подключение:</p>
-                  <a href="tel:+78432909294" className="text-gray-400 hover:text-white transition-colors">
+                  <p className="text-gray-200 text-xs">Подключение:</p>
+                  <a href="tel:+78432909294" className="text-gray-400 hover:text-white transition-colors text-sm">
                     +7 (843) 290-92-94
                   </a>
                 </div>
               </li>
               <li className="flex items-center">
-                <Phone size={18} className="mr-3 text-skynet-blue" />
+                <Phone size={16} className="mr-2 text-skynet-blue" />
                 <div>
-                  <p className="text-gray-200">Поддержка:</p>
-                  <a href="tel:+78435777775" className="text-gray-400 hover:text-white transition-colors">
+                  <p className="text-gray-200 text-xs">Поддержка:</p>
+                  <a href="tel:+78435777775" className="text-gray-400 hover:text-white transition-colors text-sm">
                     +7 (843) 5-777-775
                   </a>
                 </div>
               </li>
               <li className="flex items-center">
-                <MapPin size={18} className="mr-3 text-skynet-blue" />
-                <p className="text-gray-400">Казань, ул. Восход д. 23А</p>
+                <MapPin size={16} className="mr-2 text-skynet-blue" />
+                <p className="text-gray-400 text-sm">Казань, ул. Восход д. 23А</p>
               </li>
               <li className="flex items-center">
-                <Mail size={18} className="mr-3 text-skynet-blue" />
-                <a href="mailto:info@skynet.ru" className="text-gray-400 hover:text-white transition-colors">
+                <Mail size={16} className="mr-2 text-skynet-blue" />
+                <a href="mailto:info@skynet.ru" className="text-gray-400 hover:text-white transition-colors text-sm">
                   info@skynet.ru
                 </a>
               </li>
@@ -93,13 +93,13 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-gray-800 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-xs">
               © {new Date().getFullYear()} ООО "Скайнет". Все права защищены.
             </p>
-            <div className="mt-4 md:mt-0">
-              <ul className="flex space-x-6 text-sm">
+            <div className="mt-2 md:mt-0">
+              <ul className="flex space-x-4 text-xs">
                 <li>
                   <a href="#" className="text-gray-400 hover:text-white transition-colors">
                     Политика конфиденциальности

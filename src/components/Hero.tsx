@@ -4,27 +4,27 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-20 bg-transparent backdrop-blur-sm overflow-hidden">
+    <section className="pt-24 pb-12 bg-transparent backdrop-blur-sm overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up">
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4 animate-fade-in-up">
               Сверхскоростной интернет <br />
               <span className="text-skynet-orange">до 10 Гбит/с</span> для вашего дома
             </h2>
-            <p className="text-lg text-gray-600 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <p className="text-base text-gray-600 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               Мы предлагаем надежные телекоммуникационные услуги для частных лиц с быстрым интернетом, цифровым ТВ и другими сервисами для вашего комфорта.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <Link 
                 to="/tariffs" 
-                className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
+                className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-6 py-2.5 rounded-full shadow-lg hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
               >
                 Выбрать тариф
               </Link>
               <Link 
                 to="/services" 
-                className="bg-white/80 backdrop-blur-sm text-skynet-blue font-medium px-8 py-3 rounded-full hover:bg-skynet-blue/5 transition-all flex items-center justify-center border border-skynet-blue/20"
+                className="bg-white/80 backdrop-blur-sm text-skynet-blue font-medium px-6 py-2.5 rounded-full hover:bg-skynet-blue/5 transition-all flex items-center justify-center border border-skynet-blue/20"
               >
                 Наши услуги <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -35,25 +35,25 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/1b4d860d-bd94-43f4-af81-78eb4c5f70b8.png" 
                 alt="Семья с ноутбуком" 
-                className="w-full h-auto max-h-[660px] object-cover brightness-125 contrast-110 saturate-115"
+                className="w-full h-auto max-h-[500px] object-cover brightness-125 contrast-110 saturate-115"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-6">
-                <div className="flex items-center bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-lg mb-4 max-w-fit">
-                  <div className="bg-skynet-orange text-white p-2 rounded-full mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-4">
+                <div className="flex items-center bg-white/95 backdrop-blur-sm p-2.5 rounded-lg shadow-lg mb-3 max-w-fit">
+                  <div className="bg-skynet-orange text-white p-1.5 rounded-full mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                   <div>
                     <p className="text-xs text-gray-600 font-medium">Скорость до</p>
-                    <p className="text-xl font-bold text-gray-900">10 Гбит/с</p>
+                    <p className="text-lg font-bold text-gray-900">10 Гбит/с</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-skynet-blue/30 rounded-full filter blur-3xl"></div>
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-skynet-orange/20 rounded-full filter blur-3xl"></div>
+            <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-skynet-blue/30 rounded-full filter blur-3xl"></div>
+            <div className="absolute -top-8 -left-8 w-32 h-32 bg-skynet-orange/20 rounded-full filter blur-3xl"></div>
           </div>
         </div>
       </div>
