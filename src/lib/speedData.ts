@@ -12,7 +12,7 @@ export const speedData = [
   {
     name: '1 Гбит/с',
     value: 1000,
-    color: '#FF9500',
+    color: '#E04400',
     description: 'Быстрый',
     downloadTime4K: '40-45 секунд',
     downloadTimeGame: '~6 минут',
@@ -66,7 +66,7 @@ export const pricingPlans = [
     speed: '500 Мбит/с',
     price: '2000 ₽',
     period: 'месяц',
-    color: '#FF9500',
+    color: '#E04400',
     features: [
       'Безлимитный интернет',
       'Подключение по XG-Pon',
@@ -82,7 +82,7 @@ export const pricingPlans = [
     speed: '900 Мбит/с',
     price: '2400 ₽',
     period: 'месяц',
-    color: '#FF9500',
+    color: '#E04400',
     features: [
       'Безлимитный интернет',
       'Подключение по XG-Pon',
