@@ -1,9 +1,8 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Gift, Calendar, Phone } from 'lucide-react';
+import { CheckCircle2, Phone } from 'lucide-react';
 
 const ConnectNeighborPromo = () => {
   return (
@@ -13,12 +12,8 @@ const ConnectNeighborPromo = () => {
       <section className="pt-20 pb-16 bg-gradient-to-b from-skynet-blue to-skynet-blue-light text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-3 py-1 rounded-full mb-6">
-              <Gift className="h-4 w-4 mr-2" />
-              Специальная акция
-            </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Подключи соседа
+              Акция: Подключи соседа
             </h1>
             <p className="text-xl text-white/90 mb-6">
               Для всех абонентов предоставим 2 месяца бесплатного Интернета Вам, либо по 1 месяцу Вам и Вашему соседу.
@@ -26,12 +21,6 @@ const ConnectNeighborPromo = () => {
             <p className="text-lg text-white/80 mb-8">
               Акция действует только для частного сектора
             </p>
-            <div className="flex justify-center">
-              <span className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-lg font-medium px-4 py-2 rounded-full">
-                <Calendar className="h-5 w-5 mr-2" />
-                Акция действует постоянно
-              </span>
-            </div>
           </div>
         </div>
       </section>
