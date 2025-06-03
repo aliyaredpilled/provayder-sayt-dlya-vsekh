@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const promos = [
   {
     id: 'promo1',
-    title: 'Пригласи друга и получи месяц бесплатно!',
-    description: 'Пригласите друга подключиться к нашим услугам, и вы оба получите месяц интернета и IP TV совершенно бесплатно.',
+    title: 'Подключи соседа',
+    description: 'Для всех абонентов предоставим 2 месяца бесплатного Интернета Вам, либо по 1 месяцу Вам и Вашему соседу.',
     bgImage: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-    buttonText: 'Пригласить друга',
+    buttonText: 'Подключить соседа',
     expireDate: 'Постоянно',
     color: 'from-skynet-blue/90 to-skynet-blue-light/90'
   },
