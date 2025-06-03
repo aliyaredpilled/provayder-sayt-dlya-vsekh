@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const promos = [
   {
     id: 'promo1',
-    title: 'Подключи соседа',
+    title: 'Акция: Подключи соседа',
     description: 'Для всех абонентов предоставим 2 месяца бесплатного Интернета Вам, либо по 1 месяцу Вам и Вашему соседу.',
     bgImage: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
     buttonText: 'Подробнее об акции',
@@ -15,13 +15,13 @@ const promos = [
   },
   {
     id: 'promo2',
-    title: 'Роутер в подарок при подключении',
-    description: 'Получите современный Wi-Fi 6 роутер в подарок при подключении к тарифам от 100 Мбит/с.',
-    bgImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-    buttonText: 'Узнать детали',
+    title: 'Дарим 2000 ₽ на баланс при переходе от другого оператора',
+    description: 'Переходите к нам от любого другого интернет-провайдера и получайте денежный бонус на свой лицевой счет.',
+    bgImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    buttonText: 'Условия акции',
     buttonLink: '/tariffs',
-    expireDate: '15.12.2023',
-    color: 'from-skynet-orange/90 to-amber-500/90'
+    expireDate: '31.12.2024',
+    color: 'from-green-600/90 to-emerald-500/90'
   },
   {
     id: 'promo3',
