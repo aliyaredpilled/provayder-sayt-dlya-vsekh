@@ -31,16 +31,16 @@ const NavBar = () => {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled 
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-2" 
-          : "bg-transparent py-3"
+          ? "bg-white/90 backdrop-blur-md shadow-sm py-1" 
+          : "bg-transparent py-2"
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/ac974cac-ec6b-417a-8f2c-894736445062.png" 
+            src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
             alt="SKYNET" 
-            className="h-8"
+            className="h-7"
           />
         </Link>
 

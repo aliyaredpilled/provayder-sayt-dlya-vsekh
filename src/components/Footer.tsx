@@ -1,19 +1,18 @@
-
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Логотип и информация о компании */}
           <div>
             <div className="mb-4">
               <img 
-                src="/lovable-uploads/ac974cac-ec6b-417a-8f2c-894736445062.png" 
+                src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
                 alt="SKYNET" 
-                className="h-8" 
+                className="h-7" 
               />
             </div>
             <p className="text-gray-400 mb-4 text-sm">
