@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -8,13 +7,9 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <div className="flex items-center mb-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-fade-in-up">
-                <span className="text-skynet-blue">SkyNet</span>
-              </h1>
-            </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up">
-              Сверхскоростной интернет <span className="text-skynet-orange">до 10 Гбит/с</span> для вашего дома
+              Сверхскоростной интернет <br />
+              <span className="text-skynet-orange">до 10 Гбит/с</span> для вашего дома
             </h2>
             <p className="text-lg text-gray-600 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               Мы предлагаем надежные телекоммуникационные услуги для частных лиц с быстрым интернетом, цифровым ТВ и другими сервисами для вашего комфорта.
