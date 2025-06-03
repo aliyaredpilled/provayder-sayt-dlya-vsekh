@@ -10,9 +10,9 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img 
-                src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
-                alt="SKYNET" 
-                className="h-7" 
+                src="/lovable-uploads/c265ce47-f96f-432e-bfd3-90faca5428be.png" 
+                alt="SKYNET Строй" 
+                className="h-12" 
               />
             </div>
             <p className="text-gray-400 mb-4 text-sm">
