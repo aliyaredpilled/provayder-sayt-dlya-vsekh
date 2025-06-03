@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -80,7 +79,7 @@ const Contacts = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Телефоны</h3>
-                    <p className="text-gray-600 mb-2">Работаем без выходных с 9:00 до 21:00</p>
+                    <p className="text-gray-600 mb-2">Отвечаем круглосуточно</p>
                     <div>
                       <p className="text-sm text-gray-500 mb-1">Подключение:</p>
                       <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark font-medium">
@@ -88,7 +87,7 @@ const Contacts = () => {
                       </a>
                     </div>
                     <div className="mt-2">
-                      <p className="text-sm text-gray-500 mb-1">Техническая поддержка (круглосуточно):</p>
+                      <p className="text-sm text-gray-500 mb-1">Техническая поддержка:</p>
                       <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark font-medium">
                         +7 (843) 5-777-775
                       </a>
@@ -124,7 +123,7 @@ const Contacts = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Адрес офиса</h3>
-                    <p className="text-gray-600 mb-2">Время работы: Пн-Пт с 9:00 до 19:00, Сб с 10:00 до 17:00</p>
+                    <p className="text-gray-600 mb-2">Пн-Пт: 8:00-18:00, Сб: 8:00-13:00</p>
                     <address className="not-italic text-gray-700">
                       г. Казань, ул. Восход д. 23А
                     </address>

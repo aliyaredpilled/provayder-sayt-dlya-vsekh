@@ -1,4 +1,3 @@
-
 import { useRef } from 'react';
 import { Phone, Mail, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -104,11 +103,11 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Режим работы</h3>
-                    <p className="text-gray-600 mb-1">Отдел продаж:</p>
-                    <p className="text-gray-800">Пн-Пт: 9:00-20:00</p>
-                    <p className="text-gray-800">Сб: 10:00-18:00</p>
-                    <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
-                    <p className="text-gray-800">24/7, без выходных</p>
+                    <p className="text-gray-600 mb-1">Офис:</p>
+                    <p className="text-gray-800">Пн-Пт: 8:00-18:00</p>
+                    <p className="text-gray-800">Сб: 8:00-13:00</p>
+                    <p className="text-gray-600 mt-2 mb-1">Отвечаем по телефону:</p>
+                    <p className="text-gray-800">Круглосуточно</p>
                   </div>
                 </div>
               </div>
