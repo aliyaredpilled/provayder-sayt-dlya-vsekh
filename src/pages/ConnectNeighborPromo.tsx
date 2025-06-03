@@ -42,6 +42,15 @@ const ConnectNeighborPromo = () => {
               Акция: Подключи соседа
             </h1>
             
+            <div className="bg-white/10 border border-white/20 rounded-lg p-6 mb-8 inline-block">
+              <h2 className="text-xl font-semibold mb-3">
+                Акция: Подключи соседа
+              </h2>
+              <p className="text-lg">
+                Для всех абонентов частного сектора предоставим 2 месяца бесплатного Интернета Вам, либо по 1 месяцу Вам и Вашему соседу.
+              </p>
+            </div>
+            
             <div className="bg-white/10 border border-white/20 rounded-lg p-4 mb-8 inline-block">
               <p className="text-lg">
                 Акция действует только для частного сектора
