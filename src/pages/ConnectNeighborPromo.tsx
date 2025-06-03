@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Users, Gift, Calendar, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const ConnectNeighborPromo = () => {
   return (
@@ -130,17 +129,11 @@ const ConnectNeighborPromo = () => {
               <p className="text-gray-700 mb-8">
                 Свяжитесь с нами любым удобным способом, и мы поможем оформить подключение для вашего соседа
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button className="bg-skynet-orange hover:bg-skynet-orange-bright text-white py-6 px-8 rounded-full shadow-lg hover:shadow-xl transition-all">
                   <Phone className="h-5 w-5 mr-2" />
                   Позвонить сейчас
                 </Button>
-                <Link 
-                  to="/contacts" 
-                  className="inline-flex items-center justify-center border-2 border-skynet-blue text-skynet-blue hover:bg-skynet-blue hover:text-white py-6 px-8 rounded-full transition-all"
-                >
-                  Оставить заявку
-                </Link>
               </div>
             </div>
           </div>
