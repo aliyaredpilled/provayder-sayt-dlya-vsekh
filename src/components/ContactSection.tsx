@@ -40,9 +40,6 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
-              Оставить заявку
-            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Подключиться просто
             </h2>
@@ -104,11 +101,11 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Режим работы</h3>
-                    <p className="text-gray-600 mb-1">Отдел продаж:</p>
-                    <p className="text-gray-800">Пн-Пт: 9:00-20:00</p>
-                    <p className="text-gray-800">Сб: 10:00-18:00</p>
-                    <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
-                    <p className="text-gray-800">24/7, без выходных</p>
+                    <p className="text-gray-600 mb-1">Офис:</p>
+                    <p className="text-gray-800">ПН-ПТ: 8:00-18:00</p>
+                    <p className="text-gray-800">СБ: 8:00-13:00</p>
+                    <p className="text-gray-600 mt-2 mb-1">Отвечаем по телефону:</p>
+                    <p className="text-gray-800">Круглосуточно</p>
                   </div>
                 </div>
               </div>
@@ -205,9 +202,9 @@ const ContactSection = () => {
                   
                   <button
                     type="submit"
-                    className="w-full bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium py-3 rounded-lg shadow-md hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
+                    className="w-full bg-gradient-to-r from-skynet-orange to-skynet-orange-bright hover:from-skynet-orange-bright hover:to-skynet-orange text-white font-medium py-3 rounded-lg shadow-md hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
                   >
-                    Оставить заявку
+                    Подключиться
                   </button>
                 </form>
               </div>
