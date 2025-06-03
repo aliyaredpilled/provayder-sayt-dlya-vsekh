@@ -1,3 +1,4 @@
+
 import { useRef } from 'react';
 import { Phone, Mail, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,18 +39,6 @@ const ContactSection = () => {
       
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
-              Оставить заявку
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Подключиться просто
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Оставьте заявку, и наш специалист свяжется с вами для уточнения деталей и подключения
-            </p>
-          </div>
-          
           <div className="grid md:grid-cols-5 gap-10">
             <div className="md:col-span-2 space-y-6">
               <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
