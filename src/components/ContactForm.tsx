@@ -31,17 +31,6 @@ const ContactForm = () => {
 
   return (
     <div className="md:col-span-3">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          <span className="bg-gradient-to-r from-skynet-blue to-skynet-orange bg-clip-text text-transparent">
-            Подключиться
-          </span> просто
-        </h2>
-        <p className="text-lg text-gray-600">
-          Наш специалист свяжется с Вами в ближайшее время
-        </p>
-      </div>
-      
       <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Оставить заявку на подключение</h3>
         
@@ -123,9 +112,9 @@ const ContactForm = () => {
           
           <button
             type="submit"
-            className="w-full bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium py-3 rounded-lg shadow-md hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
+            className="w-full bg-gradient-to-r from-skynet-orange to-skynet-orange-dark hover:from-skynet-orange-bright hover:to-skynet-orange text-white font-medium py-3 rounded-lg shadow-md hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
           >
-            Оставить заявку
+            Подключиться
           </button>
         </form>
       </div>

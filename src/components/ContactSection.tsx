@@ -12,6 +12,16 @@ const ContactSection = () => {
       
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
+          {/* Main section header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Подключиться просто
+            </h2>
+            <p className="text-lg text-gray-600">
+              Наш специалист свяжется с Вами в ближайшее время
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-5 gap-10">
             <ContactInfo />
             <ContactForm />
