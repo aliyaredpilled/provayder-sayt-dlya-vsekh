@@ -40,7 +40,7 @@ const NavBar = () => {
           <img 
             src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
             alt="SKYNET" 
-            className="h-7"
+            className="h-10"
           />
         </Link>
 
