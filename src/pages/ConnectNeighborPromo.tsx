@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -51,7 +50,7 @@ const ConnectNeighborPromo = () => {
                 </div>
               </div>
               
-              <div className="bg-skynet-orange/10 rounded-2xl p-8">
+              <div className="bg-skynet-orange/20 rounded-2xl p-8">
                 <div className="text-center">
                   <div className="bg-skynet-orange text-white rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2xl font-bold">2</span>
