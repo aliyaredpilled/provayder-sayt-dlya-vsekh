@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const promos = [
   {
     id: 'promo1',
-    title: 'Месяц интернета в подарок!',
-    description: 'Подключитесь к любому тарифу и получите месяц пользования интернетом бесплатно.',
+    title: 'Пригласи друга и получи месяц бесплатно!',
+    description: 'Пригласите друга подключиться к нашим услугам, и вы оба получите месяц интернета и IP TV совершенно бесплатно.',
     bgImage: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-    buttonText: 'Подключиться',
-    expireDate: '31.12.2023',
+    buttonText: 'Пригласить друга',
+    expireDate: 'Постоянно',
     color: 'from-skynet-blue/90 to-skynet-blue-light/90'
   },
   {
@@ -34,14 +34,14 @@ const promos = [
 
 const PromoBanners = () => {
   return (
-    <section className="py-8 bg-transparent backdrop-blur-sm relative z-10">
+    <section className="py-6 bg-transparent backdrop-blur-sm relative z-10">
       <div className="absolute inset-0 bg-sky-100/50 backdrop-blur-sm -z-10 rounded-3xl mx-4"></div>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {promos.map((promo) => (
             <div 
               key={promo.id}
-              className="relative overflow-hidden rounded-2xl h-[360px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="relative overflow-hidden rounded-2xl h-[340px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
               <div 
                 className="absolute inset-0 bg-cover bg-center"
@@ -53,7 +53,7 @@ const PromoBanners = () => {
                   <div className="text-white h-full flex flex-col">
                     <span className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full mb-4">
                       <Calendar className="h-4 w-4 mr-2" />
-                      До {promo.expireDate}
+                      {promo.expireDate}
                     </span>
                     <h2 className="text-2xl font-bold mb-4 leading-tight">{promo.title}</h2>
                     <p className="text-white/90 mb-6 flex-grow">{promo.description}</p>
