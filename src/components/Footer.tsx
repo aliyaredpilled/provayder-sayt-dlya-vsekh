@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
@@ -9,11 +10,13 @@ const Footer = () => {
           {/* Логотип и информация о компании */}
           <div>
             <div className="mb-4">
-              <img 
-                src="/lovable-uploads/c265ce47-f96f-432e-bfd3-90faca5428be.png" 
-                alt="SKYNET Строй" 
-                className="h-12" 
-              />
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 inline-block">
+                <img 
+                  src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
+                  alt="SKYNET Строй" 
+                  className="h-12" 
+                />
+              </div>
             </div>
             <p className="text-gray-400 mb-4 text-sm">
               Ваш надежный провайдер современных телекоммуникационных услуг для дома и семьи в Казани.
