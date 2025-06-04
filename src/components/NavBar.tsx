@@ -43,6 +43,19 @@ const NavBar = () => {
     }
   };
 
+  const handleConnectClick = () => {
+    if (location.pathname === '/') {
+      // На главной странице скроллим к секции "Подключиться просто"
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // На других страницах переходим на главную и потом к секции
+      window.location.href = '/#contact-section';
+    }
+  };
+
   return (
     <nav 
       className={cn(
@@ -106,12 +119,12 @@ const NavBar = () => {
           <Link to="/login" className="text-skynet-blue hover:text-skynet-blue-dark font-medium">
             Личный кабинет
           </Link>
-          <Link 
-            to="/contacts" 
+          <button 
+            onClick={handleConnectClick}
             className="bg-skynet-orange hover:bg-skynet-orange-dark text-white rounded-full px-5 py-2 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
           >
             Подключиться
-          </Link>
+          </button>
         </div>
 
         {/* Mobile menu button */}
@@ -151,12 +164,12 @@ const NavBar = () => {
             <Link to="/faq" className="block py-2 text-gray-800 hover:text-skynet-orange">Поддержка</Link>
             <Link to="/contacts" className="block py-2 text-gray-800 hover:text-skynet-orange">Контакты</Link>
             <Link to="/login" className="block py-2 text-skynet-blue font-medium">Личный кабинет</Link>
-            <Link 
-              to="/contacts" 
-              className="block bg-skynet-orange text-white rounded-lg px-4 py-3 text-center mt-4 shadow-md"
+            <button 
+              onClick={handleConnectClick}
+              className="block bg-skynet-orange text-white rounded-lg px-4 py-3 text-center mt-4 shadow-md w-full"
             >
               Подключиться
-            </Link>
+            </button>
           </div>
         </div>
       )}

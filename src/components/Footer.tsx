@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
@@ -86,9 +87,21 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="mr-2 text-skynet-blue" />
-                <a href="mailto:info@skynet.ru" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  info@skynet.ru
-                </a>
+                <div>
+                  <p className="text-gray-200 text-xs">Общие вопросы:</p>
+                  <a href="mailto:sales@skynet-kazan.com" className="text-gray-400 hover:text-white transition-colors text-sm">
+                    sales@skynet-kazan.com
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <Mail size={16} className="mr-2 text-skynet-blue" />
+                <div>
+                  <p className="text-gray-200 text-xs">Техподдержка:</p>
+                  <a href="mailto:noc@skynet-kazan.com" className="text-gray-400 hover:text-white transition-colors text-sm">
+                    noc@skynet-kazan.com
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
