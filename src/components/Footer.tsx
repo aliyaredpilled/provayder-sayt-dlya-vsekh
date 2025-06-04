@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
@@ -86,9 +87,35 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="mr-2 text-skynet-blue" />
-                <a href="mailto:info@skynet.ru" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  info@skynet.ru
-                </a>
+                <div>
+                  <p className="text-gray-200 text-xs">Для запросов:</p>
+                  <a href="mailto:sales@skynet-kazan.com" className="text-gray-400 hover:text-white transition-colors text-sm">
+                    sales@skynet-kazan.com
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <Mail size={16} className="mr-2 text-skynet-blue" />
+                <div>
+                  <p className="text-gray-200 text-xs">Техподдержка:</p>
+                  <a href="mailto:noc@skynet-kazan.com" className="text-gray-400 hover:text-white transition-colors text-sm">
+                    noc@skynet-kazan.com
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <svg className="h-4 w-4 mr-2 text-skynet-blue" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/>
+                </svg>
+                <div>
+                  <p className="text-gray-200 text-xs">Telegram-боты:</p>
+                  <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm block">
+                    Техподдержка
+                  </a>
+                  <a href="https://t.me/SkyNet_document_bot" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm block">
+                    Документы
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

@@ -1,9 +1,7 @@
-
 import { useState } from 'react';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import { Phone, Mail, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Phone, Mail, Clock, CheckCircle2 } from 'lucide-react';
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -81,11 +79,11 @@ const Contacts = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Телефон</h3>
-                    <p className="text-gray-600 mb-1">Для подключения:</p>
+                    <p className="text-gray-600 mb-1">Подключение:</p>
                     <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
                       +7 (843) 290-92-94
                     </a>
-                    <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
+                    <p className="text-gray-600 mt-2 mb-1">Поддержка:</p>
                     <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
                       +7 (843) 5-777-775
                     </a>
@@ -102,13 +100,13 @@ const Contacts = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600 mb-1">Для запросов и предложений:</p>
-                    <a href="mailto:info@skynet.ru" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
-                      info@skynet.ru
+                    <p className="text-gray-600 mb-1">Для запросов:</p>
+                    <a href="mailto:sales@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      sales@skynet-kazan.com
                     </a>
                     <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
-                    <a href="mailto:support@skynet.ru" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
-                      support@skynet.ru
+                    <a href="mailto:noc@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      noc@skynet-kazan.com
                     </a>
                   </div>
                 </div>
@@ -131,14 +129,28 @@ const Contacts = () => {
                   </div>
                 </div>
               </div>
-              
-              <div className="text-center md:text-left">
-                <Link 
-                  to="/contacts" 
-                  className="inline-flex items-center text-skynet-blue hover:text-skynet-blue-dark mt-2"
-                >
-                  Все контакты <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
+
+              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 bg-blue-500 text-white rounded-lg flex items-center justify-center">
+                      <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Telegram-боты</h3>
+                    <p className="text-gray-600 mb-1">Техподдержка:</p>
+                    <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      @skynet_kazan_supportbot
+                    </a>
+                    <p className="text-gray-600 mt-2 mb-1">Документы:</p>
+                    <a href="https://t.me/SkyNet_document_bot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      @SkyNet_document_bot
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -259,20 +271,21 @@ const Contacts = () => {
           
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Мы на карте</h3>
-            <div className="rounded-xl overflow-hidden shadow-lg h-[400px]">
-              <div style={{position:"relative", overflow:"hidden", height:"100%"}}>
-                <a href="https://yandex.ru/maps/org/skaynet/20535149244/?utm_medium=mapframe&utm_source=maps" style={{color:"#eee", fontSize:"12px", position:"absolute", top:"0px"}}>Скайнет</a>
-                <a href="https://yandex.ru/maps/43/kazan/category/internet_service_provider/184105748/?utm_medium=mapframe&utm_source=maps" style={{color:"#eee", fontSize:"12px", position:"absolute", top:"14px"}}>Интернет-провайдер в Казани</a>
-                <a href="https://yandex.ru/maps/43/kazan/category/ip_telephony/184105732/?utm_medium=mapframe&utm_source=maps" style={{color:"#eee", fontSize:"12px", position:"absolute", top:"28px"}}>IP-телефония в Казани</a>
-                <iframe 
-                  src="https://yandex.ru/map-widget/v1/?ll=49.200050%2C55.812355&mode=search&oid=20535149244&ol=biz&sctx=ZAAAAAgBEAAaKAoSCZ5eKcsQz0JAEdOgaB7A4EtAEhIJQnxgx38B9T8RARQjS%2BZY4T8iBgABAgMEBSgKOABArosGSAFqAnJ1nQHNzMw9oAEAqAEAvQGLmWMKwgEFvIX2v0yCAhvRgdC60LDQudC90LXRgiDQstC%2B0YHRhdC%2B0LSKAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=49.200050%2C55.812355&sspn=0.500944%2C0.206545&text=%D1%81%D0%BA%D0%B0%D0%B9%D0%BD%D0%B5%D1%82%20%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4&z=11.39" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
-                  loading="lazy" 
-                  title="Карта расположения офиса SKYNET"
-                ></iframe>
+            <div className="rounded-xl overflow-hidden shadow-lg h-[600px] bg-gray-100 flex items-center justify-center">
+              <div>
+                <a className="dg-widget-link text-skynet-blue hover:underline block mb-2" href="http://2gis.ru/kazan/firm/2956015537194061/center/49.071485996246345,55.8363133149806/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Казани</a>
+                <div className="dg-widget-link mb-2">
+                  <a href="http://2gis.ru/kazan/firm/2956015537194061/photos/2956015537194061/center/49.071485996246345,55.8363133149806/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos" className="text-skynet-blue hover:underline">Фотографии компании</a>
+                </div>
+                <div className="dg-widget-link mb-4">
+                  <a href="http://2gis.ru/kazan/center/49.071496,55.835867/zoom/16/routeTab/rsType/bus/to/49.071496,55.835867╎Скайнет, интернет-провайдер?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route" className="text-skynet-blue hover:underline">Найти проезд до Скайнет, интернет-провайдер</a>
+                </div>
+                <div id="dg-widget-container"></div>
+                <script src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+                <script dangerouslySetInnerHTML={{
+                  __html: `new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":55.8363133149806,"lon":49.071485996246345,"zoom":16},"opt":{"city":"kazan"},"org":[{"id":"2956015537194061"}]});`
+                }}></script>
+                <noscript style={{color:"#c00", fontSize:"16px", fontWeight:"bold"}}>Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
               </div>
             </div>
           </div>
