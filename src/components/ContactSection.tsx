@@ -1,4 +1,5 @@
 
+
 import { useRef } from 'react';
 import { Phone, Mail, Clock } from 'lucide-react';
 
@@ -227,13 +228,20 @@ const ContactSection = () => {
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Мы на карте</h3>
             <div className="rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A63739936c9e90a16eead4e6b47a11fbcd2dc24c80c0bb98c73f32e6f2bffc3de&amp;source=constructor"
-                width="100%"
-                height="400"
-                style={{ border: 'none' }}
-                title="Карта офиса SkyNet"
-              ></iframe>
+              <div style={{position: 'relative', overflow: 'hidden'}}>
+                <a href="https://yandex.ru/maps/org/skaynet/20535149244/?utm_medium=mapframe&utm_source=maps" style={{color: '#eee', fontSize: '12px', position: 'absolute', top: '0px'}}>Скайнет</a>
+                <a href="https://yandex.ru/maps/43/kazan/category/internet_service_provider/184105748/?utm_medium=mapframe&utm_source=maps" style={{color: '#eee', fontSize: '12px', position: 'absolute', top: '14px'}}>Интернет-провайдер в Казани</a>
+                <a href="https://yandex.ru/maps/43/kazan/category/ip_telephony/184105732/?utm_medium=mapframe&utm_source=maps" style={{color: '#eee', fontSize: '12px', position: 'absolute', top: '28px'}}>IP-телефония в Казани</a>
+                <iframe 
+                  src="https://yandex.ru/map-widget/v1/?ll=49.071497%2C55.835924&mode=search&oid=20535149244&ol=biz&z=14.85" 
+                  width="100%" 
+                  height="400" 
+                  frameBorder="1" 
+                  allowFullScreen={true} 
+                  style={{position: 'relative'}}
+                  title="Карта офиса SkyNet"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -243,3 +251,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
