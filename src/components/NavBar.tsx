@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,6 +16,10 @@ import {
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
+  // Определяем страницы с темным фоном, где нужен светлый навбар
+  const isDarkBackgroundPage = location.pathname === '/promo/connect-neighbor';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,13 +30,24 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Определяем стиль навбара в зависимости от страницы
+  const getNavbarStyle = () => {
+    if (isDarkBackgroundPage) {
+      return isScrolled 
+        ? "bg-white/95 backdrop-blur-md shadow-md py-1" 
+        : "bg-white/90 backdrop-blur-sm py-2";
+    } else {
+      return isScrolled 
+        ? "bg-white/90 backdrop-blur-md shadow-sm py-1" 
+        : "bg-transparent py-2";
+    }
+  };
+
   return (
     <nav 
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        isScrolled 
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-1" 
-          : "bg-transparent py-2"
+        getNavbarStyle()
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
