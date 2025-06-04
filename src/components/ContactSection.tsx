@@ -48,7 +48,7 @@ const ContactSection = () => {
           </div>
           
           <div className="grid md:grid-cols-5 gap-10">
-            <div className="md:col-span-2 space-y-6">
+            <div className="md:col-span-2 space-y-4">
               <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
                 <div className="flex">
                   <div className="flex-shrink-0">
@@ -134,10 +134,10 @@ const ContactSection = () => {
             </div>
             
             <div className="md:col-span-3">
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 h-full flex flex-col">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Оставить заявку на подключение</h3>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-5 flex-1 flex flex-col">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                       Ваше имя *
@@ -147,7 +147,7 @@ const ContactSection = () => {
                       id="name"
                       ref={nameRef}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
                       placeholder="Введите ваше имя"
                     />
                   </div>
@@ -161,7 +161,7 @@ const ContactSection = () => {
                       id="phone"
                       ref={phoneRef}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
                       placeholder="+7 (___) ___-__-__"
                     />
                   </div>
@@ -175,20 +175,20 @@ const ContactSection = () => {
                       id="address"
                       ref={addressRef}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
                       placeholder="Казань, ул. ..."
                     />
                   </div>
                   
-                  <div>
+                  <div className="flex-1">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Комментарий
                     </label>
                     <textarea 
                       id="message"
                       ref={messageRef}
-                      rows={3}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent"
+                      rows={5}
+                      className="w-full h-full min-h-[120px] px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent resize-none"
                       placeholder="Дополнительная информация или пожелания"
                     ></textarea>
                   </div>
