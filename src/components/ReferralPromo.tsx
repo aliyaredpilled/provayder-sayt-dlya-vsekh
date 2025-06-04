@@ -5,28 +5,28 @@ import { Link } from 'react-router-dom';
 
 const ReferralPromo = () => {
   return (
-    <section className="py-12 relative overflow-hidden bg-gradient-to-b from-sky-50 to-white">
+    <section className="py-8 relative overflow-hidden bg-gradient-to-b from-sky-50 to-white">
       <div className="container mx-auto px-4">
         <div className="bg-gradient-to-r from-skynet-blue to-skynet-blue-light rounded-2xl overflow-hidden relative">
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-skynet-orange opacity-20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-skynet-orange opacity-20 rounded-full blur-3xl"></div>
           
-          <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center">
-            <div className="md:w-2/3 mb-8 md:mb-0 md:pr-8">
-              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full mb-4">
+          <div className="relative z-10 p-6 md:p-8 flex flex-col md:flex-row items-center">
+            <div className="md:w-2/3 mb-6 md:mb-0 md:pr-6">
+              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full mb-3">
                 <Gift className="h-4 w-4 mr-2" />
                 Специальное предложение
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
                 Месяц интернета и IP TV бесплатно для вас и вашего друга!
               </h2>
               
-              <p className="text-white/90 text-lg mb-6">
+              <p className="text-white/90 text-lg mb-4">
                 Пригласите друга подключиться к нашим услугам по вашей рекомендации, и вы оба получите месяц интернета и цифрового телевидения совершенно бесплатно.
               </p>
               
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 mb-6">
                 <li className="flex items-start text-white/90">
                   <span className="bg-white/30 rounded-full p-1 mr-3 mt-1">
                     <Users className="h-4 w-4 text-white" />
