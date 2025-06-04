@@ -54,7 +54,7 @@ const services = [
 
 const ServiceOverview = () => {
   return (
-    <section className="py-8 bg-white">
+    <section className="py-6 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
@@ -93,7 +93,7 @@ const ServiceOverview = () => {
           ))}
         </div>
         
-        <div className="mt-10 text-center">
+        <div className="mt-8 text-center">
           <Link 
             to="/services" 
             className="inline-flex items-center justify-center bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-8 py-3 rounded-full shadow-md hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
