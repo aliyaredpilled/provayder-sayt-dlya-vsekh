@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 
 const TenGigabitSection = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="10g-internet" className="py-12 relative overflow-hidden bg-gradient-to-b from-sky-50 to-white">
       <div className="container mx-auto px-4">
@@ -48,7 +55,10 @@ const TenGigabitSection = () => {
               </ul>
               
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-skynet-orange hover:bg-skynet-orange-bright text-white py-6 px-8 rounded-full shadow-lg hover:shadow-xl transition-all">
+                <Button 
+                  onClick={scrollToContact}
+                  className="bg-skynet-orange hover:bg-skynet-orange-bright text-white py-6 px-8 rounded-full shadow-lg hover:shadow-xl transition-all"
+                >
                   Подключить 10G
                 </Button>
                 <Link to="/tariffs" className="inline-flex items-center text-white hover:text-white/80 font-medium py-2">
