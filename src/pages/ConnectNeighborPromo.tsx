@@ -1,3 +1,4 @@
+
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -98,8 +99,8 @@ const ConnectNeighborPromo = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Готовы участвовать в акции?</h3>
-              <p className="text-gray-700 mb-8 text-lg">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Готовы участвовать в акции?</h3>
+              <p className="text-gray-700 mb-6 text-lg">
                 Свяжитесь с нами любым удобным способом, и мы поможем оформить подключение для вашего соседа
               </p>
               <div className="flex justify-center">
