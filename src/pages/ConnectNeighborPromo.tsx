@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -29,31 +28,31 @@ const ConnectNeighborPromo = () => {
           </div>
         </div>
       </section>
-
+      
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Как работает акция</h2>
             
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-skynet-gray-light/30 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-6 mb-16">
+              <div className="bg-skynet-gray-light/30 rounded-2xl p-6">
                 <div className="text-center">
-                  <div className="bg-skynet-blue text-white rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <div className="bg-skynet-blue text-white rounded-full p-3 w-12 h-12 mx-auto mb-4 flex items-center justify-center">
                     <span className="text-xl font-bold">1</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">Вариант 1</h3>
+                  <h3 className="text-xl font-semibold mb-3">Вариант 1</h3>
                   <p className="text-gray-700">
                     Вы получаете <strong>2 месяца бесплатного интернета</strong>, а сосед подключается по обычным условиям
                   </p>
                 </div>
               </div>
               
-              <div className="bg-skynet-orange/20 rounded-2xl p-8">
+              <div className="bg-skynet-orange/20 rounded-2xl p-6">
                 <div className="text-center">
-                  <div className="bg-skynet-orange text-white rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <div className="bg-skynet-orange text-white rounded-full p-3 w-12 h-12 mx-auto mb-4 flex items-center justify-center">
                     <span className="text-xl font-bold">2</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">Вариант 2</h3>
+                  <h3 className="text-xl font-semibold mb-3">Вариант 2</h3>
                   <p className="text-gray-700">
                     И Вы, и Ваш сосед получаете по <strong>1 месяцу бесплатного интернета</strong>
                   </p>
