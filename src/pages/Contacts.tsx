@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import { Phone, Mail, Clock, CheckCircle2, MessageSquare, Send } from 'lucide-react';
+import { Phone, Mail, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -71,87 +72,73 @@ const Contacts = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-5 gap-10">
             <div className="md:col-span-2 space-y-6">
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Подключиться просто</h3>
-                
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <p className="text-lg text-gray-600 mb-6">
-                      Получите консультацию и оставьте заявку на подключение
-                    </p>
+              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 bg-skynet-blue text-white rounded-lg flex items-center justify-center">
+                      <Phone className="h-6 w-6" />
+                    </div>
                   </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center p-4 bg-green-50 rounded-lg border border-green-200">
-                      <Phone className="h-6 w-6 text-green-600 mr-3" />
-                      <div>
-                        <p className="font-medium text-gray-900">Подключение</p>
-                        <a href="tel:+78432909294" className="text-green-600 hover:text-green-700 font-medium">
-                          +7 (843) 290-92-94
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-200">
-                      <Phone className="h-6 w-6 text-blue-600 mr-3" />
-                      <div>
-                        <p className="font-medium text-gray-900">Поддержка</p>
-                        <a href="tel:+78435777775" className="text-blue-600 hover:text-blue-700 font-medium">
-                          +7 (843) 5-777-775
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center p-4 bg-orange-50 rounded-lg border border-orange-200">
-                      <Mail className="h-6 w-6 text-orange-600 mr-3" />
-                      <div>
-                        <p className="font-medium text-gray-900">Электронная почта</p>
-                        <a href="mailto:sales@skynet-kazan.com" className="text-orange-600 hover:text-orange-700 font-medium">
-                          sales@skynet-kazan.com
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-200">
-                      <Mail className="h-6 w-6 text-purple-600 mr-3" />
-                      <div>
-                        <p className="font-medium text-gray-900">Техническая поддержка</p>
-                        <a href="mailto:noc@skynet-kazan.com" className="text-purple-600 hover:text-purple-700 font-medium">
-                          noc@skynet-kazan.com
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center p-4 bg-sky-50 rounded-lg border border-sky-200">
-                      <MessageSquare className="h-6 w-6 text-sky-600 mr-3" />
-                      <div>
-                        <p className="font-medium text-gray-900">Поддержка через Телеграм</p>
-                        <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-700 font-medium">
-                          @skynet_kazan_supportbot
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center p-4 bg-indigo-50 rounded-lg border border-indigo-200">
-                      <Send className="h-6 w-6 text-indigo-600 mr-3" />
-                      <div>
-                        <p className="font-medium text-gray-900">Документы через Телеграм</p>
-                        <a href="https://t.me/SkyNet_document_bot" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 font-medium">
-                          @SkyNet_document_bot
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
-                      <Clock className="h-6 w-6 text-gray-600 mr-3" />
-                      <div>
-                        <p className="font-medium text-gray-900">Режим работы</p>
-                        <p className="text-gray-600">ПН-ПТ: 8:00-18:00, СБ: 8:00-13:00</p>
-                        <p className="text-sm text-gray-500">Техподдержка: круглосуточно</p>
-                      </div>
-                    </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Телефон</h3>
+                    <p className="text-gray-600 mb-1">Для подключения:</p>
+                    <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      +7 (843) 290-92-94
+                    </a>
+                    <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
+                    <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      +7 (843) 5-777-775
+                    </a>
                   </div>
                 </div>
+              </div>
+              
+              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 bg-skynet-orange text-white rounded-lg flex items-center justify-center">
+                      <Mail className="h-6 w-6" />
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                    <p className="text-gray-600 mb-1">Для запросов и предложений:</p>
+                    <a href="mailto:info@skynet.ru" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      info@skynet.ru
+                    </a>
+                    <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
+                    <a href="mailto:support@skynet.ru" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                      support@skynet.ru
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 bg-green-500 text-white rounded-lg flex items-center justify-center">
+                      <Clock className="h-6 w-6" />
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Режим работы</h3>
+                    <p className="text-gray-600 mb-1">Офис:</p>
+                    <p className="text-gray-800">ПН-ПТ: 8:00-18:00</p>
+                    <p className="text-gray-800">СБ: 8:00-13:00</p>
+                    <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
+                    <p className="text-gray-800">Круглосуточно</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center md:text-left">
+                <Link 
+                  to="/contacts" 
+                  className="inline-flex items-center text-skynet-blue hover:text-skynet-blue-dark mt-2"
+                >
+                  Все контакты <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
               </div>
             </div>
             

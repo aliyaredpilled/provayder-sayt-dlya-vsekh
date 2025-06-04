@@ -318,14 +318,28 @@ const Reviews = () => {
       
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="mb-8">
+          <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900">Все отзывы</h2>
+            <div className="flex items-center space-x-2">
+              <span className="text-gray-600">Сортировать:</span>
+              <select className="border border-gray-300 rounded-lg px-3 py-2 text-sm">
+                <option>По дате</option>
+                <option>По рейтингу</option>
+                <option>По популярности</option>
+              </select>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {reviews.map(review => (
               <ReviewCard key={review.id} review={review} />
             ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <button className="bg-white border border-skynet-blue text-skynet-blue font-medium px-8 py-3 rounded-full hover:bg-skynet-blue/5 transition-colors">
+              Загрузить больше отзывов
+            </button>
           </div>
         </div>
       </section>
