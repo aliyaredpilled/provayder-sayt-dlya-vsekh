@@ -1,3 +1,4 @@
+
 import { useRef } from 'react';
 import { Phone, Mail, Clock } from 'lucide-react';
 
@@ -47,8 +48,8 @@ const ContactSection = () => {
           </div>
           
           <div className="grid md:grid-cols-5 gap-10">
-            <div className="md:col-span-2 space-y-3">
-              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+            <div className="md:col-span-2 space-y-2">
+              <div className="bg-skynet-gray-light/30 rounded-xl p-4 backdrop-blur-sm">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="h-12 w-12 bg-skynet-blue text-white rounded-lg flex items-center justify-center">
@@ -69,7 +70,7 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+              <div className="bg-skynet-gray-light/30 rounded-xl p-4 backdrop-blur-sm">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="h-12 w-12 bg-skynet-orange text-white rounded-lg flex items-center justify-center">
@@ -90,7 +91,7 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+              <div className="bg-skynet-gray-light/30 rounded-xl p-4 backdrop-blur-sm">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="h-12 w-12 bg-green-500 text-white rounded-lg flex items-center justify-center">
@@ -108,7 +109,7 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
+              <div className="bg-skynet-gray-light/30 rounded-xl p-4 backdrop-blur-sm">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="h-12 w-12 bg-blue-500 text-white rounded-lg flex items-center justify-center">
