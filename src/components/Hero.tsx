@@ -1,7 +1,14 @@
+
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
+  const scrollTo10G = () => {
+    const element = document.getElementById('10g-internet');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="pt-24 pb-12 bg-transparent backdrop-blur-sm overflow-hidden">
       <div className="container mx-auto px-4">
@@ -12,12 +19,12 @@ const Hero = () => {
               <span className="text-skynet-orange">до 10 Гбит/с</span> для вашего дома
             </h2>
             <div className="flex justify-start animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <Link 
-                to="/services" 
+              <button 
+                onClick={scrollTo10G}
                 className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-6 py-2.5 rounded-full shadow-lg hover:shadow-orange-glow transition-all transform hover:-translate-y-1 flex items-center"
               >
                 Подробнее <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </button>
             </div>
           </div>
           <div className="md:w-1/2 relative animate-fade-in-up" style={{ animationDelay: '0.3s' }}>

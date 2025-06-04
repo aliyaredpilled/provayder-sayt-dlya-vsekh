@@ -10,7 +10,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import CustomerReviews from "@/components/CustomerReviews";
 import LatestNews from "@/components/LatestNews";
-import ReferralPromo from "@/components/ReferralPromo";
+import TenGigabitSection from "@/components/TenGigabitSection";
 
 const Index = () => {
   return (
@@ -19,7 +19,7 @@ const Index = () => {
       <Hero />
       <PromoBanners />
       <LatestNews />
-      <ReferralPromo />
+      <TenGigabitSection />
       <ServiceOverview />
       <PricingPlans />
       <Benefits />
