@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -8,25 +7,16 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4 animate-fade-in-up">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up">
               Сверхскоростной интернет <br />
               <span className="text-skynet-orange">до 10 Гбит/с</span> для вашего дома
             </h2>
-            <p className="text-base text-gray-600 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Мы предлагаем надежные телекоммуникационные услуги для частных лиц с быстрым интернетом, цифровым ТВ и другими сервисами для вашего комфорта.
-            </p>
-            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <Link 
-                to="/tariffs" 
-                className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-6 py-2.5 rounded-full shadow-lg hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
-              >
-                Выбрать тариф
-              </Link>
+            <div className="flex justify-start animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <Link 
                 to="/services" 
-                className="bg-white/80 backdrop-blur-sm text-skynet-blue font-medium px-6 py-2.5 rounded-full hover:bg-skynet-blue/5 transition-all flex items-center justify-center border border-skynet-blue/20"
+                className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-6 py-2.5 rounded-full shadow-lg hover:shadow-orange-glow transition-all transform hover:-translate-y-1 flex items-center"
               >
-                Наши услуги <ArrowRight className="ml-2 h-4 w-4" />
+                Подробнее <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </div>
