@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
@@ -10,7 +9,7 @@ const Footer = () => {
           {/* Логотип и информация о компании */}
           <div>
             <div className="mb-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 inline-block">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 inline-block">
                 <img 
                   src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
                   alt="SKYNET Строй" 
