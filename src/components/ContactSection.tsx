@@ -225,22 +225,14 @@ const ContactSection = () => {
           
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Мы на карте</h3>
-            <div className="rounded-xl overflow-hidden shadow-lg h-[600px] bg-gray-100 flex items-center justify-center">
-              <div>
-                <a className="dg-widget-link text-skynet-blue hover:underline block mb-2" href="http://2gis.ru/kazan/firm/2956015537194061/center/49.071485996246345,55.8363133149806/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Казани</a>
-                <div className="dg-widget-link mb-2">
-                  <a href="http://2gis.ru/kazan/firm/2956015537194061/photos/2956015537194061/center/49.071485996246345,55.8363133149806/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos" className="text-skynet-blue hover:underline">Фотографии компании</a>
-                </div>
-                <div className="dg-widget-link mb-4">
-                  <a href="http://2gis.ru/kazan/center/49.071496,55.835867/zoom/16/routeTab/rsType/bus/to/49.071496,55.835867╎Скайнет, интернет-провайдер?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route" className="text-skynet-blue hover:underline">Найти проезд до Скайнет, интернет-провайдер</a>
-                </div>
-                <div id="dg-widget-container"></div>
-                <script src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
-                <script dangerouslySetInnerHTML={{
-                  __html: `new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":55.8363133149806,"lon":49.071485996246345,"zoom":16},"opt":{"city":"kazan"},"org":[{"id":"2956015537194061"}]});`
-                }}></script>
-                <noscript style={{color:"#c00", fontSize:"16px", fontWeight:"bold"}}>Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
-              </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A63739936c9e90a16eead4e6b47a11fbcd2dc24c80c0bb98c73f32e6f2bffc3de&amp;source=constructor"
+                width="100%"
+                height="400"
+                style={{ border: 'none' }}
+                title="Карта офиса SkyNet"
+              ></iframe>
             </div>
           </div>
         </div>
