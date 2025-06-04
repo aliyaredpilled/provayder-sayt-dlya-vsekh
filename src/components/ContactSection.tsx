@@ -1,4 +1,3 @@
-
 import { useRef } from 'react';
 import { Phone, Mail, Clock } from 'lucide-react';
 
@@ -48,7 +47,7 @@ const ContactSection = () => {
           </div>
           
           <div className="grid md:grid-cols-5 gap-10">
-            <div className="md:col-span-2 space-y-4">
+            <div className="md:col-span-2 space-y-3">
               <div className="bg-skynet-gray-light/30 rounded-xl p-6 backdrop-blur-sm">
                 <div className="flex">
                   <div className="flex-shrink-0">
@@ -180,15 +179,15 @@ const ContactSection = () => {
                     />
                   </div>
                   
-                  <div className="flex-1">
+                  <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Комментарий
                     </label>
                     <textarea 
                       id="message"
                       ref={messageRef}
-                      rows={5}
-                      className="w-full h-full min-h-[120px] px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent resize-none"
+                      rows={3}
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent resize-none"
                       placeholder="Дополнительная информация или пожелания"
                     ></textarea>
                   </div>
