@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -25,13 +24,13 @@ const latestNews = [
     excerpt: 'Рассказываем, чем цифровое ТВ отличается от аналогового, какие функции доступны пользователям и как выбрать оптимальный пакет каналов.',
     category: 'Обзоры',
     date: '25.05.2023',
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
   }
 ];
 
 const LatestNews = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-sky-100 via-sky-50 to-white relative">
+    <section className="py-8 bg-gradient-to-b from-sky-100 via-sky-50 to-white relative">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-10">
           <div>

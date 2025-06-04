@@ -1,4 +1,3 @@
-
 import { Zap, Wifi, Download, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
@@ -12,7 +11,7 @@ const TenGigabitSection = () => {
   };
 
   return (
-    <section id="10g-internet" className="py-12 relative overflow-hidden bg-gradient-to-b from-sky-50 to-white">
+    <section id="10g-internet" className="py-8 relative overflow-hidden bg-gradient-to-b from-sky-50 to-white">
       <div className="container mx-auto px-4">
         <div className="bg-gradient-to-r from-skynet-blue to-skynet-blue-light rounded-2xl overflow-hidden relative">
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-skynet-orange opacity-20 rounded-full blur-3xl"></div>

@@ -16,16 +16,18 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-100 via-sky-50 to-white">
       <NavBar />
-      <Hero />
-      <PromoBanners />
-      <LatestNews />
-      <TenGigabitSection />
-      <ServiceOverview />
-      <PricingPlans />
-      <Benefits />
-      <CustomerReviews />
-      <FAQ />
-      <ContactSection />
+      <div className="space-y-8">
+        <Hero />
+        <PromoBanners />
+        <LatestNews />
+        <TenGigabitSection />
+        <ServiceOverview />
+        <PricingPlans />
+        <Benefits />
+        <CustomerReviews />
+        <FAQ />
+        <ContactSection />
+      </div>
       <Footer />
     </div>
   );
