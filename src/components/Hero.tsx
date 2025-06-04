@@ -1,10 +1,16 @@
+
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const scrollTo10G = () => {
     const element = document.getElementById('10g-internet');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 80; // Примерная высота шапки
+      const elementPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
