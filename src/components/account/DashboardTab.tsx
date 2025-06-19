@@ -17,11 +17,6 @@ interface Service {
   gateway?: string;
   dns?: string;
   uptime?: string;
-  tariffPrice?: number;
-  speedIncoming?: string;
-  speedOutgoing?: string;
-  paidUntil?: string;
-  renewalStatus?: string;
 }
 
 interface Address {
@@ -144,81 +139,42 @@ const DashboardTab = ({
                       
                       {service.type === 'internet' && openServiceDetails[service.id.toString()] && (
                         <div className="px-4 pb-4 bg-gray-50">
-                          <div className="bg-white rounded-lg p-6 border border-gray-200">
-                            <h4 className="font-medium text-gray-900 mb-4">Детали подключения</h4>
-                            
-                            <div className="space-y-4">
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                  <p className="text-sm text-gray-500 mb-1">Тариф</p>
-                                  <p className="font-medium text-gray-900">{service.tariffPrice || service.price} руб</p>
-                                </div>
-                                <div>
-                                  <p className="text-sm text-gray-500 mb-1">Тип подключения</p>
-                                  <p className="font-medium text-gray-900">{service.connectionType}</p>
-                                </div>
+                          <div className="bg-white rounded-lg p-4 border border-gray-200">
+                            <h4 className="font-medium text-gray-900 mb-3">Детали подключения</h4>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                              <div>
+                                <p className="text-gray-500">Тип подключения:</p>
+                                <p className="font-medium">{service.connectionType}</p>
                               </div>
-
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                  <p className="text-sm text-gray-500 mb-1">Скорость входящая/исходящая</p>
-                                  <p className="font-medium text-gray-900">
-                                    {service.speedIncoming}/{service.speedOutgoing} Кбит/с
-                                  </p>
-                                </div>
-                                <div>
-                                  <p className="text-sm text-gray-500 mb-1">Статус линии</p>
-                                  <p className="font-medium flex items-center text-gray-900">
-                                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                                    Онлайн (Uptime: {service.uptime})
-                                  </p>
-                                </div>
+                              <div>
+                                <p className="text-gray-500">IP-адрес:</p>
+                                <p className="font-medium">{service.ipAddress}</p>
                               </div>
-
-                              <div className="border-t border-gray-100 pt-4">
-                                <h5 className="font-medium text-gray-900 mb-3">Сетевые настройки</h5>
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                              {service.subnetMask && (
+                                <>
                                   <div>
-                                    <p className="text-sm text-gray-500 mb-1">IP-адрес</p>
-                                    <p className="font-medium text-gray-900">{service.ipAddress}</p>
-                                  </div>
-                                  {service.subnetMask && (
-                                    <>
-                                      <div>
-                                        <p className="text-sm text-gray-500 mb-1">Маска подсети</p>
-                                        <p className="font-medium text-gray-900">{service.subnetMask}</p>
-                                      </div>
-                                      <div>
-                                        <p className="text-sm text-gray-500 mb-1">Основной шлюз</p>
-                                        <p className="font-medium text-gray-900">{service.gateway}</p>
-                                      </div>
-                                    </>
-                                  )}
-                                </div>
-                                {service.dns && (
-                                  <div className="mt-4">
-                                    <p className="text-sm text-gray-500 mb-1">DNS серверы</p>
-                                    <p className="font-medium text-gray-900">{service.dns}</p>
-                                  </div>
-                                )}
-                              </div>
-
-                              <div className="border-t border-gray-100 pt-4">
-                                <h5 className="font-medium text-gray-900 mb-3">Информация об оплате</h5>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                  <div>
-                                    <p className="text-sm text-gray-500 mb-1">Статус продления</p>
-                                    <p className="font-medium text-gray-900">{service.renewalStatus || 'Продлен системой'}</p>
+                                    <p className="text-gray-500">Маска подсети:</p>
+                                    <p className="font-medium">{service.subnetMask}</p>
                                   </div>
                                   <div>
-                                    <p className="text-sm text-gray-500 mb-1">Оплачено до</p>
-                                    <p className="font-medium text-gray-900">{service.paidUntil || '30.06.2025 23:59'}</p>
+                                    <p className="text-gray-500">Основной шлюз:</p>
+                                    <p className="font-medium">{service.gateway}</p>
                                   </div>
-                                </div>
+                                  <div>
+                                    <p className="text-gray-500">DNS серверы:</p>
+                                    <p className="font-medium">{service.dns}</p>
+                                  </div>
+                                </>
+                              )}
+                              <div>
+                                <p className="text-gray-500">Статус линии:</p>
+                                <p className="font-medium flex items-center">
+                                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                  Онлайн (Uptime: {service.uptime})
+                                </p>
                               </div>
                             </div>
-
-                            <div className="mt-6 flex gap-3">
+                            <div className="mt-4 flex gap-2">
                               <button className="bg-skynet-blue hover:bg-skynet-blue-dark text-white px-4 py-2 rounded-lg text-sm transition-colors">
                                 Статистика трафика
                               </button>
