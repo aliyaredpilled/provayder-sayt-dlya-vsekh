@@ -28,7 +28,7 @@ const Account = () => {
   }, []);
   
   const userData = {
-    name: 'Хузяшева Дилбар',
+    name: 'Хузяшева Дильбар',
     userType: 'individual' as const,
     contractNumber: '39421',
     login: 'TimurR',
@@ -82,7 +82,7 @@ const Account = () => {
       { id: 3, date: '01.06.2023 00:01', amount: -577.50, type: 'Списание', description: 'Списание за IP телефонию' }
     ],
     personalData: {
-      fullName: 'Хузяшева Дилбар Тимуровна',
+      fullName: 'Хузяшева Дильбар Тимуровна',
       phone: '+7 (843) 555-0123',
       email: 'dilbar@example.com',
       address: 'г. Казань, ул. Пушкина, д. 10, кв. 25'
@@ -163,7 +163,7 @@ const Account = () => {
                 fixed lg:relative top-0 lg:top-auto bottom-0 lg:bottom-auto left-0 z-40 lg:z-auto
                 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
                 lg:translate-x-0 transition-transform duration-300 ease-in-out
-                lg:block w-80 lg:w-auto h-full lg:h-auto
+                lg:block w-80 lg:w-auto min-h-full lg:min-h-0
               `}>
                 <AccountSidebar
                   userData={userData}

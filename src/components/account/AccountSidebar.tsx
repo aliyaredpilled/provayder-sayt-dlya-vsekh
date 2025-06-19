@@ -25,7 +25,7 @@ const AccountSidebar = ({ userData, activeTab, setActiveTab }: AccountSidebarPro
   ];
 
   return (
-    <div className="w-80 bg-skynet-blue text-white flex flex-col">
+    <div className="w-80 bg-skynet-blue text-white flex flex-col h-full min-h-full">
       {/* Блок информации о пользователе */}
       <div className="p-6 border-b border-white/10">
         <div className="flex items-start">
