@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 
@@ -96,9 +95,7 @@ const PersonalData = ({ userData }: PersonalDataProps) => {
             </div>
           </div>
         ) : (
-          <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Данные физического лица</h2>
-            
+          <div className="space-y-4">            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-base font-medium text-gray-700">ФИО</label>

@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, MessageSquare } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -101,6 +101,18 @@ const Footer = () => {
                   <a href="mailto:noc@skynet-kazan.com" className="text-gray-400 hover:text-white transition-colors text-sm">
                     noc@skynet-kazan.com
                   </a>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <MessageSquare size={16} className="mr-2 text-green-500" />
+                <div>
+                  <p className="text-gray-200 text-xs">WhatsApp:</p>
+                  <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm block">
+                    Поддержка
+                  </a>
+                  <Link to="/complaints" className="text-gray-400 hover:text-white transition-colors text-sm block">
+                    Жалобы
+                  </Link>
                 </div>
               </li>
               <li className="flex items-center">
