@@ -15,7 +15,7 @@ const Account = () => {
   
   const userData = {
     name: 'Хузяшева Дилбар',
-    userType: 'individual', // 'individual' или 'company'
+    userType: 'individual' as const, // Fixed: properly typed as literal
     contractNumber: '39421',
     login: 'TimurR',
     balance: 10750.00,
@@ -74,8 +74,20 @@ const Account = () => {
       address: 'г. Казань, ул. Пушкина, д. 10, кв. 25'
     },
     cameras: [
-      { id: 'cam1', name: 'Подъезд 1, этаж 3', address: 'г. Казань, ул. Маршала Чуйкова, д. 62', status: 'online' },
-      { id: 'cam2', name: 'Парковка, место 42', address: 'г. Казань, ул. Маршала Чуйкова, д. 62', status: 'offline' }
+      { 
+        id: 'cam1', 
+        name: 'Подъезд 1, этаж 3', 
+        address: 'г. Казань, ул. Маршала Чуйкова, д. 62', 
+        status: 'online',
+        type: 'security' // Fixed: added missing type property
+      },
+      { 
+        id: 'cam2', 
+        name: 'Парковка, место 42', 
+        address: 'г. Казань, ул. Маршала Чуйкова, д. 62', 
+        status: 'offline',
+        type: 'security' // Fixed: added missing type property
+      }
     ]
   };
 
