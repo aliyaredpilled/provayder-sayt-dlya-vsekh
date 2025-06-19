@@ -16,8 +16,9 @@ interface PaymentMethodCardProps {
 
 const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
   const renderIcon = () => {
-    // Check if it's a function (arrow function that returns JSX)
-    if (typeof method.icon === 'function' && method.icon.length === 0) {
+    // Check if it's a function by checking if it has a displayName property (LucideIcons have this)
+    // If it doesn't have displayName, it's likely our custom function
+    if (typeof method.icon === 'function' && !('displayName' in method.icon)) {
       // It's a function that returns JSX (like image functions)
       return method.icon();
     }
