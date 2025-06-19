@@ -1,23 +1,84 @@
-
 import { useState } from 'react';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import { User, Home, ClipboardList, CreditCard, Settings, LogOut, Bell, Eye, EyeOff, Wifi, Tv, Phone } from 'lucide-react';
+import { User, Home, ClipboardList, CreditCard, Settings, LogOut, Bell, Eye, EyeOff, Wifi, Tv, Phone, Video, ChevronDown, ChevronUp, MoreHorizontal } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const Account = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard');
+  const [openAddresses, setOpenAddresses] = useState<{[key: string]: boolean}>({});
+  const [openServiceDetails, setOpenServiceDetails] = useState<{[key: string]: boolean}>({});
   
-  // Имитация данных пользователя
+  // Расширенные данные пользователя с несколькими адресами
   const userData = {
     name: 'Иванов Иван',
-    address: 'г. Казань, ул. Пушкина, д. 10, кв. 42',
     balance: 1250.75,
     accountNumber: '2987465',
-    services: [
-      { id: 1, name: 'Интернет "Быстрый"', price: 999, speed: '1 Гбит/с', status: 'active', icon: Wifi },
-      { id: 2, name: 'Цифровое ТВ "Стандарт"', price: 390, channels: 140, status: 'active', icon: Tv },
-      { id: 3, name: 'Домашний телефон', price: 250, status: 'active', icon: Phone }
+    addresses: [
+      {
+        id: 'addr1',
+        address: 'г. Казань, ул. Пушкина, д. 3',
+        services: [
+          { 
+            id: 1, 
+            name: 'Интернет "Профсоюзная"', 
+            price: 750.50, 
+            speed: '30/30 Мбит/с', 
+            status: 'active', 
+            icon: Wifi,
+            type: 'internet',
+            connectionType: 'Статический IP',
+            ipAddress: '91.123.45.67',
+            subnetMask: '255.255.255.0',
+            gateway: '91.123.45.1',
+            dns: '8.8.8.8, 1.1.1.1',
+            uptime: '3 д 14 ч'
+          },
+          { 
+            id: 2, 
+            name: 'Wi-Fi Social Links', 
+            price: 578, 
+            networkName: 'nabinvest_pushkina_3', 
+            status: 'active', 
+            icon: Wifi,
+            type: 'wifi'
+          }
+        ]
+      },
+      {
+        id: 'addr2',
+        address: 'г. Казань, ул. Калинина, д. 62',
+        services: [
+          { 
+            id: 3, 
+            name: 'Интернет "Калинина-1"', 
+            price: 5775.00, 
+            speed: '30/30 Мбит/с', 
+            status: 'active', 
+            icon: Wifi,
+            type: 'internet',
+            connectionType: 'Динамический IP',
+            ipAddress: '95.100.200.30',
+            uptime: '1 д 8 ч'
+          },
+          { 
+            id: 4, 
+            name: 'Интернет "Калинина-2"', 
+            price: 8085.00, 
+            speed: '50/50 Мбит/с', 
+            status: 'active', 
+            icon: Wifi,
+            type: 'internet',
+            connectionType: 'Статический IP',
+            ipAddress: '91.145.78.123',
+            subnetMask: '255.255.255.0',
+            gateway: '91.145.78.1',
+            dns: '8.8.8.8, 1.1.1.1',
+            uptime: '7 д 2 ч'
+          }
+        ]
+      }
     ],
     payments: [
       { id: 101, date: '15.06.2023', amount: 1650, method: 'Банковская карта' },
@@ -27,7 +88,32 @@ const Account = () => {
     notifications: [
       { id: 201, date: '20.06.2023', title: 'Профилактические работы', message: 'Уважаемые абоненты! 25 июня с 02:00 до 04:00 будут проводиться технические работы. Возможны кратковременные перерывы в предоставлении услуг.', isRead: false },
       { id: 202, date: '10.06.2023', title: 'Изменение тарифов', message: 'С 1 июля 2023 года изменяются условия тарифного плана "Быстрый". Подробности в личном кабинете.', isRead: true }
+    ],
+    cameras: [
+      { id: 'cam1', name: 'Подъезд 1, этаж 3', type: 'private', status: 'online', preview: '/lovable-uploads/camera1.jpg' },
+      { id: 'cam2', name: 'Парковка, место 42', type: 'private', status: 'offline', preview: '/lovable-uploads/camera2.jpg' },
+      { id: 'cam3', name: 'Двор, детская площадка', type: 'public', status: 'online', preview: '/lovable-uploads/camera3.jpg' }
     ]
+  };
+
+  const toggleAddress = (addressId: string) => {
+    setOpenAddresses(prev => ({
+      ...prev,
+      [addressId]: !prev[addressId]
+    }));
+  };
+
+  const toggleServiceDetails = (serviceId: string) => {
+    setOpenServiceDetails(prev => ({
+      ...prev,
+      [serviceId]: !prev[serviceId]
+    }));
+  };
+
+  const getTotalMonthlyPayment = () => {
+    return userData.addresses.reduce((total, address) => {
+      return total + address.services.reduce((addressTotal, service) => addressTotal + service.price, 0);
+    }, 0);
   };
 
   return (
@@ -91,6 +177,19 @@ const Account = () => {
                       >
                         <CreditCard className="h-5 w-5 mr-3" />
                         <span>Платежи</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button 
+                        onClick={() => setActiveTab('surveillance')} 
+                        className={`w-full flex items-center px-4 py-3 rounded-lg transition-colors ${
+                          activeTab === 'surveillance' 
+                            ? 'bg-white/10' 
+                            : 'hover:bg-white/5'
+                        }`}
+                      >
+                        <Video className="h-5 w-5 mr-3" />
+                        <span>Видеонаблюдение</span>
                       </button>
                     </li>
                     <li>
@@ -165,82 +264,217 @@ const Account = () => {
                       
                       <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
                         <p className="text-sm text-gray-500 mb-1">Следующее списание</p>
-                        <p className="text-3xl font-bold text-gray-900">1639 ₽</p>
+                        <p className="text-3xl font-bold text-gray-900">{getTotalMonthlyPayment()} ₽</p>
                         <p className="mt-2 text-sm text-gray-500">01.07.2023</p>
                       </div>
                       
                       <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-                        <p className="text-sm text-gray-500 mb-1">Адрес подключения</p>
-                        <p className="text-lg font-medium text-gray-900">{userData.address}</p>
+                        <p className="text-sm text-gray-500 mb-1">Количество адресов</p>
+                        <p className="text-3xl font-bold text-gray-900">{userData.addresses.length}</p>
+                        <p className="mt-2 text-sm text-gray-500">подключений</p>
                       </div>
                     </div>
                     
-                    <h2 className="text-xl font-semibold text-gray-900 mb-4">Мои услуги</h2>
+                    <h2 className="text-xl font-semibold text-gray-900 mb-4">Мои адреса и услуги</h2>
                     
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-8">
-                      <div className="divide-y divide-gray-100">
-                        {userData.services.map(service => (
-                          <div key={service.id} className="p-4 flex items-center justify-between">
-                            <div className="flex items-center">
-                              <div className={`p-2 rounded-lg mr-4 ${
-                                service.name.includes('Интернет') ? 'bg-skynet-blue/10 text-skynet-blue' :
-                                service.name.includes('ТВ') ? 'bg-skynet-orange/10 text-skynet-orange' :
-                                'bg-green-500/10 text-green-500'
-                              }`}>
-                                <service.icon className="h-5 w-5" />
+                    <div className="space-y-4">
+                      {userData.addresses.map(address => (
+                        <div key={address.id} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                          <Collapsible
+                            open={openAddresses[address.id] !== false}
+                            onOpenChange={() => toggleAddress(address.id)}
+                          >
+                            <CollapsibleTrigger className="w-full p-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Home className="h-5 w-5 text-skynet-blue mr-3" />
+                                <span className="font-medium text-gray-900">{address.address}</span>
                               </div>
-                              <div>
-                                <p className="font-medium text-gray-900">{service.name}</p>
-                                <p className="text-sm text-gray-500">
-                                  {service.speed ? `Скорость: ${service.speed}` : 
-                                   service.channels ? `Каналов: ${service.channels}` : ''}
-                                </p>
+                              <div className="flex items-center">
+                                <span className="text-sm text-gray-500 mr-2">
+                                  {address.services.length} услуг
+                                </span>
+                                {openAddresses[address.id] !== false ? (
+                                  <ChevronUp className="h-5 w-5 text-gray-400" />
+                                ) : (
+                                  <ChevronDown className="h-5 w-5 text-gray-400" />
+                                )}
                               </div>
-                            </div>
-                            <div className="text-right">
-                              <p className="font-medium text-gray-900">{service.price} ₽/мес</p>
-                              <span className="inline-block px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
-                                Активно
-                              </span>
-                            </div>
-                          </div>
-                        ))}
+                            </CollapsibleTrigger>
+                            
+                            <CollapsibleContent>
+                              <div className="border-t border-gray-100">
+                                {address.services.map(service => (
+                                  <div key={service.id} className="border-b border-gray-50 last:border-b-0">
+                                    <div className="p-4 flex items-center justify-between">
+                                      <div className="flex items-center flex-1">
+                                        <div className={`p-2 rounded-lg mr-4 ${
+                                          service.type === 'internet' ? 'bg-skynet-blue/10 text-skynet-blue' :
+                                          service.type === 'wifi' ? 'bg-skynet-orange/10 text-skynet-orange' :
+                                          'bg-green-500/10 text-green-500'
+                                        }`}>
+                                          <service.icon className="h-5 w-5" />
+                                        </div>
+                                        <div className="flex-1">
+                                          <p className="font-medium text-gray-900">{service.name}</p>
+                                          <p className="text-sm text-gray-500">
+                                            {service.speed ? `Скорость: ${service.speed}` : 
+                                             service.networkName ? `Сеть: ${service.networkName}` : ''}
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div className="flex items-center">
+                                        <div className="text-right mr-4">
+                                          <p className="font-medium text-gray-900">{service.price} ₽/мес</p>
+                                          <span className="inline-block px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+                                            Активно
+                                          </span>
+                                        </div>
+                                        {service.type === 'internet' && (
+                                          <button
+                                            onClick={() => toggleServiceDetails(service.id.toString())}
+                                            className="flex items-center text-skynet-blue hover:text-skynet-blue-dark text-sm font-medium"
+                                          >
+                                            Подробнее
+                                            <MoreHorizontal className="h-4 w-4 ml-1" />
+                                          </button>
+                                        )}
+                                      </div>
+                                    </div>
+                                    
+                                    {/* Детальная информация для интернет-услуг */}
+                                    {service.type === 'internet' && openServiceDetails[service.id.toString()] && (
+                                      <div className="px-4 pb-4 bg-gray-50">
+                                        <div className="bg-white rounded-lg p-4 border border-gray-200">
+                                          <h4 className="font-medium text-gray-900 mb-3">Детали подключения</h4>
+                                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                                            <div>
+                                              <p className="text-gray-500">Тип подключения:</p>
+                                              <p className="font-medium">{service.connectionType}</p>
+                                            </div>
+                                            <div>
+                                              <p className="text-gray-500">IP-адрес:</p>
+                                              <p className="font-medium">{service.ipAddress}</p>
+                                            </div>
+                                            {service.subnetMask && (
+                                              <>
+                                                <div>
+                                                  <p className="text-gray-500">Маска подсети:</p>
+                                                  <p className="font-medium">{service.subnetMask}</p>
+                                                </div>
+                                                <div>
+                                                  <p className="text-gray-500">Основной шлюз:</p>
+                                                  <p className="font-medium">{service.gateway}</p>
+                                                </div>
+                                                <div>
+                                                  <p className="text-gray-500">DNS серверы:</p>
+                                                  <p className="font-medium">{service.dns}</p>
+                                                </div>
+                                              </>
+                                            )}
+                                            <div>
+                                              <p className="text-gray-500">Статус линии:</p>
+                                              <p className="font-medium flex items-center">
+                                                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                                Онлайн (Uptime: {service.uptime})
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div className="mt-4 flex gap-2">
+                                            <button className="bg-skynet-blue hover:bg-skynet-blue-dark text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                                              Статистика трафика
+                                            </button>
+                                            <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 text-sm transition-colors">
+                                              Настройки
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    )}
+                                  </div>
+                                ))}
+                                
+                                <div className="p-4 bg-gray-50 border-t border-gray-100">
+                                  <button className="bg-skynet-blue hover:bg-skynet-blue-dark text-white px-4 py-2 rounded-lg transition-colors shadow-sm">
+                                    Управлять услугами по адресу
+                                  </button>
+                                </div>
+                              </div>
+                            </CollapsibleContent>
+                          </Collapsible>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {activeTab === 'surveillance' && (
+                  <div>
+                    <div className="flex justify-between items-center mb-6">
+                      <h1 className="text-2xl font-bold text-gray-900">Видеонаблюдение</h1>
+                      <div className="flex gap-3">
+                        <button className="bg-skynet-orange hover:bg-skynet-orange-bright text-white px-4 py-2 rounded-lg transition-colors shadow-sm">
+                          ➕ Добавить камеру
+                        </button>
+                        <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+                          📂 Смотреть архив
+                        </button>
                       </div>
                     </div>
-                    
-                    <h2 className="text-xl font-semibold text-gray-900 mb-4">Последние платежи</h2>
                     
                     <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                      <table className="min-w-full divide-y divide-gray-200">
-                        <thead className="bg-gray-50">
-                          <tr>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                              Дата
-                            </th>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                              Сумма
-                            </th>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                              Способ оплаты
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody className="bg-white divide-y divide-gray-200">
-                          {userData.payments.map(payment => (
-                            <tr key={payment.id}>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                {payment.date}
-                              </td>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                {payment.amount} ₽
-                              </td>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                {payment.method}
-                              </td>
-                            </tr>
+                      <div className="border-b border-gray-200">
+                        <nav className="flex">
+                          <button className="px-6 py-4 font-medium text-skynet-blue border-b-2 border-skynet-blue">
+                            ПРИВАТНЫЕ
+                          </button>
+                          <button className="px-6 py-4 font-medium text-gray-500 hover:text-gray-700">
+                            ПУБЛИЧНЫЕ
+                          </button>
+                        </nav>
+                      </div>
+                      
+                      <div className="p-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                          {userData.cameras.filter(camera => camera.type === 'private').map(camera => (
+                            <div key={camera.id} className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                              <div className="aspect-video bg-gray-100 flex items-center justify-center">
+                                <Video className="h-12 w-12 text-gray-400" />
+                              </div>
+                              <div className="p-4">
+                                <h3 className="font-medium text-gray-900 mb-2">{camera.name}</h3>
+                                <div className="flex items-center justify-between">
+                                  <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                                    camera.status === 'online' 
+                                      ? 'bg-green-100 text-green-800' 
+                                      : 'bg-red-100 text-red-800'
+                                  }`}>
+                                    {camera.status === 'online' ? '🟢 Онлайн' : '🔴 Офлайн'}
+                                  </span>
+                                </div>
+                                <div className="mt-4 flex gap-2">
+                                  <button className="flex-1 bg-skynet-blue hover:bg-skynet-blue-dark text-white px-3 py-2 rounded text-sm transition-colors">
+                                    Смотреть
+                                  </button>
+                                  <button className="border border-gray-300 text-gray-700 px-3 py-2 rounded hover:bg-gray-50 text-sm transition-colors">
+                                    Настройки
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
                           ))}
-                        </tbody>
-                      </table>
+                        </div>
+                        
+                        {userData.cameras.filter(camera => camera.type === 'private').length === 0 && (
+                          <div className="text-center py-12">
+                            <Video className="h-12 w-12 text-gray-300 mx-auto mb-4" />
+                            <h2 className="text-xl font-medium text-gray-900 mb-2">Нет камер</h2>
+                            <p className="text-gray-600 mb-4">У вас пока нет подключенных камер видеонаблюдения</p>
+                            <button className="bg-skynet-orange hover:bg-skynet-orange-bright text-white px-6 py-3 rounded-lg shadow-sm transition-colors">
+                              Подключить камеру
+                            </button>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -249,57 +483,51 @@ const Account = () => {
                   <div>
                     <h1 className="text-2xl font-bold text-gray-900 mb-6">Мои услуги</h1>
                     <div className="space-y-6">
-                      {userData.services.map(service => (
-                        <div key={service.id} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                          <div className="flex justify-between items-start">
-                            <div className="flex items-center">
-                              <div className={`p-3 rounded-lg mr-4 ${
-                                service.name.includes('Интернет') ? 'bg-skynet-blue/10 text-skynet-blue' :
-                                service.name.includes('ТВ') ? 'bg-skynet-orange/10 text-skynet-orange' :
-                                'bg-green-500/10 text-green-500'
-                              }`}>
-                                <service.icon className="h-6 w-6" />
+                      {userData.addresses.map(address => (
+                        <div key={address.id} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                          <h2 className="text-lg font-semibold text-gray-900 mb-4">{address.address}</h2>
+                          <div className="space-y-4">
+                            {address.services.map(service => (
+                              <div key={service.id} className="border border-gray-200 rounded-lg p-4">
+                                <div className="flex justify-between items-start">
+                                  <div className="flex items-center">
+                                    <div className={`p-3 rounded-lg mr-4 ${
+                                      service.type === 'internet' ? 'bg-skynet-blue/10 text-skynet-blue' :
+                                      service.type === 'wifi' ? 'bg-skynet-orange/10 text-skynet-orange' :
+                                      'bg-green-500/10 text-green-500'
+                                    }`}>
+                                      <service.icon className="h-6 w-6" />
+                                    </div>
+                                    <div>
+                                      <h3 className="text-xl font-semibold text-gray-900">{service.name}</h3>
+                                      <p className="text-gray-500">
+                                        {service.speed ? `Скорость: ${service.speed}` : 
+                                        service.networkName ? `Сеть: ${service.networkName}` : ''}
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="text-right">
+                                    <p className="text-2xl font-bold text-gray-900">{service.price} ₽</p>
+                                    <p className="text-sm text-gray-500">ежемесячно</p>
+                                  </div>
+                                </div>
+                                
+                                <div className="mt-6 border-t border-gray-100 pt-6 flex flex-wrap gap-3">
+                                  <button className="bg-skynet-blue hover:bg-skynet-blue-dark text-white px-4 py-2 rounded-lg transition-colors shadow-sm">
+                                    Управление услугой
+                                  </button>
+                                  <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+                                    Сменить тариф
+                                  </button>
+                                  <button className="border border-red-300 text-red-600 px-4 py-2 rounded-lg hover:bg-red-50 transition-colors ml-auto">
+                                    Отключить
+                                  </button>
+                                </div>
                               </div>
-                              <div>
-                                <h2 className="text-xl font-semibold text-gray-900">{service.name}</h2>
-                                <p className="text-gray-500">
-                                  {service.speed ? `Скорость: ${service.speed}` : 
-                                  service.channels ? `Количество каналов: ${service.channels}` : 'Городской номер'}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="text-right">
-                              <p className="text-2xl font-bold text-gray-900">{service.price} ₽</p>
-                              <p className="text-sm text-gray-500">ежемесячно</p>
-                            </div>
-                          </div>
-                          
-                          <div className="mt-6 border-t border-gray-100 pt-6 flex flex-wrap gap-3">
-                            <button className="bg-skynet-blue hover:bg-skynet-blue-dark text-white px-4 py-2 rounded-lg transition-colors shadow-sm">
-                              Управление услугой
-                            </button>
-                            <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors">
-                              Сменить тариф
-                            </button>
-                            <button className="border border-red-300 text-red-600 px-4 py-2 rounded-lg hover:bg-red-50 transition-colors ml-auto">
-                              Отключить
-                            </button>
+                            ))}
                           </div>
                         </div>
                       ))}
-                      
-                      <div className="bg-skynet-gray-light/30 rounded-xl p-6 text-center">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Хотите подключить дополнительные услуги?</h3>
-                        <p className="text-gray-600 mb-4">Выберите из списка дополнительных сервисов или получите консультацию специалиста</p>
-                        <div className="flex flex-col sm:flex-row justify-center gap-4">
-                          <button className="bg-skynet-orange hover:bg-skynet-orange-bright text-white px-6 py-3 rounded-lg shadow-sm transition-colors">
-                            Дополнительные услуги
-                          </button>
-                          <button className="border border-skynet-blue text-skynet-blue px-6 py-3 rounded-lg hover:bg-skynet-blue/5 transition-colors">
-                            Получить консультацию
-                          </button>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 )}
@@ -324,7 +552,7 @@ const Account = () => {
                       
                       <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
                         <p className="text-sm text-gray-500 mb-1">Рекомендуемый платеж</p>
-                        <p className="text-3xl font-bold text-gray-900">1639 ₽</p>
+                        <p className="text-3xl font-bold text-gray-900">{getTotalMonthlyPayment()} ₽</p>
                         <p className="mt-2 text-sm text-gray-500">Списание произойдет 01.07.2023</p>
                       </div>
                     </div>
@@ -344,7 +572,7 @@ const Account = () => {
                               id="amount" 
                               className="block w-full pr-12 sm:text-sm border-gray-300 rounded-md focus:ring-skynet-blue focus:border-skynet-blue" 
                               placeholder="0.00"
-                              defaultValue="1639"
+                              defaultValue={getTotalMonthlyPayment()}
                             />
                             <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                               <span className="text-gray-500 sm:text-sm">₽</span>
@@ -547,13 +775,13 @@ const Account = () => {
                         
                         <div>
                           <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
-                            Адрес
+                            Основной адрес
                           </label>
                           <input 
                             type="text" 
                             id="address" 
                             className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent" 
-                            defaultValue="г. Казань, ул. Пушкина, д. 10, кв. 42"
+                            defaultValue="г. Казань, ул. Пушкина, д. 3"
                           />
                         </div>
                         
