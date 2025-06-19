@@ -17,6 +17,7 @@ import Career from "./pages/Career";
 import Account from "./pages/Account";
 import Reviews from "./pages/Reviews";
 import ConnectNeighborPromo from "./pages/ConnectNeighborPromo";
+import Complaints from "./pages/Complaints";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/career" element={<Career />} />
           <Route path="/account" element={<Account />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/complaints" element={<Complaints />} />
           <Route path="/promo/connect-neighbor" element={<ConnectNeighborPromo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
