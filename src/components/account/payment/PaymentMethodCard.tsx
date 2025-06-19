@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 interface PaymentMethod {
   id: string;
   label: string;
-  icon: LucideIcon | (() => ReactElement);
+  icon: (() => ReactElement) | LucideIcon;
   description: string;
 }
 
@@ -16,20 +16,13 @@ interface PaymentMethodCardProps {
 
 const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
   const renderIcon = () => {
-    // Check if it's a function that returns JSX (like our image functions)
-    if (typeof method.icon === 'function') {
-      // Check if it has React component properties (displayName, etc.)
-      if ('displayName' in method.icon || method.icon.toString().includes('createElement')) {
-        // It's a LucideIcon component, render as JSX element
-        const IconComponent = method.icon as LucideIcon;
-        return <IconComponent className="w-16 h-16 text-skynet-blue" />;
-      } else {
-        // It's a regular function that returns JSX (image functions)
-        return method.icon();
-      }
+    // Check if it's a function (arrow function that returns JSX)
+    if (typeof method.icon === 'function' && method.icon.length === 0) {
+      // It's a function that returns JSX (like image functions)
+      return method.icon();
     }
     
-    // Fallback: treat as LucideIcon component
+    // It's a LucideIcon component, render as JSX element
     const IconComponent = method.icon as LucideIcon;
     return <IconComponent className="w-16 h-16 text-skynet-blue" />;
   };
