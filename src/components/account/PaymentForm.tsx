@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FileText, CreditCard, Building2, Monitor, Terminal, QrCode } from 'lucide-react';
+import { FileText, CreditCard, Building2, Monitor, Terminal, QrCode, Zap } from 'lucide-react';
 import PaymentMethodCard from './payment/PaymentMethodCard';
 import CardPaymentConfirmation from './payment/CardPaymentConfirmation';
 import SBPPaymentConfirmation from './payment/SBPPaymentConfirmation';
@@ -31,13 +31,7 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
     { 
       id: 'sbp', 
       label: 'СБП', 
-      icon: () => (
-        <img 
-          src="/lovable-uploads/0f42383b-75d5-4944-872b-6ca28d4a2563.png" 
-          alt="СБП" 
-          className="w-12 h-12"
-        />
-      ),
+      icon: Zap,
       description: 'Система быстрых платежей'
     },
     ...(userData.userType === 'company' ? [{ 
@@ -182,11 +176,11 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold text-gray-900">Оплата</h1>
+      <h1 className="text-2xl font-bold text-gray-900 font-inter">Оплата</h1>
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-4">
+          <label className="block text-sm font-medium text-gray-700 mb-4 font-inter">
             Способ оплаты
           </label>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

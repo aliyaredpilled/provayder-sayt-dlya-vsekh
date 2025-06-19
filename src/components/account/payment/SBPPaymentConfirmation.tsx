@@ -9,10 +9,10 @@ const SBPPaymentConfirmation = ({ amount, onConfirm, onBack }: SBPPaymentConfirm
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">Оплата через СБП</h1>
+        <h1 className="text-2xl font-bold text-gray-900 font-inter">Оплата через СБП</h1>
         <button
           onClick={onBack}
-          className="text-gray-500 hover:text-gray-700"
+          className="text-gray-500 hover:text-gray-700 font-inter"
         >
           ← Назад к способам оплаты
         </button>
@@ -29,11 +29,11 @@ const SBPPaymentConfirmation = ({ amount, onConfirm, onBack }: SBPPaymentConfirm
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Подтверждение оплаты</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 font-inter">Подтверждение оплаты</h3>
+            <p className="text-gray-600 mb-4 font-inter">
               Сумма к оплате: <span className="font-bold text-2xl text-skynet-blue">{parseFloat(amount).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽</span>
             </p>
-            <p className="text-sm text-gray-500 mb-6">
+            <p className="text-sm text-gray-500 mb-6 font-inter">
               После нажатия кнопки "Оплатить" вы будете перенаправлены в приложение вашего банка для подтверждения платежа через Систему быстрых платежей.
             </p>
           </div>
@@ -41,13 +41,13 @@ const SBPPaymentConfirmation = ({ amount, onConfirm, onBack }: SBPPaymentConfirm
           <div className="flex space-x-4">
             <button
               onClick={onBack}
-              className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 px-6 rounded-lg transition-colors"
+              className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 px-6 rounded-lg transition-colors font-inter"
             >
               Отмена
             </button>
             <button
               onClick={onConfirm}
-              className="flex-1 bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium py-3 px-6 rounded-lg transition-colors"
+              className="flex-1 bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium py-3 px-6 rounded-lg transition-colors font-inter"
             >
               Оплатить через СБП
             </button>
