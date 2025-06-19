@@ -1,5 +1,5 @@
 
-import { Zap, Wifi, Download, ArrowRight, Shield, Globe, Clock } from 'lucide-react';
+import { Zap, Wifi, Download, ArrowRight, Shield, Globe, Clock, Gamepad2, Home, Users } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 
@@ -22,145 +22,104 @@ const TenGigabitSection = () => {
             <div className="text-center mb-12">
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-base font-medium px-4 py-2 rounded-full mb-6">
                 <Zap className="h-5 w-5 mr-2" />
-                XGS-PON — интернет нового поколения
+                Революционная технология
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                XGS-PON — интернет нового поколения
+                Скайнет запускает интернет будущего!
               </h2>
               <h3 className="text-2xl md:text-3xl text-white mb-6">
-                со скоростью до 10 Гбит/с
+                До 10 Гбит/с по технологии XGS-PON
               </h3>
               
               <div className="text-xl text-white/90 mb-8">
-                <p className="mb-2 text-xl">Сверхбыстро. Симметрично. Готово к будущему.</p>
+                <p className="mb-4 text-xl">Друзья, мы с гордостью объявляем о настоящем технологическом прорыве!</p>
                 <p className="text-lg">
-                  «Скайнет» (Казань) внедряет технологию XGS-PON (10 Gigabit Symmetrical Passive Optical Network) — 
-                  эволюцию классического GPON, открытую для частных и корпоративных клиентов.
+                  «Скайнет» начинает внедрение революционной технологии XGS-PON, которая позволит вам пользоваться интернетом на симметричной скорости до 10 Гбит/с.
+                </p>
+                <p className="text-lg mt-4 font-medium">
+                  Это не просто обновление — это совершенно новый уровень цифровых возможностей для вашего дома и бизнеса.
                 </p>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-12">
-              <div>
-                <h3 className="text-3xl font-bold text-white mb-8">Почему XGS-PON?</h3>
-                
-                <div className="space-y-6">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                    <div className="flex items-start mb-3">
-                      <Zap className="h-6 w-6 text-skynet-orange mr-3 mt-1" />
-                      <div>
-                        <h4 className="text-white font-semibold mb-3 text-lg">До 10 Гбит/с в обе стороны</h4>
-                        <p className="text-white/90 text-base mb-2">загрузка и выгрузка данных занимают считаные секунды</p>
-                        <p className="text-white/70 text-sm">Симметричный 10-гигабитный канал вместо привычных «нескольких сотен мегабит»</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                    <div className="flex items-start mb-3">
-                      <Clock className="h-6 w-6 text-skynet-orange mr-3 mt-1" />
-                      <div>
-                        <h4 className="text-white font-semibold mb-3 text-lg">Минимальные задержки</h4>
-                        <p className="text-white/90 text-base mb-2">онлайн-игры, видеоконференции и облачные сервисы работают без лагов</p>
-                        <p className="text-white/70 text-sm">Оптическая линия без «узких» медных сегментов</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                    <div className="flex items-start mb-3">
-                      <Shield className="h-6 w-6 text-skynet-orange mr-3 mt-1" />
-                      <div>
-                        <h4 className="text-white font-semibold mb-3 text-lg">Готовность к 8K-видео и AR/VR</h4>
-                        <p className="text-white/90 text-base mb-2">потоковое вещание самого высокого качества</p>
-                        <p className="text-white/70 text-sm">Увеличенная пропускная способность и устойчивость сигнала</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                    <div className="flex items-start mb-3">
-                      <Globe className="h-6 w-6 text-skynet-orange mr-3 mt-1" />
-                      <div>
-                        <h4 className="text-white font-semibold mb-3 text-lg">Быстрый апгрейд существующих линий</h4>
-                        <p className="text-white/90 text-base">Новое оборудование совместимо с действующей PON-инфраструктурой</p>
-                      </div>
+            <div className="mb-12">
+              <h3 className="text-3xl font-bold text-white mb-8 text-center">Что это значит для вас?</h3>
+              <p className="text-white/90 text-lg text-center mb-8">
+                Мы перевели технические термины на язык реальных преимуществ:
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex items-start mb-4">
+                    <Zap className="h-8 w-8 text-skynet-orange mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-white font-semibold mb-3 text-lg">🚀 Симметричная скорость</h4>
+                      <p className="text-white/90 text-base">
+                        Забудьте, когда загрузка была быстрой, а отдача — медленной. Теперь скорость одинакова в обе стороны. 
+                        Проводите стримы в 4K, мгновенно загружайте гигабайты файлов в облако и проводите видеоконференции без единого "зависания".
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div>
-                <h3 className="text-3xl font-bold text-white mb-8">Кому это нужно</h3>
-                
-                <div className="space-y-6">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                    <h4 className="text-white font-semibold mb-4 text-lg">🏠 Домашним пользователям</h4>
-                    <p className="text-white/90 text-base">
-                      Смотреть фильмы в 8K, мгновенно загружать семейные архивы в облако, 
-                      играть в сетевые шутеры без разрывов соединения.
-                    </p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex items-start mb-4">
+                    <Gamepad2 className="h-8 w-8 text-skynet-orange mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-white font-semibold mb-3 text-lg">🎮 Гейминг и развлечения без компромиссов</h4>
+                      <p className="text-white/90 text-base">
+                        Минимальная задержка (пинг) и высочайшая стабильность соединения — ваше главное преимущество в онлайн-играх. 
+                        Смотрите фильмы и сериалы в формате 8K без буферизации, погружайтесь в миры VR — ваш интернет готов ко всему.
+                      </p>
+                    </div>
                   </div>
+                </div>
 
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                    <h4 className="text-white font-semibold mb-4 text-lg">🏢 Бизнесу и креативным студиям</h4>
-                    <p className="text-white/90 text-base">
-                      Передавать терабайтные проекты, резервировать данные в реальном времени, 
-                      держать безотказные VPN-каналы между офисами.
-                    </p>
-                  </div>
-
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                    <h4 className="text-white font-semibold mb-4 text-lg">🏛️ Государственным и образовательным организациям</h4>
-                    <p className="text-white/90 text-base">
-                      Поддерживать сотни одновременных видеосессий, использовать облачные платформы, 
-                      не опасаясь задержек.
-                    </p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex items-start mb-4">
+                    <Home className="h-8 w-8 text-skynet-orange mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-white font-semibold mb-3 text-lg">🏠 Надежность для всей семьи и бизнеса</h4>
+                      <p className="text-white/90 text-base">
+                        Мощности хватит на все устройства одновременно. Работайте с "тяжелыми" облачными сервисами, 
+                        пока дети смотрят мультфильмы, а умный дом управляет десятками гаджетов. Соединение останется стабильным.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8">
-              <h3 className="text-3xl font-bold text-white mb-8 text-center">Как подключиться</h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="bg-skynet-orange rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">1</span>
-                  </div>
-                  <h4 className="text-white font-semibold mb-3 text-lg">Проверьте адрес</h4>
-                  <p className="text-white/90 text-base">
-                    мы начинаем с районов с высокой плотностью населения и постепенно расширяем покрытие
+              <h3 className="text-3xl font-bold text-white mb-6 text-center">Как это работает и как подключиться?</h3>
+              
+              <div className="space-y-6 mb-8">
+                <p className="text-white/90 text-lg">
+                  <strong className="text-white">XGS-PON</strong> — это следующее поколение оптоволоконных сетей (эволюция GPON). 
+                  Мы будем внедрять технологию поэтапно, начиная с районов с самой высокой потребностью в сверхскоростях.
+                </p>
+                
+                <div className="bg-skynet-orange/20 rounded-lg p-6 border border-skynet-orange/30">
+                  <p className="text-white text-lg">
+                    <strong>Хорошая новость для наших действующих клиентов на оптике:</strong> переход на новый стандарт 
+                    потребует минимальных изменений в оборудовании и не доставит хлопот.
                   </p>
                 </div>
-                <div className="text-center">
-                  <div className="bg-skynet-orange rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">2</span>
-                  </div>
-                  <h4 className="text-white font-semibold mb-3 text-lg">Выберите тариф</h4>
-                  <p className="text-white/90 text-base">
-                    линейка от 1 Гбит/с до 10 Гбит/с, с приоритетными SLA для бизнеса
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="bg-skynet-orange rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">3</span>
-                  </div>
-                  <h4 className="text-white font-semibold mb-3 text-lg">Установите новое ONT-устройство</h4>
-                  <p className="text-white/90 text-base">
-                    замена занимает ~30 минут и не требует прокладки новых кабелей
-                  </p>
-                </div>
+                
+                <p className="text-white/90 text-lg">
+                  Мы уже готовим новые тарифные планы, чтобы каждый — от домашнего пользователя до крупной компании — 
+                  смог выбрать для себя оптимальную скорость.
+                </p>
               </div>
             </div>
 
             <div className="text-center">
               <p className="text-white/90 text-xl mb-6">
-                XGS-PON от «Скайнет» — это инвестиция в стабильность и скорость, которые останутся актуальными долгие годы.
+                Следите за новостями и проверяйте доступность подключения по вашему адресу!
               </p>
               <p className="text-white font-semibold text-2xl mb-8">
-                Подключайтесь сегодня и ощутите разницу!
+                С технологией XGS-PON от «Скайнет» будущее становится реальностью.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4">
@@ -168,7 +127,7 @@ const TenGigabitSection = () => {
                   onClick={scrollToContact}
                   className="bg-skynet-orange hover:bg-skynet-orange-bright text-white py-6 px-8 rounded-full shadow-lg hover:shadow-xl transition-all text-lg"
                 >
-                  Подключить XGS-PON
+                  Узнать о подключении
                 </Button>
                 <Link to="/tariffs" className="inline-flex items-center text-white hover:text-white/80 font-medium py-2 text-lg">
                   Все тарифы <ArrowRight className="ml-2 h-4 w-4" />
