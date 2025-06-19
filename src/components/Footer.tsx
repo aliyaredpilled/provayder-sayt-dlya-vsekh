@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -21,20 +21,6 @@ const Footer = () => {
             <p className="text-gray-400 mb-4 text-sm">
               Ваш надежный провайдер современных телекоммуникационных услуг для дома и семьи в Казани.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={18} />
-              </a>
-            </div>
           </div>
           
           {/* Услуги */}
@@ -107,12 +93,9 @@ const Footer = () => {
                 <MessageSquare size={16} className="mr-2 text-green-500" />
                 <div>
                   <p className="text-gray-200 text-xs">WhatsApp:</p>
-                  <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm block">
-                    Поддержка
+                  <a href="https://api.whatsapp.com/send/?phone=79867205872&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm block">
+                    Для жалоб
                   </a>
-                  <Link to="/complaints" className="text-gray-400 hover:text-white transition-colors text-sm block">
-                    Жалобы
-                  </Link>
                 </div>
               </li>
               <li className="flex items-center">

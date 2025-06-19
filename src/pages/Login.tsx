@@ -104,16 +104,6 @@ const Login = () => {
               </Button>
             </form>
 
-            {/* Дополнительные опции */}
-            <div className="mt-6 text-center">
-              <p className="text-gray-600 text-sm">
-                Нет аккаунта?{' '}
-                <Link to="/register" className="text-skynet-orange hover:text-skynet-orange-bright font-medium">
-                  Зарегистрироваться
-                </Link>
-              </p>
-            </div>
-
             <div className="mt-6 pt-6 border-t border-gray-200">
               <p className="text-center text-xs text-gray-500">
                 Нужна помощь?{' '}

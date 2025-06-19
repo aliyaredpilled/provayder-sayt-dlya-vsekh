@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -159,10 +160,10 @@ const Account = () => {
 
               {/* Sidebar */}
               <div className={`
-                fixed lg:relative inset-y-0 left-0 z-40 lg:z-auto
+                fixed lg:relative top-0 lg:top-auto bottom-0 lg:bottom-auto left-0 z-40 lg:z-auto
                 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
                 lg:translate-x-0 transition-transform duration-300 ease-in-out
-                lg:block w-80 lg:w-auto
+                lg:block w-80 lg:w-auto h-full lg:h-auto
               `}>
                 <AccountSidebar
                   userData={userData}
