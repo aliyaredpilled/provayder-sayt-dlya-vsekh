@@ -4,21 +4,169 @@ import { useState } from 'react';
 interface PaymentFormProps {
   userData: {
     userType: 'individual' | 'company';
+    contractNumber: string;
   };
 }
 
 const PaymentForm = ({ userData }: PaymentFormProps) => {
   const [amount, setAmount] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('card');
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [showInvoiceModal, setShowInvoiceModal] = useState(false);
+  const [showSberbankInstructions, setShowSberbankInstructions] = useState(false);
 
   const paymentMethods = [
-    ...(userData.userType === 'company' ? [{ id: 'invoice', label: 'Выставить счет', icon: '📄' }] : []),
-    { id: 'card', label: 'Visa/Mastercard', icon: '💳' },
-    { id: 'sbp', label: 'СБП (Система быстрых платежей)', icon: '⚡' },
-    { id: 'sberbank', label: 'Сбербанк Онлайн', icon: '🏦' },
-    { id: 'unitpay', label: 'UnitPay', icon: '💰' },
-    { id: 'terminals', label: 'Терминалы Элекснет', icon: '🏧' }
+    ...(userData.userType === 'company' ? [{ 
+      id: 'invoice', 
+      label: 'Выставить счет', 
+      icon: '📄',
+      description: 'Для юридических лиц'
+    }] : []),
+    { 
+      id: 'card', 
+      label: 'VISA / MasterCard', 
+      icon: '💳',
+      description: 'Банковские карты'
+    },
+    { 
+      id: 'sberbank', 
+      label: 'Сбербанк Онлайн', 
+      icon: '🏦',
+      description: 'Через приложение Сбербанк'
+    }
   ];
+
+  const handlePaymentMethodClick = (methodId: string) => {
+    if (methodId === 'invoice') {
+      setShowInvoiceModal(true);
+    } else if (methodId === 'sberbank') {
+      setShowSberbankInstructions(true);
+    } else if (methodId === 'card') {
+      setPaymentMethod(methodId);
+    }
+  };
+
+  const handleCardPayment = () => {
+    if (!amount || parseFloat(amount) <= 0) return;
+    setShowConfirmation(true);
+  };
+
+  const confirmCardPayment = () => {
+    // Здесь будет переход на платежный шлюз
+    alert(`Переход на платежный шлюз для оплаты ${parseFloat(amount).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽`);
+    setShowConfirmation(false);
+    setAmount('');
+  };
+
+  const generateInvoice = () => {
+    // Здесь будет генерация PDF счета
+    alert(`Счет на сумму ${parseFloat(amount).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽ сгенерирован`);
+    setShowInvoiceModal(false);
+    setAmount('');
+  };
+
+  if (showSberbankInstructions) {
+    return (
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-gray-900">Сбербанк Онлайн</h1>
+          <button
+            onClick={() => setShowSberbankInstructions(false)}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            ← Назад к способам оплаты
+          </button>
+        </div>
+        
+        <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
+          <p className="text-orange-800 font-medium">
+            ⚠️ Обращаем внимание, что зачисление средств может занять до двух банковских дней.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-8">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Инструкция по оплате</h3>
+            
+            <div className="space-y-6">
+              <div>
+                <p className="text-gray-700 mb-3">
+                  1. В приложении «Сбербанк Онлайн» нужно выбрать раздел «Платежи». В данном разделе нужно выбрать подраздел «Остальное», как показано на картинке ниже:
+                </p>
+                <div className="bg-gray-100 rounded-lg p-4 text-center">
+                  <p className="text-gray-500">[Скриншот раздела "Остальное"]</p>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-gray-700 mb-3">
+                  2. В поисковой строке необходимо ввести наименование организации «скайнет» (русскими, строчными буквами) и нажать кнопку «Поиск»:
+                </p>
+                <div className="bg-gray-100 rounded-lg p-4 text-center">
+                  <p className="text-gray-500">[Скриншот поиска "скайнет"]</p>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-gray-700 mb-3">
+                  3. Далее в списке организаций нужно выбрать «Скайнет (г. Казань)», как показано на рисунке ниже:
+                </p>
+                <div className="bg-gray-100 rounded-lg p-4 text-center">
+                  <p className="text-gray-500">[Скриншот выбора "Скайнет (г. Казань)"]</p>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-gray-700 mb-3">
+                  4. В поле «Номер договора» нужно ввести Ваш номер договора ({userData.contractNumber}) и нажать кнопку «Продолжить».
+                </p>
+                <div className="bg-gray-100 rounded-lg p-4 text-center">
+                  <p className="text-gray-500">[Скриншот ввода номера договора]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (showConfirmation) {
+    return (
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-gray-900">Оплата через VISA / MasterCard</h1>
+          <button
+            onClick={() => setShowConfirmation(false)}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            ← Назад
+          </button>
+        </div>
+        
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div className="text-center space-y-6">
+            <p className="text-gray-600">
+              Проверьте сумму и нажмите Подтвердить. После нажатия, вы перейдете на сервис, с помощью которого будет осуществлен перевод.
+            </p>
+            
+            <div className="bg-gray-50 rounded-lg p-4">
+              <p className="text-lg font-semibold text-gray-900">
+                Сумма: {parseFloat(amount).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽
+              </p>
+            </div>
+            
+            <button
+              onClick={confirmCardPayment}
+              className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-8 py-3 rounded-lg shadow-md transition-all"
+            >
+              Подтвердить
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -26,26 +174,31 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <form className="space-y-6">
-          <div>
-            <label htmlFor="amount" className="block text-sm font-medium text-gray-700 mb-2">
-              Сумма пополнения
-            </label>
-            <div className="relative">
-              <input
-                type="number"
-                id="amount"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                className="block w-full pr-12 border-gray-300 rounded-md focus:ring-skynet-blue focus:border-skynet-blue"
-                placeholder="0.00"
-                min="1"
-                step="0.01"
-              />
-              <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                <span className="text-gray-500">₽</span>
+          {paymentMethod === 'card' && (
+            <div>
+              <label htmlFor="amount" className="block text-sm font-medium text-gray-700 mb-2">
+                Сумма пополнения
+              </label>
+              <div className="relative">
+                <input
+                  type="number"
+                  id="amount"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                  className="block w-full pr-12 border-gray-300 rounded-md focus:ring-skynet-blue focus:border-skynet-blue"
+                  placeholder="0.00"
+                  min="1"
+                  step="0.01"
+                />
+                <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                  <span className="text-gray-500">₽</span>
+                </div>
               </div>
+              <p className="mt-2 text-sm text-gray-600">
+                Введите сумму и нажмите Подтвердить. После нажатия, вы перейдете на сервис, с помощью которого будет осуществлен перевод.
+              </p>
             </div>
-          </div>
+          )}
           
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-4">
@@ -53,53 +206,90 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
             </label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {paymentMethods.map((method) => (
-                <div key={method.id} className="border border-gray-300 rounded-lg p-4 cursor-pointer hover:border-skynet-blue transition-colors">
+                <div 
+                  key={method.id} 
+                  className="border border-gray-300 rounded-lg p-4 cursor-pointer hover:border-skynet-blue transition-colors"
+                  onClick={() => handlePaymentMethodClick(method.id)}
+                >
                   <div className="flex items-center">
-                    <input
-                      id={method.id}
-                      name="payment-method"
-                      type="radio"
-                      value={method.id}
-                      checked={paymentMethod === method.id}
-                      onChange={(e) => setPaymentMethod(e.target.value)}
-                      className="h-4 w-4 text-skynet-blue focus:ring-skynet-blue border-gray-300"
-                    />
-                    <label htmlFor={method.id} className="ml-3 flex items-center text-sm font-medium text-gray-700">
-                      <span className="text-2xl mr-2">{method.icon}</span>
-                      {method.label}
-                    </label>
+                    <div className="flex items-center text-sm font-medium text-gray-700">
+                      <span className="text-2xl mr-3">{method.icon}</span>
+                      <div>
+                        <div>{method.label}</div>
+                        <div className="text-xs text-gray-500">{method.description}</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
           
-          <div className="border-t border-gray-200 pt-6">
-            <div className="bg-blue-50 rounded-lg p-4 mb-4">
-              <h3 className="text-sm font-medium text-blue-800 mb-2">Пополнить IP телефонию</h3>
-              <p className="text-sm text-blue-600">
-                Отдельный баланс для услуги IP телефонии
-              </p>
+          {paymentMethod === 'card' && (
+            <div className="flex justify-end">
               <button
                 type="button"
-                className="mt-2 text-sm text-blue-700 hover:text-blue-800 font-medium"
+                onClick={handleCardPayment}
+                disabled={!amount || parseFloat(amount) <= 0}
+                className="bg-skynet-orange hover:bg-skynet-orange-bright disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium px-8 py-3 rounded-lg shadow-md transition-all"
               >
-                Пополнить →
+                Подтвердить
               </button>
             </div>
-          </div>
-          
-          <div className="flex justify-end">
-            <button
-              type="submit"
-              disabled={!amount || parseFloat(amount) <= 0}
-              className="bg-skynet-orange hover:bg-skynet-orange-bright disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium px-8 py-3 rounded-lg shadow-md transition-all"
-            >
-              Оплатить {amount && parseFloat(amount) > 0 ? `${parseFloat(amount).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽` : ''}
-            </button>
-          </div>
+          )}
         </form>
       </div>
+
+      {/* Модальное окно для выставления счета */}
+      {showInvoiceModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-6 max-w-md w-full mx-4">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Выставление счета на оплату</h3>
+            
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="invoice-amount" className="block text-sm font-medium text-gray-700 mb-1">
+                  Сумма:
+                </label>
+                <div className="relative">
+                  <input
+                    type="number"
+                    id="invoice-amount"
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}
+                    className="block w-full pr-12 border-gray-300 rounded-md focus:ring-skynet-blue focus:border-skynet-blue"
+                    placeholder="0.00"
+                    min="1"
+                    step="0.01"
+                  />
+                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <span className="text-gray-500">₽</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex space-x-3">
+                <button
+                  onClick={() => {
+                    setShowInvoiceModal(false);
+                    setAmount('');
+                  }}
+                  className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors"
+                >
+                  Отмена
+                </button>
+                <button
+                  onClick={generateInvoice}
+                  disabled={!amount || parseFloat(amount) <= 0}
+                  className="flex-1 bg-skynet-orange hover:bg-skynet-orange-bright disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                >
+                  Выставить счет
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
