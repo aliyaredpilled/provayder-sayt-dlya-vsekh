@@ -31,12 +31,12 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacts" className="section-container">
+    <section id="contacts" className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Контакты</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Остались вопросы?</h2>
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-4 flex flex-col">
-            <div className="bg-skynet-gray-light/30 rounded-xl p-4 backdrop-blur-sm flex-grow">
+            <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <div className="h-12 w-12 bg-skynet-blue text-white rounded-lg flex items-center justify-center">
@@ -57,7 +57,7 @@ const ContactSection = () => {
               </div>
             </div>
             
-            <div className="bg-skynet-gray-light/30 rounded-xl p-4 backdrop-blur-sm flex-grow">
+            <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <div className="h-12 w-12 bg-skynet-orange text-white rounded-lg flex items-center justify-center">
@@ -78,7 +78,7 @@ const ContactSection = () => {
               </div>
             </div>
             
-            <div className="bg-skynet-gray-light/30 rounded-xl p-4 backdrop-blur-sm flex-grow">
+            <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <div className="h-12 w-12 bg-green-500 text-white rounded-lg flex items-center justify-center">
@@ -96,7 +96,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="bg-skynet-gray-light/30 rounded-xl p-4 backdrop-blur-sm flex-grow">
+            <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <div className="h-12 w-12 bg-blue-500 text-white rounded-lg flex items-center justify-center">

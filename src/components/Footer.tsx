@@ -1,7 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-8">
@@ -9,13 +21,13 @@ const Footer = () => {
           {/* Логотип и информация о компании */}
           <div>
             <div className="mb-4">
-              <div className="bg-white backdrop-blur-sm rounded-xl p-3 inline-block">
+              <a href="/" onClick={handleLogoClick} className="bg-white backdrop-blur-sm rounded-xl p-3 inline-block cursor-pointer">
                 <img 
                   src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
                   alt="SKYNET Строй" 
                   className="h-12" 
                 />
-              </div>
+              </a>
             </div>
             <p className="text-gray-400 mb-4 text-sm">
               Ваш надежный провайдер современных телекоммуникационных услуг для дома и семьи в Казани.

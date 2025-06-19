@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,6 +17,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Определяем страницы с темным фоном, где нужен светлый навбар
   const isDarkBackgroundPage = location.pathname === '/promo/connect-neighbor';
@@ -30,8 +31,22 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Функция для скролла к секции "Подключиться просто"
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
+
+  // Функция для скролла к секции "Подключиться" на странице Контакты
   const scrollToContact = () => {
+    navigate('/contacts', { state: { scrollToForm: true } });
+  };
+
+  // Функция для скролла к секции "Подключиться просто"
+  const scrollToContact_OLD = () => {
     // Если мы не на главной странице, переходим на главную и скроллим
     if (location.pathname !== '/') {
       window.location.href = '/#contact';
@@ -69,13 +84,13 @@ const NavBar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center">
+        <a href="/" onClick={handleLogoClick} className="flex items-center">
           <img 
             src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
             alt="SKYNET" 
             className="h-12"
           />
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">

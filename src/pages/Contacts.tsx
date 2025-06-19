@@ -1,9 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { Phone, Mail, Clock, CheckCircle2 } from 'lucide-react';
 
 const Contacts = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollToForm) {
+      const formElement = document.getElementById('contact-form');
+      if (formElement) {
+        // Добавляем небольшую задержку, чтобы страница успела отрисоваться
+        setTimeout(() => {
+          formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -156,7 +171,7 @@ const Contacts = () => {
               </div>
               
               <div className="md:col-span-3 flex flex-col">
-                <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 h-full flex flex-col">
+                <div id="contact-form" className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 h-full flex flex-col">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">Напишите нам</h3>
                   
                   {formStatus === 'success' ? (

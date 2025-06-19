@@ -176,7 +176,7 @@ export default {
 				'float': 'float 5s ease-in-out infinite',
 				'gradient-x': 'gradient-x 15s ease infinite',
 				'spin-slow': 'spin-slow 8s linear infinite',
-				'bounce-slight': 'bounce-slight 2s ease-in-out infinite',
+				'bounce-slight': 'bounce-slight 4s ease-in-out infinite',
 				'slide-in-right': 'slide-in-right 0.5s ease-out',
 				'slide-in-left': 'slide-in-left 0.5s ease-out',
 				'slide-in-bottom': 'slide-in-bottom 0.5s ease-out',
