@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Settings } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Link } from 'react-router-dom';
 
 interface Service {
   id: number;
@@ -64,9 +65,17 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
           <p className="text-sm text-gray-500 mb-1">Текущий баланс</p>
           <p className="text-3xl font-bold text-gray-900">{userData.balance.toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽</p>
-          <button className="mt-4 w-full bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium py-2 rounded-lg shadow-sm transition-all">
-            Пополнить счет
-          </button>
+          <Link to="/account" onClick={() => {
+            // Trigger a re-render to show payment tab
+            setTimeout(() => {
+              const event = new CustomEvent('showPaymentTab');
+              window.dispatchEvent(event);
+            }, 100);
+          }}>
+            <button className="mt-4 w-full bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium py-2 rounded-lg shadow-sm transition-all">
+              Пополнить счет
+            </button>
+          </Link>
         </div>
         
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">

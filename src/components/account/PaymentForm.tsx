@@ -174,11 +174,11 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-bold text-gray-900 font-inter">Оплата</h1>
+      <h1 className="text-2xl font-bold text-gray-900 font-inter">Оплата</h1>
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-4 font-inter">
+          <label className="block text-lg font-medium text-gray-700 mb-4 font-inter">
             Способ оплаты
           </label>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

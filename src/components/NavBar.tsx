@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -32,6 +31,18 @@ const NavBar = () => {
 
   // Функция для скролла к секции "Подключиться просто"
   const scrollToContact = () => {
+    // Check if user is at bottom of page and needs to go to top of current section
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const currentScroll = window.pageYOffset;
+    
+    // If user is near the bottom (within 200px), scroll to top of page
+    if (currentScroll + windowHeight >= documentHeight - 200) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    
+    // Otherwise, scroll to contact section as usual
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });

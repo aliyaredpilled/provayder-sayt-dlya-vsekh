@@ -12,11 +12,12 @@ const TenGigabitSection = () => {
   };
 
   return (
-    <section id="10g-internet" className="py-8 relative overflow-hidden bg-gradient-to-b from-sky-50 to-white">
+    <section id="10g-internet" className="py-8 relative overflow-hidden bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
       <div className="container mx-auto px-4">
-        <div className="bg-gradient-to-r from-skynet-blue to-skynet-blue-light rounded-2xl overflow-hidden relative">
-          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-skynet-orange opacity-20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-skynet-orange opacity-20 rounded-full blur-3xl"></div>
+        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-700 rounded-2xl overflow-hidden relative">
+          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-gradient-to-br from-yellow-400 to-orange-500 opacity-20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-gradient-to-tr from-pink-400 to-red-500 opacity-20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-10 rounded-full blur-3xl"></div>
           
           <div className="relative z-10 p-8 md:p-12">
             <div className="text-center mb-12">
@@ -50,9 +51,9 @@ const TenGigabitSection = () => {
               </p>
               
               <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="flex items-start mb-4">
-                    <Zap className="h-8 w-8 text-skynet-orange mr-4 mt-1 flex-shrink-0" />
+                    <Zap className="h-8 w-8 text-yellow-400 mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-white font-semibold mb-3 text-lg">🚀 Симметричная скорость</h4>
                       <p className="text-white/90 text-base">
@@ -63,9 +64,9 @@ const TenGigabitSection = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="flex items-start mb-4">
-                    <Gamepad2 className="h-8 w-8 text-skynet-orange mr-4 mt-1 flex-shrink-0" />
+                    <Gamepad2 className="h-8 w-8 text-green-400 mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-white font-semibold mb-3 text-lg">🎮 Гейминг и развлечения без компромиссов</h4>
                       <p className="text-white/90 text-base">
@@ -76,9 +77,9 @@ const TenGigabitSection = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="flex items-start mb-4">
-                    <Home className="h-8 w-8 text-skynet-orange mr-4 mt-1 flex-shrink-0" />
+                    <Home className="h-8 w-8 text-blue-400 mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-white font-semibold mb-3 text-lg">🏠 Надежность для всей семьи и бизнеса</h4>
                       <p className="text-white/90 text-base">
@@ -91,7 +92,7 @@ const TenGigabitSection = () => {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8 border border-white/20">
               <h3 className="text-3xl font-bold text-white mb-6 text-center">Как это работает и как подключиться?</h3>
               
               <div className="space-y-6 mb-8">
@@ -100,7 +101,7 @@ const TenGigabitSection = () => {
                   Мы будем внедрять технологию поэтапно, начиная с районов с самой высокой потребностью в сверхскоростях.
                 </p>
                 
-                <div className="bg-skynet-orange/20 rounded-lg p-6 border border-skynet-orange/30">
+                <div className="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-lg p-6 border border-yellow-400/30">
                   <p className="text-white text-lg">
                     <strong>Хорошая новость для наших действующих клиентов на оптике:</strong> переход на новый стандарт 
                     потребует минимальных изменений в оборудовании и не доставит хлопот.
@@ -125,7 +126,7 @@ const TenGigabitSection = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <Button 
                   onClick={scrollToContact}
-                  className="bg-skynet-orange hover:bg-skynet-orange-bright text-white py-6 px-8 rounded-full shadow-lg hover:shadow-xl transition-all text-lg"
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white py-6 px-8 rounded-full shadow-lg hover:shadow-xl transition-all text-lg font-semibold"
                 >
                   Узнать о подключении
                 </Button>

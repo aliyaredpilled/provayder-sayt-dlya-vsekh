@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import AccountSidebar from "@/components/account/AccountSidebar";
@@ -12,6 +11,18 @@ import DocumentsTab from "@/components/account/DocumentsTab";
 
 const Account = () => {
   const [activeTab, setActiveTab] = useState('main');
+  
+  useEffect(() => {
+    const handleShowPaymentTab = () => {
+      setActiveTab('payment');
+    };
+    
+    window.addEventListener('showPaymentTab', handleShowPaymentTab);
+    
+    return () => {
+      window.removeEventListener('showPaymentTab', handleShowPaymentTab);
+    };
+  }, []);
   
   const userData = {
     name: 'Хузяшева Дилбар',
