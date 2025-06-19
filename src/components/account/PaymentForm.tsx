@@ -74,7 +74,6 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
 
   const handlePaymentMethodClick = (methodId: string) => {
     if (methodId === 'sbp') {
-      setAmount('1000');
       setShowSBPConfirmation(true);
     } else if (methodId === 'invoice') {
       setShowInvoiceModal(true);
@@ -92,11 +91,11 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
     }
   };
 
-  const confirmSBPPayment = () => {
-    // Здесь будет переход на СБП
-    alert(`Переход в приложение банка для оплаты ${parseFloat(amount).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽ через СБП`);
+  const confirmSBPPayment = (paymentAmount: string) => {
+    // Generate a mock SBP link
+    const sbpLink = `https://qr.nspk.ru/12345678?amount=${parseFloat(paymentAmount) * 100}&currency=RUB&payeeId=12345`;
+    alert(`Ссылка для оплаты ${parseFloat(paymentAmount).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽ через СБП:\n\n${sbpLink}\n\nСкопируйте эту ссылку и откройте её в приложении вашего банка.`);
     setShowSBPConfirmation(false);
-    setAmount('');
   };
 
   const confirmCardPayment = () => {
@@ -157,7 +156,6 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
   if (showSBPConfirmation) {
     return (
       <SBPPaymentConfirmation
-        amount={amount}
         onConfirm={confirmSBPPayment}
         onBack={() => setShowSBPConfirmation(false)}
       />
@@ -176,7 +174,7 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold text-gray-900 font-inter">Оплата</h1>
+      <h1 className="text-xl font-bold text-gray-900 font-inter">Оплата</h1>
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div>

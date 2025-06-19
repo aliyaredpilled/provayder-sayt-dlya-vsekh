@@ -23,7 +23,7 @@ const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
       return method.icon();
     }
     
-    // It's a LucideIcon component, render as JSX element
+    // It's a LucideIcon component, render as JSX element with props
     const IconComponent = method.icon as LucideIcon;
     return <IconComponent className="w-16 h-16 text-skynet-blue" />;
   };
@@ -39,8 +39,8 @@ const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
             {renderIcon()}
           </div>
           <div>
-            <div className="font-semibold text-xl font-inter">{method.label}</div>
-            <div className="text-base text-gray-500 font-inter">{method.description}</div>
+            <div className="font-semibold text-base font-inter">{method.label}</div>
+            <div className="text-sm text-gray-500 font-inter">{method.description}</div>
           </div>
         </div>
       </div>
