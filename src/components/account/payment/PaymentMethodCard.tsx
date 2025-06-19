@@ -17,9 +17,8 @@ interface PaymentMethodCardProps {
 const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
   const renderIcon = () => {
     if (typeof method.icon === 'function') {
-      // Try to determine if it's a LucideIcon or a function returning JSX
+      // Try to call it as a function that returns JSX (like our image functions)
       try {
-        // First, try calling it as a function that returns JSX (like our image functions)
         const result = method.icon();
         // If it returns a valid React element, use it
         if (result && typeof result === 'object' && 'type' in result) {
@@ -27,11 +26,10 @@ const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
         }
       } catch {
         // If calling as function fails, it's likely a LucideIcon component
+        // Render as LucideIcon component with props
+        const IconComponent = method.icon as LucideIcon;
+        return <IconComponent className="w-16 h-16 text-skynet-blue" />;
       }
-      
-      // Treat as LucideIcon component and pass props
-      const IconComponent = method.icon as LucideIcon;
-      return <IconComponent className="w-16 h-16 text-skynet-blue" />;
     }
     
     // Fallback for LucideIcon component
