@@ -1,72 +1,77 @@
 
-import { User, Home, ClipboardList, CreditCard, Settings, LogOut, Bell, Wifi, Video } from 'lucide-react';
+import { User, Home, CreditCard, Receipt, FileText, Video, LogOut } from 'lucide-react';
+
+interface UserData {
+  name: string;
+  userType: 'individual' | 'company';
+  contractNumber: string;
+  login: string;
+}
 
 interface AccountSidebarProps {
-  userData: {
-    name: string;
-    accountNumber: string;
-    notifications: Array<{ isRead: boolean }>;
-  };
+  userData: UserData;
   activeTab: string;
   setActiveTab: (tab: string) => void;
 }
 
 const AccountSidebar = ({ userData, activeTab, setActiveTab }: AccountSidebarProps) => {
   const menuItems = [
-    { id: 'dashboard', icon: Home, label: 'Главная' },
-    { id: 'services', icon: Wifi, label: 'Мои услуги' },
-    { id: 'payments', icon: CreditCard, label: 'Платежи' },
+    { id: 'main', icon: Home, label: 'Главная' },
+    { id: 'payments-history', icon: Receipt, label: 'Платежи' },
+    { id: 'payment', icon: CreditCard, label: 'Оплата' },
+    { id: 'personal-data', icon: User, label: 'Личные данные' },
     { id: 'surveillance', icon: Video, label: 'Видеонаблюдение' },
-    { id: 'notifications', icon: Bell, label: 'Уведомления' },
-    { id: 'history', icon: ClipboardList, label: 'История операций' },
-    { id: 'settings', icon: Settings, label: 'Настройки' }
+    { id: 'documents', icon: FileText, label: 'Документы' }
   ];
 
   return (
-    <div className="md:w-64 bg-skynet-blue text-white">
+    <div className="w-80 bg-skynet-blue text-white flex flex-col">
+      {/* Блок информации о пользователе */}
       <div className="p-6 border-b border-white/10">
-        <div className="flex items-center">
-          <div className="bg-white/10 rounded-full p-3 mr-3">
+        <div className="flex items-start">
+          <div className="bg-white/10 rounded-full p-3 mr-4 flex-shrink-0">
             <User className="h-6 w-6" />
           </div>
-          <div>
-            <p className="font-medium">{userData.name}</p>
-            <p className="text-sm text-white/70">Лицевой счёт: {userData.accountNumber}</p>
+          <div className="min-w-0 flex-1">
+            <p className="font-medium text-lg leading-tight break-words">{userData.name}</p>
+            <p className="text-sm text-white/70 mt-1">
+              Договор: {userData.contractNumber}
+            </p>
+            <p className="text-sm text-white/70">
+              Логин: {userData.login}
+            </p>
           </div>
         </div>
       </div>
       
-      <nav className="p-4">
+      {/* Меню навигации */}
+      <nav className="p-4 flex-1">
         <ul className="space-y-1">
           {menuItems.map(item => (
             <li key={item.id}>
               <button 
                 onClick={() => setActiveTab(item.id)} 
-                className={`w-full flex items-center px-4 py-3 rounded-lg transition-colors ${
+                className={`w-full flex items-center px-4 py-3 rounded-lg transition-colors text-left ${
                   activeTab === item.id 
-                    ? 'bg-white/10' 
-                    : 'hover:bg-white/5'
+                    ? 'bg-white/10 text-white' 
+                    : 'hover:bg-white/5 text-white/90'
                 }`}
               >
-                <item.icon className="h-5 w-5 mr-3" />
+                <item.icon className="h-5 w-5 mr-3 flex-shrink-0" />
                 <span>{item.label}</span>
-                {item.id === 'notifications' && userData.notifications.some(n => !n.isRead) && (
-                  <span className="ml-auto bg-skynet-orange text-white text-xs px-2 py-1 rounded-full">
-                    {userData.notifications.filter(n => !n.isRead).length}
-                  </span>
-                )}
               </button>
             </li>
           ))}
         </ul>
-        
-        <div className="pt-4 mt-6 border-t border-white/10">
-          <button className="w-full flex items-center px-4 py-3 rounded-lg text-white/80 hover:text-white hover:bg-white/5 transition-colors">
-            <LogOut className="h-5 w-5 mr-3" />
-            <span>Выйти</span>
-          </button>
-        </div>
       </nav>
+      
+      {/* Кнопка выхода */}
+      <div className="p-4 border-t border-white/10">
+        <button className="w-full flex items-center px-4 py-3 rounded-lg text-white/80 hover:text-white hover:bg-white/5 transition-colors">
+          <LogOut className="h-5 w-5 mr-3" />
+          <span>Выход</span>
+        </button>
+      </div>
     </div>
   );
 };

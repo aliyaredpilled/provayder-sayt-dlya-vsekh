@@ -2,150 +2,99 @@
 import { useState } from 'react';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import { Wifi } from 'lucide-react';
 import AccountSidebar from "@/components/account/AccountSidebar";
-import DashboardTab from "@/components/account/DashboardTab";
+import MainDashboard from "@/components/account/MainDashboard";
+import PaymentsHistory from "@/components/account/PaymentsHistory";
+import PaymentForm from "@/components/account/PaymentForm";
+import PersonalData from "@/components/account/PersonalData";
 import SurveillanceTab from "@/components/account/SurveillanceTab";
-import ServicesTab from "@/components/account/ServicesTab";
-import PaymentsTab from "@/components/account/PaymentsTab";
-import NotificationsTab from "@/components/account/NotificationsTab";
-import SettingsTab from "@/components/account/SettingsTab";
+import DocumentsTab from "@/components/account/DocumentsTab";
 
 const Account = () => {
-  const [activeTab, setActiveTab] = useState('dashboard');
-  const [openAddresses, setOpenAddresses] = useState<{[key: string]: boolean}>({});
-  const [openServiceDetails, setOpenServiceDetails] = useState<{[key: string]: boolean}>({});
+  const [activeTab, setActiveTab] = useState('main');
   
   const userData = {
-    name: 'Иванов Иван',
-    balance: 1250.75,
-    accountNumber: '2987465',
+    name: 'Хузяшева Дилбар',
+    userType: 'individual', // 'individual' или 'company'
+    contractNumber: '39421',
+    login: 'TimurR',
+    balance: 10750.00,
     addresses: [
       {
         id: 'addr1',
-        address: 'г. Казань, ул. Пушкина, д. 3',
+        address: 'г. Казань, ул. Маршала Чуйкова, д. 62',
         services: [
-          { 
-            id: 1, 
-            name: 'Интернет "Профсоюзная"', 
-            price: 750.50, 
-            speed: '30/30 Мбит/с', 
-            status: 'active', 
-            icon: Wifi,
-            type: 'internet',
-            connectionType: 'Статический IP',
-            ipAddress: '91.123.45.67',
-            subnetMask: '255.255.255.0',
-            gateway: '91.123.45.1',
-            dns: '8.8.8.8, 1.1.1.1',
-            uptime: '3 д 14 ч'
+          {
+            id: 1,
+            name: 'Интернет',
+            icon: '💻',
+            speed: '100M/100M',
+            hasStaticIP: true,
+            login: 'user_xxl',
+            price: 7507.50,
+            status: 'Активен до 30.06.2025',
+            ipAddress: '91.225.78.246',
+            subnetMask: '255.255.252.0',
+            gateway: '91.225.76.1',
+            speedKbps: '102400/102400'
           },
-          { 
-            id: 2, 
-            name: 'Wi-Fi Social Links', 
-            price: 578, 
-            networkName: 'nabinvest_pushkina_3', 
-            status: 'active', 
-            icon: Wifi,
-            type: 'wifi'
+          {
+            id: 2,
+            name: 'IP телефония',
+            icon: '📞',
+            login: 'phone_user',
+            price: 577.50,
+            status: 'Активен до 30.06.2025'
           }
         ]
       },
       {
         id: 'addr2',
-        address: 'г. Казань, ул. Калинина, д. 62',
+        address: 'г. Казань, СНТ "Дружба-2", уч. 125 (очень длинный адрес для проверки переноса строки)',
         services: [
-          { 
-            id: 3, 
-            name: 'Интернет "Калинина-1"', 
-            price: 5775.00, 
-            speed: '30/30 Мбит/с', 
-            status: 'active', 
-            icon: Wifi,
-            type: 'internet',
-            connectionType: 'Динамический IP',
-            ipAddress: '95.100.200.30',
-            uptime: '1 д 8 ч'
-          },
-          { 
-            id: 4, 
-            name: 'Интернет "Калинина-2"', 
-            price: 8085.00, 
-            speed: '50/50 Мбит/с', 
-            status: 'active', 
-            icon: Wifi,
-            type: 'internet',
-            connectionType: 'Статический IP',
-            ipAddress: '91.145.78.123',
-            subnetMask: '255.255.255.0',
-            gateway: '91.145.78.1',
-            dns: '8.8.8.8, 1.1.1.1',
-            uptime: '7 д 2 ч'
+          {
+            id: 3,
+            name: 'Смотрёшка',
+            icon: '📺',
+            price: 0.00,
+            status: 'Активен до 30.06.2025'
           }
         ]
       }
     ],
     payments: [
-      { id: 101, date: '15.06.2023', amount: 1650, method: 'Банковская карта' },
-      { id: 102, date: '15.05.2023', amount: 1650, method: 'Банковская карта' },
-      { id: 103, date: '15.04.2023', amount: 1650, method: 'Банковская карта' }
+      { id: 1, date: '15.06.2023 14:30', amount: 1155.00, type: 'Пополнение', description: 'Пополнение через Сбербанк Онлайн' },
+      { id: 2, date: '01.06.2023 00:01', amount: -8085.00, type: 'Списание', description: 'Списание за Интернет' },
+      { id: 3, date: '01.06.2023 00:01', amount: -577.50, type: 'Списание', description: 'Списание за IP телефонию' }
     ],
-    notifications: [
-      { id: 201, date: '20.06.2023', title: 'Профилактические работы', message: 'Уважаемые абоненты! 25 июня с 02:00 до 04:00 будут проводиться технические работы. Возможны кратковременные перерывы в предоставлении услуг.', isRead: false },
-      { id: 202, date: '10.06.2023', title: 'Изменение тарифов', message: 'С 1 июля 2023 года изменяются условия тарифного плана "Быстрый". Подробности в личном кабинете.', isRead: true }
-    ],
+    personalData: {
+      fullName: 'Хузяшева Дилбар Тимуровна',
+      phone: '+7 (843) 555-0123',
+      email: 'dilbar@example.com',
+      address: 'г. Казань, ул. Пушкина, д. 10, кв. 25'
+    },
     cameras: [
-      { id: 'cam1', name: 'Подъезд 1, этаж 3', type: 'private', status: 'online', preview: '/lovable-uploads/camera1.jpg' },
-      { id: 'cam2', name: 'Парковка, место 42', type: 'private', status: 'offline', preview: '/lovable-uploads/camera2.jpg' },
-      { id: 'cam3', name: 'Двор, детская площадка', type: 'public', status: 'online', preview: '/lovable-uploads/camera3.jpg' }
+      { id: 'cam1', name: 'Подъезд 1, этаж 3', address: 'г. Казань, ул. Маршала Чуйкова, д. 62', status: 'online' },
+      { id: 'cam2', name: 'Парковка, место 42', address: 'г. Казань, ул. Маршала Чуйкова, д. 62', status: 'offline' }
     ]
   };
 
-  const toggleAddress = (addressId: string) => {
-    setOpenAddresses(prev => ({
-      ...prev,
-      [addressId]: !prev[addressId]
-    }));
-  };
-
-  const toggleServiceDetails = (serviceId: string) => {
-    setOpenServiceDetails(prev => ({
-      ...prev,
-      [serviceId]: !prev[serviceId]
-    }));
-  };
-
-  const getTotalMonthlyPayment = () => {
-    return userData.addresses.reduce((total, address) => {
-      return total + address.services.reduce((addressTotal, service) => addressTotal + service.price, 0);
-    }, 0);
-  };
-
-  const renderTabContent = () => {
+  const renderContent = () => {
     switch (activeTab) {
-      case 'dashboard':
-        return (
-          <DashboardTab
-            userData={userData}
-            openAddresses={openAddresses}
-            openServiceDetails={openServiceDetails}
-            toggleAddress={toggleAddress}
-            toggleServiceDetails={toggleServiceDetails}
-            getTotalMonthlyPayment={getTotalMonthlyPayment}
-          />
-        );
+      case 'main':
+        return <MainDashboard userData={userData} />;
+      case 'payments-history':
+        return <PaymentsHistory userData={userData} />;
+      case 'payment':
+        return <PaymentForm userData={userData} />;
+      case 'personal-data':
+        return <PersonalData userData={userData} />;
       case 'surveillance':
         return <SurveillanceTab userData={userData} />;
-      case 'services':
-        return <ServicesTab userData={userData} />;
-      case 'payments':
-        return <PaymentsTab userData={userData} getTotalMonthlyPayment={getTotalMonthlyPayment} />;
-      case 'notifications':
-        return <NotificationsTab userData={userData} />;
-      case 'settings':
-        return <SettingsTab />;
+      case 'documents':
+        return <DocumentsTab />;
       default:
-        return <div>История операций - В разработке</div>;
+        return <MainDashboard userData={userData} />;
     }
   };
 
@@ -156,15 +105,15 @@ const Account = () => {
       <div className="pt-32 pb-20">
         <div className="container mx-auto px-4">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="md:flex">
+            <div className="flex min-h-[600px]">
               <AccountSidebar
                 userData={userData}
                 activeTab={activeTab}
                 setActiveTab={setActiveTab}
               />
               
-              <div className="flex-1 p-6">
-                {renderTabContent()}
+              <div className="flex-1 p-6 bg-gray-50">
+                {renderContent()}
               </div>
             </div>
           </div>
