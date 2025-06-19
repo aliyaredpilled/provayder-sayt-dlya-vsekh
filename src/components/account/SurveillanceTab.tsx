@@ -1,4 +1,3 @@
-
 import { Video, Archive, Camera } from 'lucide-react';
 import { useState } from 'react';
 
@@ -27,11 +26,17 @@ const SurveillanceTab = ({ userData }: SurveillanceTabProps) => {
         <h1 className="text-2xl font-bold text-gray-900">Видеонаблюдение</h1>
         <div className="flex gap-3">
           <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2">
+            <Camera className="h-4 w-4" />
+            Просмотр записей
+          </button>
+          <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2">
             <Archive className="h-4 w-4" />
             Смотреть архив
           </button>
         </div>
       </div>
+      
+      
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="border-b border-gray-200">
@@ -63,12 +68,8 @@ const SurveillanceTab = ({ userData }: SurveillanceTabProps) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredCameras.map(camera => (
               <div key={camera.id} className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-                <div className="relative aspect-video bg-gray-100 flex items-center justify-center">
+                <div className="aspect-video bg-gray-100 flex items-center justify-center">
                   <Video className="h-12 w-12 text-gray-400" />
-                  <button className="absolute top-3 right-3 bg-white/90 hover:bg-white text-gray-700 px-3 py-2 rounded-lg shadow-sm transition-colors flex items-center gap-2 text-sm">
-                    <Camera className="h-4 w-4" />
-                    Просмотр записей
-                  </button>
                 </div>
                 <div className="p-4">
                   <h3 className="font-medium text-gray-900 mb-2">{camera.name}</h3>
