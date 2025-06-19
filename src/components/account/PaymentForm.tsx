@@ -93,8 +93,12 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
                 <p className="text-gray-700 mb-3">
                   1. В приложении «Сбербанк Онлайн» нужно выбрать раздел «Платежи». В данном разделе нужно выбрать подраздел «Остальное», как показано на картинке ниже:
                 </p>
-                <div className="bg-gray-100 rounded-lg p-4 text-center">
-                  <p className="text-gray-500">[Скриншот раздела "Остальное"]</p>
+                <div className="bg-gray-100 rounded-lg p-4">
+                  <img 
+                    src="/lovable-uploads/e5c6f924-2fc6-45c1-b017-027b19d385af.png" 
+                    alt="Скриншот раздела Остальное в Сбербанк Онлайн" 
+                    className="w-full max-w-md mx-auto rounded-lg"
+                  />
                 </div>
               </div>
 
@@ -102,8 +106,12 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
                 <p className="text-gray-700 mb-3">
                   2. В поисковой строке необходимо ввести наименование организации «скайнет» (русскими, строчными буквами) и нажать кнопку «Поиск»:
                 </p>
-                <div className="bg-gray-100 rounded-lg p-4 text-center">
-                  <p className="text-gray-500">[Скриншот поиска "скайнет"]</p>
+                <div className="bg-gray-100 rounded-lg p-4">
+                  <img 
+                    src="/lovable-uploads/2a95448f-2bf7-4f29-a7e7-553fc3bf1cfc.png" 
+                    alt="Скриншот поиска скайнет в Сбербанк Онлайн" 
+                    className="w-full max-w-md mx-auto rounded-lg"
+                  />
                 </div>
               </div>
 
@@ -111,8 +119,12 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
                 <p className="text-gray-700 mb-3">
                   3. Далее в списке организаций нужно выбрать «Скайнет (г. Казань)», как показано на рисунке ниже:
                 </p>
-                <div className="bg-gray-100 rounded-lg p-4 text-center">
-                  <p className="text-gray-500">[Скриншот выбора "Скайнет (г. Казань)"]</p>
+                <div className="bg-gray-100 rounded-lg p-4">
+                  <img 
+                    src="/lovable-uploads/1addae5d-5c1e-4083-939c-8c88130bebe6.png" 
+                    alt="Скриншот выбора Скайнет (г. Казань)" 
+                    className="w-full max-w-md mx-auto rounded-lg"
+                  />
                 </div>
               </div>
 
@@ -120,8 +132,12 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
                 <p className="text-gray-700 mb-3">
                   4. В поле «Номер договора» нужно ввести Ваш номер договора ({userData.contractNumber}) и нажать кнопку «Продолжить».
                 </p>
-                <div className="bg-gray-100 rounded-lg p-4 text-center">
-                  <p className="text-gray-500">[Скриншот ввода номера договора]</p>
+                <div className="bg-gray-100 rounded-lg p-4">
+                  <img 
+                    src="/lovable-uploads/0d434773-eaf9-4767-806a-80d398eb158c.png" 
+                    alt="Скриншот ввода номера договора" 
+                    className="w-full max-w-md mx-auto rounded-lg"
+                  />
                 </div>
               </div>
             </div>
