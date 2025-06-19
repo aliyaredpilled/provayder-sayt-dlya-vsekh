@@ -1,3 +1,4 @@
+
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -74,7 +75,7 @@ const Services = () => {
             <div className="lg:order-first lg:order-last">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1600132394525-ede6f1c5d418?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                   alt="Высокоскоростной интернет" 
                   className="rounded-2xl shadow-2xl"
                 />
@@ -135,7 +136,7 @@ const Services = () => {
             <div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1522198734915-76c764a8454d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                   alt="Цифровое телевидение" 
                   className="rounded-2xl shadow-2xl"
                 />
@@ -192,7 +193,7 @@ const Services = () => {
             <div className="lg:order-first lg:order-last">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                   alt="Домашняя телефония" 
                   className="rounded-2xl shadow-2xl"
                 />
