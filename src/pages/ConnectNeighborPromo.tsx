@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -13,7 +12,7 @@ const ConnectNeighborPromo = () => {
       
       <section className="pt-20 pb-16 bg-gradient-to-b from-skynet-blue to-skynet-blue-light text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Акция: Подключи соседа
             </h1>
@@ -32,7 +31,7 @@ const ConnectNeighborPromo = () => {
       
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Как работает акция</h2>
             
             <div className="grid md:grid-cols-2 gap-6 mb-16">

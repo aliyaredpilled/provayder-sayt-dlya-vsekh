@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 
@@ -10,67 +9,67 @@ const SettingsTab = () => {
       <h1 className="text-2xl font-bold text-gray-900 mb-6">Настройки профиля</h1>
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8">
-        <h2 className="text-xl font-semibold text-gray-900 mb-6">Личные данные</h2>
+        <h2 className="text-lg font-semibold text-gray-900 mb-6">Личные данные</h2>
         
         <form className="space-y-6">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
-              <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="first-name" className="block text-base font-medium text-gray-700 mb-1">
                 Имя
               </label>
               <input 
                 type="text" 
                 id="first-name" 
-                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent" 
+                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent text-base" 
                 defaultValue="Иван"
               />
             </div>
             
             <div>
-              <label htmlFor="last-name" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="last-name" className="block text-base font-medium text-gray-700 mb-1">
                 Фамилия
               </label>
               <input 
                 type="text" 
                 id="last-name" 
-                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent" 
+                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent text-base" 
                 defaultValue="Иванов"
               />
             </div>
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-base font-medium text-gray-700 mb-1">
               Email
             </label>
             <input 
               type="email" 
               id="email" 
-              className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent" 
+              className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent text-base" 
               defaultValue="ivan.ivanov@example.com"
             />
           </div>
           
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="phone" className="block text-base font-medium text-gray-700 mb-1">
               Телефон
             </label>
             <input 
               type="tel" 
               id="phone" 
-              className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent" 
+              className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent text-base" 
               defaultValue="+7 (999) 123-45-67"
             />
           </div>
           
           <div>
-            <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="address" className="block text-base font-medium text-gray-700 mb-1">
               Основной адрес
             </label>
             <input 
               type="text" 
               id="address" 
-              className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent" 
+              className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent text-base" 
               defaultValue="г. Казань, ул. Пушкина, д. 3"
             />
           </div>
@@ -78,7 +77,7 @@ const SettingsTab = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-2 rounded-lg shadow-md transition-all"
+              className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-2 rounded-lg shadow-md transition-all text-base"
             >
               Сохранить изменения
             </button>
@@ -87,18 +86,18 @@ const SettingsTab = () => {
       </div>
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8">
-        <h2 className="text-xl font-semibold text-gray-900 mb-6">Изменить пароль</h2>
+        <h2 className="text-lg font-semibold text-gray-900 mb-6">Изменить пароль</h2>
         
         <form className="space-y-6">
           <div>
-            <label htmlFor="current-password" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="current-password" className="block text-base font-medium text-gray-700 mb-1">
               Текущий пароль
             </label>
             <div className="relative">
               <input 
                 type={showPassword ? 'text' : 'password'} 
                 id="current-password" 
-                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent" 
+                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent text-base" 
                 placeholder="••••••••"
               />
               <button
@@ -116,14 +115,14 @@ const SettingsTab = () => {
           </div>
           
           <div>
-            <label htmlFor="new-password" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="new-password" className="block text-base font-medium text-gray-700 mb-1">
               Новый пароль
             </label>
             <div className="relative">
               <input 
                 type={showPassword ? 'text' : 'password'} 
                 id="new-password" 
-                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent" 
+                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent text-base" 
                 placeholder="••••••••"
               />
               <button
@@ -141,14 +140,14 @@ const SettingsTab = () => {
           </div>
           
           <div>
-            <label htmlFor="confirm-password" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="confirm-password" className="block text-base font-medium text-gray-700 mb-1">
               Подтверждение пароля
             </label>
             <div className="relative">
               <input 
                 type={showPassword ? 'text' : 'password'} 
                 id="confirm-password" 
-                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent" 
+                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent text-base" 
                 placeholder="••••••••"
               />
               <button
@@ -168,7 +167,7 @@ const SettingsTab = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-2 rounded-lg shadow-md transition-all"
+              className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-2 rounded-lg shadow-md transition-all text-base"
             >
               Изменить пароль
             </button>
@@ -177,7 +176,7 @@ const SettingsTab = () => {
       </div>
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-6">Настройки уведомлений</h2>
+        <h2 className="text-lg font-semibold text-gray-900 mb-6">Настройки уведомлений</h2>
         
         <form className="space-y-6">
           <div className="space-y-4">
@@ -191,7 +190,7 @@ const SettingsTab = () => {
                   className="h-4 w-4 text-skynet-blue focus:ring-skynet-blue border-gray-300 rounded"
                 />
               </div>
-              <div className="ml-3 text-sm">
+              <div className="ml-3 text-base">
                 <label htmlFor="email-notifications" className="font-medium text-gray-700">
                   Email-уведомления
                 </label>
@@ -209,7 +208,7 @@ const SettingsTab = () => {
                   className="h-4 w-4 text-skynet-blue focus:ring-skynet-blue border-gray-300 rounded"
                 />
               </div>
-              <div className="ml-3 text-sm">
+              <div className="ml-3 text-base">
                 <label htmlFor="sms-notifications" className="font-medium text-gray-700">
                   SMS-уведомления
                 </label>
@@ -227,7 +226,7 @@ const SettingsTab = () => {
                   className="h-4 w-4 text-skynet-blue focus:ring-skynet-blue border-gray-300 rounded"
                 />
               </div>
-              <div className="ml-3 text-sm">
+              <div className="ml-3 text-base">
                 <label htmlFor="payment-notifications" className="font-medium text-gray-700">
                   Платежные уведомления
                 </label>
@@ -244,7 +243,7 @@ const SettingsTab = () => {
                   className="h-4 w-4 text-skynet-blue focus:ring-skynet-blue border-gray-300 rounded"
                 />
               </div>
-              <div className="ml-3 text-sm">
+              <div className="ml-3 text-base">
                 <label htmlFor="promo-notifications" className="font-medium text-gray-700">
                   Рекламные уведомления
                 </label>
@@ -256,7 +255,7 @@ const SettingsTab = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-2 rounded-lg shadow-md transition-all"
+              className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-2 rounded-lg shadow-md transition-all text-base"
             >
               Сохранить настройки
             </button>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -135,7 +134,7 @@ const Account = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 font-inter">
       <NavBar />
       
       <div className="pt-24 lg:pt-32 pb-20">

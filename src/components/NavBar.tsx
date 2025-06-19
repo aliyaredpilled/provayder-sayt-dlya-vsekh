@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -12,6 +11,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { Button } from "@/components/ui/button"
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,12 +52,12 @@ const NavBar = () => {
   const getNavbarStyle = () => {
     if (isDarkBackgroundPage) {
       return isScrolled 
-        ? "bg-white/95 backdrop-blur-md shadow-md py-1" 
-        : "bg-white/90 backdrop-blur-sm py-2";
+        ? "bg-white/95 backdrop-blur-md shadow-md py-2" 
+        : "bg-white/90 backdrop-blur-sm py-3";
     } else {
       return isScrolled 
-        ? "bg-white/90 backdrop-blur-md shadow-sm py-1" 
-        : "bg-transparent py-2";
+        ? "bg-white/90 backdrop-blur-md shadow-sm py-2" 
+        : "bg-transparent py-3";
     }
   };
 
@@ -73,13 +73,13 @@ const NavBar = () => {
           <img 
             src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
             alt="SKYNET" 
-            className="h-10"
+            className="h-12"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <NavigationMenu>
+          <NavigationMenu delayDuration={100}>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Услуги</NavigationMenuTrigger>
@@ -110,7 +110,7 @@ const NavBar = () => {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/faq" className={navigationMenuTriggerStyle()}>Поддержка</Link>
+                <Link to="/support" className={navigationMenuTriggerStyle()}>Поддержка</Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
@@ -166,7 +166,7 @@ const NavBar = () => {
               <Link to="/reviews" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Отзывы</Link>
             </div>
             
-            <Link to="/faq" className="block py-2 text-gray-800 hover:text-skynet-orange">Поддержка</Link>
+            <Link to="/support" className="block py-2 text-gray-800 hover:text-skynet-orange">Поддержка</Link>
             <Link to="/contacts" className="block py-2 text-gray-800 hover:text-skynet-orange">Контакты</Link>
             <Link to="/login" className="block py-2 text-skynet-blue font-medium">Личный кабинет</Link>
             <button 

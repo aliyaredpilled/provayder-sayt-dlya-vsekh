@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -172,7 +171,7 @@ const Career = () => {
       
       <section className="pt-32 pb-20 bg-skynet-gray-light/50">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-5xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
               Карьера
             </span>
@@ -189,7 +188,7 @@ const Career = () => {
       {showApplication && selectedJobDetails && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+            <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-8 border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
                 Заявка на вакансию: {selectedJobDetails.title}
               </h2>
@@ -321,192 +320,196 @@ const Career = () => {
       
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Почему стоит работать с нами
-            </h2>
-            <p className="text-lg text-gray-600">
-              В SKYNET мы ценим наших сотрудников и создаем условия для их профессионального и личностного роста
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all">
-              <div className="bg-skynet-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-6 w-6 text-skynet-blue" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Профессиональный рост</h3>
-              <p className="text-gray-600">Возможности для обучения, развития и карьерного продвижения в динамично развивающейся компании</p>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Почему стоит работать с нами
+              </h2>
+              <p className="text-lg text-gray-600">
+                В SKYNET мы ценим наших сотрудников и создаем условия для их профессионального и личностного роста
+              </p>
             </div>
             
-            <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all">
-              <div className="bg-skynet-orange/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="h-6 w-6 text-skynet-orange" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all">
+                <div className="bg-skynet-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-6 w-6 text-skynet-blue" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Профессиональный рост</h3>
+                <p className="text-gray-600">Возможности для обучения, развития и карьерного продвижения в динамично развивающейся компании</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Забота о сотрудниках</h3>
-              <p className="text-gray-600">Комфортные условия труда, социальный пакет, корпоративные мероприятия и спортивные активности</p>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all">
-              <div className="bg-green-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-6 w-6 text-green-500" />
+              
+              <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all">
+                <div className="bg-skynet-orange/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="h-6 w-6 text-skynet-orange" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Забота о сотрудниках</h3>
+                <p className="text-gray-600">Комфортные условия труда, социальный пакет, корпоративные мероприятия и спортивные активности</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Дружный коллектив</h3>
-              <p className="text-gray-600">Команда единомышленников, готовых делиться опытом и поддерживать друг друга</p>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all">
-              <div className="bg-purple-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="h-6 w-6 text-purple-600" />
+              
+              <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all">
+                <div className="bg-green-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-6 w-6 text-green-500" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Дружный коллектив</h3>
+                <p className="text-gray-600">Команда единомышленников, готовых делиться опытом и поддерживать друг друга</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Инновационные проекты</h3>
-              <p className="text-gray-600">Работа с современными технологиями и участие в развитии инновационных сервисов</p>
+              
+              <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all">
+                <div className="bg-purple-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Rocket className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Инновационные проекты</h3>
+                <p className="text-gray-600">Работа с современными технологиями и участие в развитии инновационных сервисов</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       
-      <section className="py-16 bg-skynet-gray-light/30">
+      <section className="py-20 bg-skynet-gray-light/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Открытые вакансии
           </h2>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-1">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden">
-                <div className="divide-y divide-gray-100">
-                  {jobOpenings.map(job => (
-                    <button 
-                      key={job.id}
-                      onClick={() => handleJobSelect(job.id)}
-                      className={`w-full flex items-center p-4 text-left transition-colors ${
-                        selectedJob === job.id 
-                          ? 'bg-skynet-blue text-white' 
-                          : 'hover:bg-gray-50'
-                      }`}
-                    >
-                      <div className={`p-2 rounded-lg mr-4 ${
-                        selectedJob === job.id 
-                          ? 'bg-white/10' 
-                          : 'bg-skynet-blue/10'
-                      }`}>
-                        <Briefcase className={`h-5 w-5 ${
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-1">
+                <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <div className="divide-y divide-gray-100">
+                    {jobOpenings.map(job => (
+                      <button 
+                        key={job.id}
+                        onClick={() => handleJobSelect(job.id)}
+                        className={`w-full flex items-center p-4 text-left transition-colors ${
                           selectedJob === job.id 
-                            ? 'text-white' 
-                            : 'text-skynet-blue'
-                        }`} />
-                      </div>
-                      <div>
-                        <h3 className={`font-semibold ${
+                            ? 'bg-skynet-blue text-white' 
+                            : 'hover:bg-gray-50'
+                        }`}
+                      >
+                        <div className={`p-2 rounded-lg mr-4 ${
                           selectedJob === job.id 
-                            ? 'text-white' 
-                            : 'text-gray-900'
+                            ? 'bg-white/10' 
+                            : 'bg-skynet-blue/10'
                         }`}>
-                          {job.title}
-                        </h3>
-                        <div className={`flex flex-wrap gap-2 mt-1 text-xs ${
-                          selectedJob === job.id 
-                            ? 'text-white/80' 
-                            : 'text-gray-500'
-                        }`}>
-                          <div className="flex items-center">
-                            <MapPin className="h-3 w-3 mr-1" />
-                            <span>{job.location}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Clock className="h-3 w-3 mr-1" />
-                            <span>{job.type}</span>
+                          <Briefcase className={`h-5 w-5 ${
+                            selectedJob === job.id 
+                              ? 'text-white' 
+                              : 'text-skynet-blue'
+                          }`} />
+                        </div>
+                        <div>
+                          <h3 className={`font-semibold ${
+                            selectedJob === job.id 
+                              ? 'text-white' 
+                              : 'text-gray-900'
+                          }`}>
+                            {job.title}
+                          </h3>
+                          <div className={`flex flex-wrap gap-2 mt-1 text-xs ${
+                            selectedJob === job.id 
+                              ? 'text-white/80' 
+                              : 'text-gray-500'
+                          }`}>
+                            <div className="flex items-center">
+                              <MapPin className="h-3 w-3 mr-1" />
+                              <span>{job.location}</span>
+                            </div>
+                            <div className="flex items-center">
+                              <Clock className="h-3 w-3 mr-1" />
+                              <span>{job.type}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </button>
-                  ))}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="lg:col-span-2">
-              {selectedJobDetails ? (
-                <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
-                  <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                      {selectedJobDetails.title}
-                    </h2>
-                    <div className="flex flex-wrap gap-4 mb-4">
-                      <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        <span>{selectedJobDetails.location}</span>
+              
+              <div className="lg:col-span-2">
+                {selectedJobDetails ? (
+                  <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                    <div className="mb-8">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                        {selectedJobDetails.title}
+                      </h2>
+                      <div className="flex flex-wrap gap-4 mb-4">
+                        <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <MapPin className="h-4 w-4 mr-1" />
+                          <span>{selectedJobDetails.location}</span>
+                        </div>
+                        <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <Clock className="h-4 w-4 mr-1" />
+                          <span>{selectedJobDetails.type}</span>
+                        </div>
+                        <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <Briefcase className="h-4 w-4 mr-1" />
+                          <span>{selectedJobDetails.department}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
-                        <Clock className="h-4 w-4 mr-1" />
-                        <span>{selectedJobDetails.type}</span>
-                      </div>
-                      <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
-                        <Briefcase className="h-4 w-4 mr-1" />
-                        <span>{selectedJobDetails.department}</span>
-                      </div>
+                      <p className="text-gray-600">{selectedJobDetails.description}</p>
                     </div>
-                    <p className="text-gray-600">{selectedJobDetails.description}</p>
+                    
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Обязанности:</h3>
+                      <ul className="space-y-2">
+                        {selectedJobDetails.responsibilities.map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle2 className="h-5 w-5 text-skynet-blue mt-0.5 mr-3 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Требования:</h3>
+                      <ul className="space-y-2">
+                        {selectedJobDetails.requirements.map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle2 className="h-5 w-5 text-skynet-orange mt-0.5 mr-3 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-8">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Мы предлагаем:</h3>
+                      <ul className="space-y-2">
+                        {selectedJobDetails.benefits.map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="flex justify-between items-center border-t border-gray-100 pt-6">
+                      <p className="text-gray-500">
+                        Отправьте заявку сегодня и станьте частью нашей команды!
+                      </p>
+                      <button 
+                        onClick={handleApply}
+                        className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-3 rounded-lg shadow-md transition-all flex items-center"
+                      >
+                        Откликнуться <ArrowRight className="ml-2 h-4 w-4" />
+                      </button>
+                    </div>
                   </div>
-                  
-                  <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Обязанности:</h3>
-                    <ul className="space-y-2">
-                      {selectedJobDetails.responsibilities.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <CheckCircle2 className="h-5 w-5 text-skynet-blue mt-0.5 mr-3 flex-shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Требования:</h3>
-                    <ul className="space-y-2">
-                      {selectedJobDetails.requirements.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <CheckCircle2 className="h-5 w-5 text-skynet-orange mt-0.5 mr-3 flex-shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Мы предлагаем:</h3>
-                    <ul className="space-y-2">
-                      {selectedJobDetails.benefits.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                    <p className="text-gray-500">
-                      Отправьте заявку сегодня и станьте частью нашей команды!
+                ) : (
+                  <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100 text-center">
+                    <Briefcase className="h-16 w-16 text-gray-300 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Выберите вакансию</h3>
+                    <p className="text-gray-600">
+                      Выберите вакансию из списка слева, чтобы увидеть детальное описание и требования
                     </p>
-                    <button 
-                      onClick={handleApply}
-                      className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-3 rounded-lg shadow-md transition-all flex items-center"
-                    >
-                      Откликнуться <ArrowRight className="ml-2 h-4 w-4" />
-                    </button>
                   </div>
-                </div>
-              ) : (
-                <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100 text-center">
-                  <Briefcase className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Выберите вакансию</h3>
-                  <p className="text-gray-600">
-                    Выберите вакансию из списка слева, чтобы увидеть детальное описание и требования
-                  </p>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -514,7 +517,7 @@ const Career = () => {
       
       <section className="py-16 bg-skynet-blue text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Не нашли подходящую вакансию?</h2>
             <p className="text-xl text-white/80 mb-8">
               Мы всегда в поиске талантливых специалистов. Отправьте своё резюме, и мы свяжемся с вами, когда появится подходящая позиция.

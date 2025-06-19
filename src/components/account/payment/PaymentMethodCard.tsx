@@ -1,4 +1,3 @@
-
 import { LucideIcon } from 'lucide-react';
 import { ReactElement } from 'react';
 
@@ -31,8 +30,8 @@ const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
             {renderIcon()}
           </div>
           <div>
-            <div className="font-semibold text-lg font-inter">{method.label}</div>
-            <div className="text-base text-gray-500 font-inter">{method.description}</div>
+            <div className="font-semibold text-base font-inter">{method.label}</div>
+            <div className="text-sm text-gray-500 font-inter">{method.description}</div>
           </div>
         </div>
       </div>

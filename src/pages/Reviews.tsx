@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -222,7 +221,7 @@ const Reviews = () => {
       
       <section className="pt-32 pb-20 bg-skynet-gray-light/50">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-5xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
               Отзывы
             </span>
@@ -241,7 +240,7 @@ const Reviews = () => {
           </div>
           
           {showForm && (
-            <div className="max-w-3xl mx-auto mt-12 bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+            <div className="max-w-5xl mx-auto mt-12 bg-white rounded-xl shadow-lg p-8 border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Ваш отзыв</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -323,14 +322,12 @@ const Reviews = () => {
       
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900">Все отзывы</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {reviews.map(review => (
-              <ReviewCard key={review.id} review={review} />
-            ))}
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {reviews.map(review => (
+                <ReviewCard key={review.id} review={review} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

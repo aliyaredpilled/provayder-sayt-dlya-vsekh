@@ -1,4 +1,3 @@
-
 import { User, Home, CreditCard, Receipt, FileText, Video, LogOut } from 'lucide-react';
 
 interface UserData {
@@ -25,7 +24,7 @@ const AccountSidebar = ({ userData, activeTab, setActiveTab }: AccountSidebarPro
   ];
 
   return (
-    <div className="w-80 bg-skynet-blue text-white flex flex-col h-full min-h-full">
+    <div className="w-80 bg-skynet-blue text-white flex flex-col h-full min-h-full font-inter">
       {/* Блок информации о пользователе */}
       <div className="p-6 border-b border-white/10">
         <div className="flex items-start">

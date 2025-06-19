@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PricingPlans from "@/components/PricingPlans";
@@ -16,13 +15,13 @@ const Tariffs = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
-              Тарифы и пакеты
+              Прозрачно и выгодно
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Выгодные тарифы для любых потребностей
+              Тарифы для каждого
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Выберите оптимальный тарифный план для вашего дома. Подключение по оптоволоконной сети XG-Pon, все тарифы включают безлимитный интернет.
+              Выберите идеальный тарифный план, который соответствует вашим потребностям в скорости и бюджете.
             </p>
             <div className="flex justify-center">
               <button className="flex items-center text-skynet-blue font-medium animate-bounce">

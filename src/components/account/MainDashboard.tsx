@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Settings } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -97,7 +96,7 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
               >
                 <CollapsibleTrigger className="w-full p-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
                   <div className="flex items-center text-left">
-                    <div className="font-medium text-gray-900 break-words text-sm lg:text-base">{address.address}</div>
+                    <div className="font-medium text-gray-900 break-words text-base">{address.address}</div>
                   </div>
                   <div className="flex items-center ml-4">
                     <span className="text-xs lg:text-sm text-gray-500 mr-2">
@@ -129,7 +128,7 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
                           
                           <div className="flex justify-between items-center">
                             <div>
-                              <div className="font-medium text-gray-900 text-lg">
+                              <div className="font-medium text-gray-900 text-base">
                                 {service.price.toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽/мес
                               </div>
                               <div className="text-sm text-gray-600">{service.status}</div>
@@ -148,7 +147,7 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
                         <div className="hidden lg:block p-4 grid grid-cols-12 gap-4 items-center">
                           <div className="col-span-3 flex items-center">
                             <span className="text-2xl mr-3">{service.icon}</span>
-                            <span className="font-medium text-gray-900">{service.name}</span>
+                            <span className="font-medium text-gray-900 text-base">{service.name}</span>
                           </div>
                           
                           <div className="col-span-3 text-sm text-gray-600">
@@ -158,7 +157,7 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
                           </div>
                           
                           <div className="col-span-2 text-right">
-                            <div className="font-medium text-gray-900">
+                            <div className="font-medium text-gray-900 text-base">
                               {service.price.toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽/мес
                             </div>
                           </div>
@@ -183,10 +182,10 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
                         {openServiceSettings[service.id.toString()] && (
                           <div className="px-4 pb-4 bg-gray-50">
                             <div className="bg-white rounded-lg p-4 border border-gray-200">
-                              <h4 className="font-medium text-gray-900 mb-3 text-sm lg:text-base">
+                              <h4 className="font-medium text-gray-900 mb-3 text-base">
                                 {service.hasStaticIP ? 'Технические параметры (Статический IP)' : 'Технические параметры'}
                               </h4>
-                              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-sm">
+                              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-base">
                                 {service.hasStaticIP ? (
                                   <>
                                     <div>

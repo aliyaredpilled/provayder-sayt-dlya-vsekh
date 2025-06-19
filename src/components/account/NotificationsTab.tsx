@@ -1,4 +1,3 @@
-
 import { Bell } from 'lucide-react';
 
 interface Notification {
@@ -38,12 +37,12 @@ const NotificationsTab = ({ userData }: NotificationsTabProps) => {
                 <p className="text-sm text-gray-500 mt-1">{notification.date}</p>
               </div>
               {!notification.isRead && (
-                <span className="bg-skynet-blue text-white text-xs px-2 py-1 rounded-full">
+                <span className="bg-skynet-blue text-white text-sm px-2 py-1 rounded-full">
                   Новое
                 </span>
               )}
             </div>
-            <p className="mt-4 text-gray-600">{notification.message}</p>
+            <p className="mt-4 text-base text-gray-600">{notification.message}</p>
           </div>
         ))}
       </div>
@@ -51,8 +50,8 @@ const NotificationsTab = ({ userData }: NotificationsTabProps) => {
       {userData.notifications.length === 0 && (
         <div className="text-center py-12">
           <Bell className="h-12 w-12 text-gray-300 mx-auto mb-4" />
-          <h2 className="text-xl font-medium text-gray-900 mb-2">Нет новых уведомлений</h2>
-          <p className="text-gray-600">У вас пока нет непрочитанных уведомлений</p>
+          <h2 className="text-lg font-medium text-gray-900 mb-2">Нет новых уведомлений</h2>
+          <p className="text-base text-gray-600">У вас пока нет непрочитанных уведомлений</p>
         </div>
       )}
     </div>
