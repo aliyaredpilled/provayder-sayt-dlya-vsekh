@@ -24,7 +24,7 @@ const SupportPage = () => {
             {/* Main WhatsApp Card */}
             <div className="relative mb-12">
               <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 border border-sky-100 hover:shadow-md transition-all duration-300">
-                <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center max-w-5xl mx-auto">
                   {/* Left Column: Content */}
                   <div className="text-center md:text-left space-y-6">
                     <div className="space-y-4">
@@ -33,8 +33,8 @@ const SupportPage = () => {
                         <span className="font-semibold text-skynet-orange"> скоростью интернета</span> или есть другие вопросы?
                       </p>
                       <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
-                        Пишите напрямую руководству —<br /> 
-                        <span className="text-skynet-orange">разберёмся в любой ситуации!</span>
+                        Пишите напрямую руководству — 
+                        <span className="text-skynet-orange"> разберёмся в любой ситуации!</span>
                       </h3>
                     </div>
                     
@@ -69,16 +69,16 @@ const SupportPage = () => {
                   </div>
 
                   {/* Right Column: QR Code */}
-                  <div className="flex justify-center md:justify-end">
-                    <div className="bg-sky-50 p-8 rounded-2xl border border-sky-100 hover:border-sky-200 transition-all duration-300">
-                      <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <div className="flex justify-center md:justify-start">
+                    <div className="bg-sky-50 p-6 rounded-2xl border border-sky-100">
+                      <div className="bg-white p-4 rounded-xl shadow-sm">
                         <img 
                           src="/lovable-uploads/4f8a3072-12ec-4476-85d8-2e58e0e9897c.png" 
                           alt="QR код для WhatsApp" 
-                          className="w-40 h-40"
+                          className="w-32 h-32"
                         />
                       </div>
-                      <div className="text-center mt-6">
+                      <div className="text-center mt-4">
                         <p className="text-sm text-gray-700 font-medium mb-1">
                           Наведите камеру телефона
                         </p>
