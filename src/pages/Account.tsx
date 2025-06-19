@@ -8,9 +8,11 @@ import PaymentForm from "@/components/account/PaymentForm";
 import PersonalData from "@/components/account/PersonalData";
 import SurveillanceTab from "@/components/account/SurveillanceTab";
 import DocumentsTab from "@/components/account/DocumentsTab";
+import { Menu, X } from 'lucide-react';
 
 const Account = () => {
   const [activeTab, setActiveTab] = useState('main');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   
   useEffect(() => {
     const handleShowPaymentTab = () => {
@@ -135,17 +137,45 @@ const Account = () => {
     <div className="min-h-screen bg-gray-50">
       <NavBar />
       
-      <div className="pt-32 pb-20">
+      <div className="pt-24 lg:pt-32 pb-20">
         <div className="container mx-auto px-4">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="flex min-h-[600px]">
-              <AccountSidebar
-                userData={userData}
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
-              />
+            <div className="flex min-h-[600px] relative">
+              {/* Mobile menu button */}
+              <button
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="lg:hidden fixed top-28 left-4 z-50 bg-skynet-blue text-white p-3 rounded-lg shadow-lg"
+              >
+                {sidebarOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+
+              {/* Mobile overlay */}
+              {sidebarOpen && (
+                <div 
+                  className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+                  onClick={() => setSidebarOpen(false)}
+                />
+              )}
+
+              {/* Sidebar */}
+              <div className={`
+                fixed lg:relative inset-y-0 left-0 z-40 lg:z-auto
+                transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+                lg:translate-x-0 transition-transform duration-300 ease-in-out
+                lg:block w-80 lg:w-auto
+              `}>
+                <AccountSidebar
+                  userData={userData}
+                  activeTab={activeTab}
+                  setActiveTab={(tab) => {
+                    setActiveTab(tab);
+                    setSidebarOpen(false);
+                  }}
+                />
+              </div>
               
-              <div className="flex-1 p-6 bg-gray-50">
+              {/* Main content */}
+              <div className="flex-1 p-4 lg:p-6 bg-gray-50 ml-0 lg:ml-0">
                 {renderContent()}
               </div>
             </div>

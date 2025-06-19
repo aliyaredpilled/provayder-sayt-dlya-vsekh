@@ -61,26 +61,25 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
       <h1 className="text-2xl font-bold text-gray-900">Главная</h1>
       
       {/* Верхние виджеты */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+        <div className="bg-white rounded-xl shadow-sm p-4 lg:p-6 border border-gray-100">
           <p className="text-sm text-gray-500 mb-1">Текущий баланс</p>
-          <p className="text-3xl font-bold text-gray-900">{userData.balance.toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽</p>
+          <p className="text-2xl lg:text-3xl font-bold text-gray-900">{userData.balance.toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽</p>
           <Link to="/account" onClick={() => {
-            // Trigger a re-render to show payment tab
             setTimeout(() => {
               const event = new CustomEvent('showPaymentTab');
               window.dispatchEvent(event);
             }, 100);
           }}>
-            <button className="mt-4 w-full bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium py-2 rounded-lg shadow-sm transition-all">
+            <button className="mt-4 w-full bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium py-2 lg:py-3 rounded-lg shadow-sm transition-all text-sm lg:text-base">
               Пополнить счет
             </button>
           </Link>
         </div>
         
-        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+        <div className="bg-white rounded-xl shadow-sm p-4 lg:p-6 border border-gray-100">
           <p className="text-sm text-gray-500 mb-1">Следующее списание</p>
-          <p className="text-3xl font-bold text-gray-900">{getTotalMonthlyPayment().toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽</p>
+          <p className="text-2xl lg:text-3xl font-bold text-gray-900">{getTotalMonthlyPayment().toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽</p>
           <p className="mt-2 text-sm text-gray-500">01.07.2025</p>
         </div>
       </div>
@@ -98,10 +97,10 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
               >
                 <CollapsibleTrigger className="w-full p-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
                   <div className="flex items-center text-left">
-                    <div className="font-medium text-gray-900 break-words">{address.address}</div>
+                    <div className="font-medium text-gray-900 break-words text-sm lg:text-base">{address.address}</div>
                   </div>
                   <div className="flex items-center ml-4">
-                    <span className="text-sm text-gray-500 mr-2">
+                    <span className="text-xs lg:text-sm text-gray-500 mr-2">
                       {address.services.length} услуг
                     </span>
                     {openAddresses[address.id] !== false ? (
@@ -116,7 +115,37 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
                   <div className="border-t border-gray-100">
                     {address.services.map(service => (
                       <div key={service.id} className="border-b border-gray-50 last:border-b-0">
-                        <div className="p-4 grid grid-cols-12 gap-4 items-center">
+                        {/* Mobile layout */}
+                        <div className="lg:hidden p-4 space-y-4">
+                          <div className="flex items-start space-x-3">
+                            <span className="text-2xl">{service.icon}</span>
+                            <div className="flex-1 min-w-0">
+                              <h3 className="font-medium text-gray-900 text-base">{service.name}</h3>
+                              {service.speed && <div className="text-sm text-gray-600">Скорость: {service.speed}</div>}
+                              {service.hasStaticIP && <div className="text-sm text-blue-600">+1ip</div>}
+                              {service.login && <div className="text-sm text-gray-600">Логин: {service.login}</div>}
+                            </div>
+                          </div>
+                          
+                          <div className="flex justify-between items-center">
+                            <div>
+                              <div className="font-medium text-gray-900 text-lg">
+                                {service.price.toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽/мес
+                              </div>
+                              <div className="text-sm text-gray-600">{service.status}</div>
+                            </div>
+                            <button
+                              onClick={() => toggleServiceSettings(service.id.toString())}
+                              className="flex items-center text-skynet-blue hover:text-skynet-blue-dark text-sm font-medium"
+                            >
+                              <Settings className="h-4 w-4 mr-1" />
+                              <ChevronDown className="h-4 w-4" />
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Desktop layout */}
+                        <div className="hidden lg:block p-4 grid grid-cols-12 gap-4 items-center">
                           <div className="col-span-3 flex items-center">
                             <span className="text-2xl mr-3">{service.icon}</span>
                             <span className="font-medium text-gray-900">{service.name}</span>
@@ -154,23 +183,23 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
                         {openServiceSettings[service.id.toString()] && (
                           <div className="px-4 pb-4 bg-gray-50">
                             <div className="bg-white rounded-lg p-4 border border-gray-200">
-                              <h4 className="font-medium text-gray-900 mb-3">
+                              <h4 className="font-medium text-gray-900 mb-3 text-sm lg:text-base">
                                 {service.hasStaticIP ? 'Технические параметры (Статический IP)' : 'Технические параметры'}
                               </h4>
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-sm">
                                 {service.hasStaticIP ? (
                                   <>
                                     <div>
                                       <p className="text-gray-500">IP-адрес:</p>
-                                      <p className="font-medium">{service.ipAddress}</p>
+                                      <p className="font-medium break-all">{service.ipAddress}</p>
                                     </div>
                                     <div>
                                       <p className="text-gray-500">Маска подсети:</p>
-                                      <p className="font-medium">{service.subnetMask}</p>
+                                      <p className="font-medium break-all">{service.subnetMask}</p>
                                     </div>
                                     <div>
                                       <p className="text-gray-500">Основной шлюз:</p>
-                                      <p className="font-medium">{service.gateway}</p>
+                                      <p className="font-medium break-all">{service.gateway}</p>
                                     </div>
                                   </>
                                 ) : (
