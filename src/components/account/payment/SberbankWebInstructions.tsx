@@ -34,7 +34,7 @@ const SberbankWebInstructions = ({ contractNumber, onBack }: SberbankWebInstruct
               </p>
               <div className="bg-gray-100 rounded-lg p-4">
                 <img 
-                  src="/lovable-uploads/web-sberbank-1.png" 
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop" 
                   alt="Главная страница Сбербанк Онлайн - Переводы и платежи" 
                   className="w-full max-w-md mx-auto rounded-lg"
                 />
@@ -47,7 +47,7 @@ const SberbankWebInstructions = ({ contractNumber, onBack }: SberbankWebInstruct
               </p>
               <div className="bg-gray-100 rounded-lg p-4">
                 <img 
-                  src="/lovable-uploads/web-sberbank-2.png" 
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop" 
                   alt="Поиск организации Скайнет в веб версии Сбербанк Онлайн" 
                   className="w-full max-w-md mx-auto rounded-lg"
                 />
@@ -60,7 +60,7 @@ const SberbankWebInstructions = ({ contractNumber, onBack }: SberbankWebInstruct
               </p>
               <div className="bg-gray-100 rounded-lg p-4">
                 <img 
-                  src="/lovable-uploads/web-sberbank-3.png" 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop" 
                   alt="Выбор Скайнет (г. Казань) в списке организаций" 
                   className="w-full max-w-md mx-auto rounded-lg"
                 />
@@ -73,7 +73,7 @@ const SberbankWebInstructions = ({ contractNumber, onBack }: SberbankWebInstruct
               </p>
               <div className="bg-gray-100 rounded-lg p-4">
                 <img 
-                  src="/lovable-uploads/web-sberbank-4.png" 
+                  src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop" 
                   alt="Ввод номера договора в веб версии Сбербанк Онлайн" 
                   className="w-full max-w-md mx-auto rounded-lg"
                 />

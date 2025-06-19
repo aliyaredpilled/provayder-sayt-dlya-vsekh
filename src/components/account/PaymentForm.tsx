@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import PaymentMethodCard from './payment/PaymentMethodCard';
-import CardPaymentForm from './payment/CardPaymentForm';
 import CardPaymentConfirmation from './payment/CardPaymentConfirmation';
 import InvoiceModal from './payment/InvoiceModal';
 import SberbankInstructions from './payment/SberbankInstructions';
@@ -66,13 +65,10 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
     } else if (methodId === 'sberbank-terminal') {
       setShowSberbankTerminalInstructions(true);
     } else if (methodId === 'card') {
-      setPaymentMethod(methodId);
+      // For card payments, we'll directly show confirmation with a default amount
+      setAmount('1000'); // Set a default amount
+      setShowConfirmation(true);
     }
-  };
-
-  const handleCardPayment = () => {
-    if (!amount || parseFloat(amount) <= 0) return;
-    setShowConfirmation(true);
   };
 
   const confirmCardPayment = () => {
@@ -136,43 +132,20 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
       <h1 className="text-2xl font-bold text-gray-900">Оплата</h1>
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-        <form className="space-y-6">
-          {paymentMethod === 'card' && (
-            <CardPaymentForm
-              amount={amount}
-              setAmount={setAmount}
-              onConfirm={handleCardPayment}
-            />
-          )}
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-4">
-              Способ оплаты
-            </label>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {paymentMethods.map((method) => (
-                <PaymentMethodCard
-                  key={method.id}
-                  method={method}
-                  onClick={handlePaymentMethodClick}
-                />
-              ))}
-            </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-4">
+            Способ оплаты
+          </label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {paymentMethods.map((method) => (
+              <PaymentMethodCard
+                key={method.id}
+                method={method}
+                onClick={handlePaymentMethodClick}
+              />
+            ))}
           </div>
-          
-          {paymentMethod === 'card' && (
-            <div className="flex justify-end">
-              <button
-                type="button"
-                onClick={handleCardPayment}
-                disabled={!amount || parseFloat(amount) <= 0}
-                className="bg-skynet-orange hover:bg-skynet-orange-bright disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium px-8 py-3 rounded-lg shadow-md transition-all"
-              >
-                Подтвердить
-              </button>
-            </div>
-          )}
-        </form>
+        </div>
       </div>
 
       {showInvoiceModal && (
