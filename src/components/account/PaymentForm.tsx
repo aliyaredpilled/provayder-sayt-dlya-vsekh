@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import PaymentMethodCard from './payment/PaymentMethodCard';
 import CardPaymentForm from './payment/CardPaymentForm';
@@ -6,6 +5,7 @@ import CardPaymentConfirmation from './payment/CardPaymentConfirmation';
 import InvoiceModal from './payment/InvoiceModal';
 import SberbankInstructions from './payment/SberbankInstructions';
 import SberbankTerminalInstructions from './payment/SberbankTerminalInstructions';
+import SberbankWebInstructions from './payment/SberbankWebInstructions';
 
 interface PaymentFormProps {
   userData: {
@@ -21,6 +21,7 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
   const [showInvoiceModal, setShowInvoiceModal] = useState(false);
   const [showSberbankInstructions, setShowSberbankInstructions] = useState(false);
   const [showSberbankTerminalInstructions, setShowSberbankTerminalInstructions] = useState(false);
+  const [showSberbankWebInstructions, setShowSberbankWebInstructions] = useState(false);
 
   const paymentMethods = [
     ...(userData.userType === 'company' ? [{ 
@@ -42,8 +43,14 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
       description: 'Через приложение Сбербанк'
     },
     { 
+      id: 'sberbank-web', 
+      label: 'Сбербанк Онлайн - сайт', 
+      icon: '💻',
+      description: 'Через веб сайт Сбербанк'
+    },
+    { 
       id: 'sberbank-terminal', 
-      label: 'Сбербанк Онлайн (терминал)', 
+      label: 'Сбербанк Онлайн - терминал', 
       icon: '🏧',
       description: 'Через терминал Сбербанк'
     }
@@ -54,6 +61,8 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
       setShowInvoiceModal(true);
     } else if (methodId === 'sberbank') {
       setShowSberbankInstructions(true);
+    } else if (methodId === 'sberbank-web') {
+      setShowSberbankWebInstructions(true);
     } else if (methodId === 'sberbank-terminal') {
       setShowSberbankTerminalInstructions(true);
     } else if (methodId === 'card') {
@@ -84,6 +93,15 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
     setShowInvoiceModal(false);
     setAmount('');
   };
+
+  if (showSberbankWebInstructions) {
+    return (
+      <SberbankWebInstructions 
+        contractNumber={userData.contractNumber}
+        onBack={() => setShowSberbankWebInstructions(false)}
+      />
+    );
+  }
 
   if (showSberbankTerminalInstructions) {
     return (
