@@ -34,7 +34,7 @@ const SberbankWebInstructions = ({ contractNumber, onBack }: SberbankWebInstruct
               </p>
               <div className="bg-gray-100 rounded-lg p-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop" 
+                  src="/lovable-uploads/02b561b7-12d4-4e45-b42f-8041a7f9637c.png" 
                   alt="Главная страница Сбербанк Онлайн - Переводы и платежи" 
                   className="w-full max-w-md mx-auto rounded-lg"
                 />
@@ -47,7 +47,7 @@ const SberbankWebInstructions = ({ contractNumber, onBack }: SberbankWebInstruct
               </p>
               <div className="bg-gray-100 rounded-lg p-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop" 
+                  src="/lovable-uploads/b53b7a37-eb1e-424f-9c55-8767091ef68d.png" 
                   alt="Поиск организации Скайнет в веб версии Сбербанк Онлайн" 
                   className="w-full max-w-md mx-auto rounded-lg"
                 />
@@ -60,7 +60,7 @@ const SberbankWebInstructions = ({ contractNumber, onBack }: SberbankWebInstruct
               </p>
               <div className="bg-gray-100 rounded-lg p-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop" 
+                  src="/lovable-uploads/778feb61-da40-41e5-9361-e86632a23064.png" 
                   alt="Выбор Скайнет (г. Казань) в списке организаций" 
                   className="w-full max-w-md mx-auto rounded-lg"
                 />
@@ -73,7 +73,7 @@ const SberbankWebInstructions = ({ contractNumber, onBack }: SberbankWebInstruct
               </p>
               <div className="bg-gray-100 rounded-lg p-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop" 
+                  src="/lovable-uploads/17b39c45-b634-4f99-b0c5-0933b80e491b.png" 
                   alt="Ввод номера договора в веб версии Сбербанк Онлайн" 
                   className="w-full max-w-md mx-auto rounded-lg"
                 />
