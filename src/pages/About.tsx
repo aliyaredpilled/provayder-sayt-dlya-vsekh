@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -33,7 +32,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">История компании</h2>
               <p className="text-gray-600 mb-4">
-                Компания SKYNET была основана в 2010 году группой талантливых инженеров, увлеченных идеей создания по-настоящему современной инфраструктуры связи в родном городе. Начав с небольшой сети в одном из районов Казани, мы быстро завоевали доверие первых клиентов благодаря качественному сервису и внимательному отношению.
+                Компания SKYNET была основана в 2005 году группой талантливых инженеров, увлеченных идеей создания по-настоящему современной инфраструктуры связи в родном городе. Начав с небольшой сети в одном из районов Казани, мы быстро завоевали доверие первых клиентов благодаря качественному сервису и внимательному отношению.
               </p>
               <p className="text-gray-600 mb-4">
                 За прошедшее десятилетие мы прошли путь от небольшого локального провайдера до одного из ведущих операторов связи в регионе. Мы постоянно развиваемся, внедряем новые технологии и расширяем зону покрытия, чтобы предоставлять нашим клиентам самые современные услуги связи.
@@ -45,7 +44,7 @@ const About = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1573164574511-73c773193279?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
                 alt="История компании" 
                 className="rounded-2xl shadow-xl"
               />
@@ -54,7 +53,7 @@ const About = () => {
                 <Calendar className="h-8 w-8 text-skynet-orange mr-3" />
                 <div>
                   <div className="text-sm text-gray-500">Основано в</div>
-                  <div className="text-xl font-bold">2010</div>
+                  <div className="text-xl font-bold">2005</div>
                 </div>
               </div>
             </div>
@@ -142,54 +141,7 @@ const About = () => {
         </div>
       </section>
       
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Руководство компании</h2>
-            <p className="text-lg text-gray-600">
-              Команда опытных профессионалов, стремящихся к инновациям и высокому качеству услуг
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="relative mb-6 mx-auto w-48 h-48 rounded-full overflow-hidden bg-skynet-gray-light/50">
-                <User className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24 text-gray-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900">Андрей Иванов</h3>
-              <p className="text-skynet-blue mb-3">Генеральный директор</p>
-              <p className="text-gray-600 px-4">
-                Более 15 лет опыта в телекоммуникационной отрасли. 
-                Под его руководством компания вышла в лидеры регионального рынка.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="relative mb-6 mx-auto w-48 h-48 rounded-full overflow-hidden bg-skynet-gray-light/50">
-                <User className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24 text-gray-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900">Сергей Петров</h3>
-              <p className="text-skynet-blue mb-3">Технический директор</p>
-              <p className="text-gray-600 px-4">
-                Отвечает за развитие инфраструктуры компании и внедрение новых технологий. 
-                Эксперт в области сетевых технологий и систем связи.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="relative mb-6 mx-auto w-48 h-48 rounded-full overflow-hidden bg-skynet-gray-light/50">
-                <User className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-24 w-24 text-gray-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900">Елена Смирнова</h3>
-              <p className="text-skynet-blue mb-3">Директор по развитию</p>
-              <p className="text-gray-600 px-4">
-                Руководит стратегическим развитием компании и выводом на рынок новых услуг. 
-                Обладает обширным опытом в маркетинге и развитии бизнеса.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       
       <section className="py-16 bg-skynet-blue">
         <div className="container mx-auto px-4">
