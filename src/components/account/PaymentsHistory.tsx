@@ -16,25 +16,10 @@ interface PaymentsHistoryProps {
 }
 
 const PaymentsHistory = ({ userData }: PaymentsHistoryProps) => {
-  const [selectedPeriod, setSelectedPeriod] = useState('all');
-
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-900">Платежи</h1>
-        
-        <div className="flex items-center space-x-4">
-          <select
-            value={selectedPeriod}
-            onChange={(e) => setSelectedPeriod(e.target.value)}
-            className="border border-gray-300 rounded-md px-3 py-2 bg-white focus:ring-skynet-blue focus:border-skynet-blue"
-          >
-            <option value="all">Все операции</option>
-            <option value="month">Текущий месяц</option>
-            <option value="year">Текущий год</option>
-            <option value="custom">Произвольный период</option>
-          </select>
-        </div>
       </div>
       
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
