@@ -1,5 +1,6 @@
 
-import { Video } from 'lucide-react';
+import { Video, Archive } from 'lucide-react';
+import { useState } from 'react';
 
 interface Camera {
   id: string;
@@ -16,16 +17,18 @@ interface SurveillanceTabProps {
 }
 
 const SurveillanceTab = ({ userData }: SurveillanceTabProps) => {
+  const [activeTab, setActiveTab] = useState('private');
+
+  const filteredCameras = userData.cameras.filter(camera => camera.type === activeTab);
+
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-900">Видеонаблюдение</h1>
         <div className="flex gap-3">
-          <button className="bg-skynet-orange hover:bg-skynet-orange-bright text-white px-4 py-2 rounded-lg transition-colors shadow-sm">
-            ➕ Добавить камеру
-          </button>
-          <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors">
-            📂 Смотреть архив
+          <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2">
+            <Archive className="h-4 w-4" />
+            Смотреть архив
           </button>
         </div>
       </div>
@@ -33,10 +36,24 @@ const SurveillanceTab = ({ userData }: SurveillanceTabProps) => {
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="border-b border-gray-200">
           <nav className="flex">
-            <button className="px-6 py-4 font-medium text-skynet-blue border-b-2 border-skynet-blue">
+            <button 
+              onClick={() => setActiveTab('private')}
+              className={`px-6 py-4 font-medium ${
+                activeTab === 'private' 
+                  ? 'text-skynet-blue border-b-2 border-skynet-blue' 
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
               ПРИВАТНЫЕ
             </button>
-            <button className="px-6 py-4 font-medium text-gray-500 hover:text-gray-700">
+            <button 
+              onClick={() => setActiveTab('public')}
+              className={`px-6 py-4 font-medium ${
+                activeTab === 'public' 
+                  ? 'text-skynet-blue border-b-2 border-skynet-blue' 
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
               ПУБЛИЧНЫЕ
             </button>
           </nav>
@@ -44,7 +61,7 @@ const SurveillanceTab = ({ userData }: SurveillanceTabProps) => {
         
         <div className="p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {userData.cameras.filter(camera => camera.type === 'private').map(camera => (
+            {filteredCameras.map(camera => (
               <div key={camera.id} className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
                 <div className="aspect-video bg-gray-100 flex items-center justify-center">
                   <Video className="h-12 w-12 text-gray-400" />
@@ -73,14 +90,18 @@ const SurveillanceTab = ({ userData }: SurveillanceTabProps) => {
             ))}
           </div>
           
-          {userData.cameras.filter(camera => camera.type === 'private').length === 0 && (
+          {filteredCameras.length === 0 && (
             <div className="text-center py-12">
               <Video className="h-12 w-12 text-gray-300 mx-auto mb-4" />
-              <h2 className="text-xl font-medium text-gray-900 mb-2">Нет камер</h2>
-              <p className="text-gray-600 mb-4">У вас пока нет подключенных камер видеонаблюдения</p>
-              <button className="bg-skynet-orange hover:bg-skynet-orange-bright text-white px-6 py-3 rounded-lg shadow-sm transition-colors">
-                Подключить камеру
-              </button>
+              <h2 className="text-xl font-medium text-gray-900 mb-2">
+                {activeTab === 'private' ? 'Нет приватных камер' : 'Нет публичных камер'}
+              </h2>
+              <p className="text-gray-600 mb-4">
+                {activeTab === 'private' 
+                  ? 'У вас пока нет подключенных приватных камер видеонаблюдения'
+                  : 'В данный момент нет доступных публичных камер'
+                }
+              </p>
             </div>
           )}
         </div>
