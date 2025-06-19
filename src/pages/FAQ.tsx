@@ -10,22 +10,6 @@ const FAQPage = () => {
     <div className="min-h-screen bg-white">
       <NavBar />
       
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-block px-3 py-1 rounded-full bg-skynet-purple/10 text-skynet-purple text-sm font-medium mb-3">
-              Часто задаваемые вопросы
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Вопросы и ответы
-            </h1>
-            <p className="text-lg text-gray-600">
-              Здесь собраны наиболее распространенные вопросы наших клиентов и подробные ответы на них
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Complaints Section */}
       <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="container mx-auto px-4">
