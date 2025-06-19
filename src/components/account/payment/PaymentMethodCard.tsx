@@ -18,19 +18,18 @@ const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
   const renderIcon = () => {
     // Check if it's a function that returns JSX (like our image functions)
     if (typeof method.icon === 'function') {
-      try {
-        // Try to call it without arguments first (for image functions)
-        const result = method.icon();
-        // If it returns a valid React element, use it
-        if (result && typeof result === 'object' && 'type' in result) {
-          return result;
-        }
-      } catch {
-        // If it fails, it's a LucideIcon component, render it with props
+      // Check if it has React component properties (displayName, etc.)
+      if ('displayName' in method.icon || method.icon.toString().includes('createElement')) {
+        // It's a LucideIcon component, render as JSX element
+        const IconComponent = method.icon as LucideIcon;
+        return <IconComponent className="w-16 h-16 text-skynet-blue" />;
+      } else {
+        // It's a regular function that returns JSX (image functions)
+        return method.icon();
       }
     }
     
-    // Treat as LucideIcon component and render with props
+    // Fallback: treat as LucideIcon component
     const IconComponent = method.icon as LucideIcon;
     return <IconComponent className="w-16 h-16 text-skynet-blue" />;
   };
