@@ -1,3 +1,4 @@
+
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -74,7 +75,7 @@ const Services = () => {
             <div className="lg:order-first lg:order-last">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  src="/lovable-uploads/6bd0a9cf-eb5d-47b5-8540-b50d8a6e271c.png" 
                   alt="Высокоскоростной интернет" 
                   className="rounded-2xl shadow-2xl"
                 />
@@ -135,7 +136,7 @@ const Services = () => {
             <div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  src="/lovable-uploads/966fd92e-e8ba-4f80-b2eb-d0e832a47cb0.png" 
                   alt="Цифровое телевидение" 
                   className="rounded-2xl shadow-2xl"
                 />
@@ -192,7 +193,7 @@ const Services = () => {
             <div className="lg:order-first lg:order-last">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  src="/lovable-uploads/096de058-975f-45b7-8a3b-a600b91f9d18.png" 
                   alt="Домашняя телефония" 
                   className="rounded-2xl shadow-2xl"
                 />
