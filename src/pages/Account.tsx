@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -34,11 +33,16 @@ const Account = () => {
             icon: Wifi,
             type: 'internet',
             connectionType: 'Статический IP',
-            ipAddress: '91.123.45.67',
+            ipAddress: '91.244.252.86',
             subnetMask: '255.255.255.0',
-            gateway: '91.123.45.1',
+            gateway: '91.244.252.1',
             dns: '8.8.8.8, 1.1.1.1',
-            uptime: '3 д 14 ч'
+            uptime: '3 д 14 ч',
+            tariffPrice: 7508,
+            speedIncoming: '30720',
+            speedOutgoing: '30720',
+            paidUntil: '30.06.2025 23:59',
+            renewalStatus: 'Продлен системой'
           },
           { 
             id: 2, 
@@ -63,9 +67,17 @@ const Account = () => {
             status: 'active', 
             icon: Wifi,
             type: 'internet',
-            connectionType: 'Динамический IP',
-            ipAddress: '95.100.200.30',
-            uptime: '1 д 8 ч'
+            connectionType: 'Статический IP',
+            ipAddress: '91.244.253.74',
+            subnetMask: '255.255.255.0',
+            gateway: '91.244.253.1',
+            dns: '8.8.8.8, 1.1.1.1',
+            uptime: '1 д 8 ч',
+            tariffPrice: 5775,
+            speedIncoming: '30720',
+            speedOutgoing: '30720',
+            paidUntil: '30.06.2025 23:59',
+            renewalStatus: 'Продлен системой'
           },
           { 
             id: 4, 
@@ -75,12 +87,14 @@ const Account = () => {
             status: 'active', 
             icon: Wifi,
             type: 'internet',
-            connectionType: 'Статический IP',
-            ipAddress: '91.145.78.123',
-            subnetMask: '255.255.255.0',
-            gateway: '91.145.78.1',
-            dns: '8.8.8.8, 1.1.1.1',
-            uptime: '7 д 2 ч'
+            connectionType: 'Динамический IP',
+            ipAddress: '95.100.200.30',
+            uptime: '7 д 2 ч',
+            tariffPrice: 8085,
+            speedIncoming: '51200',
+            speedOutgoing: '51200',
+            paidUntil: '30.06.2025 23:59',
+            renewalStatus: 'Продлен системой'
           }
         ]
       }
