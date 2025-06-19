@@ -16,16 +16,18 @@ interface PaymentMethodCardProps {
 
 const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
   const renderIcon = () => {
-    // Check if it's a function by checking if it has a displayName property (LucideIcons have this)
-    // If it doesn't have displayName, it's likely our custom function
-    if (typeof method.icon === 'function' && !('displayName' in method.icon)) {
-      // It's a function that returns JSX (like image functions)
+    // Check if it's a LucideIcon by checking if it has a displayName property
+    if (typeof method.icon === 'function' && 'displayName' in method.icon) {
+      // It's a LucideIcon component, render as JSX element
+      const IconComponent = method.icon as LucideIcon;
+      return <IconComponent className="w-16 h-16 text-skynet-blue" />;
+    } else if (typeof method.icon === 'function') {
+      // It's a custom function that returns JSX
       return method.icon();
     }
     
-    // It's a LucideIcon component, render as JSX element with props
-    const IconComponent = method.icon as LucideIcon;
-    return <IconComponent className="w-16 h-16 text-skynet-blue" />;
+    // Fallback case
+    return null;
   };
   
   return (
