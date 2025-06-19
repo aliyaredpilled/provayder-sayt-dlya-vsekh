@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { FileText, CreditCard, Building2, Smartphone, Monitor, Terminal, QrCode } from 'lucide-react';
 import PaymentMethodCard from './payment/PaymentMethodCard';
 import CardPaymentConfirmation from './payment/CardPaymentConfirmation';
 import InvoiceModal from './payment/InvoiceModal';
 import SberbankInstructions from './payment/SberbankInstructions';
 import SberbankTerminalInstructions from './payment/SberbankTerminalInstructions';
 import SberbankWebInstructions from './payment/SberbankWebInstructions';
+import QRPaymentInstructions from './payment/QRPaymentInstructions';
 
 interface PaymentFormProps {
   userData: {
@@ -21,37 +23,44 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
   const [showSberbankInstructions, setShowSberbankInstructions] = useState(false);
   const [showSberbankTerminalInstructions, setShowSberbankTerminalInstructions] = useState(false);
   const [showSberbankWebInstructions, setShowSberbankWebInstructions] = useState(false);
+  const [showQRInstructions, setShowQRInstructions] = useState(false);
 
   const paymentMethods = [
     ...(userData.userType === 'company' ? [{ 
       id: 'invoice', 
       label: 'Выставить счет', 
-      icon: '📄',
+      icon: FileText,
       description: 'Для юридических лиц'
     }] : []),
     { 
+      id: 'qr', 
+      label: 'Оплата по QR коду', 
+      icon: QrCode,
+      description: 'Сканируйте QR код в приложении'
+    },
+    { 
       id: 'card', 
       label: 'VISA / MasterCard', 
-      icon: '💳',
+      icon: CreditCard,
       description: 'Банковские карты'
     },
     { 
       id: 'sberbank', 
-      label: 'Сбербанк Онлайн', 
-      icon: '🏦',
-      description: 'Через приложение Сбербанк'
+      label: 'Сбербанк Онлайн - терминал', 
+      icon: Terminal,
+      description: 'Через терминал Сбербанк'
     },
     { 
       id: 'sberbank-web', 
       label: 'Сбербанк Онлайн - сайт', 
-      icon: '💻',
+      icon: Monitor,
       description: 'Через веб сайт Сбербанк'
     },
     { 
       id: 'sberbank-terminal', 
-      label: 'Сбербанк Онлайн - терминал', 
-      icon: '🏧',
-      description: 'Через терминал Сбербанк'
+      label: 'Сбербанк Онлайн - банкомат', 
+      icon: Building2,
+      description: 'Через банкомат Сбербанк'
     }
   ];
 
@@ -64,9 +73,10 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
       setShowSberbankWebInstructions(true);
     } else if (methodId === 'sberbank-terminal') {
       setShowSberbankTerminalInstructions(true);
+    } else if (methodId === 'qr') {
+      setShowQRInstructions(true);
     } else if (methodId === 'card') {
-      // For card payments, we'll directly show confirmation with a default amount
-      setAmount('1000'); // Set a default amount
+      setAmount('1000');
       setShowConfirmation(true);
     }
   };
@@ -89,6 +99,15 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
     setShowInvoiceModal(false);
     setAmount('');
   };
+
+  if (showQRInstructions) {
+    return (
+      <QRPaymentInstructions 
+        contractNumber={userData.contractNumber}
+        onBack={() => setShowQRInstructions(false)}
+      />
+    );
+  }
 
   if (showSberbankWebInstructions) {
     return (
