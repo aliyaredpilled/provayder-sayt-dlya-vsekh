@@ -1,10 +1,11 @@
 
 import { LucideIcon } from 'lucide-react';
+import { ReactElement } from 'react';
 
 interface PaymentMethod {
   id: string;
   label: string;
-  icon: LucideIcon;
+  icon: LucideIcon | (() => ReactElement);
   description: string;
 }
 
@@ -14,7 +15,21 @@ interface PaymentMethodCardProps {
 }
 
 const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
-  const IconComponent = method.icon;
+  const renderIcon = () => {
+    if (typeof method.icon === 'function') {
+      // Проверяем, возвращает ли функция JSX элемент (для изображений)
+      const iconResult = method.icon();
+      if (iconResult && typeof iconResult === 'object' && 'type' in iconResult) {
+        return iconResult;
+      }
+      // Если это LucideIcon компонент
+      const IconComponent = method.icon as LucideIcon;
+      return <IconComponent className="w-12 h-12 text-skynet-blue" />;
+    }
+    // Если это LucideIcon компонент
+    const IconComponent = method.icon as LucideIcon;
+    return <IconComponent className="w-12 h-12 text-skynet-blue" />;
+  };
   
   return (
     <div 
@@ -23,7 +38,9 @@ const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
     >
       <div className="flex items-center">
         <div className="flex items-center text-base font-medium text-gray-700">
-          <IconComponent className="w-12 h-12 mr-4 text-skynet-blue" />
+          <div className="mr-4">
+            {renderIcon()}
+          </div>
           <div>
             <div className="font-semibold text-lg">{method.label}</div>
             <div className="text-sm text-gray-500">{method.description}</div>

@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { FileText, CreditCard, Building2, Smartphone, Monitor, Terminal, QrCode } from 'lucide-react';
+import { FileText, CreditCard, Building2, Monitor, Terminal, QrCode } from 'lucide-react';
 import PaymentMethodCard from './payment/PaymentMethodCard';
 import CardPaymentConfirmation from './payment/CardPaymentConfirmation';
+import SBPPaymentConfirmation from './payment/SBPPaymentConfirmation';
 import InvoiceModal from './payment/InvoiceModal';
 import SberbankInstructions from './payment/SberbankInstructions';
 import SberbankTerminalInstructions from './payment/SberbankTerminalInstructions';
@@ -17,8 +18,9 @@ interface PaymentFormProps {
 
 const PaymentForm = ({ userData }: PaymentFormProps) => {
   const [amount, setAmount] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState('card');
+  const [paymentMethod, setPaymentMethod] = useState('sbp');
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [showSBPConfirmation, setShowSBPConfirmation] = useState(false);
   const [showInvoiceModal, setShowInvoiceModal] = useState(false);
   const [showSberbankInstructions, setShowSberbankInstructions] = useState(false);
   const [showSberbankTerminalInstructions, setShowSberbankTerminalInstructions] = useState(false);
@@ -26,6 +28,18 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
   const [showQRInstructions, setShowQRInstructions] = useState(false);
 
   const paymentMethods = [
+    { 
+      id: 'sbp', 
+      label: 'СБП', 
+      icon: () => (
+        <img 
+          src="/lovable-uploads/0f42383b-75d5-4944-872b-6ca28d4a2563.png" 
+          alt="СБП" 
+          className="w-12 h-12"
+        />
+      ),
+      description: 'Система быстрых платежей'
+    },
     ...(userData.userType === 'company' ? [{ 
       id: 'invoice', 
       label: 'Выставить счет', 
@@ -65,7 +79,10 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
   ];
 
   const handlePaymentMethodClick = (methodId: string) => {
-    if (methodId === 'invoice') {
+    if (methodId === 'sbp') {
+      setAmount('1000');
+      setShowSBPConfirmation(true);
+    } else if (methodId === 'invoice') {
       setShowInvoiceModal(true);
     } else if (methodId === 'sberbank') {
       setShowSberbankInstructions(true);
@@ -79,6 +96,13 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
       setAmount('1000');
       setShowConfirmation(true);
     }
+  };
+
+  const confirmSBPPayment = () => {
+    // Здесь будет переход на СБП
+    alert(`Переход в приложение банка для оплаты ${parseFloat(amount).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} ₽ через СБП`);
+    setShowSBPConfirmation(false);
+    setAmount('');
   };
 
   const confirmCardPayment = () => {
@@ -132,6 +156,16 @@ const PaymentForm = ({ userData }: PaymentFormProps) => {
       <SberbankInstructions 
         contractNumber={userData.contractNumber}
         onBack={() => setShowSberbankInstructions(false)}
+      />
+    );
+  }
+
+  if (showSBPConfirmation) {
+    return (
+      <SBPPaymentConfirmation
+        amount={amount}
+        onConfirm={confirmSBPPayment}
+        onBack={() => setShowSBPConfirmation(false)}
       />
     );
   }
