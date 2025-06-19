@@ -1,8 +1,9 @@
+
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import ContactSection from "@/components/ContactSection";
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare, Phone, Clock, Users } from 'lucide-react';
 
 const SupportPage = () => {
   return (
@@ -10,50 +11,92 @@ const SupportPage = () => {
       <NavBar />
       
       {/* Complaints Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-skynet-blue/5 via-white to-skynet-purple/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <span className="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-3">
+          <div className="max-w-6xl mx-auto text-center">
+            <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-skynet-blue to-skynet-purple text-white text-sm font-medium mb-6 shadow-lg">
               Поддержка и обратная связь
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               Есть вопросы или предложения?
             </h2>
             
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 transform hover:scale-[1.01] transition-transform duration-300">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                {/* Left Column: Text & Button */}
-                <div className="text-center md:text-left">
-                  <div className="text-lg text-gray-700 mb-6 space-y-3">
-                    <p>Что-то не так с <strong>монтажом</strong>, <strong>скоростью интернета</strong> или есть другие вопросы?</p>
-                    <p className="text-2xl lg:text-3xl font-bold text-skynet-blue leading-tight">
-                      Пишите напрямую руководству —<br /> разберёмся в любой ситуации!
-                    </p>
-                  </div>
-                  <a 
-                    href="https://wa.me/79867205872" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                  >
-                    <MessageSquare className="h-6 w-6 mr-3" />
-                    Написать в WhatsApp
-                  </a>
-                </div>
-
-                {/* Right Column: QR Code */}
-                <div className="flex justify-center md:justify-end">
-                  <div className="text-center bg-gray-50/50 p-6 rounded-2xl shadow-inner border border-gray-200/50">
-                    <div className="p-4 bg-white rounded-xl inline-block shadow-md">
-                      <img 
-                        src="/lovable-uploads/4f8a3072-12ec-4476-85d8-2e58e0e9897c.png" 
-                        alt="QR код для WhatsApp" 
-                        className="w-40 h-40"
-                      />
+            {/* Main WhatsApp Card */}
+            <div className="relative mb-12">
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl transform rotate-1 opacity-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-skynet-blue to-skynet-purple rounded-3xl transform -rotate-1 opacity-5"></div>
+              
+              <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                  {/* Left Column: Content */}
+                  <div className="text-center md:text-left space-y-6">
+                    <div className="space-y-4">
+                      <p className="text-lg text-gray-700 leading-relaxed">
+                        Что-то не так с <span className="font-bold text-skynet-blue">монтажом</span>, 
+                        <span className="font-bold text-skynet-purple"> скоростью интернета</span> или есть другие вопросы?
+                      </p>
+                      <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-skynet-blue to-skynet-purple bg-clip-text text-transparent leading-tight">
+                        Пишите напрямую руководству —<br /> разберёмся в любой ситуации!
+                      </h3>
                     </div>
-                    <p className="text-sm text-gray-600 mt-4 font-medium">
-                      Наведите камеру, чтобы <br/>начать чат в WhatsApp
-                    </p>
+                    
+                    {/* Features */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-6">
+                      <div className="flex items-center justify-center md:justify-start space-x-2">
+                        <Clock className="h-5 w-5 text-green-500" />
+                        <span className="text-sm text-gray-600 font-medium">24/7 поддержка</span>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start space-x-2">
+                        <Phone className="h-5 w-5 text-green-500" />
+                        <span className="text-sm text-gray-600 font-medium">Быстрый ответ</span>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start space-x-2">
+                        <Users className="h-5 w-5 text-green-500" />
+                        <span className="text-sm text-gray-600 font-medium">Личный подход</span>
+                      </div>
+                    </div>
+                    
+                    {/* WhatsApp Button */}
+                    <div className="pt-4">
+                      <a 
+                        href="https://wa.me/79867205872" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="group relative inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                        <MessageSquare className="relative h-6 w-6 mr-3 animate-pulse" />
+                        <span className="relative">Написать в WhatsApp</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Right Column: QR Code */}
+                  <div className="flex justify-center md:justify-end">
+                    <div className="relative">
+                      {/* Decorative rings */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-ping opacity-20"></div>
+                      <div className="absolute inset-4 bg-gradient-to-r from-skynet-blue to-skynet-purple rounded-full animate-pulse opacity-10"></div>
+                      
+                      <div className="relative bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl shadow-inner border-2 border-gray-100 hover:border-green-200 transition-all duration-300">
+                        <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                          <img 
+                            src="/lovable-uploads/4f8a3072-12ec-4476-85d8-2e58e0e9897c.png" 
+                            alt="QR код для WhatsApp" 
+                            className="w-40 h-40"
+                          />
+                        </div>
+                        <div className="text-center mt-6">
+                          <p className="text-sm text-gray-700 font-semibold mb-1">
+                            Наведите камеру телефона
+                          </p>
+                          <p className="text-xs text-gray-500">
+                            для быстрого перехода в WhatsApp
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -70,4 +113,4 @@ const SupportPage = () => {
   );
 };
 
-export default SupportPage; 
+export default SupportPage;
