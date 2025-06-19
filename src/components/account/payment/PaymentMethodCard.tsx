@@ -17,18 +17,25 @@ interface PaymentMethodCardProps {
 const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
   const renderIcon = () => {
     if (typeof method.icon === 'function') {
-      // Проверяем, возвращает ли функция JSX элемент (для изображений)
-      const iconResult = method.icon();
-      if (iconResult && typeof iconResult === 'object' && 'type' in iconResult) {
-        return iconResult;
+      // Check if it's a functional component (LucideIcon) or a function returning JSX
+      try {
+        const iconResult = method.icon();
+        // If it returns a JSX element, render it directly
+        if (iconResult && typeof iconResult === 'object' && 'type' in iconResult) {
+          return iconResult;
+        }
+      } catch {
+        // If calling as function fails, treat as LucideIcon component
+        const IconComponent = method.icon as LucideIcon;
+        return <IconComponent className="w-16 h-16 text-skynet-blue" />;
       }
-      // Если это LucideIcon компонент
+      // If we get here, treat as LucideIcon component
       const IconComponent = method.icon as LucideIcon;
-      return <IconComponent className="w-12 h-12 text-skynet-blue" />;
+      return <IconComponent className="w-16 h-16 text-skynet-blue" />;
     }
-    // Если это LucideIcon компонент
+    // Fallback for LucideIcon component
     const IconComponent = method.icon as LucideIcon;
-    return <IconComponent className="w-12 h-12 text-skynet-blue" />;
+    return <IconComponent className="w-16 h-16 text-skynet-blue" />;
   };
   
   return (
@@ -37,13 +44,13 @@ const PaymentMethodCard = ({ method, onClick }: PaymentMethodCardProps) => {
       onClick={() => onClick(method.id)}
     >
       <div className="flex items-center">
-        <div className="flex items-center text-base font-medium text-gray-700">
-          <div className="mr-4">
+        <div className="flex items-center text-lg font-medium text-gray-700">
+          <div className="mr-6">
             {renderIcon()}
           </div>
           <div>
-            <div className="font-semibold text-lg">{method.label}</div>
-            <div className="text-sm text-gray-500">{method.description}</div>
+            <div className="font-semibold text-xl">{method.label}</div>
+            <div className="text-base text-gray-500">{method.description}</div>
           </div>
         </div>
       </div>
