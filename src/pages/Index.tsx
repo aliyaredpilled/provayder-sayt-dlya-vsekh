@@ -1,5 +1,6 @@
 
 import NavBar from "@/components/NavBar";
+import KazanHero from "@/components/KazanHero";
 import Hero from "@/components/Hero";
 import PromoBanners from "@/components/PromoBanners";
 import ServiceOverview from "@/components/ServiceOverview";
@@ -16,6 +17,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-100 via-sky-50 to-white">
       <NavBar />
+      <KazanHero />
       <div className="space-y-8">
         <Hero />
         <PromoBanners />
