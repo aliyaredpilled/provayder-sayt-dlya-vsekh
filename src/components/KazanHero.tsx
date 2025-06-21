@@ -1,7 +1,7 @@
 
 const KazanHero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[85vh] w-full overflow-hidden">
       {/* Фоновое изображение */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
