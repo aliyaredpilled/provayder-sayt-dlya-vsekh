@@ -1,16 +1,23 @@
 
 const KazanHero = () => {
+  const scrollToTenGigabit = () => {
+    const element = document.getElementById('10g-internet');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Фоновое изображение */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-b-3xl"
         style={{
           backgroundImage: 'url(/lovable-uploads/afacc5e4-7c6a-4adf-8e57-cb674bc93013.png)'
         }}
       >
         {/* Градиентный оверлей для лучшей читаемости текста */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40 rounded-b-3xl"></div>
       </div>
 
       {/* Контент */}
@@ -26,7 +33,10 @@ const KazanHero = () => {
       </div>
 
       {/* Анимированная стрелка вниз */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce cursor-pointer hover:scale-110 transition-transform"
+        onClick={scrollToTenGigabit}
+      >
         <svg 
           className="w-8 h-8 opacity-70" 
           fill="none" 
