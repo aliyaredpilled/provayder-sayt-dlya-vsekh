@@ -1,8 +1,7 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
-import { WifiIcon, Tv, Phone, Cloud, Shield, Zap, Check, ArrowRight } from 'lucide-react';
+import { WifiIcon, Tv, Phone, Cloud, Shield, Zap, Check, ArrowRight, Video } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 const Services = () => {
@@ -197,6 +196,67 @@ const Services = () => {
                   alt="Домашняя телефония" 
                   className="rounded-2xl shadow-2xl"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section className="py-14 bg-skynet-gray-light/30">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="bg-purple-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <Video className="h-8 w-8 text-purple-500" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Видеонаблюдение</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Современная система видеонаблюдения с удаленным доступом и облачным хранением записей. 
+                Следите за своим домом в режиме реального времени с любого устройства.
+              </p>
+              
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-purple-500 mt-1 mr-3 flex-shrink-0" />
+                  <span>HD камеры с ночным видением и детекцией движения</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-purple-500 mt-1 mr-3 flex-shrink-0" />
+                  <span>Удаленный просмотр через мобильное приложение</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-purple-500 mt-1 mr-3 flex-shrink-0" />
+                  <span>Облачное хранение записей до 30 дней</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-purple-500 mt-1 mr-3 flex-shrink-0" />
+                  <span>Уведомления о движении и тревожных событиях</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-purple-500 mt-1 mr-3 flex-shrink-0" />
+                  <span>Простая установка и настройка специалистами</span>
+                </li>
+              </ul>
+              
+              <Link 
+                to="/tariffs" 
+                className="inline-flex items-center bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-8 py-3 rounded-full shadow-md hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
+              >
+                Заказать видеонаблюдение <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+            
+            <div className="lg:order-first lg:order-last">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/f6727173-7816-430e-9fa3-0a2b396be1de.png" 
+                  alt="Видеонаблюдение" 
+                  className="rounded-2xl shadow-2xl"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-purple-500 text-white p-4 rounded-xl shadow-lg">
+                  <div className="text-3xl font-bold">24/7</div>
+                  <div className="text-sm">Наблюдение</div>
+                </div>
               </div>
             </div>
           </div>
