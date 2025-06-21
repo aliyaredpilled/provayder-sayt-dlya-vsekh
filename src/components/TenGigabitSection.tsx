@@ -1,3 +1,4 @@
+
 import { Zap, Wifi, Download, ArrowRight, Shield, Globe, Clock, Gamepad2, Home, Users, CheckCircle2, MapPin, Settings2, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
@@ -13,135 +14,170 @@ const TenGigabitSection = () => {
   return (
     <section id="10g-internet" className="py-8 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="bg-gradient-to-r from-sky-100 to-blue-100 rounded-2xl overflow-hidden relative border border-sky-200">
-          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-gradient-to-br from-skynet-orange to-skynet-orange-dark opacity-30 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-gradient-to-tr from-skynet-orange to-orange-500 opacity-30 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-skynet-orange/20 to-skynet-blue/20 opacity-20 rounded-full blur-3xl"></div>
+        <div className="bg-gradient-to-br from-white to-sky-50 rounded-3xl overflow-hidden relative border border-sky-200/50">
           
           <div className="relative z-10 p-8 md:p-12">
             <div className="text-center mb-12">
-              <div className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-4">
-                Революционная технология XGS-PON
+              <div className="inline-block px-4 py-2 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-semibold mb-6">
+                Революционная технология XG-PON
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold text-skynet-blue mb-4">
-                Интернет будущего. <span className="text-skynet-orange">До 10 Гбит/с.</span>
+              <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                XG-PON: <span className="text-skynet-orange">Скорость, меняющая правила</span>
               </h2>
               
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Это не просто обновление — это совершенно новый уровень цифровых возможностей для вашего дома и бизнеса, доступный уже сегодня.
+              <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                Представьте интернет, который никогда не тормозит. Где загрузка гигабайтов занимает секунды, а стримы в 8K идут без единой задержки. <span className="font-bold text-gray-900">Это не будущее. Это XG-PON.</span>
               </p>
             </div>
 
             <div className="mb-12">
-              <h3 className="text-3xl font-bold text-skynet-blue mb-8 text-center">Что это значит для вас?</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">Ваши новые суперспособности</h3>
               
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                {/* Card 1: Symmetric Speed */}
-                <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-skynet-orange/30 shadow-lg flex flex-col">
+                {/* Card 1: Upload Power */}
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 shadow-sm hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <Zap className="h-8 w-8 text-skynet-orange mr-4 flex-shrink-0" />
-                    <h4 className="text-skynet-blue font-semibold text-xl">Симметричная скорость</h4>
-                  </div>
-                  <div className="space-y-4 flex-grow flex flex-col justify-between">
-                    <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
-                      <p className="font-semibold text-gray-800 text-sm">Забудьте, когда загрузка была быстрой, а отдача — медленной. Теперь скорость одинакова в обе стороны.</p>
+                    <div className="bg-skynet-orange/10 rounded-xl p-3 mr-4">
+                      <Zap className="h-7 w-7 text-skynet-orange" />
                     </div>
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      <li className="flex items-center"><CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />Стримы в 4K и 8K</li>
-                      <li className="flex items-center"><CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />Мгновенная загрузка в облако</li>
-                      <li className="flex items-center"><CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />Видеоконференции без «зависаний»</li>
-                    </ul>
+                    <h4 className="text-gray-900 font-bold text-lg">Мощный канал на отдачу</h4>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                    Ведите стримы в 4K, делитесь тяжелыми файлами и работайте с облаком так же быстро, как с локальным диском. <span className="font-semibold text-gray-900">Забудьте о долгих загрузках навсегда.</span>
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />
+                      Стримы в реальном времени
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />
+                      Мгновенная работа с облаком
+                    </div>
                   </div>
                 </div>
 
                 {/* Card 2: Gaming */}
-                <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-skynet-orange/30 shadow-lg flex flex-col">
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 shadow-sm hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <Gamepad2 className="h-8 w-8 text-skynet-orange mr-4 flex-shrink-0" />
-                    <h4 className="text-skynet-blue font-semibold text-xl">Гейминг без компромиссов</h4>
-                  </div>
-                  <div className="space-y-4 flex-grow flex flex-col justify-between">
-                    <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
-                      <p className="font-semibold text-gray-800 text-sm">Минимальный пинг и стабильность — ваше главное преимущество в онлайн-баталиях.</p>
+                    <div className="bg-skynet-orange/10 rounded-xl p-3 mr-4">
+                      <Gamepad2 className="h-7 w-7 text-skynet-orange" />
                     </div>
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      <li className="flex items-center"><CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />Фильмы и сериалы в 8K</li>
-                      <li className="flex items-center"><CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />Погружение в миры VR/AR</li>
-                      <li className="flex items-center"><CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />Ваш интернет готов ко всему</li>
-                    </ul>
+                    <h4 className="text-gray-900 font-bold text-lg">Игры на максималках</h4>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                    Получите нечестное преимущество. <span className="font-semibold text-gray-900">Сверхнизкий пинг и стабильность соединения XG-PON — ваш ключ к победе</span> в любой онлайн-игре.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />
+                      Минимальный пинг
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />
+                      Максимальная стабильность
+                    </div>
                   </div>
                 </div>
 
-                {/* Card 3: Reliability */}
-                <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-skynet-orange/30 shadow-lg flex flex-col">
+                {/* Card 3: Entertainment */}
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 shadow-sm hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <Home className="h-8 w-8 text-skynet-orange mr-4 flex-shrink-0" />
-                    <h4 className="text-skynet-blue font-semibold text-xl">Надежность для всех</h4>
-                  </div>
-                   <div className="space-y-4 flex-grow flex flex-col justify-between">
-                    <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
-                      <p className="font-semibold text-gray-800 text-sm">Мощности хватит на все устройства одновременно, соединение останется стабильным.</p>
+                    <div className="bg-skynet-orange/10 rounded-xl p-3 mr-4">
+                      <Globe className="h-7 w-7 text-skynet-orange" />
                     </div>
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      <li className="flex items-center"><CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />Работа с «тяжелыми» сервисами</li>
-                      <li className="flex items-center"><CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />Просмотр видео детьми</li>
-                      <li className="flex items-center"><CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />Управление десятками гаджетов</li>
-                    </ul>
+                    <h4 className="text-gray-900 font-bold text-lg">Развлечения в 8K и VR</h4>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                    Погружайтесь в контент нового поколения. <span className="font-semibold text-gray-900">Смотрите фильмы в максимальном качестве и исследуйте миры виртуальной реальности без буферизации.</span>
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />
+                      Фильмы и сериалы в 8K
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />
+                      VR без задержек
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 4: Family */}
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-skynet-orange/10 rounded-xl p-3 mr-4">
+                      <Users className="h-7 w-7 text-skynet-orange" />
+                    </div>
+                    <h4 className="text-gray-900 font-bold text-lg">Хватит на всю семью</h4>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                    Подключайте всё и сразу: компьютеры, смартфоны, игровые консоли, телевизоры и десятки умных устройств. <span className="font-semibold text-gray-900">Скорости хватит на всех без потери качества.</span>
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />
+                      Десятки устройств одновременно
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <CheckCircle2 className="h-4 w-4 mr-2 text-green-500 flex-shrink-0" />
+                      Без потери скорости
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/70 backdrop-blur-sm rounded-xl p-8 mb-8 border border-skynet-orange/30 shadow-lg">
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-gray-200/50">
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-skynet-blue mb-8">Как подключиться?</h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Как стать обладателем суперскорости?</h3>
               </div>
               
-              <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div className="flex flex-col items-center">
-                  <div className="bg-skynet-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <MapPin className="h-8 w-8 text-skynet-blue" />
+                  <div className="bg-skynet-blue/10 rounded-2xl w-20 h-20 flex items-center justify-center mb-6">
+                    <MapPin className="h-10 w-10 text-skynet-blue" />
                   </div>
-                  <h4 className="font-semibold text-lg mb-2 text-gray-900">Поэтапное внедрение</h4>
-                  <p className="text-sm text-gray-600">Начинаем с районов с самой высокой потребностью в сверхскоростях.</p>
+                  <h4 className="font-bold text-xl mb-3 text-gray-900">Поэтапное внедрение</h4>
+                  <p className="text-gray-600 leading-relaxed">Начинаем с районов с самой высокой потребностью в сверхскоростях.</p>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="bg-skynet-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <Settings2 className="h-8 w-8 text-skynet-blue" />
+                  <div className="bg-skynet-blue/10 rounded-2xl w-20 h-20 flex items-center justify-center mb-6">
+                    <Settings2 className="h-10 w-10 text-skynet-blue" />
                   </div>
-                  <h4 className="font-semibold text-lg mb-2 text-gray-900">Простое обновление</h4>
-                  <p className="text-sm text-gray-600">Для действующих клиентов на оптике — переход потребует минимальных изменений.</p>
+                  <h4 className="font-bold text-xl mb-3 text-gray-900">Простое обновление</h4>
+                  <p className="text-gray-600 leading-relaxed">Для действующих клиентов на оптике — переход потребует минимальных изменений.</p>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className="bg-skynet-blue/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <Sparkles className="h-8 w-8 text-skynet-blue" />
+                  <div className="bg-skynet-blue/10 rounded-2xl w-20 h-20 flex items-center justify-center mb-6">
+                    <Sparkles className="h-10 w-10 text-skynet-blue" />
                   </div>
-                  <h4 className="font-semibold text-lg mb-2 text-gray-900">Новые тарифы</h4>
-                  <p className="text-sm text-gray-600">Мы уже готовим новые тарифные планы, чтобы каждый выбрал для себя оптимум.</p>
+                  <h4 className="font-bold text-xl mb-3 text-gray-900">Новые тарифы</h4>
+                  <p className="text-gray-600 leading-relaxed">Мы уже готовим новые тарифные планы, чтобы каждый выбрал для себя оптимум.</p>
                 </div>
               </div>
             </div>
 
             <div className="text-center">
-              <p className="text-gray-700 text-xl mb-6">
+              <p className="text-gray-700 text-xl md:text-2xl mb-4 font-medium">
                 Следите за новостями и проверяйте доступность подключения по вашему адресу!
               </p>
-              <p className="text-skynet-blue font-semibold text-2xl mb-8">
-                С технологией XGS-PON от «Скайнет» будущее становится реальностью.
+              <p className="text-skynet-blue font-bold text-2xl md:text-3xl mb-8">
+                С технологией XG-PON от «Скайнет» будущее становится реальностью.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4">
                 <Button 
                   onClick={scrollToContact}
-                  className="bg-gradient-to-r from-skynet-orange to-skynet-orange-dark hover:from-skynet-orange-dark hover:to-orange-600 text-white py-6 px-8 rounded-full shadow-lg hover:shadow-xl transition-all text-lg font-semibold"
+                  className="bg-gradient-to-r from-skynet-orange to-skynet-orange-dark hover:from-skynet-orange-dark hover:to-orange-600 text-white py-6 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all text-lg font-bold"
                 >
                   Узнать о подключении
                 </Button>
-                <Link to="/tariffs" className="inline-flex items-center text-skynet-blue hover:text-skynet-blue-dark font-medium py-2 text-lg">
+                <Link to="/tariffs" className="inline-flex items-center text-skynet-blue hover:text-skynet-blue-dark font-semibold py-2 text-lg">
                   Все тарифы <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
