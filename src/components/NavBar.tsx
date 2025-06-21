@@ -88,7 +88,7 @@ const NavBar = () => {
     } else {
       return isScrolled 
         ? "bg-white/90 backdrop-blur-md shadow-sm py-2" 
-        : "bg-transparent py-3";
+        : "bg-white/90 backdrop-blur-md shadow-sm py-3";
     }
   };
 

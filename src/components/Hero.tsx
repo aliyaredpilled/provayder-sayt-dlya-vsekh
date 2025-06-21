@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -15,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-20 pb-8 bg-transparent backdrop-blur-sm overflow-hidden">
+    <section id="internet-hero" className="pt-20 pb-8 bg-transparent backdrop-blur-sm overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
