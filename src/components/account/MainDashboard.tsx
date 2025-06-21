@@ -182,10 +182,10 @@ const MainDashboard = ({ userData }: MainDashboardProps) => {
                         {openServiceSettings[service.id.toString()] && (
                           <div className="px-4 pb-4 bg-gray-50">
                             <div className="bg-white rounded-lg p-4 border border-gray-200">
-                              <h4 className="font-medium text-gray-900 mb-3 text-base">
+                              <h4 className="font-medium text-gray-900 mb-3 text-sm">
                                 {service.hasStaticIP ? 'Технические параметры (Статический IP)' : 'Технические параметры'}
                               </h4>
-                              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-base">
+                              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-sm">
                                 {service.hasStaticIP ? (
                                   <>
                                     <div>
