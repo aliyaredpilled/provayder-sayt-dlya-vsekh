@@ -1,12 +1,14 @@
-import { Phone, Users, Clock, Mail } from "lucide-react";
 
-const icons = { Phone, Users, Clock, Mail };
+import { Phone, Users, Clock, Mail, MessageCircle } from "lucide-react";
 
-export default function InfoCard({ icon, title, subtitle, bg }: {
+const icons = { Phone, Users, Clock, Mail, MessageCircle };
+
+export default function InfoCard({ icon, title, subtitle, bg, href }: {
   icon: keyof typeof icons;
   title: string;
   subtitle: string;
   bg: string;          // «skynet-blue», «emerald-500» и т.д.
+  href?: string;       // добавляем опциональную ссылку
 }) {
   const Icon = icons[icon];
   
@@ -22,7 +24,7 @@ export default function InfoCard({ icon, title, subtitle, bg }: {
 
   const bgColorClass = bgVariants[bg] || 'bg-gray-500'; // Резервный цвет
 
-  return (
+  const content = (
     <div className="bg-white backdrop-blur-sm shadow-card border border-gray-200/80
                     rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition">
       <div className={`h-12 w-12 rounded-lg flex items-center justify-center ${bgColorClass} text-white`}>
@@ -34,4 +36,14 @@ export default function InfoCard({ icon, title, subtitle, bg }: {
       </div>
     </div>
   );
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className="block">
+        {content}
+      </a>
+    );
+  }
+
+  return content;
 } 
