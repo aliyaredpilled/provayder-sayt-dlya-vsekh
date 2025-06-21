@@ -1,3 +1,4 @@
+
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PricingPlans from "@/components/PricingPlans";
@@ -44,29 +45,29 @@ const Tariffs = () => {
                 <TableHeader>
                   <TableRow className="bg-skynet-gray-light">
                     <TableHead className="text-gray-900 font-semibold">Характеристики</TableHead>
-                    <TableHead className="text-center text-gray-900 font-semibold">50 Мбит/с</TableHead>
-                    <TableHead className="text-center text-gray-900 font-semibold">100 Мбит/с</TableHead>
-                    <TableHead className="text-center text-gray-900 font-semibold">500 Мбит/с</TableHead>
+                    <TableHead className="text-center text-gray-900 font-semibold">300 Мбит/с</TableHead>
+                    <TableHead className="text-center text-gray-900 font-semibold">600 Мбит/с</TableHead>
                     <TableHead className="text-center text-gray-900 font-semibold">900 Мбит/с</TableHead>
                     <TableHead className="text-center text-gray-900 font-semibold">2 Гбит/с</TableHead>
+                    <TableHead className="text-center text-gray-900 font-semibold">3 Гбит/с</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   <TableRow>
                     <TableCell className="text-gray-700">Скорость</TableCell>
-                    <TableCell className="text-center text-gray-900">50 Мбит/с</TableCell>
-                    <TableCell className="text-center text-gray-900">100 Мбит/с</TableCell>
-                    <TableCell className="text-center text-gray-900">500 Мбит/с</TableCell>
+                    <TableCell className="text-center text-gray-900">300 Мбит/с</TableCell>
+                    <TableCell className="text-center text-gray-900">600 Мбит/с</TableCell>
                     <TableCell className="text-center text-gray-900">900 Мбит/с</TableCell>
                     <TableCell className="text-center text-gray-900">2 Гбит/с</TableCell>
+                    <TableCell className="text-center text-gray-900">3 Гбит/с</TableCell>
                   </TableRow>
                   <TableRow className="bg-gray-50">
                     <TableCell className="text-gray-700">Ежемесячная плата</TableCell>
-                    <TableCell className="text-center text-gray-900">1000 ₽</TableCell>
-                    <TableCell className="text-center text-gray-900">1200 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">900 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">1100 ₽</TableCell>
                     <TableCell className="text-center text-gray-900">2000 ₽</TableCell>
-                    <TableCell className="text-center text-gray-900">2400 ₽</TableCell>
                     <TableCell className="text-center text-gray-900">3500 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">4500 ₽</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="text-gray-700">Wi-Fi роутер</TableCell>
@@ -81,7 +82,7 @@ const Tariffs = () => {
                     <TableCell className="text-center text-gray-900">Базовая</TableCell>
                     <TableCell className="text-center text-gray-900">Базовая</TableCell>
                     <TableCell className="text-center text-gray-900">Приоритетная</TableCell>
-                    <TableCell className="text-center text-gray-900">Приоритетная</TableCell>
+                    <TableCell className="text-center text-gray-900">Премиум 24/7</TableCell>
                     <TableCell className="text-center text-gray-900">Премиум 24/7</TableCell>
                   </TableRow>
                   <TableRow>
@@ -94,11 +95,11 @@ const Tariffs = () => {
                   </TableRow>
                   <TableRow className="bg-gray-50">
                     <TableCell className="text-gray-700">Технология</TableCell>
-                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
-                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
-                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
-                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
-                    <TableCell className="text-center text-gray-900">XG-Pon</TableCell>
+                    <TableCell className="text-center text-gray-900">Оптоволокно</TableCell>
+                    <TableCell className="text-center text-gray-900">Оптоволокно</TableCell>
+                    <TableCell className="text-center text-gray-900">Оптоволокно</TableCell>
+                    <TableCell className="text-center text-gray-900">XG-PON</TableCell>
+                    <TableCell className="text-center text-gray-900">XG-PON</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -151,8 +152,8 @@ const Tariffs = () => {
               </div>
               <div className="flex flex-col items-center">
                 <CheckCircle2 className="h-12 w-12 text-skynet-orange mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Технология XG-PON</h3>
-                <p className="text-white/80">Современное оптоволоконное подключение</p>
+                <h3 className="text-xl font-semibold mb-2">Smart-TV в подарок</h3>
+                <p className="text-white/80">120 телеканалов в цифровом качестве бесплатно</p>
               </div>
               <div className="flex flex-col items-center">
                 <CheckCircle2 className="h-12 w-12 text-skynet-orange mb-4" />
