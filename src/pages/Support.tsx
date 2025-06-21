@@ -1,3 +1,4 @@
+
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
@@ -70,21 +71,22 @@ const SupportPage = () => (
         {/* Быстрые контакты */}
         <div className="mt-16 grid md:grid-cols-3 gap-6 animate-fade-in-up">
           <InfoCard
+            icon="MessageCircle"
+            title="Telegram-бот поддержки"
+            subtitle="@skynet_kazan_supportbot"
+            bg="skynet-blue"
+            href="https://t.me/skynet_kazan_supportbot"
+          />
+          <InfoCard
             icon="Phone"
             title="Позвоните нам"
             subtitle="+7 (843) 5-777-775"
-            bg="skynet-blue"
+            bg="skynet-orange"
           />
           <InfoCard
             icon="Mail"
             title="Напишите на почту"
             subtitle="noc@skynet-kazan.com"
-            bg="skynet-orange"
-          />
-          <InfoCard
-            icon="Clock"
-            title="Поддержка 24/7"
-            subtitle="Без выходных"
             bg="emerald-500"
           />
         </div>
