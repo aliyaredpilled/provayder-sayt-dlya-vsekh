@@ -1,4 +1,3 @@
-
 import { Check, ArrowRight, Wifi, Gift, Zap, Users } from 'lucide-react';
 import { pricingPlans } from '@/lib/speedData';
 import { Card, CardContent } from '@/components/ui/card';
@@ -109,7 +108,7 @@ const PricingPlans = () => {
                     </ul>
                     
                     <a 
-                      href="#contact"
+                      href="#contacts"
                       className={`w-full rounded-full py-3 px-4 text-center font-medium transition-all flex items-center justify-center ${
                         plan.isPopular 
                           ? 'bg-skynet-orange hover:bg-skynet-orange/90 text-white' 
@@ -182,7 +181,7 @@ const PricingPlans = () => {
                     </ul>
                     
                     <a 
-                      href="#contact"
+                      href="#contacts"
                       className="w-full rounded-full py-3 px-4 text-center font-medium transition-all flex items-center justify-center bg-skynet-blue hover:bg-skynet-blue-dark text-white"
                     >
                       Подключить
@@ -233,7 +232,7 @@ const PricingPlans = () => {
                       <p className="text-gray-700 mb-6">{plan.description}</p>
                       
                       <a 
-                        href="#contact"
+                        href="#contacts"
                         className="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white rounded-full py-3 px-6 font-medium transition-all"
                       >
                         Обсудить условия
