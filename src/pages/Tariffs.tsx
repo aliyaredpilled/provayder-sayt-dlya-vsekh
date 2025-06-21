@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PricingPlans from "@/components/PricingPlans";
@@ -11,28 +10,9 @@ const Tariffs = () => {
     <div className="min-h-screen bg-white">
       <NavBar />
       
-      <section className="pt-32 pb-20 bg-skynet-gray-light/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
-              Прозрачно и выгодно
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Тарифы для каждого
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Выберите идеальный тарифный план, который соответствует вашим потребностям в скорости и бюджете.
-            </p>
-            <div className="flex justify-center">
-              <button className="flex items-center text-skynet-blue font-medium animate-bounce">
-                Смотреть тарифы <ArrowDown className="ml-2 h-4 w-4" />
-              </button>
-            </div>
-          </div>
-        </div>
+      <section className="pt-36 pb-20">
+        <PricingPlans />
       </section>
-      
-      <PricingPlans />
       
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">

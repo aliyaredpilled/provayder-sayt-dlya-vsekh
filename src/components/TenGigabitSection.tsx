@@ -1,4 +1,3 @@
-
 import { Zap, Wifi, Download, ArrowRight, Shield, Globe, Clock, Gamepad2, Home, Users, CheckCircle2, MapPin, Settings2, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
@@ -22,11 +21,11 @@ const TenGigabitSection = () => {
                 Революционная технология XG-PON
               </div>
               
-              <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up">
                 XG-PON: <span className="text-skynet-orange">Скорость, меняющая правила</span>
               </h2>
               
-              <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
                 Представьте интернет, который никогда не тормозит. Где загрузка гигабайтов занимает секунды, а стримы в 8K идут без единой задержки. <span className="font-bold text-gray-900">Это не будущее. Это XG-PON.</span>
               </p>
             </div>

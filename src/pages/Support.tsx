@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
@@ -72,7 +71,7 @@ const SupportPage = () => (
         <div className="mt-16 grid md:grid-cols-3 gap-6 animate-fade-in-up">
           <InfoCard
             icon="MessageCircle"
-            title="Telegram-бот поддержки"
+            title="Техподдержка в Telegram"
             subtitle="@skynet_kazan_supportbot"
             bg="skynet-blue"
             href="https://t.me/skynet_kazan_supportbot"

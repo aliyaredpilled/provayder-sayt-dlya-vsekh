@@ -26,7 +26,7 @@ const Services = () => {
         </div>
       </section>
       
-      <section className="py-14 bg-white">
+      <section id="internet" className="py-14 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -88,7 +88,7 @@ const Services = () => {
         </div>
       </section>
       
-      <section className="py-14 bg-skynet-gray-light/30">
+      <section id="tv" className="py-14 bg-skynet-gray-light/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -149,7 +149,7 @@ const Services = () => {
         </div>
       </section>
       
-      <section className="py-14 bg-white">
+      <section id="telephony" className="py-14 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -202,7 +202,7 @@ const Services = () => {
         </div>
       </section>
       
-      <section className="py-14 bg-skynet-gray-light/30">
+      <section id="surveillance" className="py-14 bg-skynet-gray-light/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
