@@ -8,16 +8,19 @@ const KazanHero = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Фоновое изображение */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/lovable-uploads/beautiful_kazan.png)'
-        }}
-      >
-        {/* Градиентный оверлей для лучшей читаемости текста */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
-      </div>
+      {/* Фоновое изображение с использованием <picture> для оптимизации */}
+      <picture className="absolute inset-0 w-full h-full">
+        <source srcSet="/lovable-uploads/beautiful_kazan.webp" type="image/webp" />
+        <source srcSet="/lovable-uploads/beautiful_kazan-optimized.png" type="image/png" />
+        <img 
+          src="/lovable-uploads/beautiful_kazan-optimized.png" 
+          alt="Красивый вид на город Казань" 
+          className="w-full h-full object-cover object-center"
+        />
+      </picture>
+      
+      {/* Градиентный оверлей для лучшей читаемости текста */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
 
       {/* Контент */}
       <div 
