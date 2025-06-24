@@ -65,7 +65,7 @@ const Contacts = () => {
     <div className="min-h-screen bg-white">
       <NavBar />
       
-      <section className="pt-24 pb-16 bg-skynet-gray-light/50">
+      <section className="pt-32 pb-20 bg-skynet-gray-light/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">

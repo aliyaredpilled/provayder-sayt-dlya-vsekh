@@ -10,7 +10,7 @@ const SupportPage = () => (
     <NavBar />
 
     {/* Hero / Заголовок */}
-    <section className="pt-36 pb-20 text-center animate-fade-in-up">
+    <section className="pt-32 pb-20 text-center animate-fade-in-up">
       <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium">
         Поддержка и обратная связь
       </span>
