@@ -44,16 +44,16 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Телефон</h3>
-                  <p className="text-gray-600 mb-1">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Телефон</h3>
+                  <p className="text-base text-gray-600 mb-2">
                     Подключение:&nbsp;
-                    <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block">
+                    <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
                       +7&nbsp;(843)&nbsp;290-92-94
                     </a>
                   </p>
-                  <p className="text-gray-600 mb-1">
+                  <p className="text-base text-gray-600 mb-1">
                     Поддержка:&nbsp;
-                    <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block">
+                    <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
                       +7&nbsp;(843)&nbsp;5-777-775
                     </a>
                   </p>
@@ -69,15 +69,19 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600 mb-1">Для запросов:</p>
-                  <a href="mailto:sales@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
-                    sales@skynet-kazan.com
-                  </a>
-                  <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
-                  <a href="mailto:noc@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
-                    noc@skynet-kazan.com
-                  </a>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                  <p className="text-base text-gray-600 mb-2">
+                    Для запросов:&nbsp;
+                    <a href="mailto:sales@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
+                      sales@skynet-kazan.com
+                    </a>
+                  </p>
+                  <p className="text-base text-gray-600 mb-1">
+                    Техподдержка:&nbsp;
+                    <a href="mailto:noc@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
+                      noc@skynet-kazan.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -90,12 +94,9 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Режим работы</h3>
-                  <p className="text-gray-600 mb-1">Офис:</p>
-                  <p className="text-gray-800">ПН-ПТ: 8:00-18:00</p>
-                  <p className="text-gray-800">СБ: 8:00-13:00</p>
-                  <p className="text-gray-600 mt-2 mb-1">Техническая поддержка:</p>
-                  <p className="text-gray-800">Круглосуточно</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Режим работы</h3>
+                  <p className="text-base text-gray-800">Офис: ПН-ПТ: 8:00-18:00, СБ: 8:00-13:00</p>
+                  <p className="text-base text-gray-800 mt-1">Техподдержка: Круглосуточно</p>
                 </div>
               </div>
             </div>
@@ -110,22 +111,24 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Telegram-боты</h3>
-                  <p className="text-gray-600 mb-1">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Telegram-боты</h3>
+                  <p className="text-base text-gray-600 mb-2">
                     Техподдержка:&nbsp;
-                    <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block">
+                    <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
                       @skynet_kazan_supportbot
                     </a>
                   </p>
-                  <p className="text-gray-600 mt-2 mb-1">Документы:</p>
-                  <a href="https://t.me/SkyNet_document_bot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
-                    @SkyNet_document_bot
-                  </a>
+                  <p className="text-base text-gray-600 mb-1">
+                    Документы:&nbsp;
+                    <a href="https://t.me/SkyNet_document_bot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
+                      @SkyNet_document_bot
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-3 border border-gray-100 backdrop-blur-sm flex-grow">
+            <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <div className="h-12 w-12 bg-green-500 text-white rounded-lg flex items-center justify-center">
@@ -133,9 +136,8 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-snug">Есть повод пожаловаться?</h3>
-                  <p className="text-gray-600 text-sm mb-1 leading-snug">Что-то не так с монтажом/скоростью<br/>или есть другие вопросы?</p>
-                  <p className="text-gray-600 text-sm mb-2 leading-snug">Пишите&nbsp;руководству «Скайнет&nbsp;Стрим»<br/>на WhatsApp — разберёмся!</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-tight">Есть повод пожаловаться?</h3>
+                  <p className="text-base text-gray-600 mb-2 leading-snug">Пишите&nbsp;руководству «Скайнет&nbsp;Стрим»<br/>на WhatsApp — разберёмся!</p>
                   <a href="https://api.whatsapp.com/send/?phone=79867205872&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%82%D1%8C%20%D0%B6%D0%B0%D0%BB%D0%BE%D0%B1%D1%83" target="_blank" rel="noopener noreferrer" className="text-skynet-blue font-semibold hover:text-skynet-blue-dark transition-colors">
                     WhatsApp
                   </a>
