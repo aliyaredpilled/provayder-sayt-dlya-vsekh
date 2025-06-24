@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock, MessageSquare } from 'lucide-react';
 import { Textarea } from "@/components/ui/textarea";
 
 const ContactSection = () => {
@@ -35,7 +35,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Готовы подключиться?</h2>
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-4 flex flex-col">
+          <div className="space-y-4 flex flex-col h-full justify-between">
             <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
               <div className="flex">
                 <div className="flex-shrink-0">
@@ -114,6 +114,23 @@ const ContactSection = () => {
                   <p className="text-gray-600 mt-2 mb-1">Документы:</p>
                   <a href="https://t.me/SkyNet_document_bot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
                     @SkyNet_document_bot
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <div className="h-12 w-12 bg-green-500 text-white rounded-lg flex items-center justify-center">
+                    <MessageSquare className="h-6 w-6" />
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">WhatsApp</h3>
+                  <p className="text-gray-600 mb-1">Для консультаций и заявок:</p>
+                  <a href="https://api.whatsapp.com/send/?phone=79867205872&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
+                    +7 986 720-58-72
                   </a>
                 </div>
               </div>
