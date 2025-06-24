@@ -36,14 +36,10 @@ const KazanHero = () => {
             />
             <span className="relative z-10 px-8 py-4 block">20 лет вместе с Казанью</span>
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl font-medium drop-shadow-lg opacity-95 mb-4 leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl font-medium drop-shadow-lg opacity-95 leading-relaxed">
             Надёжный интернет в каждый дом и бизнес 
             <br className="hidden md:block" />
             столицы Татарстана
-          </p>
-          <p className="text-base md:text-lg opacity-90 font-light max-w-2xl mx-auto">
-            С 2004 года мы строим будущее связи в Казани, обеспечивая стабильным 
-            и скоростным интернетом тысячи семей и предприятий нашего любимого города
           </p>
         </div>
       </div>
