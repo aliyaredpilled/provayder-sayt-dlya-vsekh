@@ -217,7 +217,7 @@ const PricingPlans = () => {
                       
                       <div className="mb-5">
                         <div className="flex items-end mb-2">
-                          <span className="text-5xl font-bold text-purple-600">{plan.price}</span>
+                          <span className="text-4xl font-bold text-purple-600">{plan.price}</span>
                         </div>
                         <div 
                           className="text-lg font-medium py-2 px-4 rounded-full inline-block text-white"
