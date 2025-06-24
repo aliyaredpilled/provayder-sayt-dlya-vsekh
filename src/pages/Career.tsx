@@ -169,7 +169,7 @@ const Career = () => {
     <div className="min-h-screen bg-white">
       <NavBar />
       
-      <section className="pt-32 pb-20 bg-skynet-gray-light/50">
+      <section className="pt-32 pb-10 bg-skynet-gray-light/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-5xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">

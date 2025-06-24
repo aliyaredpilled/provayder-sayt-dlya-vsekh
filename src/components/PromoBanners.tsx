@@ -1,4 +1,3 @@
-
 import { Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -51,23 +50,23 @@ const PromoBanners = () => {
                 style={{ backgroundImage: `url(${promo.bgImage})` }}
               ></div>
               <div className={`absolute inset-0 bg-gradient-to-r ${promo.color}`}></div>
-              <div className="absolute inset-0 flex items-center">
-                <div className="p-4">
-                  <div className="text-white h-full flex flex-col">
-                    <span className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full mb-3 self-start">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      {promo.expireDate}
-                    </span>
-                    <h2 className="text-lg font-bold mb-3 leading-tight">{promo.title}</h2>
-                    <p className="text-white/90 mb-4 flex-grow text-sm">{promo.description}</p>
-                    <Link 
-                      to={promo.buttonLink} 
-                      className="inline-flex items-center justify-center bg-white text-skynet-blue font-medium px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:bg-gray-100 transition-all text-sm self-start"
-                    >
-                      {promo.buttonText}
-                    </Link>
-                  </div>
-                </div>
+              
+              {/* Дата акции, закрепленная наверху */}
+              <span className="absolute top-4 left-4 inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full z-10">
+                <Calendar className="h-3 w-3 mr-1" />
+                {promo.expireDate}
+              </span>
+
+              {/* Основной контент карточки, прижатый к низу */}
+              <div className="relative h-full flex flex-col justify-end p-4">
+                <h2 className="text-white text-lg font-bold mb-3 leading-tight">{promo.title}</h2>
+                <p className="text-white/90 mb-4 flex-grow text-sm">{promo.description}</p>
+                <Link 
+                  to={promo.buttonLink} 
+                  className="inline-flex items-center justify-center bg-white text-skynet-blue font-medium px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:bg-gray-100 transition-all text-sm self-start"
+                >
+                  {promo.buttonText}
+                </Link>
               </div>
             </div>
           ))}
