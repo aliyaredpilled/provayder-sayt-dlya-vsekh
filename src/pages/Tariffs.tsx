@@ -10,7 +10,7 @@ const Tariffs = () => {
     <div className="min-h-screen bg-white">
       <NavBar />
       
-      <section className="pt-32 pb-20">
+      <section className="pt-32 pb-20 bg-skynet-gray-light/50">
         <PricingPlans />
       </section>
       

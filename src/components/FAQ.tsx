@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,21 +37,16 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <section className="bg-skynet-gray-light/50 py-16 sm:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 rounded-full bg-skynet-purple/10 text-skynet-purple text-sm font-medium mb-3">
-            Часто задаваемые вопросы
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
+            Помощь
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ответы на популярные вопросы
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Часто задаваемые вопросы
           </h2>
-          <p className="text-gray-600">
-            Здесь собраны наиболее распространенные вопросы наших клиентов. 
-            Если вы не нашли ответ на свой вопрос, обратитесь в нашу службу поддержки.
-          </p>
         </div>
-
         <div className="max-w-3xl mx-auto divide-y divide-gray-200">
           {faqItems.map((item, index) => (
             <div key={index} className="py-5">

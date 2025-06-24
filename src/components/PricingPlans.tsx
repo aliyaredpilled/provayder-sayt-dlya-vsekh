@@ -8,7 +8,7 @@ const PricingPlans = () => {
   const exclusivePlans = pricingPlans.filter(plan => plan.category === 'exclusive');
 
   return (
-    <section id="pricing" className="py-4 bg-skynet-gray-light/50">
+    <section id="pricing">
       <div className="section-container">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">

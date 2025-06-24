@@ -111,18 +111,15 @@ const ReviewCard = ({ review, index }: { review: typeof reviews[0], index: numbe
 
 const CustomerReviews = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-sky-100/70 to-white/80">
+    <section className="bg-white py-16 sm:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
-            Отзывы
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
+            Отзывы клиентов
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Что говорят наши клиенты
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Что о нас говорят
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Мы гордимся тем, что наши клиенты довольны качеством наших услуг и обслуживания
-          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
