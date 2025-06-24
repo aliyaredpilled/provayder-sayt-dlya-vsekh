@@ -185,6 +185,154 @@ const Career = () => {
         </div>
       </section>
       
+      <section className="py-20 bg-skynet-gray-light/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Открытые вакансии
+          </h2>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-1">
+                <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <div className="divide-y divide-gray-100">
+                    {jobOpenings.map(job => (
+                      <button 
+                        key={job.id}
+                        onClick={() => handleJobSelect(job.id)}
+                        className={`w-full flex items-center p-4 text-left transition-colors ${
+                          selectedJob === job.id 
+                            ? 'bg-skynet-blue text-white' 
+                            : 'hover:bg-gray-50'
+                        }`}
+                      >
+                        <div className={`p-2 rounded-lg mr-4 ${
+                          selectedJob === job.id 
+                            ? 'bg-white/10' 
+                            : 'bg-skynet-blue/10'
+                        }`}>
+                          <Briefcase className={`h-5 w-5 ${
+                            selectedJob === job.id 
+                              ? 'text-white' 
+                              : 'text-skynet-blue'
+                          }`} />
+                        </div>
+                        <div>
+                          <h3 className={`font-semibold ${
+                            selectedJob === job.id 
+                              ? 'text-white' 
+                              : 'text-gray-900'
+                          }`}>
+                            {job.title}
+                          </h3>
+                          <div className={`flex flex-wrap gap-2 mt-1 text-xs ${
+                            selectedJob === job.id 
+                              ? 'text-white/80' 
+                              : 'text-gray-500'
+                          }`}>
+                            <div className="flex items-center">
+                              <MapPin className="h-3 w-3 mr-1" />
+                              <span>{job.location}</span>
+                            </div>
+                            <div className="flex items-center">
+                              <Clock className="h-3 w-3 mr-1" />
+                              <span>{job.type}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              <div className="lg:col-span-2">
+                {selectedJobDetails ? (
+                  <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                    <div className="mb-8">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                        {selectedJobDetails.title}
+                      </h2>
+                      <div className="flex flex-wrap gap-4 mb-4">
+                        <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <MapPin className="h-4 w-4 mr-1" />
+                          <span>{selectedJobDetails.location}</span>
+                        </div>
+                        <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <Clock className="h-4 w-4 mr-1" />
+                          <span>{selectedJobDetails.type}</span>
+                        </div>
+                        <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <Briefcase className="h-4 w-4 mr-1" />
+                          <span>{selectedJobDetails.department}</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-600">{selectedJobDetails.description}</p>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Обязанности:</h3>
+                      <ul className="space-y-2">
+                        {selectedJobDetails.responsibilities.map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle2 className="h-5 w-5 text-skynet-blue mt-0.5 mr-3 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Требования:</h3>
+                      <ul className="space-y-2">
+                        {selectedJobDetails.requirements.map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle2 className="h-5 w-5 text-skynet-orange mt-0.5 mr-3 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-8">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Мы предлагаем:</h3>
+                      <ul className="space-y-2">
+                        {selectedJobDetails.benefits.map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="flex justify-between items-center border-t border-gray-100 pt-6">
+                      <p className="text-gray-500">
+                        Отправьте заявку сегодня и станьте частью нашей команды!
+                      </p>
+                      <button 
+                        onClick={handleApply}
+                        className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-3 rounded-lg shadow-md transition-all flex items-center"
+                      >
+                        Откликнуться <ArrowRight className="ml-2 h-4 w-4" />
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100 text-center">
+                    <Briefcase className="h-16 w-16 text-gray-300 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Открытые позиции</h3>
+                    <p className="text-gray-600">
+                      Здесь будет отображена подробная информация о выбранной вакансии
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {showApplication && selectedJobDetails && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -361,154 +509,6 @@ const Career = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Инновационные проекты</h3>
                 <p className="text-gray-600">Работа с современными технологиями и участие в развитии инновационных сервисов</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section className="py-20 bg-skynet-gray-light/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Открытые вакансии
-          </h2>
-          
-          <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-3 gap-8">
-              <div className="lg:col-span-1">
-                <div className="bg-white rounded-xl shadow-md overflow-hidden">
-                  <div className="divide-y divide-gray-100">
-                    {jobOpenings.map(job => (
-                      <button 
-                        key={job.id}
-                        onClick={() => handleJobSelect(job.id)}
-                        className={`w-full flex items-center p-4 text-left transition-colors ${
-                          selectedJob === job.id 
-                            ? 'bg-skynet-blue text-white' 
-                            : 'hover:bg-gray-50'
-                        }`}
-                      >
-                        <div className={`p-2 rounded-lg mr-4 ${
-                          selectedJob === job.id 
-                            ? 'bg-white/10' 
-                            : 'bg-skynet-blue/10'
-                        }`}>
-                          <Briefcase className={`h-5 w-5 ${
-                            selectedJob === job.id 
-                              ? 'text-white' 
-                              : 'text-skynet-blue'
-                          }`} />
-                        </div>
-                        <div>
-                          <h3 className={`font-semibold ${
-                            selectedJob === job.id 
-                              ? 'text-white' 
-                              : 'text-gray-900'
-                          }`}>
-                            {job.title}
-                          </h3>
-                          <div className={`flex flex-wrap gap-2 mt-1 text-xs ${
-                            selectedJob === job.id 
-                              ? 'text-white/80' 
-                              : 'text-gray-500'
-                          }`}>
-                            <div className="flex items-center">
-                              <MapPin className="h-3 w-3 mr-1" />
-                              <span>{job.location}</span>
-                            </div>
-                            <div className="flex items-center">
-                              <Clock className="h-3 w-3 mr-1" />
-                              <span>{job.type}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-2">
-                {selectedJobDetails ? (
-                  <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
-                    <div className="mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                        {selectedJobDetails.title}
-                      </h2>
-                      <div className="flex flex-wrap gap-4 mb-4">
-                        <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
-                          <MapPin className="h-4 w-4 mr-1" />
-                          <span>{selectedJobDetails.location}</span>
-                        </div>
-                        <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
-                          <Clock className="h-4 w-4 mr-1" />
-                          <span>{selectedJobDetails.type}</span>
-                        </div>
-                        <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">
-                          <Briefcase className="h-4 w-4 mr-1" />
-                          <span>{selectedJobDetails.department}</span>
-                        </div>
-                      </div>
-                      <p className="text-gray-600">{selectedJobDetails.description}</p>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Обязанности:</h3>
-                      <ul className="space-y-2">
-                        {selectedJobDetails.responsibilities.map((item, index) => (
-                          <li key={index} className="flex items-start">
-                            <CheckCircle2 className="h-5 w-5 text-skynet-blue mt-0.5 mr-3 flex-shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Требования:</h3>
-                      <ul className="space-y-2">
-                        {selectedJobDetails.requirements.map((item, index) => (
-                          <li key={index} className="flex items-start">
-                            <CheckCircle2 className="h-5 w-5 text-skynet-orange mt-0.5 mr-3 flex-shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="mb-8">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Мы предлагаем:</h3>
-                      <ul className="space-y-2">
-                        {selectedJobDetails.benefits.map((item, index) => (
-                          <li key={index} className="flex items-start">
-                            <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="flex justify-between items-center border-t border-gray-100 pt-6">
-                      <p className="text-gray-500">
-                        Отправьте заявку сегодня и станьте частью нашей команды!
-                      </p>
-                      <button 
-                        onClick={handleApply}
-                        className="bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-6 py-3 rounded-lg shadow-md transition-all flex items-center"
-                      >
-                        Откликнуться <ArrowRight className="ml-2 h-4 w-4" />
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100 text-center">
-                    <Briefcase className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Выберите вакансию</h3>
-                    <p className="text-gray-600">
-                      Выберите вакансию из списка слева, чтобы увидеть детальное описание и требования
-                    </p>
-                  </div>
-                )}
               </div>
             </div>
           </div>
