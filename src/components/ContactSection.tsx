@@ -45,14 +45,18 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Телефон</h3>
-                  <p className="text-gray-600 mb-1">Подключение:</p>
-                  <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
-                    +7 (843) 290-92-94
-                  </a>
-                  <p className="text-gray-600 mt-2 mb-1">Поддержка:</p>
-                  <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
-                    +7 (843) 5-777-775
-                  </a>
+                  <p className="text-gray-600 mb-1">
+                    Подключение:&nbsp;
+                    <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block">
+                      +7&nbsp;(843)&nbsp;290-92-94
+                    </a>
+                  </p>
+                  <p className="text-gray-600 mb-1">
+                    Поддержка:&nbsp;
+                    <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block">
+                      +7&nbsp;(843)&nbsp;5-777-775
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -107,10 +111,12 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Telegram-боты</h3>
-                  <p className="text-gray-600 mb-1">Техподдержка:</p>
-                  <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
-                    @skynet_kazan_supportbot
-                  </a>
+                  <p className="text-gray-600 mb-1">
+                    Техподдержка:&nbsp;
+                    <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block">
+                      @skynet_kazan_supportbot
+                    </a>
+                  </p>
                   <p className="text-gray-600 mt-2 mb-1">Документы:</p>
                   <a href="https://t.me/SkyNet_document_bot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
                     @SkyNet_document_bot
@@ -127,7 +133,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-snug">ЕСТЬ ПОВОД<br/>ПОЖАЛОВАТЬСЯ?</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-snug">Есть повод пожаловаться?</h3>
                   <p className="text-gray-600 text-sm mb-1 leading-snug">Что-то не так с монтажом/скоростью<br/>или есть другие вопросы?</p>
                   <p className="text-gray-600 text-sm mb-2 leading-snug">Пишите&nbsp;руководству «Скайнет&nbsp;Стрим»<br/>на WhatsApp — разберёмся!</p>
                   <a href="https://api.whatsapp.com/send/?phone=79867205872&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%82%D1%8C%20%D0%B6%D0%B0%D0%BB%D0%BE%D0%B1%D1%83" target="_blank" rel="noopener noreferrer" className="text-skynet-blue font-semibold hover:text-skynet-blue-dark transition-colors">
