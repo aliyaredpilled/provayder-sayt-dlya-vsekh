@@ -61,8 +61,8 @@ const Tariffs = () => {
                     <TableCell className="text-center text-gray-900">Базовая</TableCell>
                     <TableCell className="text-center text-gray-900">Базовая</TableCell>
                     <TableCell className="text-center text-gray-900">Приоритетная</TableCell>
-                    <TableCell className="text-center text-gray-900">Премиум 24/7</TableCell>
-                    <TableCell className="text-center text-gray-900">Премиум 24/7</TableCell>
+                    <TableCell className="text-center text-gray-900">Поддержка 24/7</TableCell>
+                    <TableCell className="text-center text-gray-900">Поддержка 24/7</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="text-gray-700">Подключение</TableCell>

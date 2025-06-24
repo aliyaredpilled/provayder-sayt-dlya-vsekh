@@ -17,8 +17,8 @@ const TenGigabitSection = () => {
           
           <div className="relative z-10 p-8 md:p-12">
             <div className="text-center mb-12">
-              <div className="inline-block px-4 py-2 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-semibold mb-6">
-                Революционная технология <span className="text-skynet-blue">XG-PON</span>
+              <div className="inline-block px-4 py-2 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-semibold mb-6">
+                Революционная технология XG-PON
               </div>
               
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up">

@@ -57,11 +57,11 @@ const ServiceOverview = () => {
     <section className="py-6 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
-            Наши услуги
+          <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-xs md:text-sm font-medium mb-3">
+            Всё, что вам нужно
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Комплексные решения для вашего дома
+            Наши услуги
           </h2>
           <p className="text-gray-600">
             Мы предлагаем полный спектр современных телекоммуникационных услуг, 
