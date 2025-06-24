@@ -47,13 +47,13 @@ const ContactSection = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Телефон</h3>
                   <p className="text-base text-gray-600 mb-2">
                     Подключение:&nbsp;
-                    <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
+                    <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
                       +7&nbsp;(843)&nbsp;290-92-94
                     </a>
                   </p>
                   <p className="text-base text-gray-600 mb-1">
                     Поддержка:&nbsp;
-                    <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
+                    <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
                       +7&nbsp;(843)&nbsp;5-777-775
                     </a>
                   </p>
@@ -72,13 +72,13 @@ const ContactSection = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
                   <p className="text-base text-gray-600 mb-2">
                     Для запросов:&nbsp;
-                    <a href="mailto:sales@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
+                    <a href="mailto:sales@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
                       sales@skynet-kazan.com
                     </a>
                   </p>
                   <p className="text-base text-gray-600 mb-1">
                     Техподдержка:&nbsp;
-                    <a href="mailto:noc@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
+                    <a href="mailto:noc@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
                       noc@skynet-kazan.com
                     </a>
                   </p>
@@ -95,8 +95,8 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Режим работы</h3>
-                  <p className="text-base text-gray-800">Офис: ПН-ПТ: 8:00-18:00, СБ: 8:00-13:00</p>
-                  <p className="text-base text-gray-800 mt-1">Техподдержка: Круглосуточно</p>
+                  <p className="text-base text-gray-600">Офис: ПН-ПТ: 8:00-18:00,<br/>СБ: 8:00-13:00</p>
+                  <p className="text-base text-gray-600 mt-1">Техподдержка: Круглосуточно</p>
                 </div>
               </div>
             </div>
@@ -114,13 +114,13 @@ const ContactSection = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Telegram-боты</h3>
                   <p className="text-base text-gray-600 mb-2">
                     Техподдержка:&nbsp;
-                    <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
+                    <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
                       @skynet_kazan_supportbot
                     </a>
                   </p>
                   <p className="text-base text-gray-600 mb-1">
                     Документы:&nbsp;
-                    <a href="https://t.me/SkyNet_document_bot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium">
+                    <a href="https://t.me/SkyNet_document_bot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
                       @SkyNet_document_bot
                     </a>
                   </p>
@@ -138,7 +138,7 @@ const ContactSection = () => {
                 <div className="ml-4">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-tight">Есть повод пожаловаться?</h3>
                   <p className="text-base text-gray-600 mb-2 leading-snug">Пишите&nbsp;руководству «Скайнет&nbsp;Стрим»<br/>на WhatsApp — разберёмся!</p>
-                  <a href="https://api.whatsapp.com/send/?phone=79867205872&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%82%D1%8C%20%D0%B6%D0%B0%D0%BB%D0%BE%D0%B1%D1%83" target="_blank" rel="noopener noreferrer" className="text-skynet-blue font-semibold hover:text-skynet-blue-dark transition-colors">
+                  <a href="https://api.whatsapp.com/send/?phone=79867205872&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%82%D1%8C%20%D0%B6%D0%B0%D0%BB%D0%BE%D0%B1%D1%83" target="_blank" rel="noopener noreferrer" className="text-skynet-blue font-semibold hover:text-skynet-blue-dark transition-colors text-base">
                     WhatsApp
                   </a>
                 </div>
@@ -262,4 +262,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
