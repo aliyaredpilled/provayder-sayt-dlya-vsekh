@@ -56,14 +56,6 @@ const Tariffs = () => {
                     <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
                     <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
                   </TableRow>
-                  <TableRow className="bg-gray-50">
-                    <TableCell className="text-gray-700">Техническая поддержка</TableCell>
-                    <TableCell className="text-center text-gray-900">Базовая</TableCell>
-                    <TableCell className="text-center text-gray-900">Базовая</TableCell>
-                    <TableCell className="text-center text-gray-900">Приоритетная</TableCell>
-                    <TableCell className="text-center text-gray-900">Поддержка 24/7</TableCell>
-                    <TableCell className="text-center text-gray-900">Поддержка 24/7</TableCell>
-                  </TableRow>
                   <TableRow>
                     <TableCell className="text-gray-700">Подключение</TableCell>
                     <TableCell className="text-center text-gray-900">5000 ₽</TableCell>

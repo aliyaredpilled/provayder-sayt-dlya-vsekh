@@ -45,7 +45,6 @@ const PricingPlans = () => {
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Users className="h-6 w-6 text-skynet-blue" />
                 <h3 className="text-2xl font-bold text-gray-900">Надёжная база для любых задач</h3>
-                <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">до 1 Гбит/с</span>
               </div>
               <p className="text-gray-600">Идеальные решения для дома, семьи и работы</p>
             </div>
@@ -108,7 +107,7 @@ const PricingPlans = () => {
                     </ul>
                     
                     <a 
-                      href="#contacts"
+                      href="#contact"
                       className={`w-full rounded-full py-3 px-4 text-center font-medium transition-all flex items-center justify-center ${
                         plan.isPopular 
                           ? 'bg-skynet-orange hover:bg-skynet-orange/90 text-white' 
@@ -130,7 +129,6 @@ const PricingPlans = () => {
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Zap className="h-6 w-6 text-skynet-blue" />
                 <h3 className="text-2xl font-bold text-gray-900">Ультраскорость для тех, кому нужно всё</h3>
-                <span className="px-3 py-1 bg-skynet-blue/10 text-skynet-blue rounded-full text-sm font-medium">XG-PON</span>
               </div>
               <p className="text-gray-600">Профессиональные решения на базе технологии XG-PON</p>
             </div>
@@ -181,7 +179,7 @@ const PricingPlans = () => {
                     </ul>
                     
                     <a 
-                      href="#contacts"
+                      href="#contact"
                       className="w-full rounded-full py-3 px-4 text-center font-medium transition-all flex items-center justify-center bg-skynet-blue hover:bg-skynet-blue-dark text-white"
                     >
                       Подключить
@@ -232,7 +230,7 @@ const PricingPlans = () => {
                       <p className="text-gray-700 mb-6">{plan.description}</p>
                       
                       <a 
-                        href="#contacts"
+                        href="#contact"
                         className="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white rounded-full py-3 px-6 font-medium transition-all"
                       >
                         Обсудить условия
@@ -265,7 +263,7 @@ const PricingPlans = () => {
           <div className="mt-16">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Дополнительные услуги, чтобы было ещё лучше</h3>
-              <p className="text-gray-600">Сделайте свой интернет-опыт максимально комфортным</p>
+              <p className="text-gray-600">{/* удалили слоган */}</p>
             </div>
             
             <Card className="bg-white border border-gray-200 max-w-2xl mx-auto">
@@ -291,12 +289,7 @@ const PricingPlans = () => {
             </Card>
           </div>
           
-          <div className="mt-12 text-center">
-            <a href="/tariffs" className="text-skynet-blue font-medium inline-flex items-center hover:underline">
-              Смотреть все тарифы и опции
-              <ArrowRight className="ml-1 h-4 w-4" />
-            </a>
-          </div>
+          {/* убрали ссылку на те же тарифы */}
         </div>
       </div>
     </section>

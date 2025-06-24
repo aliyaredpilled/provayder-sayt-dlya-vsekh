@@ -31,9 +31,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacts" className="py-16 sm:py-24">
+    <section id="contact" className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Остались вопросы?</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Готовы подключиться?</h2>
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-4 flex flex-col">
             <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
