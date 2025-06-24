@@ -31,10 +31,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-24">
+    <section id="contact" className="py-10 sm:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Готовы подключиться?</h2>
-        <div className="grid md:grid-cols-2 gap-12">
+        <h2 className="text-3xl font-bold text-center mb-8">Готовы подключиться?</h2>
+        <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-4 flex flex-col h-full justify-between">
             <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
               <div className="flex">
@@ -119,7 +119,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
+            <div className="bg-white rounded-xl p-3 border border-gray-100 backdrop-blur-sm flex-grow">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <div className="h-12 w-12 bg-green-500 text-white rounded-lg flex items-center justify-center">
@@ -127,10 +127,11 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">WhatsApp</h3>
-                  <p className="text-gray-600 mb-1">Для консультаций и заявок:</p>
-                  <a href="https://api.whatsapp.com/send/?phone=79867205872&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors">
-                    +7 986 720-58-72
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-snug">ЕСТЬ ПОВОД<br/>ПОЖАЛОВАТЬСЯ?</h3>
+                  <p className="text-gray-600 text-sm mb-1 leading-snug">Что-то не так с монтажом/скоростью<br/>или есть другие вопросы?</p>
+                  <p className="text-gray-600 text-sm mb-2 leading-snug">Пишите&nbsp;руководству «Скайнет&nbsp;Стрим»<br/>на WhatsApp — разберёмся!</p>
+                  <a href="https://api.whatsapp.com/send/?phone=79867205872&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%82%D1%8C%20%D0%B6%D0%B0%D0%BB%D0%BE%D0%B1%D1%83" target="_blank" rel="noopener noreferrer" className="text-skynet-blue font-semibold hover:text-skynet-blue-dark transition-colors">
+                    WhatsApp
                   </a>
                 </div>
               </div>
