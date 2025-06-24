@@ -1,3 +1,4 @@
+
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -14,20 +15,24 @@ const Hero = () => {
   };
 
   return (
-    <section id="internet-hero" className="pt-20 pb-8 bg-transparent backdrop-blur-sm overflow-hidden">
+    <section id="internet-hero" className="pt-16 pb-8 bg-transparent backdrop-blur-sm overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up">
-              Сверхскоростной интернет <br />
-              <span className="text-skynet-orange">до 10 Гбит/с</span> для вашего дома
+              От домашнего комфорта <br />
+              до <span className="text-skynet-orange">скорости 10 Гбит/с</span>
             </h2>
+            <p className="text-gray-600 mb-6 text-lg animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              Технологии мирового уровня для жителей Казани. Стабильное подключение, 
+              которому доверяют уже два десятилетия.
+            </p>
             <div className="flex justify-start animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <button 
                 onClick={scrollTo10G}
                 className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-6 py-2.5 rounded-full shadow-lg hover:shadow-orange-glow transition-all transform hover:-translate-y-1 flex items-center"
               >
-                Подробнее <ArrowRight className="ml-2 h-4 w-4" />
+                Узнать подробнее <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>
           </div>

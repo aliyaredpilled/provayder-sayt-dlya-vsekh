@@ -1,3 +1,4 @@
+
 const KazanHero = () => {
   const scrollToTenGigabit = () => {
     const element = document.getElementById('internet-hero');
@@ -15,38 +16,45 @@ const KazanHero = () => {
         <img 
           src="/lovable-uploads/beautiful_kazan-optimized.png" 
           alt="Красивый вид на город Казань" 
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center rounded-b-3xl"
         />
       </picture>
       
       {/* Градиентный оверлей для лучшей читаемости текста */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 rounded-b-3xl"></div>
 
       {/* Контент */}
       <div 
-        className="relative z-10 flex flex-col justify-center h-full pb-60 cursor-pointer"
+        className="relative z-10 flex flex-col justify-center h-full pb-40 cursor-pointer px-4"
         onClick={scrollToTenGigabit}
       >
-        <div className="text-center text-white px-4">
-          <h1 className="relative inline-block text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-2xl px-12 py-2 rounded-2xl overflow-hidden">
+        <div className="text-center text-white max-w-4xl mx-auto">
+          <h1 className="relative inline-block text-3xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-2xl">
             <span
               aria-hidden="true"
-              className="absolute left-0 bottom-0 h-full w-full bg-skynet-orange/70"
+              className="absolute left-0 bottom-0 h-full w-full bg-skynet-orange/80 rounded-2xl"
             />
-            <span className="relative z-10">Уже 20 лет в Казани</span>
+            <span className="relative z-10 px-8 py-4 block">20 лет вместе с Казанью</span>
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl font-medium drop-shadow-lg opacity-90">
-            Надежный интернет-провайдер для вашего дома и бизнеса
+          <p className="text-lg md:text-xl lg:text-2xl font-medium drop-shadow-lg opacity-95 mb-4 leading-relaxed">
+            Надёжный интернет в каждый дом и бизнес 
+            <br className="hidden md:block" />
+            столицы Татарстана
+          </p>
+          <p className="text-base md:text-lg opacity-90 font-light max-w-2xl mx-auto">
+            С 2004 года мы строим будущее связи в Казани, обеспечивая стабильным 
+            и скоростным интернетом тысячи семей и предприятий нашего любимого города
           </p>
         </div>
       </div>
 
       {/* Анимированная стрелка вниз */}
       <div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce cursor-pointer"
+        onClick={scrollToTenGigabit}
       >
         <svg 
-          className="w-8 h-8 opacity-70" 
+          className="w-8 h-8 opacity-80 hover:opacity-100 transition-opacity" 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
