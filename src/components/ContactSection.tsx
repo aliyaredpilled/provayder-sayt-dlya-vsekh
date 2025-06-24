@@ -1,3 +1,4 @@
+
 import { useRef } from 'react';
 import { Phone, Mail, Clock, MessageSquare } from 'lucide-react';
 import { Textarea } from "@/components/ui/textarea";
@@ -95,7 +96,9 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Режим работы</h3>
-                  <p className="text-base text-gray-600">Офис: ПН-ПТ: 8:00-18:00,<br/>СБ: 8:00-13:00</p>
+                  <p className="text-base text-gray-600">Офис:</p>
+                  <p className="text-base text-gray-600">ПН-ПТ: 8:00-18:00</p>
+                  <p className="text-base text-gray-600">СБ: 8:00-13:00</p>
                   <p className="text-base text-gray-600 mt-1">Техподдержка: Круглосуточно</p>
                 </div>
               </div>

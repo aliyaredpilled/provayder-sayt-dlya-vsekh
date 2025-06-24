@@ -16,11 +16,11 @@ const promos = [
   {
     id: 'promo2',
     title: 'Дарим 2000 ₽ на баланс при переходе от другого оператора',
-    description: 'Переходите к нам от любого другого интернет-провайдера и получайте денежный бонус на свой лицевой счет.',
+    description: 'Переходите к нам от любого другого оптического интернет-провайдера и получайте денежный бонус на свой лицевой счет.',
     bgImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
     buttonText: 'Условия акции',
     buttonLink: '/tariffs',
-    expireDate: '31.12.2024',
+    expireDate: 'до 30.07.2025',
     color: 'from-green-600/90 to-emerald-500/90'
   },
   {
@@ -30,7 +30,7 @@ const promos = [
     bgImage: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
     buttonText: 'Подключить ТВ',
     buttonLink: '/tariffs',
-    expireDate: '01.12.2023',
+    expireDate: 'до 31.08.2025',
     color: 'from-purple-600/90 to-indigo-700/90'
   }
 ];
@@ -54,7 +54,7 @@ const PromoBanners = () => {
               <div className="absolute inset-0 flex items-center">
                 <div className="p-4">
                   <div className="text-white h-full flex flex-col">
-                    <span className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full mb-3">
+                    <span className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full mb-3 self-start">
                       <Calendar className="h-3 w-3 mr-1" />
                       {promo.expireDate}
                     </span>
@@ -62,7 +62,7 @@ const PromoBanners = () => {
                     <p className="text-white/90 mb-4 flex-grow text-sm">{promo.description}</p>
                     <Link 
                       to={promo.buttonLink} 
-                      className="inline-flex items-center justify-center bg-white text-skynet-blue font-medium px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:bg-gray-100 transition-all text-sm"
+                      className="inline-flex items-center justify-center bg-white text-skynet-blue font-medium px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:bg-gray-100 transition-all text-sm self-start"
                     >
                       {promo.buttonText}
                     </Link>
