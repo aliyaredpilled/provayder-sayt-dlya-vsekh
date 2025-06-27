@@ -38,20 +38,34 @@ const SupportPage = () => (
               ответим в течение <span className="font-semibold text-gray-900">15 минут</span>.
             </p>
 
-            <a
-              href="https://wa.me/79867205872"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3
-                         bg-gradient-to-r from-emerald-400 to-emerald-500
-                         hover:from-emerald-500 hover:to-emerald-400
-                         text-white font-bold px-9 py-4 rounded-xl
-                         shadow-lg hover:shadow-orange-glow
-                         transition-all duration-3000 animate-bounce-slight"
-            >
-              <MessageSquare className="h-6 w-6" />
-              Написать в WhatsApp
-            </a>
+            <div className="space-y-4">
+              <a
+                href="https://wa.me/79867205872?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3
+                           bg-gradient-to-r from-emerald-400 to-emerald-500
+                           hover:from-emerald-500 hover:to-emerald-400
+                           text-white font-bold px-9 py-4 rounded-xl
+                           shadow-lg hover:shadow-orange-glow
+                           transition-all duration-3000 animate-bounce-slight"
+              >
+                <MessageSquare className="h-6 w-6" />
+                Написать в WhatsApp
+              </a>
+              
+              <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-emerald-400">
+                <div className="flex items-center gap-2 text-gray-700">
+                  <span className="text-base">📱 Номер для WhatsApp:</span>
+                  <span className="font-semibold text-emerald-600 text-lg">
+                    +7 986 720 58 72
+                  </span>
+                </div>
+                <p className="text-gray-600 mt-2">
+                  Добавьте номер в контакты и напишите нам в WhatsApp
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* QR-код */}
@@ -60,7 +74,7 @@ const SupportPage = () => (
               <img
                 src="/lovable-uploads/4f8a3072-12ec-4476-85d8-2e58e0e9897c.png"
                 alt="QR-код для WhatsApp"
-                className="w-40 h-40 rounded-xl border shadow-md transition-transform duration-300 ease-in-out hover:scale-105"
+                className="w-48 h-48 border shadow-md transition-transform duration-300 ease-in-out hover:scale-110"
               />
               <p className="mt-3 text-sm text-gray-600">Наведите камеру,<br/>чтобы начать чат</p>
             </div>
@@ -72,7 +86,7 @@ const SupportPage = () => (
           <InfoCard
             icon="MessageCircle"
             title="Техподдержка в Telegram"
-            subtitle="@skynet_kazan_supportbot"
+                          subtitle="@skynet_kazan_supportbot"
             bg="skynet-blue"
             href="https://t.me/skynet_kazan_supportbot"
           />
@@ -85,7 +99,7 @@ const SupportPage = () => (
           <InfoCard
             icon="Mail"
             title="Напишите на почту"
-            subtitle="noc@skynet-kazan.com"
+                          subtitle="noc@skynet-kazan.com"
             bg="emerald-500"
           />
         </div>

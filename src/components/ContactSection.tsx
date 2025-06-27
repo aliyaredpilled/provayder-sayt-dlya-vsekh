@@ -1,4 +1,3 @@
-
 import { useRef } from 'react';
 import { Phone, Mail, Clock, MessageSquare } from 'lucide-react';
 import { Textarea } from "@/components/ui/textarea";
@@ -32,9 +31,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-10 sm:py-16">
+    <section id="contact" className="py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Готовы подключиться?</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8">Готовы подключиться?</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-4 flex flex-col h-full justify-between">
             <div className="bg-white rounded-xl p-4 border border-gray-100 backdrop-blur-sm flex-grow">
@@ -73,14 +72,14 @@ const ContactSection = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
                   <p className="text-base text-gray-600 mb-2">
                     Для запросов:&nbsp;
-                    <a href="mailto:sales@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
-                      sales@skynet-kazan.com
+                                <a href="mailto:sales@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
+              sales@skynet-kazan.com
                     </a>
                   </p>
                   <p className="text-base text-gray-600 mb-1">
                     Техподдержка:&nbsp;
-                    <a href="mailto:noc@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
-                      noc@skynet-kazan.com
+                                <a href="mailto:noc@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
+              noc@skynet-kazan.com
                     </a>
                   </p>
                 </div>
@@ -141,9 +140,14 @@ const ContactSection = () => {
                 <div className="ml-4">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-tight">Есть повод пожаловаться?</h3>
                   <p className="text-base text-gray-600 mb-2 leading-snug">Пишите&nbsp;руководству «Скайнет&nbsp;Стрим»<br/>на WhatsApp — разберёмся!</p>
-                  <a href="https://api.whatsapp.com/send/?phone=79867205872&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%82%D1%8C%20%D0%B6%D0%B0%D0%BB%D0%BE%D0%B1%D1%83" target="_blank" rel="noopener noreferrer" className="text-skynet-blue font-semibold hover:text-skynet-blue-dark transition-colors text-base">
-                    WhatsApp
-                  </a>
+                  <div className="space-y-1">
+                    <a href="tel:+79867205872" className="text-base text-gray-600 hover:text-skynet-blue transition-colors block font-medium">
+                      +7 986 720 58 72
+                    </a>
+                    <a href="https://wa.me/79867205872?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!" target="_blank" rel="noopener noreferrer" className="text-base text-skynet-blue hover:text-skynet-blue-dark transition-colors block font-medium">
+                      Написать в WhatsApp
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

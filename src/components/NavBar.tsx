@@ -103,7 +103,7 @@ const NavBar = () => {
         <a href="/" onClick={handleLogoClick} className="flex items-center">
           <img 
             src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
-            alt="SKYNET" 
+            alt="Скайнет-Стрим" 
             className="h-12"
           />
         </a>

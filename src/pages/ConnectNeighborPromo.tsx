@@ -67,7 +67,7 @@ const ConnectNeighborPromo = () => {
                   <CheckCircle2 className="h-6 w-6 text-skynet-blue mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Для действующих абонентов</h4>
-                    <p className="text-gray-700">Акция доступна всем текущим клиентам SKYNET без исключений</p>
+                    <p className="text-gray-700">Акция доступна всем текущим клиентам Скайнет-Стрим без исключений</p>
                   </div>
                 </div>
                 
@@ -75,7 +75,7 @@ const ConnectNeighborPromo = () => {
                   <CheckCircle2 className="h-6 w-6 text-skynet-blue mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Новый абонент</h4>
-                    <p className="text-gray-700">Сосед должен быть новым клиентом, ранее не пользовавшимся услугами SKYNET</p>
+                    <p className="text-gray-700">Сосед должен быть новым клиентом, ранее не пользовавшимся услугами Скайнет-Стрим</p>
                   </div>
                 </div>
                 

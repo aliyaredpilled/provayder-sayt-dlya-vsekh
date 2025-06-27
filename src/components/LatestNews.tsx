@@ -30,9 +30,9 @@ const latestNews = [
 
 const LatestNews = () => {
   return (
-    <section className="py-8 bg-gradient-to-b from-sky-100 via-sky-50 to-white relative">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-sky-100 via-sky-50 to-white relative">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-10">
+        <div className="flex justify-between items-center mb-8">
           <div>
             <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
               Новости

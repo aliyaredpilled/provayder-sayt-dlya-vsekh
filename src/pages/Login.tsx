@@ -34,7 +34,7 @@ const Login = () => {
             <div className="text-center mb-8">
               <img 
                 src="/lovable-uploads/696510d7-9903-4f21-967c-1a7892efc8ac.png" 
-                alt="SKYNET" 
+                alt="Скайнет-Стрим" 
                 className="h-12 mx-auto mb-4"
               />
               <h1 className="text-2xl font-bold text-gray-900 mb-2">

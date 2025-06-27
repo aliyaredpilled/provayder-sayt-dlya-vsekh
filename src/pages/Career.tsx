@@ -474,7 +474,7 @@ const Career = () => {
                 Почему стоит работать с нами
               </h2>
               <p className="text-lg text-gray-600">
-                В SKYNET мы ценим наших сотрудников и создаем условия для их профессионального и личностного роста
+                В Скайнет-Стрим мы ценим наших сотрудников и создаем условия для их профессионального и личностного роста
               </p>
             </div>
             
@@ -523,7 +523,7 @@ const Career = () => {
               Мы всегда в поиске талантливых специалистов. Отправьте своё резюме, и мы свяжемся с вами, когда появится подходящая позиция.
             </p>
             <a 
-              href="mailto:hr@skynet.ru" 
+                              href="mailto:hr@skynet.ru" 
               className="inline-flex items-center bg-white text-skynet-blue hover:bg-gray-100 font-medium px-8 py-3 rounded-full shadow-md transition-all transform hover:-translate-y-1"
             >
               Отправить резюме

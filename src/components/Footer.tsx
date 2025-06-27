@@ -86,8 +86,8 @@ const Footer = () => {
                 <Mail size={16} className="mr-2 text-skynet-blue" />
                 <div>
                   <p className="text-gray-200 text-xs">Для запросов:</p>
-                  <a href="mailto:sales@skynet-kazan.com" className="text-gray-400 hover:text-white transition-colors text-sm">
-                    sales@skynet-kazan.com
+                              <a href="mailto:sales@skynet-kazan.com" className="text-gray-400 hover:text-white transition-colors text-sm">
+              sales@skynet-kazan.com
                   </a>
                 </div>
               </li>

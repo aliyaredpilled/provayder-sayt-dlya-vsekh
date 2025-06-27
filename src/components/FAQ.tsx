@@ -37,9 +37,9 @@ const FAQ = () => {
   };
 
   return (
-    <section className="bg-skynet-gray-light/50 py-16 sm:py-24">
+    <section className="bg-skynet-gray-light/50 py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
             Помощь
           </span>

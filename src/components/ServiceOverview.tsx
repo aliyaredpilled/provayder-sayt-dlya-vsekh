@@ -57,13 +57,13 @@ const ServiceOverview = () => {
     <section className="py-6 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-xs md:text-sm font-medium mb-3">
+          <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
             Всё, что вам нужно
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             Наши услуги
           </h2>
-          <p className="text-gray-600">
+          <p className="text-base md:text-lg text-gray-600">
             Мы предлагаем полный спектр современных телекоммуникационных услуг, 
             чтобы сделать вашу жизнь более комфортной и технологичной.
           </p>
@@ -79,8 +79,8 @@ const ServiceOverview = () => {
               <div className={`${service.color} w-14 h-14 rounded-lg flex items-center justify-center text-white mb-5`}>
                 <service.icon size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+              <p className="text-sm md:text-base text-gray-600 mb-4">{service.description}</p>
               <Link 
                 to={service.url} 
                 className="inline-flex items-center text-skynet-blue font-medium hover:text-skynet-blue-dark"

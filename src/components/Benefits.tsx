@@ -16,10 +16,10 @@ const Benefits = () => {
           <span className="inline-block px-3 py-1 rounded-full bg-skynet-blue/10 text-skynet-blue text-sm font-medium mb-3">
             Преимущества
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Почему выбирают <span className="text-skynet-blue">SkyNet</span>
           </h2>
-          <p className="text-gray-600">
+          <p className="text-base md:text-lg text-gray-600">
             Мы не просто предоставляем доступ в интернет. Мы создаем безупречный опыт 
             подключения с лучшими технологиями и сервисом.
           </p>
@@ -38,8 +38,8 @@ const Benefits = () => {
                 <div className="bg-skynet-blue/10 rounded-full w-12 h-12 flex items-center justify-center mb-5">
                   <IconComponent className="h-6 w-6 text-skynet-blue" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                <p className="text-gray-600 text-sm">{benefit.description}</p>
+                <h3 className="text-lg md:text-xl font-semibold mb-3">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm md:text-base">{benefit.description}</p>
               </div>
             );
           })}

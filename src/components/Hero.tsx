@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -23,7 +22,7 @@ const Hero = () => {
               От домашнего комфорта <br />
               до <span className="text-skynet-orange">скорости 10 Гбит/с</span>
             </h2>
-            <p className="text-gray-600 mb-6 text-lg animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <p className="text-gray-600 mb-6 text-base md:text-lg animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               Технологии мирового уровня для жителей Казани. Стабильное подключение, 
               которому доверяют уже два десятилетия.
             </p>

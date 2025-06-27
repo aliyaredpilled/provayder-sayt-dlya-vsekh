@@ -111,9 +111,9 @@ const ReviewCard = ({ review, index }: { review: typeof reviews[0], index: numbe
 
 const CustomerReviews = () => {
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <span className="inline-block px-3 py-1 rounded-full bg-skynet-orange/10 text-skynet-orange text-sm font-medium mb-3">
             Отзывы клиентов
           </span>

@@ -29,6 +29,7 @@ const Tariffs = () => {
                     <TableHead className="text-center text-gray-900 font-semibold">900 Мбит/с</TableHead>
                     <TableHead className="text-center text-gray-900 font-semibold">2 Гбит/с</TableHead>
                     <TableHead className="text-center text-gray-900 font-semibold">3 Гбит/с</TableHead>
+                    <TableHead className="text-center text-gray-900 font-semibold">9 Гбит/с</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -39,6 +40,7 @@ const Tariffs = () => {
                     <TableCell className="text-center text-gray-900">900 Мбит/с</TableCell>
                     <TableCell className="text-center text-gray-900">2 Гбит/с</TableCell>
                     <TableCell className="text-center text-gray-900">3 Гбит/с</TableCell>
+                    <TableCell className="text-center text-gray-900">9 Гбит/с</TableCell>
                   </TableRow>
                   <TableRow className="bg-gray-50">
                     <TableCell className="text-gray-700">Ежемесячная плата</TableCell>
@@ -47,6 +49,7 @@ const Tariffs = () => {
                     <TableCell className="text-center text-gray-900">2000 ₽</TableCell>
                     <TableCell className="text-center text-gray-900">3500 ₽</TableCell>
                     <TableCell className="text-center text-gray-900">4500 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">По запросу</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="text-gray-700">Wi-Fi роутер</TableCell>
@@ -55,6 +58,7 @@ const Tariffs = () => {
                     <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
                     <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
                     <TableCell className="text-center text-gray-900">Аренда 150₽/мес или покупка 3500₽</TableCell>
+                    <TableCell className="text-center text-gray-900">Включено в тариф</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="text-gray-700">Подключение</TableCell>
@@ -63,6 +67,7 @@ const Tariffs = () => {
                     <TableCell className="text-center text-gray-900">5000 ₽</TableCell>
                     <TableCell className="text-center text-gray-900">5000 ₽</TableCell>
                     <TableCell className="text-center text-gray-900">5000 ₽</TableCell>
+                    <TableCell className="text-center text-gray-900">Бесплатно</TableCell>
                   </TableRow>
                   <TableRow className="bg-gray-50">
                     <TableCell className="text-gray-700">Технология</TableCell>
@@ -71,6 +76,7 @@ const Tariffs = () => {
                     <TableCell className="text-center text-gray-900">Оптоволокно</TableCell>
                     <TableCell className="text-center text-gray-900">XG-PON</TableCell>
                     <TableCell className="text-center text-gray-900">XG-PON</TableCell>
+                    <TableCell className="text-center text-gray-900">XG-PON 10G</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

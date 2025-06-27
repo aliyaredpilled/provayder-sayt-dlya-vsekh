@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import KazanHero from "@/components/KazanHero";
 import Hero from "@/components/Hero";
@@ -18,7 +17,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-sky-100 via-sky-50 to-white">
       <NavBar />
       <KazanHero />
-      <div className="space-y-8">
+      <div className="space-y-16 md:space-y-20">
         <Hero />
         <PromoBanners />
         <LatestNews />
@@ -30,7 +29,9 @@ const Index = () => {
         <FAQ />
         <ContactSection />
       </div>
-      <Footer />
+      <div className="mt-16 md:mt-20">
+        <Footer />
+      </div>
     </div>
   );
 };
