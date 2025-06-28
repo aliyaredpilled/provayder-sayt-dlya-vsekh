@@ -116,10 +116,10 @@ const NavBar = () => {
                 <NavigationMenuTrigger>Услуги</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[400px] gap-3 p-4">
-                    <button onClick={() => handleServiceLinkClick('#internet')} className="text-left block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Интернет для дома</button>
-                    <button onClick={() => handleServiceLinkClick('#tv')} className="text-left block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телевидение</button>
-                    <button onClick={() => handleServiceLinkClick('#telephony')} className="text-left block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Телефония</button>
-                    <button onClick={() => handleServiceLinkClick('#surveillance')} className="text-left block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Видеонаблюдение</button>
+                    <button onClick={() => handleServiceLinkClick('#internet')} className="text-left block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Интернет для дома</button>
+                    <button onClick={() => handleServiceLinkClick('#tv')} className="text-left block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Телевидение</button>
+                    <button onClick={() => handleServiceLinkClick('#telephony')} className="text-left block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Телефония</button>
+                    <button onClick={() => handleServiceLinkClick('#surveillance')} className="text-left block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Видеонаблюдение</button>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -132,10 +132,10 @@ const NavBar = () => {
                 <NavigationMenuTrigger>О компании</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[400px] gap-3 p-4">
-                    <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">О компании</Link>
-                    <Link to="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Новости</Link>
-                    <Link to="/career" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Вакансии</Link>
-                    <Link to="/reviews" className="block px-4 py-2 text-sm text-gray-700 hover:bg-skynet-gray-light rounded-md">Отзывы</Link>
+                    <Link to="/about" className="block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">О компании</Link>
+                    <Link to="/blog" className="block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Новости</Link>
+                    <Link to="/career" className="block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Вакансии</Link>
+                    <Link to="/reviews" className="block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Отзывы</Link>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -191,10 +191,10 @@ const NavBar = () => {
             
             <div className="py-2">
               <p className="font-medium text-gray-800 mb-1">О компании</p>
-              <Link to="/about" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">О компании</Link>
-              <Link to="/blog" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Новости</Link>
-              <Link to="/career" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Вакансии</Link>
-              <Link to="/reviews" className="block pl-3 py-2 text-gray-600 hover:text-skynet-orange">Отзывы</Link>
+              <Link to="/about" className="block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">О компании</Link>
+              <Link to="/blog" className="block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Новости</Link>
+              <Link to="/career" className="block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Вакансии</Link>
+              <Link to="/reviews" className="block px-4 py-2 text-base text-gray-700 hover:bg-skynet-gray-light rounded-md">Отзывы</Link>
             </div>
             
             <Link to="/support" className="block py-2 text-gray-800 hover:text-skynet-orange">Поддержка</Link>

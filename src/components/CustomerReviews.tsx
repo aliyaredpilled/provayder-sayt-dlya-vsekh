@@ -73,7 +73,7 @@ const ReviewCard = ({ review, index }: { review: typeof reviews[0], index: numbe
                 <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-sm text-gray-500">{review.date}</span>
+            <span className="text-base text-gray-500">{review.date}</span>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ const ReviewCard = ({ review, index }: { review: typeof reviews[0], index: numbe
             <p className="line-clamp-5">{review.text.substring(0, 200)}...</p>
             <button 
               onClick={() => setExpanded(true)}
-              className="text-skynet-blue flex items-center mt-2 text-sm font-medium hover:underline"
+              className="text-skynet-blue flex items-center mt-2 text-base font-medium hover:underline"
             >
               Показать полностью <ChevronDown className="ml-1 h-4 w-4" />
             </button>
@@ -94,7 +94,7 @@ const ReviewCard = ({ review, index }: { review: typeof reviews[0], index: numbe
             {isLongText && expanded && (
               <button 
                 onClick={() => setExpanded(false)}
-                className="text-skynet-blue flex items-center mt-2 text-sm font-medium hover:underline"
+                className="text-skynet-blue flex items-center mt-2 text-base font-medium hover:underline"
               >
                 Свернуть <ChevronUp className="ml-1 h-4 w-4" />
               </button>

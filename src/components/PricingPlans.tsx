@@ -90,7 +90,7 @@ const PricingPlans = () => {
                       </div>
                     </div>
                     
-                    <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
+                    <p className="text-gray-600 text-base mb-4">{plan.description}</p>
                     
                     <ul className="space-y-3 mb-8 min-h-[180px]">
                       {plan.features.map((feature, i) => (
@@ -101,7 +101,7 @@ const PricingPlans = () => {
                           >
                             <Check className="h-3 w-3" />
                           </div>
-                          <span className="text-gray-600 text-sm">{feature}</span>
+                          <span className="text-gray-600 text-base">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -162,7 +162,7 @@ const PricingPlans = () => {
                       </div>
                     </div>
                     
-                    <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
+                    <p className="text-gray-600 text-base mb-4">{plan.description}</p>
                     
                     <ul className="space-y-3 mb-8 min-h-[200px]">
                       {plan.features.map((feature, i) => (
@@ -173,7 +173,7 @@ const PricingPlans = () => {
                           >
                             <Check className="h-3 w-3" />
                           </div>
-                          <span className="text-gray-600 text-sm">{feature}</span>
+                          <span className="text-gray-600 text-base">{feature}</span>
                         </li>
                       ))}
                     </ul>

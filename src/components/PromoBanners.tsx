@@ -62,12 +62,12 @@ const PromoBanners = () => {
 
                   {/* Заголовок и описание */}
                   <h2 className="text-lg font-bold mb-3 leading-tight">{promo.title}</h2>
-                  <p className="text-white/90 mb-4 text-sm flex-grow">{promo.description}</p>
+                  <p className="text-white/90 mb-4 text-base flex-grow">{promo.description}</p>
 
                   {/* Кнопка */}
                   <Link 
                     to={promo.buttonLink} 
-                    className="inline-flex items-center justify-center bg-white text-skynet-blue font-medium px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:bg-gray-100 transition-all text-sm self-start"
+                    className="inline-flex items-center justify-center bg-white text-skynet-blue font-medium px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:bg-gray-100 transition-all text-base self-start"
                   >
                     {promo.buttonText}
                   </Link>

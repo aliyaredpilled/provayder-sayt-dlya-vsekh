@@ -50,7 +50,7 @@ const Hero = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-600 font-medium">Скорость до</p>
+                    <p className="text-sm text-gray-600 font-medium">Скорость до</p>
                     <p className="text-lg font-bold text-gray-900">10 Гбит/с</p>
                   </div>
                 </div>

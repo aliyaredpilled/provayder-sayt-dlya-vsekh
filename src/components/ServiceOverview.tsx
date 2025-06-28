@@ -80,7 +80,7 @@ const ServiceOverview = () => {
                 <service.icon size={24} />
               </div>
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-4">{service.description}</p>
+              <p className="text-base text-gray-600 mb-4">{service.description}</p>
               <Link 
                 to={service.url} 
                 className="inline-flex items-center text-skynet-blue font-medium hover:text-skynet-blue-dark"

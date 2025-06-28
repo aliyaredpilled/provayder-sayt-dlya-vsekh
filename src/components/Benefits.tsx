@@ -39,7 +39,7 @@ const Benefits = () => {
                   <IconComponent className="h-6 w-6 text-skynet-blue" />
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold mb-3">{benefit.title}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{benefit.description}</p>
+                <p className="text-gray-600 text-base">{benefit.description}</p>
               </div>
             );
           })}

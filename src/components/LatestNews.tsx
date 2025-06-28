@@ -69,10 +69,10 @@ const LatestNews = () => {
                   {post.excerpt}
                 </p>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-500">{post.date}</span>
+                  <span className="text-base text-gray-500">{post.date}</span>
                   <Link 
                     to="/blog" 
-                    className="inline-flex items-center text-skynet-blue hover:text-skynet-blue-dark font-medium text-sm"
+                    className="inline-flex items-center text-skynet-blue hover:text-skynet-blue-dark font-medium text-base"
                   >
                     Подробнее <ArrowRight className="ml-1 h-4 w-4" />
                   </Link>
