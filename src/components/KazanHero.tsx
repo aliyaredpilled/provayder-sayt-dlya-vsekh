@@ -48,7 +48,7 @@ const KazanHero = () => {
         }
       `}</style>
 
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-[100svh] w-full overflow-hidden">
         {/* Фоновое изображение с параллакс эффектом */}
         <picture className="absolute inset-0 w-full h-full">
           <source srcSet="/lovable-uploads/beautiful_kazan.webp" type="image/webp" />
@@ -70,40 +70,26 @@ const KazanHero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-skynet-orange/10 via-transparent to-blue-500/10"></div>
         </div>
 
-        {/* Плавающие декоративные элементы */}
-        <div className="absolute inset-0 overflow-hidden rounded-b-3xl">
-          {/* Плавающие круги */}
-          <div className="absolute top-20 left-10 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-1 h-1 bg-skynet-orange/50 rounded-full animate-ping"></div>
-          <div className="absolute bottom-40 left-20 w-3 h-3 bg-blue-400/40 rounded-full animate-bounce"></div>
-          
-          {/* Светящиеся точки */}
-          <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-gradient-to-r from-white/20 to-skynet-orange/30 rounded-full blur-sm animate-pulse"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-6 h-6 bg-gradient-to-r from-blue-400/20 to-white/20 rounded-full blur-md animate-bounce"></div>
-        </div>
-
         {/* Контент */}
         <div 
-          className="relative z-10 flex flex-col justify-center h-full pb-40 cursor-pointer px-4"
+          className="relative z-10 flex flex-col justify-center h-full pb-32 md:pb-40 cursor-pointer px-2"
           onClick={scrollToTenGigabit}
         >
           <div className={`text-center text-white max-w-4xl mx-auto transform transition-all duration-1000 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
             {/* Основной слоган с улучшенной анимацией */}
-            <h1 className="relative inline-block text-3xl md:text-5xl lg:text-6xl font-bold mb-2 drop-shadow-2xl text-white group">
+            <h1 className="text-[26px] leading-tight md:text-5xl lg:text-6xl font-bold mb-2 drop-shadow-2xl text-white">
               <span
-                aria-hidden="true"
-                className="absolute left-0 bottom-1.5 h-3/4 w-full bg-gradient-to-r from-skynet-orange/70 to-skynet-orange/50 rounded-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-skynet-orange/30"
-              />
-              <span className="relative z-10 px-8 py-4 block transform transition-transform duration-300 group-hover:scale-105">
+                className="inline-block px-4 md:px-6 py-3 bg-gradient-to-r from-skynet-orange/70 to-skynet-orange/50 rounded-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-skynet-orange/30"
+              >
                 <span className="animate-fade-in-up">Связь,</span>{' '}
-                <span className="whitespace-nowrap animate-fade-in-up animation-delay-200">достойная столицы.</span>
+                <span className="animate-fade-in-up animation-delay-200">достойная столицы.</span>
               </span>
             </h1>
 
             {/* Подзаголовок с анимацией */}
-            <p className={`text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-lg text-white leading-relaxed max-w-3xl mx-auto mb-4 whitespace-nowrap transform transition-all duration-1000 delay-300 ${
+            <p className={`text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-lg text-white leading-relaxed max-w-3xl mx-auto mb-4 transform transition-all duration-1000 delay-300 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
               20 лет мы обеспечиваем Казань надёжным интернетом
@@ -113,9 +99,9 @@ const KazanHero = () => {
             <div className={`mt-10 transform transition-all duration-1000 delay-500 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
-              <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-lg font-semibold">Скорость до 10 Гбит/с</span>
+              <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-full px-6 md:px-8 py-3 md:py-4 border border-white/20">
+                <div className="w-2.5 md:w-3 h-2.5 md:h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-[17px] md:text-lg font-semibold">Скорость до 10 Гбит/с</span>
               </div>
             </div>
           </div>
