@@ -1,8 +1,8 @@
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Пустая страница */}
+    <div>
+      {/* Полностью пустая страница */}
     </div>
   );
 };
