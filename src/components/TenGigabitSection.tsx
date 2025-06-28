@@ -1,3 +1,4 @@
+// XG-PON Section Component - обновлено для лучшей типографики и баланса
 import { Zap, Wifi, Download, ArrowRight, Shield, Globe, Clock, Gamepad2, Home, Users, CheckCircle2, MapPin, Settings2, Sparkles, Check } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
