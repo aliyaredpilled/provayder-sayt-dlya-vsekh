@@ -1,3 +1,4 @@
+
 import { ArrowDown, Zap, Users, Shield, Award } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -10,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="internet-hero" className="relative py-20 pt-32 bg-gradient-to-b from-sky-100 via-sky-50 to-white overflow-hidden">
+    <section id="internet-hero" className="relative py-20 pt-40 bg-gradient-to-b from-sky-100 via-sky-50 to-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Column */}
