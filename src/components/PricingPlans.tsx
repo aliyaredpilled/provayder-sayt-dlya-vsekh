@@ -1,4 +1,3 @@
-
 import { Check, ArrowRight, Wifi, Gift, Zap, Users } from 'lucide-react';
 import { pricingPlans } from '@/lib/speedData';
 import { Card, CardContent } from '@/components/ui/card';
@@ -25,9 +24,9 @@ const PricingPlans = () => {
             
             <Card className="bg-gradient-to-r from-skynet-orange/5 to-skynet-blue/5 border-skynet-orange/20 mx-auto max-w-2xl mb-8">
               <CardContent className="p-6">
-                <div className="flex flex-col items-center gap-3 mb-3">
+                <div className="flex items-center justify-center gap-3 mb-3">
                   <Gift className="text-skynet-orange h-6 w-6" />
-                  <h3 className="text-lg font-semibold text-center">Smart-TV в подарок!</h3>
+                  <h3 className="text-lg font-semibold text-skynet-orange">Smart-TV в подарок!</h3>
                 </div>
                 <p className="text-gray-700 mb-4">
                   Превратите свой телевизор в центр развлечений! Получите доступ к 120 телеканалам в цифровом качестве абсолютно бесплатно при подключении любого тарифа.
@@ -264,7 +263,7 @@ const PricingPlans = () => {
           <div className="mt-16">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Дополнительные услуги, чтобы было ещё лучше</h3>
-              <p className="text-gray-600">{/* удалили слоган */}</p>
+              <p className="text-gray-600"></p>
             </div>
             
             <Card className="bg-white border border-gray-200 max-w-2xl mx-auto">
