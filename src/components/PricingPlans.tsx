@@ -25,9 +25,9 @@ const PricingPlans = () => {
             
             <Card className="bg-gradient-to-r from-skynet-orange/5 to-skynet-blue/5 border-skynet-orange/20 mx-auto max-w-2xl mb-8">
               <CardContent className="p-6">
-                <div className="flex flex-col items-center gap-3 mb-3">
+                <div className="flex items-center justify-center gap-2 mb-3">
                   <Gift className="text-skynet-orange h-6 w-6" />
-                  <h3 className="text-lg font-semibold text-center">Smart-TV в подарок!</h3>
+                  <h3 className="text-lg font-semibold text-skynet-orange">Smart-TV в подарок!</h3>
                 </div>
                 <p className="text-gray-700 mb-4">
                   Превратите свой телевизор в центр развлечений! Получите доступ к 120 телеканалам в цифровом качестве абсолютно бесплатно при подключении любого тарифа.

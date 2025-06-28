@@ -1,64 +1,90 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowDown, Zap, Users, Shield, Award } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Hero = () => {
-  const scrollTo10G = () => {
-    const element = document.getElementById('10g-internet');
+  const scrollToPricing = () => {
+    const element = document.getElementById('pricing');
     if (element) {
-      const headerHeight = 80; // Примерная высота шапки
-      const elementPosition = element.offsetTop - headerHeight;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section id="internet-hero" className="pt-16 pb-8 bg-transparent backdrop-blur-sm overflow-hidden">
+    <section id="internet-hero" className="relative py-20 pt-32 bg-gradient-to-b from-sky-100 via-sky-50 to-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up">
-              От домашнего комфорта <br />
-              до <span className="text-skynet-orange">скорости 10 Гбит/с</span>
-            </h2>
-            <p className="text-gray-600 mb-6 text-base md:text-lg animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Технологии мирового уровня для жителей Казани. Стабильное подключение, 
-              которому доверяют уже два десятилетия.
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Left Column */}
+          <div className="md:order-1">
+            <h1 className="heading-xl text-gray-900 mb-4">
+              Высокоскоростной интернет <br />
+              для вашего дома и бизнеса
+            </h1>
+            <p className="text-gray-600 text-lg mb-6">
+              Надёжное подключение, высокая скорость и доступные тарифы.
+              Подключайтесь сейчас и получите максимум возможностей!
             </p>
-            <div className="flex justify-start animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <button 
-                onClick={scrollTo10G}
-                className="bg-skynet-orange hover:bg-skynet-orange-bright text-white font-medium px-6 py-2.5 rounded-full shadow-lg hover:shadow-orange-glow transition-all transform hover:-translate-y-1 flex items-center"
+
+            <div className="flex flex-col md:flex-row gap-4 mb-6">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-skynet-blue text-white hover:bg-skynet-blue-dark h-11 px-8"
               >
-                Узнать подробнее <ArrowRight className="ml-2 h-4 w-4" />
+                Подключиться
+                <ArrowDown className="ml-2 h-4 w-4" />
+              </a>
+              <button
+                onClick={scrollToPricing}
+                className="inline-flex items-center justify-center rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+              >
+                Выбрать тариф
               </button>
             </div>
-          </div>
-          <div className="md:w-1/2 relative animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
-              <img 
-                src="/lovable-uploads/1b4d860d-bd94-43f4-af81-78eb4c5f70b8.png" 
-                alt="Семья с ноутбуком" 
-                className="w-full h-auto max-h-[500px] object-cover brightness-125 contrast-110 saturate-115"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-4">
-                <div className="flex items-center bg-white/95 backdrop-blur-sm p-2.5 rounded-lg shadow-lg mb-3 max-w-fit">
-                  <div className="bg-skynet-orange text-white p-1.5 rounded-full mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
+
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              <Card className="bg-white shadow-md">
+                <CardContent className="flex items-center space-x-4 p-4">
+                  <Zap className="text-skynet-blue h-6 w-6" />
                   <div>
-                    <p className="text-sm text-gray-600 font-medium">Скорость до</p>
-                    <p className="text-lg font-bold text-gray-900">10 Гбит/с</p>
+                    <h3 className="text-xl font-semibold">До 10 Гбит/с</h3>
+                    <p className="text-sm text-gray-500">Скорость интернета</p>
                   </div>
-                </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white shadow-md">
+                <CardContent className="flex items-center space-x-4 p-4">
+                  <Users className="text-skynet-blue h-6 w-6" />
+                  <div>
+                    <h3 className="text-xl font-semibold">99.9%</h3>
+                    <p className="text-sm text-gray-500">Стабильность связи</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="relative md:order-2">
+            <img
+              src="/lovable-uploads/hero-internet-connection.webp"
+              alt="Интернет соединение"
+              className="rounded-2xl shadow-2xl w-full h-auto"
+            />
+
+            {/* Badges */}
+            <div className="absolute top-0 left-0 p-4">
+              <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2">
+                <Shield className="text-green-500 h-5 w-5" />
+                <span className="text-sm font-medium text-gray-700">Безопасное соединение</span>
               </div>
             </div>
-            
-            <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-skynet-blue/30 rounded-full filter blur-3xl"></div>
-            <div className="absolute -top-8 -left-8 w-32 h-32 bg-skynet-orange/20 rounded-full filter blur-3xl"></div>
+
+            <div className="absolute bottom-0 right-0 p-4">
+              <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2">
+                <Award className="text-yellow-500 h-5 w-5" />
+                <span className="text-sm font-medium text-gray-700">Лучший провайдер 2024</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
