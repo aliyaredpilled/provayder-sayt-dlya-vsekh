@@ -31,9 +31,12 @@ const PricingPlans = () => {
                 <p className="text-gray-700 mb-4">
                   Превратите свой телевизор в центр развлечений! Получите доступ к 120 телеканалам в цифровом качестве абсолютно бесплатно при подключении любого тарифа.
                 </p>
-                <div className="flex items-start gap-2 text-sm text-gray-600">
-                  <Check className="h-4 w-4 text-skynet-orange mt-0.5 flex-shrink-0" />
-                  <span><span className="font-semibold text-skynet-orange">Важно:</span> Стоимость установки и действующие акции могут сделать наше предложение ещё выгоднее!</span>
+                <div className="flex items-start gap-1 text-sm text-gray-600">
+                  <span className="flex items-center gap-1">
+                    <Check className="h-4 w-4 text-skynet-orange flex-shrink-0" />
+                    <span className="font-semibold text-skynet-orange">Важно:</span>
+                  </span>
+                  <span>Стоимость установки и действующие акции могут сделать наше предложение ещё выгоднее!</span>
                 </div>
               </CardContent>
             </Card>
@@ -108,11 +111,7 @@ const PricingPlans = () => {
                     
                     <a 
                       href="#contact"
-                      className={`w-full rounded-full py-3 px-4 text-center font-medium transition-all flex items-center justify-center ${
-                        plan.isPopular 
-                          ? 'bg-skynet-orange hover:bg-skynet-orange/90 text-white' 
-                          : 'bg-white text-gray-800 border border-gray-200 hover:bg-gray-50'
-                      }`}
+                      className="w-full rounded-full py-3 px-4 text-center font-medium transition-all flex items-center justify-center bg-skynet-orange hover:bg-skynet-orange/90 text-white"
                     >
                       Подключить
                       <ArrowRight className="ml-2 h-4 w-4" />

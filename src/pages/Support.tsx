@@ -34,8 +34,8 @@ const SupportPage = () => (
               Пишите <span className="text-skynet-orange">напрямую руководству</span> — разберёмся в любой ситуации!
             </h2>
             <p className="text-gray-600">
-              Есть вопросы по скорости, монтажу или счёту? Просто напишите нам в WhatsApp —
-              ответим в течение <span className="font-semibold text-gray-900">15 минут</span>.
+              Есть вопросы по тех. поддержке, монтажу или счёту?<br/>
+              Просто напишите нам в WhatsApp — ответим в течение <span className="font-semibold text-gray-900">15 минут</span>.
             </p>
 
             <div className="space-y-4">

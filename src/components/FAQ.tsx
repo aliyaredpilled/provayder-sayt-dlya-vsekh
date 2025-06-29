@@ -13,7 +13,7 @@ const faqItems = [
   },
   {
     question: 'Что делать, если интернет перестал работать?',
-    answer: 'Если интернет перестал работать, сначала проверьте подключение кабелей и перезагрузите роутер. Если это не помогает, обратитесь в нашу техническую поддержку по номеру +7(843) 5-777-775. Наши специалисты работают круглосуточно и помогут решить любые проблемы с подключением.'
+    answer: '• Проверьте, горят ли индикаторы на роутере. Если нет — убедитесь, что роутер подключен к сети.\n• Убедитесь, что кабели подключены правильно и плотно.\n• Перезагрузите роутер: отключите питание на 30-40 секунд и включите обратно.\n• Проверьте настройки подключения на вашем компьютере или телефоне.\n\nЕсли это не помогает, обратитесь в нашу техническую поддержку по номеру\n+7 (843) 5-777-775'
   },
   {
     question: 'Как оплатить услуги интернета и ТВ?',
@@ -21,7 +21,7 @@ const faqItems = [
   },
   {
     question: 'Могу ли я временно приостановить услуги?',
-    answer: 'Да, вы можете воспользоваться услугой "Добровольная блокировка" и приостановить обслуживание на срок от 7 до 90 дней. Активировать услугу можно через личный кабинет или по телефону поддержки. В период блокировки абонентская плата не взимается.'
+    answer: 'Да, вы можете воспользоваться услугой "Добровольная блокировка" и приостановить обслуживание. Активировать услугу можно через личный кабинет или по телефону поддержки. В период блокировки абонентская плата не взимается.'
   }
 ];
 
@@ -67,29 +67,13 @@ const FAQ = () => {
               <div className={`mt-3 transition-all duration-300 overflow-hidden ${
                 openItems.includes(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}>
-                <p className="text-gray-600">{item.answer}</p>
+                <p className="text-gray-600 whitespace-pre-line">{item.answer}</p>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-5">Остались вопросы? Мы всегда готовы помочь!</p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link 
-              to="/faq" 
-              className="inline-flex items-center justify-center bg-skynet-blue hover:bg-skynet-blue-dark text-white font-medium px-8 py-3 rounded-full shadow-md transition-all"
-            >
-              Все вопросы и ответы
-            </Link>
-            <a 
-              href="tel:+78435777775" 
-              className="inline-flex items-center justify-center border border-skynet-blue text-skynet-blue font-medium px-8 py-3 rounded-full hover:bg-skynet-blue/5 transition-all"
-            >
-              Позвонить в поддержку
-            </a>
-          </div>
-        </div>
+
       </div>
     </section>
   );

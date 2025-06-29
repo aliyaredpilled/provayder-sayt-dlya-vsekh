@@ -52,7 +52,7 @@ const ContactSection = () => {
                     </a>
                   </p>
                   <p className="text-base text-gray-600 mb-1">
-                    Поддержка:&nbsp;
+                    Тех. поддержка:&nbsp;
                     <a href="tel:+78435777775" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
                       +7&nbsp;(843)&nbsp;5-777-775
                     </a>
@@ -138,8 +138,8 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-tight">Есть повод пожаловаться?</h3>
-                  <p className="text-base text-gray-600 mb-2 leading-snug">Пишите&nbsp;руководству «Скайнет&nbsp;Стрим»<br/>на WhatsApp — разберёмся!</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-tight">Проблемы с тех. поддержкой?</h3>
+                  <p className="text-base text-gray-600 mb-2 leading-snug">Что-то не так с монтажом и монтажником/работой техподдержки или у вас другие жалобы и предложения?<br/>Пишите напрямую руководству «Скайнет Стрим»!</p>
                   <div className="space-y-1">
                     <a href="tel:+79867205872" className="text-base text-gray-600 hover:text-skynet-blue transition-colors block font-medium">
                       +7 986 720 58 72
