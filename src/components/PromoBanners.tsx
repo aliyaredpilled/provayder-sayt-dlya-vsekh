@@ -39,11 +39,11 @@ const PromoBanners = () => {
     <section className="py-12 md:py-16 bg-transparent backdrop-blur-sm relative z-10">
       <div className="absolute inset-0 bg-sky-100/50 backdrop-blur-sm -z-10 rounded-3xl mx-4"></div>
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-none mx-auto">
           {promos.map((promo) => (
             <div 
               key={promo.id}
-              className="relative overflow-hidden rounded-2xl h-[280px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="relative overflow-hidden rounded-2xl h-[320px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
               <div 
                 className="absolute inset-0 bg-cover bg-center"
@@ -53,21 +53,21 @@ const PromoBanners = () => {
               
               {/* Контейнер контента, собранный у верхнего края */}
               <div className="absolute inset-0 flex items-start">
-                <div className="p-4 text-white flex flex-col h-full">
+                <div className="p-6 text-white flex flex-col h-full">
                   {/* Бейдж даты */}
-                  <span className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full mb-3 self-start">
+                  <span className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full mb-4 self-start">
                     <Calendar className="h-3 w-3 mr-1" />
                     {promo.expireDate}
                   </span>
 
                   {/* Заголовок и описание */}
-                  <h2 className="text-lg font-bold mb-3 leading-tight">{promo.title}</h2>
-                  <p className="text-white/90 mb-4 text-base flex-grow">{promo.description}</p>
+                  <h2 className="text-xl font-bold mb-4 leading-tight">{promo.title}</h2>
+                  <p className="text-white/90 mb-5 text-lg flex-grow leading-relaxed">{promo.description}</p>
 
                   {/* Кнопка */}
                   <Link 
                     to={promo.buttonLink} 
-                    className="inline-flex items-center justify-center bg-white text-skynet-blue font-medium px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:bg-gray-100 transition-all text-base self-start"
+                    className="inline-flex items-center justify-center bg-white text-skynet-blue font-medium px-6 py-3 rounded-full shadow-md hover:shadow-lg hover:bg-gray-100 transition-all text-lg self-start"
                   >
                     {promo.buttonText}
                   </Link>

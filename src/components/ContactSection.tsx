@@ -44,7 +44,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Телефон</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Телефон</h3>
                   <p className="text-base text-gray-600 mb-2">
                     Подключение:&nbsp;
                     <a href="tel:+78432909294" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
@@ -69,7 +69,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
                   <p className="text-base text-gray-600 mb-2">
                     Для запросов:&nbsp;
                                 <a href="mailto:sales@skynet-kazan.com" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
@@ -94,7 +94,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Режим работы</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Режим работы</h3>
                   <p className="text-base text-gray-600">Офис:</p>
                   <p className="text-base text-gray-600">ПН-ПТ: 8:00-18:00</p>
                   <p className="text-base text-gray-600">СБ: 8:00-13:00</p>
@@ -113,7 +113,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Telegram-боты</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Telegram-боты</h3>
                   <p className="text-base text-gray-600 mb-2">
                     Техподдержка:&nbsp;
                     <a href="https://t.me/skynet_kazan_supportbot" target="_blank" rel="noopener noreferrer" className="text-skynet-blue hover:text-skynet-blue-dark transition-colors inline-block font-medium text-base">
@@ -138,8 +138,8 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-tight">Проблемы с тех. поддержкой?</h3>
-                  <p className="text-base text-gray-600 mb-2 leading-snug">Что-то не так с монтажом и монтажником/работой техподдержки или у вас другие жалобы и предложения?<br/>Пишите напрямую руководству «Скайнет Стрим»!</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-tight">Жалобы и предложения</h3>
+                  <p className="text-base font-normal text-gray-600 mb-2 leading-snug">Нам важно ваше мнение — именно благодаря вашим отзывам мы становимся лучше!<br/>Если у вас возникли жалобы, предложения по улучшению сервиса или вы хотите поделиться впечатлением о нашей работе, напишите нам в WhatsApp с пометкой «руководителю»</p>
                   <div className="space-y-1">
                     <a href="tel:+79867205872" className="text-base text-gray-600 hover:text-skynet-blue transition-colors block font-medium">
                       +7 986 720 58 72
@@ -157,9 +157,9 @@ const ContactSection = () => {
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Оставить заявку на подключение</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-5 flex-1 flex flex-col">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
+                <div className="mb-5">
+                  <label htmlFor="name" className="block text-base font-medium text-gray-700 mb-1">
                     Ваше имя *
                   </label>
                   <input 
@@ -172,8 +172,8 @@ const ContactSection = () => {
                   />
                 </div>
                 
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                <div className="mb-5">
+                  <label htmlFor="phone" className="block text-base font-medium text-gray-700 mb-1">
                     Телефон *
                   </label>
                   <input 
@@ -186,8 +186,8 @@ const ContactSection = () => {
                   />
                 </div>
                 
-                <div>
-                  <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
+                <div className="mb-5">
+                  <label htmlFor="address" className="block text-base font-medium text-gray-700 mb-1">
                     Адрес подключения *
                   </label>
                   <input 
@@ -200,20 +200,19 @@ const ContactSection = () => {
                   />
                 </div>
                 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <div className="flex-1 mb-5">
+                  <label htmlFor="message" className="block text-base font-medium text-gray-700 mb-1">
                     Комментарий
                   </label>
                   <textarea 
                     id="message"
                     ref={messageRef}
-                    rows={3}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent resize-none"
+                    className="w-full h-full min-h-[120px] px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-skynet-blue focus:border-transparent resize-none"
                     placeholder="Дополнительная информация или пожелания"
                   ></textarea>
                 </div>
                 
-                <div className="flex items-start">
+                <div className="flex items-start mt-6">
                   <div className="flex items-center h-5">
                     <input
                       id="policy"
@@ -235,7 +234,7 @@ const ContactSection = () => {
                 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-skynet-orange to-skynet-orange-bright hover:from-skynet-orange-bright hover:to-skynet-orange text-white font-medium py-3 rounded-lg shadow-md hover:shadow-orange-glow transition-all transform hover:-translate-y-1"
+                  className="w-full bg-gradient-to-r from-skynet-orange to-skynet-orange-bright hover:from-skynet-orange-bright hover:to-skynet-orange text-white font-medium py-3 rounded-lg shadow-md hover:shadow-orange-glow transition-all transform hover:-translate-y-1 mt-6"
                 >
                   Подключиться
                 </button>
@@ -245,7 +244,7 @@ const ContactSection = () => {
         </div>
         
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Мы на карте</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Мы на карте</h3>
           <div className="rounded-xl overflow-hidden shadow-lg">
             <div style={{position: 'relative', overflow: 'hidden'}}>
               <a href="https://yandex.ru/maps/org/skaynet/20535149244/?utm_medium=mapframe&utm_source=maps" style={{color: '#eee', fontSize: '12px', position: 'absolute', top: '0px'}}>Скайнет</a>
@@ -255,9 +254,8 @@ const ContactSection = () => {
                 src="https://yandex.ru/map-widget/v1/?ll=49.071497%2C55.835924&mode=search&oid=20535149244&ol=biz&z=14.85" 
                 width="100%" 
                 height="400" 
-                frameBorder="1" 
                 allowFullScreen={true} 
-                style={{position: 'relative'}}
+                style={{position: 'relative', border: '1px solid #ccc'}}
                 title="Карта офиса SkyNet"
               />
             </div>

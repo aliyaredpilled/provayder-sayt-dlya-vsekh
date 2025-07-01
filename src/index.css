@@ -139,3 +139,17 @@
     @apply bg-gradient-to-r from-white to-sky-100 border border-skynet-blue/10 rounded-xl shadow-sm hover:shadow-md transition-all;
   }
 }
+
+/* Кастомные анимации */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
