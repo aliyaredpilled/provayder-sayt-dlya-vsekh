@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 
 const KazanHero = () => {
@@ -81,7 +82,7 @@ const KazanHero = () => {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
               <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white leading-relaxed">
-                Уже <span className="font-bold" style={{color:'#f98c37'}}>20 лет</span> мы обеспечиваем Казань 
+                Уже <span className="font-bold text-yellow-300 drop-shadow-lg">20 лет</span> мы обеспечиваем Казань 
                 <br className="hidden md:block" />
                 стабильной связью и высоким качеством сервиса
               </p>
