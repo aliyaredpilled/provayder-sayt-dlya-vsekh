@@ -85,15 +85,6 @@ const KazanHero = () => {
                 <br className="hidden md:block" />
                 стабильной связью и высоким качеством сервиса
               </p>
-              
-              {/* Декоративные элементы внутри карточки */}
-              <div className="flex justify-center mt-6">
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-0.5 bg-gradient-to-r from-white/20 to-skynet-orange/60"></div>
-                  <div className="w-2 h-2 bg-skynet-orange/80 rounded-full"></div>
-                  <div className="w-8 h-0.5 bg-gradient-to-l from-white/20 to-skynet-orange/60"></div>
-                </div>
-              </div>
             </div>
 
             {/* Статистические элементы */}
