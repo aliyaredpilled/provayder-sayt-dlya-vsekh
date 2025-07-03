@@ -82,8 +82,8 @@ const KazanHero = () => {
             <div className={`backdrop-blur-[2px] rounded-3xl px-1.5 py-2 md:px-3 md:py-3 mx-auto max-w-[92%] md:max-w-4xl transform transition-all duration-1000 delay-300 shadow-lg ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-relaxed border border-white/20 rounded-2xl px-4 py-2">
-                Уже <span className="inline-block text-white text-2xl md:text-3xl lg:text-4xl">20 лет</span> мы обеспечиваем Казань{' '}
+              <p className="inline-block text-xl md:text-2xl lg:text-3xl font-semibold text-white leading-relaxed border border-white/20 rounded-2xl px-3 py-1.5">
+                Уже <span className="inline-block text-white text-xl md:text-2xl lg:text-3xl">20 лет</span> мы обеспечиваем Казань{' '}
                 <br className="hidden md:block" />{' '}
                 стабильной связью и высоким качеством сервиса
               </p>
