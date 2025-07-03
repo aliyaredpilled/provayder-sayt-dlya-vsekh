@@ -1,0 +1,42 @@
+name: Deploy Skystrim
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build-and-deploy:  
+    runs-on: [self-hosted, windows]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Deploy to D:\Skystrim
+        shell: pwsh
+        run: |
+          # Путь к локальной сборке
+          $distDir = Join-Path ${{ github.workspace }} 'dist'
+          # Путь на сервере
+          $targetDir = 'D:\Skystrim'
+          # Синхронизируем файлы 
+          robocopy $distDir $targetDir /MIR /Z /NP /R:3 /W:5
+
+      - name: Restart IIS App Pool
+        shell: pwsh
+        run: |
+          Import-Module WebAdministration
+          Restart-WebAppPool -Name 'Skystrim'
