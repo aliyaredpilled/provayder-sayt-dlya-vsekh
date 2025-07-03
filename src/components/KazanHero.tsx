@@ -52,7 +52,7 @@ const KazanHero = () => {
 
         {/* Контент */}
         <div 
-          className="relative z-10 flex flex-col justify-center h-full pb-32 md:pb-40 cursor-pointer px-2 pt-32 md:pt-0"
+          className="relative z-10 flex flex-col justify-center h-full pb-32 md:pb-40 cursor-pointer px-2 pt-20 md:pt-0"
           onClick={scrollToTenGigabit}
         >
           <div className={`text-center text-white max-w-6xl mx-auto transform transition-all duration-1000 ${
@@ -90,7 +90,7 @@ const KazanHero = () => {
             </div>
 
             {/* Статистические элементы */}
-            <div className={`mt-8 flex flex-col sm:flex-row gap-6 justify-center items-center transform transition-all duration-1000 delay-500 ${
+            <div className={`mt-14 flex flex-col sm:flex-row gap-6 justify-center items-center transform transition-all duration-1000 delay-500 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
               <div className="glass-card backdrop-blur-[2px] rounded-full px-5 py-2.5 bg-black/5 hover:bg-black/10 transition-all duration-300 hover:-translate-y-1 shadow-lg">
