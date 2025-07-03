@@ -69,7 +69,7 @@ const KazanHero = () => {
             </div>
 
             {/* Основной слоган с улучшенной анимацией */}
-                          <h1 className="text-[28px] leading-tight md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight font-bold mb-8 drop-shadow-2xl text-white max-w-[92%] mx-auto md:max-w-none">
+                          <h1 className="text-[28px] leading-tight md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight font-bold mb-4 drop-shadow-2xl text-white max-w-[92%] mx-auto md:max-w-none">
               <span
                 className="inline-block px-1.5 md:px-3 py-2 md:py-3 bg-gradient-to-r from-skynet-orange/80 via-orange-400/80 to-skynet-orange/80 rounded-2xl transform transition-all duration-500 hover:scale-105 shadow-2xl shadow-skynet-orange/30 hover:shadow-3xl hover:shadow-skynet-orange/50 border border-orange-300/20"
               >
