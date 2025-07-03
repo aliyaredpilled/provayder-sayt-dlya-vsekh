@@ -71,7 +71,7 @@ const KazanHero = () => {
             {/* Основной слоган с улучшенной анимацией */}
                           <h1 className="text-[28px] leading-tight md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight font-bold mb-2 drop-shadow-2xl text-white max-w-[92%] mx-auto md:max-w-none">
               <span
-                className="inline-block px-1.5 md:px-3 py-2 md:py-3 bg-gradient-to-r from-skynet-orange/80 via-orange-400/80 to-skynet-orange/80 rounded-2xl transform transition-all duration-500 hover:scale-105 shadow-2xl shadow-skynet-orange/30 hover:shadow-3xl hover:shadow-skynet-orange/50 border border-orange-300/20"
+                className="inline-block px-1.5 md:px-3 py-2 md:py-3 bg-gradient-to-r from-orange-400/40 via-skynet-orange/50 to-orange-400/40 backdrop-blur-sm rounded-2xl transform transition-all duration-500 hover:scale-105 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 border border-orange-200/30"
               >
                 <span>Интернет,</span>{' '}
                 <span>достойный столицы Татарстана</span>
@@ -90,7 +90,7 @@ const KazanHero = () => {
             </div>
 
             {/* Статистические элементы */}
-            <div className={`mt-16 flex flex-col sm:flex-row gap-6 justify-center items-center transform transition-all duration-1000 delay-500 ${
+            <div className={`mt-20 flex flex-col sm:flex-row gap-6 justify-center items-center transform transition-all duration-1000 delay-500 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
               <div className="glass-card backdrop-blur-[2px] rounded-full px-5 py-2.5 bg-black/5 hover:bg-black/10 transition-all duration-300 hover:-translate-y-1 shadow-lg">
