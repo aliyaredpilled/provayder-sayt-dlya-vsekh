@@ -83,7 +83,7 @@ const KazanHero = () => {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
               <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-relaxed">
-                Уже <span className="inline-block text-white text-2xl md:text-3xl lg:text-4xl">20 лет</span> мы обеспечиваем Казань{' '}
+                Уже <span className="inline-block text-white text-2xl md:text-3xl lg:text-4xl shadow-lg">20 лет</span> мы обеспечиваем Казань{' '}
                 <br className="hidden md:block" />{' '}
                 стабильной связью и высоким качеством сервиса
               </p>
