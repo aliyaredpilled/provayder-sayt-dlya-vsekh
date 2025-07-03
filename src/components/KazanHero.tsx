@@ -52,7 +52,7 @@ const KazanHero = () => {
 
         {/* Контент */}
         <div 
-          className="relative z-10 flex flex-col justify-center h-full pb-32 md:pb-40 cursor-pointer px-2"
+          className="relative z-10 flex flex-col justify-center h-full pb-32 md:pb-40 cursor-pointer px-2 pt-32 md:pt-0"
           onClick={scrollToTenGigabit}
         >
           <div className={`text-center text-white max-w-6xl mx-auto transform transition-all duration-1000 ${
@@ -69,9 +69,9 @@ const KazanHero = () => {
             </div>
 
             {/* Основной слоган с улучшенной анимацией */}
-            <h1 className="text-[22px] leading-tight md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight font-bold mb-8 drop-shadow-2xl text-white">
+                          <h1 className="text-[28px] leading-tight md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight font-bold mb-8 drop-shadow-2xl text-white max-w-[92%] mx-auto md:max-w-none">
               <span
-                className="inline-block px-2 md:px-3 py-3 bg-gradient-to-r from-skynet-orange via-orange-400 to-skynet-orange rounded-2xl transform transition-all duration-500 hover:scale-105 shadow-2xl shadow-skynet-orange/30 hover:shadow-3xl hover:shadow-skynet-orange/50 border border-orange-300/20"
+                className="inline-block px-1.5 md:px-3 py-2 md:py-3 bg-gradient-to-r from-skynet-orange/80 via-orange-400/80 to-skynet-orange/80 rounded-2xl transform transition-all duration-500 hover:scale-105 shadow-2xl shadow-skynet-orange/30 hover:shadow-3xl hover:shadow-skynet-orange/50 border border-orange-300/20"
               >
                 <span>Интернет,</span>{' '}
                 <span>достойный столицы Татарстана</span>
@@ -79,12 +79,12 @@ const KazanHero = () => {
             </h1>
 
             {/* Подзаголовок с glass-card эффектом */}
-            <div className={`glass-card bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-10 mx-auto max-w-4xl transform transition-all duration-1000 delay-300 shadow-2xl ${
+            <div className={`backdrop-blur-[2px] rounded-3xl px-1.5 py-2 md:px-3 md:py-3 mx-auto max-w-[92%] md:max-w-4xl transform transition-all duration-1000 delay-300 shadow-lg ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
-              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white leading-relaxed">
-                Уже <span className="font-bold text-orange-400 drop-shadow-lg">20 лет</span> мы обеспечиваем Казань 
-                <br className="hidden md:block" />
+              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-relaxed">
+                Уже <span className="inline-block text-white text-3xl md:text-4xl lg:text-5xl">20 лет</span> мы обеспечиваем Казань{' '}
+                <br className="hidden md:block" />{' '}
                 стабильной связью и высоким качеством сервиса
               </p>
             </div>
@@ -93,14 +93,14 @@ const KazanHero = () => {
             <div className={`mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center transform transition-all duration-1000 delay-500 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
-              <div className="glass-card bg-white/15 backdrop-blur-sm rounded-full px-8 py-4 border border-white/30 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 shadow-lg">
+              <div className="glass-card backdrop-blur-[2px] rounded-full px-5 py-2.5 bg-black/5 hover:bg-black/10 transition-all duration-300 hover:-translate-y-1 shadow-lg">
                 <div className="flex items-center space-x-4">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
                   <span className="text-lg font-bold text-white">Скорость до 10 Гбит/с</span>
                 </div>
               </div>
               
-              <div className="glass-card bg-white/15 backdrop-blur-sm rounded-full px-8 py-4 border border-white/30 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 shadow-lg">
+              <div className="glass-card backdrop-blur-[2px] rounded-full px-5 py-2.5 bg-black/5 hover:bg-black/10 transition-all duration-300 hover:-translate-y-1 shadow-lg">
                 <div className="flex items-center space-x-4">
                   <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-300 shadow-lg shadow-blue-400/50"></div>
                   <span className="text-lg font-bold text-white">Стабильность 99.9%</span>
