@@ -71,7 +71,7 @@ const KazanHero = () => {
             {/* Основной слоган с улучшенной анимацией */}
                           <h1 className="text-[28px] leading-tight md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight font-bold mb-2 drop-shadow-2xl text-white max-w-[92%] mx-auto md:max-w-none">
               <span
-                className="inline-block px-1.5 md:px-3 py-2 md:py-3 bg-white bg-gradient-to-r from-orange-400/40 via-skynet-orange/50 to-orange-400/40 backdrop-blur-sm rounded-2xl transform transition-all duration-500 hover:scale-105 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 border border-orange-200/30"
+                className="inline-block px-1.5 md:px-3 py-2 md:py-3 bg-black/60 bg-gradient-to-r from-orange-400/40 via-skynet-orange/50 to-orange-400/40 backdrop-blur-sm rounded-2xl transform transition-all duration-500 hover:scale-105 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 border border-orange-200/30"
               >
                 <span>Интернет,</span>{' '}
                 <span>достойный столицы Татарстана</span>
