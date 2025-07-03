@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  build-and-deploy:  
+  build-and-deploy:
     runs-on: [self-hosted, windows]
 
     steps:
@@ -26,17 +26,17 @@ jobs:
         run: npm run build
 
       - name: Deploy to D:\Skystrim
-        shell: pwsh
+        shell: powershell
         run: |
           # Путь к локальной сборке
-          $distDir = Join-Path ${{ github.workspace }} 'dist'
+          $distDir   = Join-Path $env:GITHUB_WORKSPACE 'dist'
           # Путь на сервере
           $targetDir = 'D:\Skystrim'
-          # Синхронизируем файлы 
+          # Синхронизируем файлы
           robocopy $distDir $targetDir /MIR /Z /NP /R:3 /W:5
 
       - name: Restart IIS App Pool
-        shell: pwsh
+        shell: powershell
         run: |
           Import-Module WebAdministration
           Restart-WebAppPool -Name 'Skystrim'
