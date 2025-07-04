@@ -47,7 +47,7 @@ const Login = () => {
 
             {/* Форма */}
             <form 
-              action="https://wwww.skynet-kazan.com/login"
+              action="https://www.skynet-kazan.com/login"
               method="post"
               className="space-y-6">
               <div className="space-y-2">
