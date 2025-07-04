@@ -34,6 +34,8 @@ jobs:
           $targetDir = 'D:\Skystrim'
           # Синхронизируем файлы
           robocopy $distDir $targetDir /MIR /Z /NP /R:3 /W:5
+          # Копируем public отдельно
+          robocopy (Join-Path $env:GITHUB_WORKSPACE 'public') (Join-Path $targetDir 'public') /MIR /Z /NP /R:3 /W:5
 
       - name: Restart IIS App Pool
         shell: powershell
